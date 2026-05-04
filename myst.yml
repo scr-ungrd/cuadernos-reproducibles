@@ -1,0 +1,18 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 1af89ef8-cd74-4b2b-a1e3-0a89055b3b1b
+  title: Cuadernos Reproducibles con MyST
+  description: Convierte documentos Markdown y Jupyter Notebooks en publicaciones científicas estructuradas e interactivas.
+  toc:
+    - file: index.md
+    - file: 01-paper.md
+    - file: 02-notebook.ipynb
+site:
+  template: book-theme
+  title: Cuadernos Reproducibles
+  options:
+    logo_text: MyST Quickstart
+    style: ./css/footer.css
+  parts:
+    footer: footer.md
