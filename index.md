@@ -22,18 +22,16 @@ Colección de cuadernos Markdown y Jupyter estructurados, replicables e interact
 
 ¿Qué puedes hacer?
 
-## Herramientas para una comunicación científica moderna
+## Esta es nuestra colección de cuadernos reproducibles
 
 :::::{grid} 1 2 2 2
 ::::{card}
-:url: 01-paper.md
-:footer: Artículos científicos
+:url: https://scr-ungrd.github.io/cuadernos-reproducibles-CRC001
+:footer: La Palma Seismicity 2021
 
-:::{image} ./images/pdf-two-column.png
+:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-CRC001/build/reservoirs-f44eec100ca1ba6f8beb1435c2e5e627.png
 :height: 256px
 :::
-
-Exporta tus documentos a PDF, Word o LaTeX con un solo comando.
 ::::
 
 ::::{card}
@@ -75,60 +73,5 @@ NASA TOPS
 {button}`Ver documentación <https://mystmd.org/guide>`
 
 +++ { "kind": "centered"}
-
-## Empieza en minutos
-
-Escribe en Markdown, ejecuta en Jupyter, publica en la web.
-
-### Publicación científica moderna
-
-{button}`Abrir el paper <01-paper.md>` {button}`Ver el notebook <02-notebook.ipynb>`
-
-[Ver documentación completa](https://mystmd.org/guide)
-
-+++ { "kind": "justified"}
-
-Capacidades
-
-## Todo lo que necesitas para publicar ciencia
-
-Desde la escritura hasta la publicación, con herramientas de primer nivel.
-
-### Ecuaciones, citas y exportación en un solo flujo
-
-{button}`Explorar capacidades <01-paper.md>` Soporte completo para LaTeX, BibTeX y más.
-
-[Ver todas las funciones](https://mystmd.org/guide)
-
-:::::{grid} 1 2 3 3
-::::{card}
-:footer: Ecuaciones
-
-:::{image} ./images/equations.gif
-:height: 150px
-:::
-
-Soporte nativo para LaTeX y notación matemática compleja.
-::::
-
-::::{card}
-:footer: Citas
-
-:::{image} ./images/citations.png
-:height: 150px
-:::
-
-Gestión de referencias bibliográficas integrada con BibTeX.
-::::
-
-::::{card}
-:footer: Exportación PDF
-
-:::{image} ./images/export-pdf.png
-:height: 150px
-:::
-
-Genera documentos de alta calidad listos para publicar.
-::::
 
 :::::
