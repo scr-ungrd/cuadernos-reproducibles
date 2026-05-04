@@ -1,23 +1,41 @@
-::::{grid} 1 1 2 3
+:::::{grid} 3 3 5 5
+:class: outer-grid col-screen
 
-:::{grid-item}
-**MyST Quickstart**
+::::{div}
 
-Cuadernos reproducibles para comunicación científica moderna.
-:::
+# Cuadernos Reproducibles de Conocimiento del Riesgo de Desastres
 
-:::{grid-item}
-**Recursos**
+```{image} ./images/mystmd.svg
+:width: 50px
+:align: left
+```
+
+Comunicación científica moderna con MyST Markdown y Jupyter. 
+::::
+
+::::{div}
+::::
+
+::::{grid} 1 1 3 3
+
+:::{div}
 
 - [Guía MyST](https://mystmd.org/guide)
 - [Jupyter Book](https://jupyterbook.org)
 - [Executable Books](https://executablebooks.org)
-:::
+  :::
 
-:::{grid-item}
-**Proyecto**
+:::{div}
 
 - [Paper](01-paper.md)
 - [Notebook](02-notebook.ipynb)
-:::
+  :::
+
+:::{div}
+
+- [MyST Sandbox](https://mystmd.org/sandbox)
+  :::
+
 ::::
+
+:::::
