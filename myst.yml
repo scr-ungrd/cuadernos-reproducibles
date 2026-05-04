@@ -11,6 +11,7 @@ project:
 site:
   template: book-theme
   title: Cuadernos Reproducibles de Conocimiento del Riesgo de Desastres
+  base_url: https://scr-ungrd.github.io/cuadernos-reproducibles
   options:
     logo_text: Cuadernos Reproducibles
     style: ./css/footer.css
