@@ -48,7 +48,9 @@ Existen iniciativas internacionales de referencia han consolidado ecosistemas de
 
 -   European Centre for Medium-Range Weather Forecasts, Probability of Fire Jupyter Book (https://ecmwf.github.io/AI-Probability-of-Fire)
 
--   Proyecto Pythia (https://projectpythia.org/) EM-DAT (https://github.com/em-dat/)
+-   Proyecto Pythia (https://projectpythia.org/) 
+
+-   EM-DAT (https://github.com/em-dat/)
 
 Estas iniciativas emplean arquitecturas que implementan usando Jupyter Notebooks enriquecidos con MyST Markdown, organizados por amenaza y publicados bajo licencia abierta, que en conjunto constituyen el modelo de referencia que esta convocatoria adopta y adapta al contexto colombiano. El propósito de esta convocatoria es doble: construir un corpus verificable de metodologías computacionales para el análisis del riesgo en Colombia, y establecer una comunidad de práctica que eleve los estándares de reproducibilidad y apertura en el campo de la gestión del riesgo a nivel institucional y académico.
 

@@ -16,22 +16,23 @@ Colección de cuadernos estructurados, replicables e interactivos en Markdown y 
 
 ![Demostración interactiva de MyST Markdown](./images/interactive.gif)
 
-{button}`Ver instrucciones de autor <03-paper.md>`
+{button}`Instrucciones para publicar en cuadernos reproducibles <01-cuadernos-de-conocimiento.md>`
 
 +++ { "kind": "justified"}
 
-¿Qué puedes hacer?
+¿Qué análisis puedes hacer?
 
-## Esta es nuestra colección de cuadernos reproducibles
+## Nuestra colección de cuadernos reproducibles
 
 :::::{grid} 1 2 2 2
 ::::{card}
 :url: https://scr-ungrd.github.io/cuadernos-reproducibles-CRC001
 :footer: Cambio climático Bogotá
 
-:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-CRC001/build/reservoirs-f44eec100ca1ba6f8beb1435c2e5e627.png
+:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-CRC001/build/e5210fa5b51dce208e0ea6f8254c9e77.png
 :height: 256px
 :::
+Escenarios de cambio climático en Bogotá hasta el año 2074. Evidencia para tomar decisiones de reducción del riesgo por aumento de la temperatura media anual.
 ::::
 
 ::::{card}
@@ -70,7 +71,7 @@ NASA TOPS
 
 ::::
 
-{button}`Ver documentación <https://mystmd.org/guide>`
+{button}`Ver documentación de Myst <https://mystmd.org/guide>`
 
 +++ { "kind": "centered"}
 

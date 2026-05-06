@@ -2,7 +2,7 @@
 version: 1
 project:
   id: 1af89ef8-cd74-4b2b-a1e3-0a89055b3b1b
-  title: Cuadernos Reproducibles de Conocimiento del Riesgo de Desastres
+  title: Contenido
   description: Colección de cuadernos Markdown y Jupyter estructurados, replicables e interactivos en Gestión del Riesgo de Desastres.
   toc:
     - file: index.md
