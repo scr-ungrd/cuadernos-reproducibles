@@ -16,5 +16,14 @@ site:
   options:
     logo_text: Inicio
     style: ./css/footer.css
+  nav:
+    - title: Guía
+      url: /cuadernos-de-conocimiento
+    - title: Convocatoria
+      url: /convocatoria-cuadernos
+    - title: Paper
+      url: /paper
+    - title: Notebook
+      url: /notebook
   parts:
     footer: footer.md

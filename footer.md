@@ -27,8 +27,8 @@ Comunicación científica moderna con MyST Markdown y Jupyter.
 
 :::{div}
 
-- [Paper](01-paper.md)
-- [Notebook](02-notebook.ipynb)
+- [Paper](03-paper.md)
+- [Notebook](04-notebook.ipynb)
   :::
 
 :::{div}
