@@ -27,12 +27,12 @@ Colección de cuadernos estructurados, replicables e interactivos en Markdown y 
 :::::{grid} 1 2 2 2
 ::::{card}
 :url: https://scr-ungrd.github.io/cuadernos-reproducibles-CRC001
-:footer: Cambio climático Bogotá
+:footer: Cambio climático Montería
 
-:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-CRC001/build/e5210fa5b51dce208e0ea6f8254c9e77.png
+:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-CRC001/build/1f0197d107bae4c600a00a4953b6d62c.png
 :height: 256px
 :::
-Escenarios de cambio climático en Bogotá hasta el año 2074. Evidencia para tomar decisiones de reducción del riesgo por aumento de la temperatura media anual.
+Escenarios de cambio climático en Montería hasta el año 2074. Evidencia para tomar decisiones de reducción del riesgo / mitigación por el aumento de la temperatura media anual.
 ::::
 
 ::::{card}
