@@ -12,11 +12,11 @@ Inicio rápido
 
 ## Cuadernos Reproducibles de Conocimiento del Riesgo de Desastres
 
-Colección de cuadernos Markdown y Jupyter estructurados, replicables e interactivos en Gestión del Riesgo de Desastres.
+Colección de cuadernos estructurados, replicables e interactivos en Markdown y Jupyter para la Gestión del Riesgo de Desastres.
 
 ![Demostración interactiva de MyST Markdown](./images/interactive.gif)
 
-{button}`Ver la guía <01-paper.md>`
+{button}`Ver instrucciones de autor <03-paper.md>`
 
 +++ { "kind": "justified"}
 
@@ -27,7 +27,7 @@ Colección de cuadernos Markdown y Jupyter estructurados, replicables e interact
 :::::{grid} 1 2 2 2
 ::::{card}
 :url: https://scr-ungrd.github.io/cuadernos-reproducibles-CRC001
-:footer: La Palma Seismicity 2021
+:footer: Cambio climático Bogotá
 
 :::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-CRC001/build/reservoirs-f44eec100ca1ba6f8beb1435c2e5e627.png
 :height: 256px
@@ -35,7 +35,7 @@ Colección de cuadernos Markdown y Jupyter estructurados, replicables e interact
 ::::
 
 ::::{card}
-:url: 02-notebook.ipynb
+:url: 04-notebook.ipynb
 :footer: Figuras interactivas
 
 :::{image} ./images/structured-data.gif

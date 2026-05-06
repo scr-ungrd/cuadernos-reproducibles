@@ -6,13 +6,15 @@ project:
   description: Colección de cuadernos Markdown y Jupyter estructurados, replicables e interactivos en Gestión del Riesgo de Desastres.
   toc:
     - file: index.md
-    - file: 01-paper.md
-    - file: 02-notebook.ipynb
+    - file: 01-cuadernos-de-conocimiento.md
+    - file: 02-convocatoria-cuadernos.md
+    - file: 03-paper.md
+    - file: 04-notebook.ipynb
 site:
   template: book-theme
   title: Cuadernos Reproducibles de Conocimiento del Riesgo de Desastres
   options:
-    logo_text: Cuadernos Reproducibles
+    logo_text: Inicio
     style: ./css/footer.css
   parts:
     footer: footer.md
