@@ -29,7 +29,7 @@ Colección de cuadernos estructurados, replicables e interactivos en Markdown y 
 :url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc001
 :footer: Cambio climático Montería
 
-:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-CRC001/build/1f0197d107bae4c600a00a4953b6d62c.png
+:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-crc001/build/1f0197d107bae4c600a00a4953b6d62c.png
 :height: 256px
 :::
 Escenarios de cambio climático en Montería hasta el año 2074. Evidencia para tomar decisiones de reducción del riesgo / mitigación por el aumento de la temperatura media anual.
