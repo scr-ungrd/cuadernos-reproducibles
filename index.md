@@ -26,7 +26,7 @@ Colección de cuadernos estructurados, replicables e interactivos en Markdown y 
 
 :::::{grid} 1 2 2 2
 ::::{card}
-:url: https://scr-ungrd.github.io/cuadernos-reproducibles-CRC001
+:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc001
 :footer: Cambio climático Montería
 
 :::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-CRC001/build/1f0197d107bae4c600a00a4953b6d62c.png
