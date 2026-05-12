@@ -36,14 +36,25 @@ Escenarios de cambio climático en Montería hasta el año 2074. Evidencia para 
 ::::
 
 ::::{card}
-:url: 04-notebook.ipynb
-:footer: Figuras interactivas
+:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc002/
+:footer: Calor urbano Cartagena
 
-:::{image} ./images/structured-data.gif
+:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-crc002/build/880453d61c54da1213f747c079100f30.png
 :height: 256px
 :::
 
-Integra notebooks de Jupyter con figuras dinámicas e interactivas.
+Riesgo por olas de calor urbano en Cartagena, Bolívar bajo escenarios de cambio climático
+::::
+
+::::{card}
+:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc003
+:footer: Propagación de tsunami
+
+:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-crc003/build/tsunami_propagation-62c5bf11d80a85eebc3868da9ab9a56d.gif
+:height: 256px
+:::
+
+Simulación del Tsunami de Tumaco de 1979
 ::::
 
 :::::
