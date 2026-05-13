@@ -6,7 +6,7 @@ authors:
     affiliation: Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)
     github: scr-ungrd
 keywords: [convocatoria, cuadernos reproducibles, gestión del riesgo, Colombia, ciencia abierta, IA, amenazas naturales]
-date: 2025-01-01
+date: 2026-05-12
 ---
 
 # Convocatoria: Cuadernos Reproducibles para la Gestión del Riesgo de Desastres en Colombia
@@ -16,7 +16,7 @@ date: 2025-01-01
 :::{card}
 **📅 Apertura de postulaciones**
 ^^^
-Primer semestre 2025
+Segundo semestre 2026
 :::
 
 :::{card}
