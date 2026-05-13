@@ -50,7 +50,7 @@ Riesgo por olas de calor urbano en Cartagena, Bolívar bajo escenarios de cambio
 :url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc003
 :footer: Propagación de tsunami
 
-:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-crc003/build/tsunami_propagation-62c5bf11d80a85eebc3868da9ab9a56d.gif
+:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-crc003/build/tsunami_propagation-44e28597475e67e68fdade5fed8c33b7.gif
 :height: 256px
 :::
 
