@@ -61,6 +61,7 @@ site:
   options:
     logo_text: "Cuadernos · UNGRD"
     style: ./css/footer.css
+    url: https://masantizof.github.io/cuadernos-reproducibles-ungrd
     primary_color: "#0154a5"
     secondary_color: "#ffffff"
     accent_color: "#2563eb"
