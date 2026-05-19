@@ -33,6 +33,8 @@ jobs:
         run: pip install -r binder/requirements.txt
       - name: Build MyST site
         run: myst build --html
+        env:
+          BASE_URL: /cuadernos-reproducibles-ungrd
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
