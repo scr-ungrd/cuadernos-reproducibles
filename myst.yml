@@ -1,0 +1,78 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+
+project:
+  id: 7c2f4a81-3e5b-4d90-b2c1-8a6f3d1e0b94
+  title: Cuadernos Reproducibles de Conocimiento del Riesgo de Desastres
+  description: Colección de cuadernos estructurados, replicables e interactivos en Markdown y Jupyter para la Gestión del Riesgo de Desastres en Colombia.
+  keywords:
+    - cuadernos reproducibles
+    - riesgo de desastres
+    - Colombia
+    - UNGRD
+    - Python
+    - Jupyter
+    - ciencia abierta
+  authors:
+    - name: Subdirección para el Conocimiento del Riesgo
+      affiliation: Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)
+      github: scr-ungrd
+  github: https://github.com/masantizof/cuadernos-reproducibles-ungrd
+  license:
+    content: CC-BY-SA-4.0
+    code: MIT
+  open_access: true
+  jupyter:
+    binder:
+      url: https://mybinder.org
+      repo: masantizof/cuadernos-reproducibles-ungrd
+      ref: HEAD
+
+  toc:
+    - file: index.md
+    - title: Guía
+      file: 01-cuadernos-de-conocimiento.md
+    - title: Convocatoria
+      file: 02-convocatoria-cuadernos.md
+    - title: Colección de Cuadernos
+      children:
+        - title: "CRC-001: Cambio Climático Montería"
+          file: crc001/article.ipynb
+          children:
+            - file: crc001/notebooks/data-screening-visualization.ipynb
+        - title: "CRC-002: Calor Urbano Cartagena"
+          file: crc002/article.ipynb
+          children:
+            - file: crc002/notebooks/observable-exports.ipynb
+        - title: "CRC-003: Tsunami de Tumaco 1979"
+          file: crc003/article.md
+          children:
+            - file: crc003/notebooks/01-bathymetry.ipynb
+            - file: crc003/notebooks/02-simulation.ipynb
+            - file: crc003/notebooks/03-visualization.ipynb
+        - title: "CRC-004: Sismicidad de Colombia"
+          file: crc004/sismicidad-colombia.ipynb
+        - title: "CRC-005: Inundaciones Sentinel-1 (GEE)"
+          file: crc005/gee-inundaciones-sentinel1.ipynb
+
+site:
+  template: book-theme
+  title: Cuadernos Reproducibles — UNGRD
+  options:
+    logo_text: "Cuadernos · UNGRD"
+    style: ./css/footer.css
+    primary_color: "#0154a5"
+    secondary_color: "#ffffff"
+    accent_color: "#2563eb"
+    launch_buttons:
+      binderhub_url: https://mybinder.org
+      thebe: true
+  nav:
+    - title: Guía
+      url: /cuadernos-de-conocimiento
+    - title: Convocatoria
+      url: /convocatoria-cuadernos
+    - title: Colección
+      url: /crc001/article
+  parts:
+    footer: footer.md
