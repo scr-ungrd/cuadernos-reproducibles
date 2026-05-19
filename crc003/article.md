@@ -4,8 +4,8 @@ subtitle: Reproducción numérica de la propagación del tsunami del 12 de dicie
 ---
 
 **Cuaderno 3 — Visualización y validación:**
-[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/scr-ungrd/cuadernos-reproducibles-crc003/blob/main/notebooks/03-visualization.ipynb)
-[![Abrir en Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/scr-ungrd/cuadernos-reproducibles-crc003/main?filepath=notebooks/03-visualization.ipynb)
+[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/masantizof/cuadernos-reproducibles-ungrd/blob/main/crc003/notebooks/03-visualization.ipynb)
+[![Abrir en Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/masantizof/cuadernos-reproducibles-ungrd/HEAD?filepath=crc003/notebooks/03-visualization.ipynb)
 
 ---
 
@@ -112,6 +112,7 @@ exterior es de tipo Neumann (gradiente nulo). El solver está implementado en
 ### Dominio de simulación y datos de entrada
 
 El dominio abarca la región costera del Pacífico colombiano entre:
+
 - Latitud: 0.5°N – 3.5°N
 - Longitud: 79.5°W – 77.0°W
 
@@ -131,6 +132,7 @@ $$
 $$
 
 donde:
+
 - $A_1 = 8.0$ m es la amplitud de calibración de la elevación principal
 - $A_2 = A_1/3 \approx 2.67$ m es la amplitud de la depresión secundaria (*leading depression*)
 - $\lambda = 80\,000$ m es la longitud de onda característica
@@ -146,7 +148,7 @@ propagación hasta la costa, de modo que la amplitud costero-simulada alcanza lo
 ### Parámetros de la simulación
 
 | Parámetro | Valor | Justificación |
-|-----------|-------|--------------|
+| --------- | ----- | ------------- |
 | Resolución espacial | 450 m | GEBCO 15 arc-sec en UTM |
 | Paso de tiempo (dt) | 1.0 s | Condición CFL: $CFL = c_{max} \cdot dt \cdot \sqrt{2}/dx \approx 0.62 < 1$ |
 | Duración | 1 800 s (30 min) | Tiempo de llegada histórico + 15 min post-arribo |
@@ -159,62 +161,56 @@ propagación hasta la costa, de modo que la amplitud costero-simulada alcanza lo
 
 ### Elevación máxima de la ola
 
-La {numref}`fig-max-eta` muestra la distribución espacial de la elevación máxima
-de la superficie marina (η) durante los 30 minutos de simulación. Los valores más
-altos se concentran en la zona costera norte del dominio, frente a Tumaco y Bocagrande,
-con amplitudes de hasta 3–4 m en aguas someras (profundidad < 200 m), coherentes
-con las observaciones de {cite:t}`herd1981`.
+Los valores más altos de la superficie marina (η) se concentran en la zona costera norte del
+dominio, frente a Tumaco y Bocagrande, con amplitudes de hasta 3–4 m en aguas someras
+(profundidad < 200 m), coherentes con las observaciones de {cite:t}`herd1981`.
 
-:::{figure} notebooks/max_inundation_map.png
-:label: fig-max-eta
-:alt: Elevación máxima de la ola y amplitud costera
-Panel izquierdo: elevación máxima de la superficie marina (η) durante 30 min de
-simulación LSWE. Panel derecho: amplitud máxima en zona costera (profundidad < 200 m).
-La estrella roja indica el epicentro del sismo del 12 de diciembre de 1979.
+:::{note} Figura interactiva — ejecutar el cuaderno
+El mapa de elevación máxima (`max_inundation_map.png`) se genera al ejecutar el
+**Cuaderno 3** (`03-visualization.ipynb`). Panel izquierdo: distribución espacial de η_max
+durante 30 min de simulación LSWE. Panel derecho: amplitud costera (profundidad < 200 m).
+La estrella roja indica el epicentro del 12 de diciembre de 1979.
+
+[![Abrir Cuaderno 3 en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/masantizof/cuadernos-reproducibles-ungrd/blob/main/crc003/notebooks/03-visualization.ipynb)
 :::
 
 ### Series de tiempo
 
-La {numref}`fig-timeseries` muestra la evolución temporal de η en cuatro estaciones
-históricas. La ola llega a Tumaco (muelle) aproximadamente a los 15 minutos del sismo,
-coincidiendo con el tiempo de arribo reportado por {cite:t}`herd1981`.
+La ola llega a Tumaco (muelle) aproximadamente a los 15 minutos del sismo, coincidiendo
+con el tiempo de arribo reportado por {cite:t}`herd1981`.
 
-:::{figure} notebooks/time_series.png
-:label: fig-timeseries
-:alt: Series de tiempo en estaciones de observación históricas
-Series de tiempo de la elevación de la superficie del agua (η) en cuatro estaciones
-históricas. Las líneas discontinuas horizontales indican el run-up observado
-{cite:p}`herd1981`; las líneas discontinuas verticales marcan el tiempo de arribo observado.
+:::{note} Figura interactiva — ejecutar el cuaderno
+La figura de series de tiempo (`time_series.png`) se genera al ejecutar el
+**Cuaderno 3** (`03-visualization.ipynb`). Muestra la evolución de η en cuatro estaciones
+históricas. Las líneas discontinuas indican el run-up observado y el tiempo de arribo.
+
+[![Abrir Cuaderno 3 en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/masantizof/cuadernos-reproducibles-ungrd/blob/main/crc003/notebooks/03-visualization.ipynb)
 :::
 
 ### Validación cuantitativa
 
-La {numref}`fig-validation` compara el run-up simulado con el observado en 8 estaciones
-costeras. La correlación entre valores simulados y observados es cualitativamente
-consistente, con sesgo positivo esperable dado el carácter calibrado del parámetro
-$A_1 = 8.0$ m de la N-wave.
+La correlación entre run-up simulado y observado en 8 estaciones costeras es cualitativamente
+consistente, con sesgo positivo esperable dado el parámetro de calibración $A_1 = 8.0$ m.
 
-:::{figure} notebooks/validation.png
-:label: fig-validation
-:alt: Validación cuantitativa del modelo
-Comparación entre run-up simulado y observado en estaciones costeras de
-{cite:t}`herd1981`. Izquierda: diagrama de dispersión con línea 1:1.
-Derecha: barras comparativas por estación.
+:::{note} Figura interactiva — ejecutar el cuaderno
+La figura de validación (`validation.png`) se genera al ejecutar el **Cuaderno 3**
+(`03-visualization.ipynb`). Compara run-up simulado vs observado ({cite:t}`herd1981`):
+diagrama de dispersión con línea 1:1 y barras comparativas por estación.
+
+[![Abrir Cuaderno 3 en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/masantizof/cuadernos-reproducibles-ungrd/blob/main/crc003/notebooks/03-visualization.ipynb)
 :::
 
 ### Animación de la propagación
 
-La {numref}`fig-animation` ilustra la propagación del tsunami desde el epicentro
-hasta la costa colombiana durante los primeros 30 minutos. La ola avanza de oeste
-a este a una velocidad de celeridad característica $c = \sqrt{gH_0}$ ≈ 200 m/s
-en aguas de 4 000 m de profundidad, llegando a la costa en ~15 minutos.
+La ola avanza de oeste a este a una velocidad de celeridad característica $c = \sqrt{gH_0}$
+≈ 200 m/s en aguas de 4 000 m de profundidad, llegando a la costa en ~15 minutos.
 
-:::{figure} notebooks/tsunami_propagation.gif
-:label: fig-animation
-:alt: Animación de la propagación del tsunami
-Animación de la propagación del tsunami de Tumaco 1979 (solver LSWE, 31 frames,
-t = 0–30 min). La escala de color muestra η en metros; la estrella roja indica
-el epicentro.
+:::{note} Animación interactiva — ejecutar el cuaderno
+La animación (`tsunami_propagation.gif`, 31 frames, t = 0–30 min) se genera al ejecutar el
+**Cuaderno 3** (`03-visualization.ipynb`). Muestra la propagación del tsunami desde el
+epicentro (estrella roja) hasta la costa colombiana. La escala de color representa η en metros.
+
+[![Abrir Cuaderno 3 en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/masantizof/cuadernos-reproducibles-ungrd/blob/main/crc003/notebooks/03-visualization.ipynb)
 :::
 
 ## Instrucciones de reproducción
@@ -275,7 +271,7 @@ en la región.
 
 ## Disponibilidad de datos y código
 
-- **Batimetría GEBCO 2023**: https://doi.org/10.5285/f98b053b-0cbc-6c23-e053-6c86abc0af7b {cite:p}`gebco2023`
+- **Batimetría GEBCO 2023**: [doi.org/10.5285/f98b053b-0cbc-6c23-e053-6c86abc0af7b](https://doi.org/10.5285/f98b053b-0cbc-6c23-e053-6c86abc0af7b) {cite:p}`gebco2023`
 - **Observaciones históricas 1979**: archivo `data/observaciones_1979.csv` (este repositorio)
 
 ```{bibliography}

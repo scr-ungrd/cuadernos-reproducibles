@@ -62,12 +62,20 @@ Simulación de la propagación del Tsunami de Tumaco de 1979 en el Pacífico col
 :url: crc004/sismicidad-colombia
 :footer: CRC-004 · Sismicidad de Colombia
 
+:::{image} ./crc004/images/banner.png
+:height: 200px
+:::
+
 Análisis exploratorio de la sismicidad colombiana con el catálogo del USGS 2000–2024. Mapas interactivos, estadísticas por departamento y zonas de mayor actividad sísmica.
 ::::
 
 ::::{card}
 :url: crc005/gee-inundaciones-sentinel1
 :footer: CRC-005 · Inundaciones Sentinel-1
+
+:::{image} ./crc005/images/banner.png
+:height: 200px
+:::
 
 Detección de inundaciones por La Niña 2021–2022 usando imágenes SAR Sentinel-1 en Google Earth Engine. Análisis de cambio de retrodispersión y cartografía por departamento.
 ::::
