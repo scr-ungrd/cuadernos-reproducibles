@@ -5,6 +5,7 @@
 
 # --- Análisis de datos ---
 pandas>=2.0
+pyarrow>=12.0
 numpy>=1.24
 scipy>=1.10
 statsmodels>=0.14
