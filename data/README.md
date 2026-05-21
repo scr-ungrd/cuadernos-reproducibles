@@ -1,26 +1,30 @@
 # Datos del cuaderno 05 — Escenarios El Niño 2026-2027
 
 Este directorio contiene los archivos de datos necesarios para ejecutar el cuaderno
-`05-visor-nino-2026-2027.ipynb`.
+`05-visor-nino-2026-2027.ipynb`, tanto localmente como en Binder.
 
-## Archivos requeridos
+## Archivos incluidos
 
-| Archivo | Descripción | Fuente |
-|---------|-------------|--------|
-| `datos_base_analisis.parquet` | Registros de emergencias UNGRD 2023-2024 | SCR / UNGRD |
-| `colombia_departamentos.json` | GeoJSON de departamentos de Colombia (DIVIPOLA) | DANE / IGAC |
-| `colombia_municipios.json` | GeoJSON de municipios de Colombia (DIVIPOLA) | DANE / IGAC |
+| Archivo | Tamaño | Descripción | Fuente |
+| ------- | ------ | ----------- | ------ |
+| `datos_base_analisis.parquet` | 0.24 MB | Registros de emergencias UNGRD 2023-2024 con variables de impacto, tipo de evento, clasificación climática y codificación DIVIPOLA | SCR / UNGRD |
+| `colombia_departamentos.json` | 0.41 MB | GeoJSON de departamentos de Colombia (DIVIPOLA) | DANE / IGAC |
+| `colombia_municipios.json` | 2.91 MB | GeoJSON de municipios de Colombia (DIVIPOLA) | DANE / IGAC |
 
-## Instrucciones de descarga
+Los tres archivos están versionados en el repositorio. Al clonar el repositorio o
+lanzarlo en Binder, estarán disponibles automáticamente en esta carpeta.
 
-Los archivos de datos están disponibles en el repositorio interno de la UNGRD.
-Solicítelos a la Subdirección para el Conocimiento del Riesgo (SCR) o descárguelos
-desde el repositorio de insumos del proyecto Plataforma Riesgos.
+## Ejecutar en Binder (sin instalación local)
 
-Una vez descargados, ubíquelos en esta carpeta (`data/`) antes de ejecutar el cuaderno.
+Haz clic en el badge del `README.md` o en el enlace del frontmatter del cuaderno.
+Binder construirá el entorno desde `requirements.txt` y abrirá el cuaderno
+directamente en JupyterLab en la nube.
 
-## Verificación
+## Ejecutar localmente
 
-Tras ubicar los archivos, puede verificar su integridad ejecutando la celda de
-**Carga y preprocesamiento de datos** del cuaderno, que imprimirá el número de
-registros cargados y el rango de fechas del periodo de análisis.
+```bash
+git clone https://github.com/scr-ungrd/cuadernos-reproducibles.git
+cd cuadernos-reproducibles
+pip install -r requirements.txt
+jupyter lab 05-visor-nino-2026-2027.ipynb
+```

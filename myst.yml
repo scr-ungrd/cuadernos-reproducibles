@@ -4,6 +4,9 @@ project:
   id: 1af89ef8-cd74-4b2b-a1e3-0a89055b3b1b
   title: Contenido
   description: Colección de cuadernos Markdown y Jupyter estructurados, replicables e interactivos en Gestión del Riesgo de Desastres.
+  launch_buttons:
+    binderhub_url: https://mybinder.org
+    notebook_interface: jupyterlab
   toc:
     - file: index.md
     - file: 01-cuadernos-de-conocimiento.md

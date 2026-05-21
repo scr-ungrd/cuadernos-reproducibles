@@ -1,6 +1,7 @@
-# MyST Quickstart
+# Cuadernos Reproducibles de Conocimiento del Riesgo de Desastres
 
 [![Made with MyST](https://img.shields.io/badge/made%20with-myst-orange)](https://myst.tools)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/scr-ungrd/cuadernos-reproducibles/main?labpath=05-visor-nino-2026-2027.ipynb)
 
 This repository contains the files used in the [quickstart guide](https://mystmd.org/guide/quickstart), and can be used to follow that guide, before trying MyST with your own content.
 
