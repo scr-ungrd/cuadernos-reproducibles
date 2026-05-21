@@ -24,7 +24,7 @@ Colección de cuadernos estructurados, replicables e interactivos en Markdown y 
 
 ## Nuestra colección de cuadernos reproducibles
 
-:::::{grid} 1 2 2 3
+:::::{grid} 1 2 3 3
 ::::{card}
 :url: crc001/article
 :footer: CRC-001 · Cambio climático Montería
@@ -78,6 +78,17 @@ Análisis exploratorio de la sismicidad colombiana con el catálogo del USGS 200
 :::
 
 Detección de inundaciones por La Niña 2021–2022 usando imágenes SAR Sentinel-1 en Google Earth Engine. Análisis de cambio de retrodispersión y cartografía por departamento.
+::::
+
+::::{card}
+:url: crc006/escenarios-nino-2026-2027
+:footer: CRC-006 · Escenarios El Niño 2026–2027
+
+:::{image} ./crc006/images/banner.png
+:height: 200px
+:::
+
+Posibles escenarios de riesgo en Colombia ante un eventual Fenómeno El Niño 2026–2027, basados en el análogo histórico 2023–2024. Mapas interactivos, rankings departamentales y análisis temporal.
 ::::
 
 :::::
