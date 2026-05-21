@@ -4,5 +4,10 @@ matplotlib
 numpy
 vega_datasets
 
+# Cuaderno 05 — Escenarios El Niño 2026-2027
+pandas
+pyarrow
+folium
+
 # To interactively browser Jupyter content with MyST
 jupyterlab_myst

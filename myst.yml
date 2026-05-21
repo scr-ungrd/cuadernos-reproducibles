@@ -10,6 +10,7 @@ project:
     - file: 02-convocatoria-cuadernos.md
     - file: 03-paper.md
     - file: 04-notebook.ipynb
+    - file: 05-visor-nino-2026-2027.ipynb
 site:
   template: book-theme
   title: Cuadernos Reproducibles de Conocimiento del Riesgo de Desastres
@@ -25,5 +26,7 @@ site:
       url: /paper
     - title: Notebook
       url: /notebook
+    - title: "El Niño 2026-2027"
+      url: /visor-nino-2026-2027
   parts:
     footer: footer.md

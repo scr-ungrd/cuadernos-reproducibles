@@ -57,6 +57,17 @@ Riesgo por olas de calor urbano en Cartagena, Bolívar bajo escenarios de cambio
 Simulación del Tsunami de Tumaco de 1979
 ::::
 
+::::{card}
+:url: /visor-nino-2026-2027
+:footer: Escenarios El Niño 2026–2027
+
+:::{image} ./images/banner.png
+:height: 256px
+:::
+
+Posibles escenarios de riesgo en Colombia ante un eventual Fenómeno El Niño 2026–2027, basados en el análogo histórico 2023–2024.
+::::
+
 :::::
 
 +++ {"kind": "logo-cloud"}
