@@ -17,7 +17,7 @@ project:
     - name: Subdirección para el Conocimiento del Riesgo
       affiliation: Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)
       github: scr-ungrd
-  github: https://github.com/masantizof/cuadernos-reproducibles-ungrd
+  github: https://github.com/scr-ungrd/cuadernos-reproducibles
   license:
     content: CC-BY-SA-4.0
     code: MIT
@@ -25,7 +25,7 @@ project:
   jupyter:
     binder:
       url: https://mybinder.org
-      repo: masantizof/cuadernos-reproducibles-ungrd
+      repo: scr-ungrd/cuadernos-reproducibles
       ref: HEAD
 
   toc:
@@ -63,7 +63,7 @@ site:
   options:
     logo_text: "Cuadernos · UNGRD"
     style: ./css/footer.css
-    url: https://masantizof.github.io/cuadernos-reproducibles-ungrd
+    url: https://scr-ungrd.github.io/cuadernos-reproducibles
     primary_color: "#0154a5"
     secondary_color: "#ffffff"
     accent_color: "#2563eb"

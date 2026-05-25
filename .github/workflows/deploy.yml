@@ -34,7 +34,7 @@ jobs:
       - name: Build MyST site
         run: myst build --html
         env:
-          BASE_URL: /cuadernos-reproducibles-ungrd
+          BASE_URL: /cuadernos-reproducibles
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
