@@ -34,28 +34,6 @@ project:
       file: 01-cuadernos-de-conocimiento.md
     - title: Convocatoria
       file: 02-convocatoria-cuadernos.md
-    - title: Colección de Cuadernos
-      children:
-        - title: "CRC-001: Cambio Climático Montería"
-          file: crc001/article.ipynb
-          children:
-            - file: crc001/notebooks/data-screening-visualization.ipynb
-        - title: "CRC-002: Calor Urbano Cartagena"
-          file: crc002/article.ipynb
-          children:
-            - file: crc002/notebooks/observable-exports.ipynb
-        - title: "CRC-003: Tsunami de Tumaco 1979"
-          file: crc003/article.md
-          children:
-            - file: crc003/notebooks/01-bathymetry.ipynb
-            - file: crc003/notebooks/02-simulation.ipynb
-            - file: crc003/notebooks/03-visualization.ipynb
-        - title: "CRC-004: Sismicidad de Colombia"
-          file: crc004/sismicidad-colombia.ipynb
-        - title: "CRC-005: Inundaciones Sentinel-1 (GEE)"
-          file: crc005/gee-inundaciones-sentinel1.ipynb
-        - title: "CRC-006: Escenarios El Niño 2026–2027"
-          file: crc006/escenarios-nino-2026-2027.ipynb
 
 site:
   template: book-theme
@@ -70,6 +48,8 @@ site:
     launch_buttons:
       binderhub_url: https://mybinder.org
       thebe: true
+    extra_head: |
+      <script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.sd-card-link').forEach(function(a){a.target='_blank';});});</script>
   nav:
     - title: Guía
       url: /cuadernos-de-conocimiento

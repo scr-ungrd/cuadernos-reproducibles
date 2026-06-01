@@ -1,0 +1,38 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+
+project:
+  title: "CRC-006: Escenarios de Riesgo ante el Fenómeno El Niño 2026–2027"
+  subtitle: "Análisis del análogo histórico 2023–2024 para la anticipación de emergencias en Colombia"
+  authors:
+    - name: Christian Euscátegui
+      affiliation: Subdirección para el Conocimiento del Riesgo (SCR), UNGRD
+      github: scr-ungrd
+  github: https://github.com/scr-ungrd/cuadernos-reproducibles-crc006
+  binder: https://mybinder.org/v2/gh/scr-ungrd/cuadernos-reproducibles-crc006/main
+  open_access: true
+  license:
+    content: CC-BY-4.0
+    code: MIT
+  keywords:
+    - El Niño
+    - ENSO
+    - riesgo de desastres
+    - Colombia
+    - análogo climático
+    - UNGRD
+    - emergencias
+    - análisis espacial
+  date: 2026-05-21
+  banner: ./images/banner.png
+
+site:
+  template: article-theme
+  title: "CRC-006: El Niño 2026–2027 — UNGRD"
+  options:
+    primary_color: "#0154a5"
+    secondary_color: "#ffffff"
+    accent_color: "#2563eb"
+    launch_buttons:
+      binderhub_url: https://mybinder.org
+      thebe: true

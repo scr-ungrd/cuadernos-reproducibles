@@ -26,40 +26,46 @@ Colección de cuadernos estructurados, replicables e interactivos en Markdown y 
 
 :::::{grid} 1 2 3 3
 ::::{card}
-:url: crc001/article
+:url: https://github.com/scr-ungrd/cuadernos-reproducibles-crc001
 :footer: CRC-001 · Cambio climático Montería
 
-:::{image} ./crc001/images/banner.png
+:::{image} ./images/climate-change-1.gif
 :height: 200px
 :::
 
 Escenarios de cambio climático en Montería hasta el año 2074. Evidencia para tomar decisiones de reducción del riesgo por el aumento de la temperatura media anual.
+
+*Fuente: bgr.com / Global Warming GIF (2015)*
 ::::
 
 ::::{card}
-:url: crc002/article
+:url: https://github.com/scr-ungrd/cuadernos-reproducibles-crc002
 :footer: CRC-002 · Calor urbano Cartagena
 
-:::{image} ./crc002/images/fig6_uhi_lst_mean.png
+:::{image} ./images/olas-calor-1.jpg
 :height: 200px
 :::
 
 Riesgo por olas de calor urbano en Cartagena, Bolívar bajo escenarios de cambio climático.
+
+*Imagen elaborada por el autor*
 ::::
 
 ::::{card}
-:url: crc003/article
+:url: https://github.com/scr-ungrd/cuadernos-reproducibles-crc003
 :footer: CRC-003 · Tsunami Tumaco 1979
 
-:::{image} ./crc003/images/banner.png
+:::{image} ./images/tsunami-1.avif
 :height: 200px
 :::
 
 Simulación de la propagación del Tsunami de Tumaco de 1979 en el Pacífico colombiano.
+
+*Foto: G. Cajiao Lenis / Servicio Geológico Colombiano*
 ::::
 
 ::::{card}
-:url: crc004/sismicidad-colombia
+:url: https://github.com/scr-ungrd/cuadernos-reproducibles-crc004
 :footer: CRC-004 · Sismicidad de Colombia
 
 :::{image} ./crc004/images/banner.png
@@ -70,7 +76,7 @@ Análisis exploratorio de la sismicidad colombiana con el catálogo del USGS 200
 ::::
 
 ::::{card}
-:url: crc005/gee-inundaciones-sentinel1
+:url: https://github.com/scr-ungrd/cuadernos-reproducibles-crc005
 :footer: CRC-005 · Inundaciones Sentinel-1
 
 :::{image} ./crc005/images/banner.png
@@ -81,7 +87,7 @@ Detección de inundaciones por La Niña 2021–2022 usando imágenes SAR Sentine
 ::::
 
 ::::{card}
-:url: crc006/escenarios-nino-2026-2027
+:url: https://github.com/scr-ungrd/cuadernos-reproducibles-crc006
 :footer: CRC-006 · Escenarios El Niño 2026–2027
 
 :::{image} ./crc006/images/banner.png
@@ -89,6 +95,17 @@ Detección de inundaciones por La Niña 2021–2022 usando imágenes SAR Sentine
 :::
 
 Posibles escenarios de riesgo en Colombia ante un eventual Fenómeno El Niño 2026–2027, basados en el análogo histórico 2023–2024. Mapas interactivos, rankings departamentales y análisis temporal.
+::::
+
+::::{card}
+:url: https://github.com/scr-ungrd/visor-nino-2026-2027
+:footer: Visor Interactivo · El Niño 2026–2027
+
+:::{image} ./images/ungrd-2.jpg
+:height: 200px
+:::
+
+Visor analítico interactivo de escenarios de riesgo para el Fenómeno El Niño 2026–2027. Filtros dinámicos por departamento, fenómeno y métrica de impacto humanitario.
 ::::
 
 :::::

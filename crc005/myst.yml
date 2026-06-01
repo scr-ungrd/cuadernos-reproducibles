@@ -1,0 +1,40 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+
+project:
+  title: "CRC-005: Detección de Inundaciones con Sentinel-1 SAR y Google Earth Engine"
+  subtitle: "Evento La Niña 2021–2022 · Colombia"
+  authors:
+    - name: Subdirección para el Conocimiento del Riesgo
+      affiliation: Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)
+      github: scr-ungrd
+  github: https://github.com/scr-ungrd/cuadernos-reproducibles-crc005
+  binder: https://mybinder.org/v2/gh/scr-ungrd/cuadernos-reproducibles-crc005/main
+  open_access: true
+  license:
+    content: CC-BY-SA-4.0
+    code: MIT
+  keywords:
+    - Google Earth Engine
+    - Sentinel-1
+    - SAR
+    - inundaciones
+    - Colombia
+    - La Niña
+    - geemap
+    - teledetección
+    - riesgo de desastres
+    - UNGRD
+  date: 2026-01-01
+  banner: ./images/banner.png
+
+site:
+  template: article-theme
+  title: "CRC-005: Inundaciones Sentinel-1 — UNGRD"
+  options:
+    primary_color: "#0154a5"
+    secondary_color: "#ffffff"
+    accent_color: "#2563eb"
+    launch_buttons:
+      binderhub_url: https://mybinder.org
+      thebe: true

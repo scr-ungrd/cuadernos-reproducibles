@@ -1,0 +1,7 @@
+# CRC-006 — Escenarios El Niño 2026-2027
+pandas>=2.0
+pyarrow>=12.0
+geopandas>=0.13
+folium>=0.14
+altair>=5.0
+shapely>=2.0
