@@ -68,7 +68,7 @@ Simulación de la propagación del Tsunami de Tumaco de 1979 en el Pacífico col
 :url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc004
 :footer: CRC-004 · Sismicidad de Colombia
 
-:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-crc004/build/sismicidad_temporal-822c6f8664a7e167bcb8f39f203e230b.png
+:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-crc004/build/sismicidad_temporal-f12dbf0089921cd40f9ed17324cdc9be.png
 :height: 200px
 :::
 
@@ -79,7 +79,7 @@ Análisis exploratorio de la sismicidad colombiana con el catálogo del USGS 200
 :url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc005
 :footer: CRC-005 · Inundaciones Sentinel-1
 
-:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-crc005/build/inundacion_por_depar-8e2ca6abdd1d7d6dca15f2b732ed4bcf.png
+:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-crc005/build/inundacion_por_depar-549c0b5c75107498eee8e8845c40fe8a.png
 :height: 200px
 :::
 
