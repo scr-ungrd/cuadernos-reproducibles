@@ -26,7 +26,7 @@ Colección de cuadernos estructurados, replicables e interactivos en Markdown y 
 
 :::::{grid} 1 2 3 3
 ::::{card}
-:url: https://github.com/scr-ungrd/cuadernos-reproducibles-crc001
+:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc001
 :footer: CRC-001 · Cambio climático Montería
 
 :::{image} ./images/climate-change-1.gif
@@ -39,7 +39,7 @@ Escenarios de cambio climático en Montería hasta el año 2074. Evidencia para 
 ::::
 
 ::::{card}
-:url: https://github.com/scr-ungrd/cuadernos-reproducibles-crc002
+:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc002
 :footer: CRC-002 · Calor urbano Cartagena
 
 :::{image} ./images/olas-calor-1.jpg
@@ -52,7 +52,7 @@ Riesgo por olas de calor urbano en Cartagena, Bolívar bajo escenarios de cambio
 ::::
 
 ::::{card}
-:url: https://github.com/scr-ungrd/cuadernos-reproducibles-crc003
+:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc003
 :footer: CRC-003 · Tsunami Tumaco 1979
 
 :::{image} ./images/tsunami-1.avif
@@ -65,10 +65,10 @@ Simulación de la propagación del Tsunami de Tumaco de 1979 en el Pacífico col
 ::::
 
 ::::{card}
-:url: https://github.com/scr-ungrd/cuadernos-reproducibles-crc004
+:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc004
 :footer: CRC-004 · Sismicidad de Colombia
 
-:::{image} ./crc004/images/banner.png
+:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-crc004/build/sismicidad_temporal-822c6f8664a7e167bcb8f39f203e230b.png
 :height: 200px
 :::
 
@@ -76,10 +76,10 @@ Análisis exploratorio de la sismicidad colombiana con el catálogo del USGS 200
 ::::
 
 ::::{card}
-:url: https://github.com/scr-ungrd/cuadernos-reproducibles-crc005
+:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc005
 :footer: CRC-005 · Inundaciones Sentinel-1
 
-:::{image} ./crc005/images/banner.png
+:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-crc005/build/inundacion_por_depar-8e2ca6abdd1d7d6dca15f2b732ed4bcf.png
 :height: 200px
 :::
 
@@ -90,7 +90,7 @@ Detección de inundaciones por La Niña 2021–2022 usando imágenes SAR Sentine
 :url: https://github.com/scr-ungrd/cuadernos-reproducibles-crc006
 :footer: CRC-006 · Escenarios El Niño 2026–2027
 
-:::{image} ./crc006/images/banner.png
+:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-crc006/build/impacto_trimestral-6b3734fb31f410e0285ab088516b247c.png
 :height: 200px
 :::
 

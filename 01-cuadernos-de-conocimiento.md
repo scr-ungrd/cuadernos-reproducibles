@@ -1,6 +1,6 @@
 ---
 title: Cuadernos Reproducibles de Conocimiento del Riesgo
-date: 2025-01-27
+date: 2026-06-27
 license: CC-BY-4.0
 keywords:
   - Notebooks
@@ -18,25 +18,21 @@ abbreviations:
   USGS: United States Geological Survey
 ---
 
-:::{figure} ./images/banner.png
-:name: banner-image
-:class: banner-image
-:width: 100%
-:::
-
 +++ {"part": "abstract"}
 
-Cuadernos Reproducibles de Conocimiento del Riesgo
+Los Cuadernos Reproducibles de Conocimiento del Riesgo de la UNGRD son documento ejecutables que combina tres elementos en un solo archivo o repositorio: Narrativa científica, código ejecutable, y resultados reproducibles. Los cuadernos abordan la evaluación de amenazas, análisis de riesgo, indicadores de vulnerabilidad y exposición, o metodologías transversales de análisis de riesgos. Deben desarrollarse con Python, Jupyter y MyST Markdown, publicarse en GitHub con licencia abierta, y cumplir los principios FAIR. Los cuadernos reproducibles son la convergencia de un artículo científico, un script reproducible y un sitio web interactivo en un solo flujo de trabajo.
+
++++
 
 ## Introducción
 
-La producción de conocimiento técnico y científico en gestión del riesgo de desastres ha crecido de manera sostenida en Colombia durante la última década. Sin embargo, persistente la brecha que separa la generación de ese conocimiento de su reutilización efectiva: los métodos quedan atrapados en artículos científicos informes institucionales de difícil acceso, los datos de entrada no se publican junto con los resultados, y los análisis rara vez pueden ser verificados, extendidos o adaptados por terceros. Esta convocatoria nace como respuesta a esa brecha.
+La producción de conocimiento técnico y científico en gestión del riesgo de desastres ha crecido de manera sostenida en Colombia durante la última década. Sin embargo, persistente la brecha que separa la generación de ese conocimiento de su reutilización efectiva: los métodos quedan atrapados en artículos científicos, capítulos de libros o informes técnicos e institucionales, los datos de entrada no se publican junto con los resultados, o los análisis rara vez pueden ser verificados, extendidos o adaptados por terceros. Esta convocatoria nace como respuesta a esa brecha.
 
-La Subdirección para el Conocimiento del Riesgo de la Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD), en el marco de la Plataforma Riesgos como proyecto de ciencia abierta alojado en GitHub, convoca a investigadores, analistas y profesionales técnicos del Sistema Nacional para la Gestión del Riesgo de Desastres (SNGRD) y de la comunidad académica en general a presentar cuadernos computacionales reproducibles que documenten metodologías, análisis y flujos de trabajo aplicados al conocimiento del riesgo en Colombia.
+La Subdirección para el Conocimiento del Riesgo de la Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD) y la Comisión Nacional Asesora para el Fomento de la Ciencia, Tecnología e Innovación  convoca a investigadores, analistas y profesionales en general del Sistema Nacional para la Gestión del Riesgo de Desastres (SNGRD) a presentar cuadernos computacionales reproducibles que documenten metodologías, análisis y flujos de trabajo aplicados al proceso de conocimiento del riesgo, con potenciales alicaciones a los procesos de reducción del riesgo y manejo de desastres.
 
-Los Cuadernos Reproducibles de Conocimiento del Riesgo tienen el objetivo de compartir datos, herramientas y flujos de trabajo para fomentar la investigación y tecnologías reproducibles y reutilizables en gestión del riesgo de desastres.
+Los Cuadernos Reproducibles de Conocimiento del Riesgo tienen el objetivo de compartir datos, herramientas y flujos de trabajo para fomentar la ciencia y tecnologías reproducibles y reutilizables en gestión del riesgo de desastres.
 
-Un cuaderno computacional reproducible no es simplemente un script con comentarios: es un documento científico ejecutable que combina narrativa explicativa, código verificable, datos de entrada accesibles y resultados interpretados en un único objeto publicable. Esta concepción está en el corazón del movimiento internacional de ciencia abierta soportado que los principios FAIR —Findable, Accessible, Interoperable, Reusable— que son la base de toda publicación científica moderna orientada a la transparencia y la reproducibilidad, especialmente en estudios con alta densidad de datos y computación intensiva. Los cuadernos computacionales son hoy el vehículo más directo para operacionalizar esos principios.
+Un cuaderno computacional reproducible no es simplemente un script con comentarios: es un documento ejecutable que combina narrativa explicativa, código verificable, datos de entrada accesibles y resultados para interprerse y aplicarse en la toma de decisiones. Esta concepción está en el corazón del movimiento internacional de ciencia abierta soportado que los principios FAIR —Findable, Accessible, Interoperable, Reusable— que son la base de toda publicación científica moderna orientada a la transparencia y la reproducibilidad, especialmente en estudios con alta densidad de datos y computación intensiva. Los cuadernos computacionales son hoy el vehículo más directo para operacionalizar esos principios.
 
 Existen iniciativas internacionales de referencia han consolidado ecosistemas de cuadernos abiertos que articulan datos, métodos y narrativa dentro de repositorios públicos en GitHub. Algunos ejemplos son:
 
@@ -47,13 +43,13 @@ Existen iniciativas internacionales de referencia han consolidado ecosistemas de
 -   Proyecto Pythia (https://projectpythia.org/)
 -   EM-DAT (https://github.com/em-dat/)
 
-Estas iniciativas emplean arquitecturas que implementan usando Jupyter Notebooks enriquecidos con MyST Markdown, organizados por amenaza y publicados bajo licencia abierta, que en conjunto constituyen el modelo de referencia que esta convocatoria adopta y adapta al contexto colombiano. El propósito de esta convocatoria es doble: construir un corpus verificable de metodologías computacionales para el análisis del riesgo en Colombia, y establecer una comunidad de práctica que eleve los estándares de reproducibilidad y apertura en el campo de la gestión del riesgo a nivel institucional y académico.
+Estas iniciativas emplean arquitecturas que implementan cuadernos Jupyter enriquecidos con MyST Markdown y publicados bajo licencia abierta, que en conjunto constituyen el modelo de referencia que esta convocatoria adopta y adapta al contexto colombiano con dos objetivos: construir un corpus verificable de metodologías computacionales para el análisis del riesgo en Colombia, y establecer una comunidad de práctica que eleve los estándares de reproducibilidad y apertura en el campo de la gestión del riesgo a nivel institucional y académico.
 
 ## Enfoque de los cuadernos
 
-Esta convocatoria define los cuadernos aceptables a partir de cuatro líneas temáticas prioritarias, que corresponden a los componentes centrales del análisis del riesgo conforme al Marco de Sendai para la Reducción del Riesgo de Desastres 2015–2030 y a la Ley 1523 de 2012:
+Esta convocatoria define los cuadernos aceptables a partir de cuatro líneas temáticas, que corresponden al análisis del riesgo conforme al Marco de Sendai para la Reducción del Riesgo de Desastres 2015–2030 y a la Ley 1523 de 2012:
 
-**Evaluación de amenazas**. Cuadernos que documenten metodologías para la caracterización, modelación o cartografía de amenazas naturales o socio naturales como inundaciones, movimientos en masa, sismos, sequías, incendios de la cobertura vegetal, entre otras— relevantes para el territorio colombiano. Se valoran especialmente los enfoques probabilísticos, el uso de series históricas de registros institucionales (e.g. desde UNGRD, IDEAM, SGC, IGAC) y la integración de escenarios de cambio climático.
+**Evaluación de amenazas**. Cuadernos que documenten metodologías para la caracterización, modelación o cartografía de amenazas naturales,  socio naturales o antrópicas relevantes para el territorio colombiano. Se valoran especialmente los enfoques probabilísticos, el uso de series históricas con fuentes institucionales (e.g. desde UNGRD, IDEAM, SGC, IGAC), así como la integración de escenarios de cambio climático.
 
 **Análisis de riesgo**. Cuadernos que articulen datos de amenaza con información de exposición y vulnerabilidad para estimar el riesgo relativo o absoluto a nivel municipal, departamental o de cuenca. Este tipo de contribución sigue la arquitectura metodológica consolidada por plataformas como CLIMAAX, donde los flujos de trabajo separan explícitamente la evaluación de la amenaza del análisis del riesgo en cuadernos encadenados dentro de un mismo repositorio.
 

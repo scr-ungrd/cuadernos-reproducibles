@@ -55,7 +55,5 @@ site:
       url: /cuadernos-de-conocimiento
     - title: Convocatoria
       url: /convocatoria-cuadernos
-    - title: Colección
-      url: /crc001/article
   parts:
     footer: footer.md
