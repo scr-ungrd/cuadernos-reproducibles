@@ -87,7 +87,7 @@ Detección de inundaciones por La Niña 2021–2022 usando imágenes SAR Sentine
 ::::
 
 ::::{card}
-:url: https://github.com/scr-ungrd/cuadernos-reproducibles-crc006
+:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc006/
 :footer: CRC-006 · Escenarios El Niño 2026–2027
 
 :::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-crc006/build/impacto_trimestral-6b3734fb31f410e0285ab088516b247c.png
