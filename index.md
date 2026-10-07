@@ -68,7 +68,7 @@ Simulación de la propagación del Tsunami de Tumaco de 1979 en el Pacífico col
 :url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc004
 :footer: CRC-004 · Sismicidad de Colombia
 
-:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-crc004/build/sismicidad_temporal-6452b66d20214de2fa67cc6ded5baef3.png
+:::{image} ./images/crc004-sismicidad.png
 :height: 200px
 :::
 
@@ -79,7 +79,7 @@ Análisis exploratorio de la sismicidad colombiana con el catálogo del USGS 200
 :url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc005
 :footer: CRC-005 · Inundaciones Sentinel-1
 
-:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-crc005/build/inundacion_por_depar-549c0b5c75107498eee8e8845c40fe8a.png
+:::{image} ./images/crc005-inundacion.png
 :height: 200px
 :::
 
@@ -90,7 +90,7 @@ Detección de inundaciones por La Niña 2021–2022 usando imágenes SAR Sentine
 :url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc006/
 :footer: CRC-006 · Escenarios El Niño 2026–2027
 
-:::{image} https://scr-ungrd.github.io/cuadernos-reproducibles-crc006/build/impacto_trimestral-8bb17f4323539acfcfed0cac8992d9fb.png
+:::{image} ./images/crc006-impacto.png
 :height: 200px
 :::
 
