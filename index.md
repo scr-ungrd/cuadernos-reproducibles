@@ -97,17 +97,6 @@ Detección de inundaciones por La Niña 2021–2022 usando imágenes SAR Sentine
 Posibles escenarios de riesgo en Colombia ante un eventual Fenómeno El Niño 2026–2027, basados en el análogo histórico 2023–2024. Mapas interactivos, rankings departamentales y análisis temporal.
 ::::
 
-::::{card}
-:url: https://github.com/scr-ungrd/visor-nino-2026-2027
-:footer: Visor Interactivo · El Niño 2026–2027
-
-:::{image} ./images/ungrd-2.jpg
-:height: 200px
-:::
-
-Visor analítico interactivo de escenarios de riesgo para el Fenómeno El Niño 2026–2027. Filtros dinámicos por departamento, fenómeno y métrica de impacto humanitario.
-::::
-
 :::::
 
 +++ {"kind": "logo-cloud"}
