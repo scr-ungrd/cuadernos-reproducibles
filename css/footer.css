@@ -53,3 +53,91 @@ body {
     font-weight: bold;
   }
 }
+
+/* ===== Landing estilo Elemental Microscopy ===== */
+/* Variables: modo día (por defecto) y modo noche (html.dark) */
+:root { --lp-bg: #F5F4F0; --lp-fg: #1C1C2E; --lp-title: #1C1C2E; --lp-muted: #5C5C7A; --lp-line: rgba(35,42,96,.10); --lp-link: #232A60; }
+html.dark { --lp-bg: #15151E; --lp-fg: #E8E8F2; --lp-title: #FFFFFF; --lp-muted: #9898A8; --lp-line: rgba(255,255,255,.07); --lp-link: #9ec5ff; }
+
+body:has(.hero), body:has(.hero) main { background: var(--lp-bg) !important; color: var(--lp-fg); }
+body:has(.hero) .myst-top-nav { background: var(--lp-bg) !important; color: var(--lp-fg); box-shadow: 0 1px 0 var(--lp-line); }
+body:has(.hero) .myst-top-nav a, body:has(.hero) .myst-top-nav .myst-home-link, body:has(.hero) .myst-top-nav .myst-theme-button { color: var(--lp-fg) !important; }
+body:has(.hero) .myst-top-nav .myst-theme-button { border-color: var(--lp-fg) !important; }
+
+/* Botón día/noche en la esquina superior izquierda */
+.myst-top-nav-bar > div.flex-grow { display: contents; }
+.myst-top-nav-bar .myst-theme-button { order: -2; margin-right: .75rem; }
+.myst-top-nav-bar > div:first-child { order: -1; }
+
+/* Hero (siempre oscuro, con texto blanco, en ambos modos) */
+.hero { position: relative; min-height: 460px; display: flex; align-items: center; overflow: hidden; margin-bottom: 2.5rem; }
+.hero .hero-bg, .hero img.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; margin: 0; }
+.hero figure { position: absolute; inset: 0; margin: 0; }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(6,11,22,.88) 0%, rgba(6,11,22,.55) 55%, rgba(6,11,22,.25) 100%); }
+.hero-content { position: relative; z-index: 2; max-width: 52rem; padding: 3.5rem max(1.5rem, 6vw); color: #fff; }
+.hero-content > p:first-child { font-size: .85rem; letter-spacing: .04em; font-weight: 500; opacity: .9; margin: 0 0 .6rem; }
+.hero-content h1, .hero-content h2 { font-size: clamp(2.6rem, 6vw, 4.4rem); line-height: 1.05; font-weight: 700; color: #fff; margin: 0 0 1.2rem; }
+.hero-content p { font-size: 1.25rem; line-height: 1.6; color: #fff; }
+.hero-content a.button { background: #fff; color: #0b1220 !important; border-radius: 6px; padding: .6rem 1.4rem; font-weight: 500; text-decoration: none; display: inline-block; margin-top: .8rem; }
+.hero-credit { position: absolute; z-index: 2; right: 1rem; bottom: .5rem; font-size: .7rem; color: rgba(255,255,255,.75); max-width: 28rem; text-align: right; }
+.hero-credit p { margin: 0; }
+
+.intro { max-width: 46rem; margin: 0 auto 2.5rem; color: var(--lp-fg); }
+.intro p { line-height: 1.7; }
+.intro strong { color: var(--lp-title); }
+
+body:has(.hero) h2:not(.hero-content h2), body:has(.hero) h3 { color: var(--lp-title); width: 100%; max-width: 46rem; margin-left: auto; margin-right: auto; text-align: left; }
+
+/* Tarjetas: una por fila, miniatura a la izquierda */
+body:has(.hero) .myst-card { max-width: 46rem; margin: 0 auto !important; background: transparent !important; border: 0 !important; border-bottom: 1px solid var(--lp-line) !important; border-radius: 0 !important; box-shadow: none !important; display: block; }
+body:has(.hero) .myst-card .myst-card-body { display: grid; grid-template-columns: 190px 1fr; column-gap: 1.4rem; padding: 1.4rem 0 !important; align-items: start; }
+body:has(.hero) .myst-card .myst-card-body > :first-child { grid-row: 1 / span 4; margin: 0; }
+body:has(.hero) .myst-card img { width: 190px; height: 120px; object-fit: cover; border-radius: 6px; margin: 0 !important; }
+body:has(.hero) .myst-card .myst-card-body > :not(:first-child) { grid-column: 2; margin: 0 0 .5rem; }
+body:has(.hero) .myst-card strong { font-size: 1.25rem; line-height: 1.3; color: var(--lp-title); }
+body:has(.hero) .myst-card p { color: var(--lp-muted); font-size: .95rem; line-height: 1.5; }
+body:has(.hero) .myst-card .myst-card-body > :last-child { font-size: .8rem; }
+body:has(.hero) .myst-card:hover strong { text-decoration: underline; }
+.see-all { max-width: 46rem; margin: 2rem auto 3rem; }
+.see-all a { color: var(--lp-link); }
+
+@media (max-width: 640px) {
+  body:has(.hero) .myst-card .myst-card-body { grid-template-columns: 1fr; }
+  body:has(.hero) .myst-card .myst-card-body > :first-child { grid-row: auto; }
+  body:has(.hero) .myst-card .myst-card-body > :not(:first-child) { grid-column: 1; }
+  body:has(.hero) .myst-card img { width: 100%; height: 180px; }
+  .hero { min-height: 520px; }
+}
+
+/* Íconos de la barra superior: Hub, GitHub y traducción (Bootstrap Icons, MIT) */
+.myst-top-nav a[href^="https://scr-ungrd.github.io/hub"],
+.myst-top-nav a[href^="https://github.com/scr-ungrd/cuadernos-reproducibles"],
+.myst-top-nav a[href^="https://translate.google.com/translate"] {
+  font-size: 0 !important; width: 2.25rem; height: 2.25rem; padding: 0 !important; margin: 0 .1rem !important;
+  display: inline-flex; align-items: center; justify-content: center; border-radius: 6px;
+}
+.myst-top-nav a[href^="https://scr-ungrd.github.io/hub"]::before,
+.myst-top-nav a[href^="https://github.com/scr-ungrd/cuadernos-reproducibles"]::before,
+.myst-top-nav a[href^="https://translate.google.com/translate"]::before {
+  content: ""; width: 1.25rem; height: 1.25rem; background-color: currentColor;
+  -webkit-mask: var(--ico) center / contain no-repeat; mask: var(--ico) center / contain no-repeat;
+}
+.myst-top-nav a[href^="https://scr-ungrd.github.io/hub"]:hover,
+.myst-top-nav a[href^="https://github.com/scr-ungrd/cuadernos-reproducibles"]:hover,
+.myst-top-nav a[href^="https://translate.google.com/translate"]:hover { background: rgba(127,127,127,.18); }
+.myst-top-nav a[href^="https://scr-ungrd.github.io/hub"] { --ico: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 fill=%22black%22 class=%22bi bi-diagram-3-fill%22 viewBox=%220 0 16 16%22%3E %3Cpath fill-rule=%22evenodd%22 d=%22M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5zm-6 8A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5zm6 0A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5zm6 0a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5z%22/%3E %3C/svg%3E"); }
+.myst-top-nav a[href^="https://github.com/scr-ungrd/cuadernos-reproducibles"] { --ico: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 fill=%22black%22 class=%22bi bi-github%22 viewBox=%220 0 16 16%22%3E %3Cpath d=%22M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8%22/%3E %3C/svg%3E"); }
+.myst-top-nav a[href^="https://translate.google.com/translate"] { --ico: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 fill=%22black%22 class=%22bi bi-translate%22 viewBox=%220 0 16 16%22%3E %3Cpath d=%22M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z%22/%3E %3Cpath d=%22M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31%22/%3E %3C/svg%3E"); }
+
+/* Logos de herramientas en el pie original */
+.footer .footer-logos p { display: flex; flex-wrap: wrap; align-items: center; gap: .9rem 1.1rem; margin: .75rem 0; }
+.footer .footer-logos a { display: inline-flex; opacity: .9; transition: opacity .15s; }
+.footer .footer-logos a:hover { opacity: 1; }
+.footer .footer-logos a { flex-shrink: 0; }
+.footer .footer-logos img { height: 30px !important; width: auto !important; max-width: none !important; margin: 0; }
+.footer .footer-logos a[href*="mystmd"] img { filter: brightness(0) invert(1); }
+
+/* Sección inferior con el aviso de la Subdirección (franja azul del Hub) */
+.footer .footer-notice { background: #223764; color: #fff; border-top: 1px solid rgba(255,255,255,.1); text-align: center; font-size: .85rem; padding: 1.25rem 1rem; margin: 2rem -3.5rem -2.5rem; width: calc(100% + 7rem); }
+.footer .footer-notice p { margin: 0; color: #fff; opacity: .6; }
+.footer .footer-logos a[href*="zenodo"] img { height: 24px !important; }

@@ -55,5 +55,11 @@ site:
       url: /cuadernos-de-conocimiento
     - title: Convocatoria
       url: /convocatoria-cuadernos
+    - title: HUB SCR — portal de proyectos
+      url: https://scr-ungrd.github.io/hub/
+    - title: Repositorio en GitHub
+      url: https://github.com/scr-ungrd/cuadernos-reproducibles
+    - title: Translate to English
+      url: https://translate.google.com/translate?sl=es&tl=en&u=https://scr-ungrd.github.io/cuadernos-reproducibles/
   parts:
     footer: footer.md

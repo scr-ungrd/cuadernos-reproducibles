@@ -5,12 +5,23 @@
 
 # Cuadernos Reproducibles de Conocimiento del Riesgo de Desastres
 
-```{image} ./images/mystmd.svg
-:width: 50px
-:align: left
-```
+:::{div}
+:class: footer-logos
 
-Comunicación científica moderna con MyST Markdown y Jupyter. 
+[![MyST Markdown](./images/mystmd.svg)](https://mystmd.org)
+[![Jupyter](./images/logo-jupyter.svg)](https://jupyter.org)
+[![Markdown](./images/logo-markdown.svg)](https://commonmark.org)
+[![Google Colab](./images/logo-googlecolab.svg)](https://colab.research.google.com)
+[![GitHub](./images/logo-github.svg)](https://github.com/scr-ungrd/cuadernos-reproducibles)
+[![Python](./images/logo-python.svg)](https://www.python.org)
+[![R](./images/logo-r.svg)](https://www.r-project.org)
+[![Binder](./images/logo-binder.svg)](https://mybinder.org)
+[![Zenodo](./images/logo-zenodo.svg)](https://zenodo.org)
+[![Creative Commons CC BY-SA 4.0](./images/logo-creativecommons.svg)](https://creativecommons.org/licenses/by-sa/4.0/deed.es)
+[![Principios FAIR (Wilkinson et al., 2016, Scientific Data)](./images/logo-fair.svg)](https://www.nature.com/articles/sdata201618)
+:::
+
+Comunicación científica moderna con MyST Markdown y Jupyter.
 ::::
 
 ::::{div}
@@ -27,8 +38,8 @@ Comunicación científica moderna con MyST Markdown y Jupyter.
 
 :::{div}
 
-- [Paper](03-paper.md)
-- [Notebook](04-notebook.ipynb)
+- [Guía para publicar](01-cuadernos-de-conocimiento.md)
+- [Convocatoria](02-convocatoria-cuadernos.md)
   :::
 
 :::{div}
@@ -39,3 +50,9 @@ Comunicación científica moderna con MyST Markdown y Jupyter.
 ::::
 
 :::::
+
+::::{div}
+:class: footer-notice col-screen
+
+© 2026 Subdirección para el Conocimiento del Riesgo - UNGRD. Todos los derechos reservados.
+::::

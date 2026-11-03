@@ -6,124 +6,118 @@ site:
   hide_outline: true
 ---
 
-+++ { "kind": "split-image" }
+:::::{div}
+:class: hero col-screen
 
-Ciencia abierta para la gestión del riesgo
+```{image} ./images/hero-barranquilla-sentinel2.jpg
+:alt: Imagen satelital Sentinel-2 de Barranquilla y la desembocadura del río Magdalena
+:class: hero-bg
+```
 
-## Cuadernos Reproducibles de Conocimiento del Riesgo de Desastres
+::::{div}
+:class: hero-content
 
-Colección de cuadernos estructurados, replicables e interactivos en Markdown y Jupyter para la Gestión del Riesgo de Desastres en Colombia.
+SUBDIRECCIÓN PARA EL CONOCIMIENTO DEL RIESGO · UNGRD
 
-![Demostración interactiva de MyST Markdown](./images/interactive.gif)
+# Cuadernos Reproducibles
 
-{button}`Instrucciones para publicar <01-cuadernos-de-conocimiento.md>`
+Publicamos cuadernos abiertos, ejecutables e interactivos que muestran cómo analizar las amenazas, la exposición y la vulnerabilidad en Colombia, con datos públicos, código y resultados que cualquiera puede reproducir.
 
-+++ { "kind": "justified"}
+{button}`Cuadernos recientes <#cuadernos>`
+::::
 
-¿Qué análisis puedes hacer?
+::::{div}
+:class: hero-credit
 
-## Nuestra colección de cuadernos reproducibles
+Imagen: Barranquilla y el río Magdalena, 31 de marzo de 2024. Contiene datos modificados de Copernicus Sentinel (2024), Unión Europea.
+::::
+:::::
 
-:::::{grid} 1 2 3 3
-::::{card}
-:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc001
-:footer: CRC-001 · Cambio climático Montería
+:::{div}
+:class: intro
 
-:::{image} ./images/climate-change-1.gif
-:height: 200px
+**Cuadernos Reproducibles de Conocimiento del Riesgo de Desastres** es una colección en línea de la Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD). Cada cuaderno es **interactivo**: reúne el texto, el código y los resultados en un mismo documento que se puede ejecutar en la nube, sin instalar nada.
+
+Cubre **cambio climático**, **olas de calor**, **sismos**, **tsunamis**, **inundaciones** y **fenómeno El Niño**, y está dirigida a equipos técnicos, autoridades territoriales, academia y quienes toman decisiones en **gestión del riesgo de desastres**. Todo se publica bajo principios de **ciencia abierta**.
 :::
 
-Escenarios de cambio climático en Montería hasta el año 2074. Evidencia para tomar decisiones de reducción del riesgo por el aumento de la temperatura media anual.
-
-*Fuente: bgr.com / Global Warming GIF (2015)*
-::::
+(cuadernos)=
+## Cuadernos recientes
 
 ::::{card}
 :url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc002
-:footer: CRC-002 · Calor urbano Cartagena
 
-:::{image} ./images/olas-calor-1.jpg
-:height: 200px
-:::
+![Mapa de riesgo por olas de calor urbano](./images/olas-calor-1.jpg)
 
-Riesgo por olas de calor urbano en Cartagena, Bolívar bajo escenarios de cambio climático.
+**Riesgo por olas de calor urbano en Cartagena, Bolívar, bajo escenarios de cambio climático**
 
-*Imagen elaborada por el autor*
+Cuaderno de la serie CRC-002. Riesgo por olas de calor urbano en Cartagena bajo escenarios de cambio climático, con datos de IDEAM, NEX-GDDP, Landsat y WorldPop en seis fases, según el marco del IPCC AR6.
+
+Subdirección para el Conocimiento del Riesgo · 2 nov 2026
 ::::
 
 ::::{card}
 :url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc003
-:footer: CRC-003 · Tsunami Tumaco 1979
 
-:::{image} ./images/tsunami-1.avif
-:height: 200px
-:::
+![Fotografía del tsunami de Tumaco de 1979](./images/tsunami-1.avif)
 
-Simulación de la propagación del Tsunami de Tumaco de 1979 en el Pacífico colombiano.
+**Simulación del tsunami de Tumaco de 1979 (versión 2)**
 
-*Foto: G. Cajiao Lenis / Servicio Geológico Colombiano*
+Cuaderno de la serie CRC-003. Propagación del tsunami del 12 de diciembre de 1979 (Mw 8,3) en el Pacífico colombiano con una fuente de Okada y aguas someras lineales, ejecutable en Google Colab.
+
+Subdirección para el Conocimiento del Riesgo · 2 nov 2026
 ::::
 
 ::::{card}
 :url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc004
-:footer: CRC-004 · Sismicidad de Colombia
 
-:::{image} ./images/crc004-sismicidad.png
-:height: 200px
-:::
+![Mapa de sismicidad de Colombia](./images/crc004-sismicidad.png)
 
-Análisis exploratorio de la sismicidad colombiana con el catálogo del USGS 2000–2024. Mapas interactivos, estadísticas por departamento y zonas de mayor actividad sísmica.
-::::
+**Análisis de sismicidad de Colombia**
 
-::::{card}
-:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc005
-:footer: CRC-005 · Inundaciones Sentinel-1
+Cuaderno de la serie CRC-004. Análisis exploratorio de la sismicidad colombiana con el catálogo del USGS 2000–2024. Incluye mapas interactivos, estadísticas por departamento y zonas de mayor actividad sísmica.
 
-:::{image} ./images/crc005-inundacion.png
-:height: 200px
-:::
-
-Detección de inundaciones por La Niña 2021–2022 usando imágenes SAR Sentinel-1 en Google Earth Engine. Análisis de cambio de retrodispersión y cartografía por departamento.
+Subdirección para el Conocimiento del Riesgo · 30 jun 2026
 ::::
 
 ::::{card}
 :url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc006/
-:footer: CRC-006 · Escenarios El Niño 2026–2027
 
-:::{image} ./images/crc006-impacto.png
-:height: 200px
-:::
+![Mapa de impacto del fenómeno El Niño](./images/crc006-impacto.png)
 
-Posibles escenarios de riesgo en Colombia ante un eventual Fenómeno El Niño 2026–2027, basados en el análogo histórico 2023–2024. Mapas interactivos, rankings departamentales y análisis temporal.
+**Escenarios de riesgo ante el fenómeno El Niño 2026–2027**
+
+Cuaderno de la serie CRC-006. Posibles escenarios de riesgo en Colombia ante un eventual fenómeno El Niño 2026–2027, basados en el análogo histórico 2023–2024. Incluye mapas interactivos, rankings departamentales y análisis temporal.
+
+Christian Euscátegui y Moises Santizo · 21 may 2026
 ::::
 
-:::::
+::::{card}
+:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc001
 
-+++ {"kind": "logo-cloud"}
+![Animación de calentamiento global](./images/climate-change-1.gif)
 
-Ecosistema que lo hace posible
+**Proyección de temperatura en Montería, Córdoba, bajo escenarios de cambio climático**
 
-::::{grid} 1 2 3 3
+Cuaderno de la serie CRC-001. Escenarios de cambio climático en Montería hasta el año 2074, con análisis probabilístico en CLIMADA. Aporta evidencia para decidir medidas de reducción del riesgo por el aumento de la temperatura media anual.
 
-:::{figure} ./images/jupyter.png
-:height: 100px
-Jupyter
-:::
-
-:::{figure} ./images/mystmd.svg
-:height: 100px
-MyST Markdown
-:::
-
-:::{figure} ./images/nasa-tops.webp
-:height: 100px
-NASA TOPS
-:::
-
+Subdirección para el Conocimiento del Riesgo · 4 may 2026 · DOI 10.5281/zenodo.20061610
 ::::
 
-{button}`Ver documentación de MyST <https://mystmd.org/guide>`
+::::{card}
+:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc005
 
-+++ { "kind": "centered"}
+![Mapa de inundaciones detectadas con Sentinel-1](./images/crc005-inundacion.png)
 
-:::::
+**Detección de inundaciones con Sentinel-1 SAR y Google Earth Engine**
+
+Cuaderno de la serie CRC-005. Detección de inundaciones por La Niña 2021–2022 con imágenes SAR Sentinel-1 en Google Earth Engine. Analiza el cambio de retrodispersión y elabora cartografía por departamento.
+
+Subdirección para el Conocimiento del Riesgo · 1 ene 2026
+::::
+
+:::{div}
+:class: see-all
+
+[Guía para publicar un cuaderno](01-cuadernos-de-conocimiento.md) · [Convocatoria](02-convocatoria-cuadernos.md)
+:::
