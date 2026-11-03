@@ -19,6 +19,7 @@
 [![Zenodo](./images/logo-zenodo.svg)](https://zenodo.org)
 [![Creative Commons CC BY-SA 4.0](./images/logo-creativecommons.svg)](https://creativecommons.org/licenses/by-sa/4.0/deed.es)
 [![Principios FAIR (Wilkinson et al., 2016, Scientific Data)](./images/logo-fair.svg)](https://www.nature.com/articles/sdata201618)
+[![Principios CARE para la gobernanza de datos indígenas (GIDA)](./images/logo-care.svg)](https://www.gida-global.org/careprinciples)
 :::
 
 Comunicación científica moderna con MyST Markdown y Jupyter.
