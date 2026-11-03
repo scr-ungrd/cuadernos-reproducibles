@@ -39,6 +39,7 @@ site:
   template: book-theme
   title: Cuadernos Reproducibles — UNGRD
   options:
+    favicon: ./images/favicon.png
     logo_text: "Cuadernos · UNGRD"
     style: ./css/footer.css
     url: https://scr-ungrd.github.io/cuadernos-reproducibles
