@@ -33,6 +33,10 @@ Imagen: Barranquilla y el río Magdalena, 31 de marzo de 2024. Contiene datos mo
 ::::
 :::::
 
+:::{warning} Proyecto en fase piloto
+Este proyecto está en fase piloto. La convocatoria aún no se ha abierto, los cuadernos no han sido validados por expertos y el proyecto se presenta únicamente con fines de demostración.
+:::
+
 :::{div}
 :class: intro
 
