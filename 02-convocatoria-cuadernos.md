@@ -270,20 +270,22 @@ openai          # modelos de lenguaje (vía API)
 
 Prepara tu cuaderno siguiendo los requisitos técnicos descritos. Asegúrate de que se ejecute de forma completa sin errores en un entorno limpio.
 
-### Paso 2 — Clonar el repositorio
+### Paso 2 — Crear tu repositorio desde la plantilla
+
+Cada cuaderno vive en su propio repositorio público de GitHub. Para crearlo, abre la [plantilla de cuadernos reproducibles](https://github.com/scr-ungrd/cuadernos-reproducibles-crc000), pulsa **Use this template → Create a new repository** y asigna un nombre a tu repositorio. Luego clónalo en tu equipo:
 
 ```bash
-git clone https://github.com/scr-ungrd/riesgos.git
-cd riesgos
+git clone https://github.com/<tu-usuario>/<tu-repositorio>.git
+cd <tu-repositorio>
 ```
 
 ### Paso 3 — Ubicar el cuaderno
 
-Coloca tu cuaderno en la carpeta `notebooks/` y, si aplica, los datos de prueba en `notebooks/data/` o mediante descarga automática desde fuentes abiertas al interior del cuaderno.
+Coloca tu cuaderno en la carpeta `notebooks/` de tu repositorio y, si aplica, los datos de prueba en `data/` o mediante descarga automática desde fuentes abiertas al interior del cuaderno. Actualiza `myst.yml` con los autores, afiliaciones y palabras clave, y `environment.yml` con las dependencias.
 
-### Paso 4 — Abrir un Pull Request
+### Paso 4 — Postular el cuaderno
 
-Crea una rama con el nombre de tu cuaderno, sube los archivos y abre un **Pull Request** en el repositorio de GitHub con la siguiente información en la descripción:
+Cuando tu repositorio esté público y el cuaderno se ejecute completo, abre un **issue** en el [repositorio de la plataforma](https://github.com/scr-ungrd/cuadernos-reproducibles/issues) con el enlace a tu repositorio y la siguiente información:
 
 - Nombre del cuaderno y autores
 - Institución o afiliación
@@ -293,6 +295,41 @@ Crea una rama con el nombre de tu cuaderno, sube los archivos y abre un **Pull R
 - Breve descripción metodológica (máximo 200 palabras)
 
 El equipo de la Subdirección para el Conocimiento del Riesgo revisará la postulación y podrá solicitar ajustes antes de publicar.
+
+### Paso 5 — Hacer el proceso con ayuda de una IA
+
+Si usas un asistente de IA con acceso a tu equipo y a GitHub (por ejemplo, Claude Code, Codex o Copilot en modo agente), puedes delegarle los pasos 2 a 4. Copia el siguiente prompt, reemplaza los valores entre `<` y `>` y pégalo en tu asistente:
+
+````text
+Quiero postular un cuaderno reproducible a la convocatoria de Cuadernos Reproducibles de Conocimiento del Riesgo de la UNGRD. Ayúdame a hacerlo paso a paso.
+
+Datos del cuaderno:
+- Nombre del cuaderno: <nombre>
+- Autores: <nombres>
+- Institución o afiliación: <institución>
+- Amenaza o fenómeno analizado: <amenaza>
+- Región geográfica: <región>
+- Fuentes de datos: <fuentes>
+- Ruta local de mi cuaderno (.ipynb): <ruta>
+- Mi usuario de GitHub: <usuario>
+
+Tareas:
+1. Crea un repositorio público en mi cuenta de GitHub a partir de la plantilla https://github.com/scr-ungrd/cuadernos-reproducibles-crc000 (nombre sugerido: cuadernos-reproducibles-<codigo-o-tema>) y clónalo en mi equipo.
+2. Copia mi cuaderno a la carpeta notebooks/ y los datos de prueba a data/. Si el cuaderno descarga datos de fuentes abiertas, deja la descarga automática y documenta el acceso.
+3. Actualiza myst.yml (título, autores, afiliaciones, palabras clave, licencia), environment.yml (dependencias con versiones fijas) y README.md (título, descripción, instrucciones de instalación, datos de entrada y ejemplo de ejecución). Conserva una licencia abierta.
+4. Verifica que el cuaderno se ejecute completo y sin errores en un entorno limpio creado desde environment.yml, y que `myst build --html` funcione. Si algo falla, corrígelo o dime qué necesitas de mí.
+5. Muéstrame un resumen de los cambios y espera mi confirmación antes de hacer commit y push.
+6. Después de mi confirmación, haz commit y push, y abre un issue en https://github.com/scr-ungrd/cuadernos-reproducibles/issues con el enlace a mi repositorio y estos datos: nombre y autores, institución, amenaza o fenómeno, región, fuentes de datos y una descripción metodológica de máximo 200 palabras.
+
+Reglas:
+- No inventes datos, resultados ni referencias; si falta información, pregúntamela.
+- No publiques nada (push, repositorio público o issue) sin mi confirmación.
+- No incluyas credenciales, tokens ni datos personales en el repositorio.
+````
+
+:::{warning}
+Revisa siempre lo que genere la IA antes de confirmar la publicación. La responsabilidad sobre el contenido del cuaderno, los datos y las licencias es de los autores.
+:::
 
 :::{admonition} ¿No tienes cuenta de GitHub?
 :class: note
@@ -367,7 +404,6 @@ Esta convocatoria se inscribe en los siguientes instrumentos:
 - **Marco de Sendai para la Reducción del Riesgo de Desastres 2015–2030** — En particular la Prioridad 1: comprender el riesgo de desastres
 - **Agenda 2030 para el Desarrollo Sostenible** — ODS 11 (ciudades resilientes) y ODS 13 (acción por el clima)
 - **Política Nacional de Ciencia, Tecnología e Innovación** — Principios de ciencia abierta y acceso libre al conocimiento
-- **Plan Nacional de Desarrollo "Colombia, Potencia Mundial de la Vida"** — Eje de transformación territorial y gestión del riesgo
 
 ---
 
@@ -390,7 +426,7 @@ Si los datos son públicos pero requieren registro previo (como GEE o ERA5), deb
 
 :::{admonition} ¿Puedo modificar o actualizar mi cuaderno después de publicado?
 :class: note
-Sí, a través de nuevos Pull Requests. La plataforma lleva historial de versiones mediante git.
+Sí. Actualiza tu repositorio y avisa al equipo en el issue de tu postulación. La plataforma lleva historial de versiones mediante git.
 :::
 
 ---
@@ -416,7 +452,7 @@ Descarga y análisis del catálogo sísmico público del USGS para Colombia (200
 
 Para consultas sobre la convocatoria, criterios técnicos o proceso de postulación, comunícate con la **Subdirección para el Conocimiento del Riesgo de la UNGRD**:
 
-- **GitHub**: Abre un issue en el repositorio `scr-ungrd/riesgos`
+- **GitHub**: Abre un issue en el repositorio [`scr-ungrd/cuadernos-reproducibles`](https://github.com/scr-ungrd/cuadernos-reproducibles/issues)
 - **Plataforma**: Usa el formulario de contacto disponible en el repositorio
 
 :::{note}
