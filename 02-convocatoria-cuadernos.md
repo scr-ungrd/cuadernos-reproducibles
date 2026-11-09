@@ -1,12 +1,11 @@
 ---
 title: Convocatoria — Cuadernos Reproducibles para la Gestión del Riesgo
-subtitle: Plataforma Abierta de Conocimiento · UNGRD 2025
 authors:
   - name: Subdirección para el Conocimiento del Riesgo
     affiliation: Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)
     github: scr-ungrd
 keywords: [convocatoria, cuadernos reproducibles, gestión del riesgo, Colombia, ciencia abierta, IA, amenazas naturales]
-date: 2026-05-12
+date: 2026-11-09
 ---
 
 # Convocatoria: Cuadernos Reproducibles para la Gestión del Riesgo de Desastres en Colombia
