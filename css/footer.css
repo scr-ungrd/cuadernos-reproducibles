@@ -76,7 +76,7 @@ body:has(.hero) .myst-top-nav .myst-theme-button { border-color: var(--lp-fg) !i
 .hero::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(6,11,22,.88) 0%, rgba(6,11,22,.55) 55%, rgba(6,11,22,.25) 100%); }
 .hero-content { position: relative; z-index: 2; max-width: 52rem; padding: 3.5rem max(1.5rem, 6vw); color: #fff; }
 .hero-content > p:first-child { font-size: .85rem; letter-spacing: .04em; font-weight: 500; opacity: .9; margin: 0 0 .6rem; }
-.hero-content h1, .hero-content h2 { font-size: clamp(2.6rem, 6vw, 4.4rem); line-height: 1.05; font-weight: 700; color: #fff; margin: 0 0 1.2rem; }
+.hero-content h1, .hero-content h2 { font-size: clamp(2.34rem, 5.4vw, 3.96rem); line-height: 1.05; font-weight: 700; color: #fff; margin: 0 0 1.2rem; }
 .hero-content p { font-size: 1.25rem; line-height: 1.6; color: #fff; }
 .hero-content a.button { background: #fff; color: #0b1220 !important; border-radius: 6px; padding: .6rem 1.4rem; font-weight: 500; text-decoration: none; display: inline-block; margin-top: .8rem; }
 .hero-credit { position: absolute; z-index: 2; right: 1rem; bottom: .5rem; font-size: .7rem; color: rgba(255,255,255,.75); max-width: 28rem; text-align: right; }

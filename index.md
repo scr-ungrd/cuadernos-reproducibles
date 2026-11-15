@@ -19,7 +19,7 @@ site:
 
 SUBDIRECCIÓN PARA EL CONOCIMIENTO DEL RIESGO · UNGRD
 
-# Cuadernos Reproducibles
+# Cuadernos Reproducibles de Conocimiento del Riesgo
 
 Publicamos cuadernos abiertos, ejecutables e interactivos que muestran cómo analizar las amenazas, la exposición y la vulnerabilidad en Colombia, con datos públicos, código y resultados que cualquiera puede reproducir.
 
