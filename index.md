@@ -73,15 +73,15 @@ Subdirección para el Conocimiento del Riesgo · 2 nov 2026
 ::::
 
 ::::{card}
-:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc004
+:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc003
 
-![Mapa de sismicidad de Colombia](./images/crc004-sismicidad.png)
+![Mapa de sismicidad de Colombia](./images/crc003-sismicidad.png)
 
 **Análisis de sismicidad de Colombia**
 
-Cuaderno de la serie CRC-004. Análisis exploratorio de la sismicidad colombiana con el catálogo del USGS 2000–2024. Incluye mapas interactivos, estadísticas por departamento y zonas de mayor actividad sísmica.
+Cuaderno de la serie CRC-003. Sismicidad de Colombia con el catálogo del USGS 2000–2024: magnitud de completitud, relación de Gutenberg-Richter por máxima verosimilitud, profundidad focal y mapas interactivos de epicentros.
 
-Subdirección para el Conocimiento del Riesgo · 30 jun 2026
+Subdirección para el Conocimiento del Riesgo · 16 nov 2026
 ::::
 
 ::::{card}
