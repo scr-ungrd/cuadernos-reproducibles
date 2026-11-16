@@ -84,29 +84,6 @@ Cuaderno de la serie CRC-003. Sismicidad de Colombia con el catálogo del USGS 2
 Subdirección para el Conocimiento del Riesgo · 16 nov 2026
 ::::
 
-::::{card}
-:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc006/
-
-![Mapa de impacto del fenómeno El Niño](./images/crc006-impacto.png)
-
-**Escenarios de riesgo ante el fenómeno El Niño 2026–2027**
-
-Cuaderno de la serie CRC-006. Posibles escenarios de riesgo en Colombia ante un eventual fenómeno El Niño 2026–2027, basados en el análogo histórico 2023–2024. Incluye mapas interactivos, rankings departamentales y análisis temporal.
-
-Christian Euscátegui y Moises Santizo · 21 may 2026
-::::
-
-::::{card}
-:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc005
-
-![Mapa de inundaciones detectadas con Sentinel-1](./images/crc005-inundacion.png)
-
-**Detección de inundaciones con Sentinel-1 SAR y Google Earth Engine**
-
-Cuaderno de la serie CRC-005. Detección de inundaciones por La Niña 2021–2022 con imágenes SAR Sentinel-1 en Google Earth Engine. Analiza el cambio de retrodispersión y elabora cartografía por departamento.
-
-Subdirección para el Conocimiento del Riesgo · 1 ene 2026
-::::
 
 :::{div}
 :class: see-all
