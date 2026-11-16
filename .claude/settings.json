@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:scr-ungrd.github.io)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://scr-ungrd.github.io/cuadernos-reproducibles-crc004/build/sismicidad_temporal-822c6f8664a7e167bcb8f39f203e230b.png\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://scr-ungrd.github.io/cuadernos-reproducibles-crc005/build/inundacion_por_depar-8e2ca6abdd1d7d6dca15f2b732ed4bcf.png\")",
+      "Bash(curl -s -o /dev/null -w \"CRC-004: %{http_code}\\\\n\" \"https://scr-ungrd.github.io/cuadernos-reproducibles-crc004/build/sismicidad_temporal-f12dbf0089921cd40f9ed17324cdc9be.png\")",
+      "Bash(curl -s -o /dev/null -w \"CRC-005: %{http_code}\\\\n\" \"https://scr-ungrd.github.io/cuadernos-reproducibles-crc005/build/inundacion_por_depar-549c0b5c75107498eee8e8845c40fe8a.png\")",
+      "WebFetch(domain:earthkit.ecmwf.int)",
+      "Bash(conda list *)",
+      "Bash(/Users/mauricio/anaconda3/bin/python3.13 -c \"import cartopy, matplotlib, imageio, numpy; print\\('OK'\\)\")",
+      "Bash(/Users/mauricio/anaconda3/bin/python3.13 /private/tmp/claude-501/-Users-mauricio-Documents-Data-science-local-Cuadernos-reproducibles-cuadernos-reproducibles-landing/6ed66021-9ef8-4fbd-9d28-638c61435250/scratchpad/globe_gif.py)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} %{url_effective}\" \"https://scr-ungrd.github.io/cuadernos-reproducibles-crc006/build/impacto_trimestral-6b3734fb31f410e0285ab088516b247c.png\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://scr-ungrd.github.io/cuadernos-reproducibles-crc006/build/impacto_trimestral-8bb17f4323539acfcfed0cac8992d9fb.png\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://scr-ungrd.github.io/cuadernos-reproducibles-crc006/build/impacto_trimestral-a3ad4b40d633f63f90bd8a151123f23a.png\")"
+    ]
+  }
+}

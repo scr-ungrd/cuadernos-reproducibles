@@ -79,7 +79,7 @@ Subdirección para el Conocimiento del Riesgo · 2 nov 2026
 
 **Análisis de sismicidad de Colombia**
 
-Cuaderno de la serie CRC-003. Sismicidad de Colombia con el catálogo del USGS 2000–2024: magnitud de completitud, relación de Gutenberg-Richter por máxima verosimilitud, profundidad focal y mapas interactivos de epicentros.
+Cuaderno de la serie CRC-003. Sismicidad de Colombia con el catálogo del USGS 2000–2026: magnitud de completitud, relación de Gutenberg-Richter por máxima verosimilitud, profundidad focal y mapas interactivos de epicentros.
 
 Subdirección para el Conocimiento del Riesgo · 16 nov 2026
 ::::
