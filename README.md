@@ -10,9 +10,8 @@ Este repositorio contiene solo la portada, la guía para publicar un cuaderno y 
 
 | # | Título | Amenaza | Región | Sitio | Repositorio |
 |---|--------|---------|--------|-------|-------------|
-| CRC-001 | Proyección de temperatura bajo escenarios de cambio climático | Cambio climático | Montería, Córdoba | [Ver](https://scr-ungrd.github.io/cuadernos-reproducibles-crc001/) | [crc001](https://github.com/scr-ungrd/cuadernos-reproducibles-crc001) |
-| CRC-002 | Riesgo por olas de calor urbano | Calor extremo | Cartagena, Bolívar | [Ver](https://scr-ungrd.github.io/cuadernos-reproducibles-crc002/) | [crc002](https://github.com/scr-ungrd/cuadernos-reproducibles-crc002) |
-| CRC-003 | Simulación del tsunami de Tumaco de 1979 (versión 2) | Tsunami | Pacífico colombiano | [Ver](https://scr-ungrd.github.io/cuadernos-reproducibles-crc003/) | [crc003](https://github.com/scr-ungrd/cuadernos-reproducibles-crc003) |
+| CRC-001 | Riesgo por olas de calor urbano bajo escenarios de cambio climático | Calor extremo y cambio climático | Montería, Córdoba | [Ver](https://scr-ungrd.github.io/cuadernos-reproducibles-crc001/) | [crc001](https://github.com/scr-ungrd/cuadernos-reproducibles-crc001) |
+| CRC-002 | Simulación del tsunami de Tumaco de 1979 (versión 2) | Tsunami | Pacífico colombiano | [Ver](https://scr-ungrd.github.io/cuadernos-reproducibles-crc002/) | [crc002](https://github.com/scr-ungrd/cuadernos-reproducibles-crc002) |
 | CRC-004 | Análisis de sismicidad de Colombia | Sismo | Nacional | [Ver](https://scr-ungrd.github.io/cuadernos-reproducibles-crc004/) | [crc004](https://github.com/scr-ungrd/cuadernos-reproducibles-crc004) |
 | CRC-005 | Detección de inundaciones con Sentinel-1 y Google Earth Engine | Inundación | Caribe colombiano y cuenca del Magdalena | [Ver](https://scr-ungrd.github.io/cuadernos-reproducibles-crc005/) | [crc005](https://github.com/scr-ungrd/cuadernos-reproducibles-crc005) |
 | CRC-006 | Escenarios de riesgo ante el fenómeno El Niño 2026–2027 | Fenómeno El Niño | Nacional | [Ver](https://scr-ungrd.github.io/cuadernos-reproducibles-crc006/) | [crc006](https://github.com/scr-ungrd/cuadernos-reproducibles-crc006) |

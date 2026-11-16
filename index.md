@@ -49,25 +49,25 @@ Cubre **cambio climático**, **olas de calor**, **sismos**, **tsunamis**, **inun
 ## Cuadernos recientes
 
 ::::{card}
-:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc002
+:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc001
 
-![Mapa de riesgo por olas de calor urbano](./images/olas-calor-1.jpg)
+![Mapa de riesgo por olas de calor urbano en Montería](./images/olas-calor-monteria.png)
 
-**Riesgo por olas de calor urbano en Cartagena, Bolívar, bajo escenarios de cambio climático**
+**Riesgo por olas de calor urbano en Montería, Córdoba, bajo escenarios de cambio climático**
 
-Cuaderno de la serie CRC-002. Riesgo por olas de calor urbano en Cartagena bajo escenarios de cambio climático, con datos de IDEAM, NEX-GDDP, Landsat y WorldPop en seis fases, según el marco del IPCC AR6.
+Cuaderno de la serie CRC-001. Proyección del cambio climático, olas de calor y riesgo por calor urbano en Montería, con datos de IDEAM, NEX-GDDP, Landsat y WorldPop en seis fases, según el marco del IPCC AR6.
 
-Subdirección para el Conocimiento del Riesgo · 2 nov 2026
+Subdirección para el Conocimiento del Riesgo · 15 nov 2026
 ::::
 
 ::::{card}
-:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc003
+:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc002
 
 ![Fotografía del tsunami de Tumaco de 1979](./images/tsunami-1.avif)
 
 **Simulación del tsunami de Tumaco de 1979 (versión 2)**
 
-Cuaderno de la serie CRC-003. Propagación del tsunami del 12 de diciembre de 1979 (Mw 8,3) en el Pacífico colombiano con una fuente de Okada y aguas someras lineales, ejecutable en Google Colab.
+Cuaderno de la serie CRC-002. Propagación del tsunami del 12 de diciembre de 1979 (Mw 8,3) en el Pacífico colombiano con una fuente de Okada y aguas someras lineales, ejecutable en Google Colab.
 
 Subdirección para el Conocimiento del Riesgo · 2 nov 2026
 ::::
@@ -94,18 +94,6 @@ Subdirección para el Conocimiento del Riesgo · 30 jun 2026
 Cuaderno de la serie CRC-006. Posibles escenarios de riesgo en Colombia ante un eventual fenómeno El Niño 2026–2027, basados en el análogo histórico 2023–2024. Incluye mapas interactivos, rankings departamentales y análisis temporal.
 
 Christian Euscátegui y Moises Santizo · 21 may 2026
-::::
-
-::::{card}
-:url: https://scr-ungrd.github.io/cuadernos-reproducibles-crc001
-
-![Animación de calentamiento global](./images/climate-change-1.gif)
-
-**Proyección de temperatura en Montería, Córdoba, bajo escenarios de cambio climático**
-
-Cuaderno de la serie CRC-001. Escenarios de cambio climático en Montería hasta el año 2074, con análisis probabilístico en CLIMADA. Aporta evidencia para decidir medidas de reducción del riesgo por el aumento de la temperatura media anual.
-
-Subdirección para el Conocimiento del Riesgo · 4 may 2026 · DOI 10.5281/zenodo.20061610
 ::::
 
 ::::{card}
