@@ -1,306 +1,136 @@
 ---
-title: Convocatoria — Cuadernos Reproducibles para la Gestión del Riesgo
+title: Convocatoria
+subtitle: Cuadernos reproducibles para la gestión del riesgo de desastres en Colombia
 authors:
   - name: Subdirección para el Conocimiento del Riesgo
     affiliation: Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)
     github: scr-ungrd
-keywords: [convocatoria, cuadernos reproducibles, gestión del riesgo, Colombia, ciencia abierta, IA, amenazas naturales]
-date: 2026-11-09
+keywords: [convocatoria, cuadernos reproducibles, gestión del riesgo, Colombia, ciencia abierta]
+date: 2026-11-16
+license: CC-BY-4.0
 ---
 
-# Convocatoria: Cuadernos Reproducibles para la Gestión del Riesgo de Desastres en Colombia
++++ {"part": "abstract"}
 
-::::{grid} 1 1 2 2
+La Subdirección para el Conocimiento del Riesgo (SCR) de la UNGRD recibe cuadernos reproducibles que documenten análisis de riesgo de desastres en Colombia. La convocatoria es abierta, gratuita y permanente, y está dirigida a la academia, las entidades del SNGRD, las organizaciones técnicas y las personas profesionales. Este documento explica qué cuadernos aceptamos, cómo postularlos y cómo los evaluamos.
 
-:::{card}
-**📅 Apertura de postulaciones**
-^^^
-Segundo semestre 2026
++++
+
+:::{warning} Fase piloto
+La convocatoria aún no está abierta. Prevemos abrirla en el segundo semestre de 2026. Mientras tanto, esta página describe el proceso que seguiremos.
 :::
 
-:::{card}
-**🌐 Modalidad**
-^^^
-Abierta · Nacional e internacional · Sin costo
-:::
-
-::::
-
----
-
-## Contexto y Motivación
-
-Colombia es uno de los países de América Latina con mayor exposición a amenazas de origen natural. La coincidencia de procesos tectónicos activos, alta variabilidad climática, relieve complejo y grandes desigualdades territoriales configura un escenario donde la capacidad de análisis y anticipación del riesgo es un asunto de política pública, desarrollo sostenible y justicia territorial.
-
-Al mismo tiempo, la comunidad científica y técnica nacional e internacional ha avanzado de manera sostenida en el desarrollo de metodologías, datos y herramientas computacionales que abren nuevas posibilidades para el análisis del riesgo. Un informe reciente de la **Oficina de las Naciones Unidas para la Reducción del Riesgo de Desastres para Latinoamérica y el Caribe (UNDRR-ROAS)** documenta el crecimiento acelerado en el uso de inteligencia artificial aplicada a la gestión del riesgo, con casos de uso en generación de mapas de susceptibilidad, evaluación de vulnerabilidad estructural, sistemas de alerta temprana, gestión de recursos hídricos, logística humanitaria y modelado de impacto de fenómenos extremos.
-
-Sin embargo, buena parte de ese conocimiento permanece disperso, con dificultades de reproducibilidad, poco acceso por parte de actores locales y escasamente articulado con los sistemas de información institucionales del Estado colombiano.
-
-La **Subdirección para el Conocimiento del Riesgo de la UNGRD**, en su rol articulador del Sistema Nacional de Gestión del Riesgo de Desastres (SNGRD), lanza esta convocatoria para contribuir a cerrar esa brecha: reunir, documentar y compartir metodologías de análisis como **cuadernos reproducibles** accesibles desde esta plataforma científica abierta.
-
----
-
-## Objetivo General
-
-Construir una biblioteca de cuadernos reproducibles de análisis del riesgo de desastres en Colombia, desarrollados por actores académicos, investigadores, entidades del SNGRD y organizaciones técnicas nacionales e internacionales, que contribuyan al fortalecimiento del conocimiento del riesgo, la transferencia metodológica y la toma de decisiones con base científica.
-
----
-
-## Objetivos Específicos
-
-- Vincular a la comunidad investigadora y técnica con la Plataforma de Análisis de Riesgos de la UNGRD como espacio de divulgación y colaboración.
-- Generar una red activa de personas y organizaciones con intereses comunes en la analítica de datos para la gestión del riesgo.
-- Documentar y visibilizar metodologías reproducibles aplicadas a amenazas, vulnerabilidad, exposición y riesgo en Colombia.
-- Promover el uso de datos abiertos, herramientas libres e inteligencia artificial en la gestión del riesgo, siguiendo los principios de ciencia abierta (FAIR).
-- Aportar insumos técnicos al Marco de Sendai para la Reducción del Riesgo de Desastres 2015–2030, en particular al objetivo de fortalecer la comprensión del riesgo y la toma de decisiones basada en evidencia.
-
----
-
-## ¿Qué Buscamos?
-
-Cuadernos reproducibles (Jupyter Notebooks) que documenten análisis de datos aplicados a la gestión del riesgo de desastres, incluyendo —sin limitarse a— los siguientes ámbitos temáticos:
-
-::::{grid} 1 2 3 3
-
-:::{card}
-🏔️ **Amenazas Geológicas**
-^^^
-Sismicidad, amenaza volcánica, movimientos en masa, licuefacción, tsunamis. Modelado, zonificación y análisis de catálogos.
-:::
-
-:::{card}
-🌊 **Amenazas Hidrometeorologicas**
-^^^
-Inundaciones, avenidas torrenciales, sequías, precipitación extrema. Análisis de frecuencia, curvas IDF, umbrales.
-:::
-
-:::{card}
-🌍 **Amenazas Climáticas**
-^^^
-Incendios forestales, cambio climático y riesgo, ENSO, estrés hídrico, variabilidad climática y sus efectos sobre amenazas.
-:::
-
-:::{card}
-🏘️ **Vulnerabilidad y Exposición**
-^^^
-Análisis de exposición poblacional e infraestructural, vulnerabilidad física y social, índices de riesgo territorial.
-:::
-
-:::{card}
-🤖 **Inteligencia Artificial Aplicada**
-^^^
-Clasificación de imágenes satelitales, detección de daños, modelos predictivos, aprendizaje automático para GRD.
-:::
-
-:::{card}
-📡 **Datos y Monitoreo**
-^^^
-Procesamiento de sensores remotos, series de tiempo hidrometeorológicas, redes de monitoreo, datos en tiempo real.
-:::
-
-::::
-
----
-
-## Inspiración y Referentes
-
-Esta convocatoria se inspira en iniciativas globales que han demostrado el valor de las plataformas abiertas de colaboración científica en gestión del riesgo y cambio climático:
-
-::::{grid} 1 2 2 2
-
-:::{card}
-🌐 **CLIMAAX — Climate Risk Assessment**
-^^^
-Plataforma europea de evaluación de riesgos climáticos que pone a disposición flujos de trabajo abiertos y reproducibles (Workflow Notebooks) para análisis de riesgo climático a escala regional, desarrollados por la comunidad científica y accesibles sin costo.
-:::
-
-:::{card}
-🏦 **Banco Mundial — GFDRR**
-^^^
-El Global Facility for Disaster Reduction and Recovery comparte herramientas de análisis, cuadernos reproducibles y repositorios de código abierto para la evaluación del riesgo, usados por más de 100 países en decisiones de inversión y política pública.
-:::
-
-:::{card}
-🇺🇳 **UNDRR — Marco de Sendai**
-^^^
-La agenda global 2015–2030 para la reducción del riesgo de desastres reconoce explícitamente el papel del conocimiento científico y la ciencia abierta como pilares de la gestión prospectiva del riesgo.
-:::
-
-:::{card}
-🛰️ **NASA · USGS · Copernicus**
-^^^
-Repositorios de datos abiertos satelitales, sísmicos, hidrometeorológicos e incendios que constituyen la base de datos disponibles y recomendados para los cuadernos de esta plataforma.
-:::
-
-::::
-
----
-
-## ¿Quién Puede Participar?
-
-La convocatoria es **abierta y gratuita**. Pueden postular:
-
-- Investigadores y grupos de investigación de universidades colombianas y extranjeras
-- Institutos técnicos y científicos públicos del SNGRD: SGC, IDEAM, DIMAR, IGAC, INVIAS, entre otros
-- Organizaciones no gubernamentales con trabajo técnico en gestión del riesgo
-- Consultores, profesionales independientes y equipos de gobierno con capacidades técnicas
-- Estudiantes de posgrado con aval de un director o investigador
-
-:::{admonition} Participación internacional
-:class: tip
-Se alienta especialmente la participación de investigadores internacionales cuyas metodologías aporten valor al contexto colombiano, sea mediante adaptación de herramientas existentes o desarrollo de nuevos análisis con datos del país.
-:::
-
----
-
-## Requisitos Técnicos de los Cuadernos
-
-Los cuadernos postulados deben cumplir los siguientes estándares para garantizar su reproducibilidad, calidad técnica y coherencia con la plataforma:
-
-### Formato y Tecnología
-
-::::{grid} 1 1 2 2
-
-:::{card}
-**Formato requerido**
-^^^
-Jupyter Notebook (`.ipynb`) o MyST Markdown (`.md`) con bloques de código. El cuaderno debe poder ejecutarse de inicio a fin sin intervención manual en un entorno Python estándar.
-:::
-
-:::{card}
-**Lenguaje**
-^^^
-Python 3.9 o superior (prioritario). Se aceptan también cuadernos en R con renv para gestión de dependencias. No se aceptan cuadernos que requieran licencias de software propietario.
-:::
-
-:::{card}
-**Datos abiertos**
-^^^
-Todos los datos utilizados deben ser de acceso público, libre y gratuito (NASA, USGS, IDEAM, SGC, DANE, IGAC, GEE, Copernicus, etc.). No se aceptan datos privativos, confidenciales ni con restricciones de redistribución.
-:::
-
-:::{card}
-**Dependencias**
-^^^
-Se debe incluir un archivo `requirements.txt` o `environment.yml` con todas las dependencias especificadas. Las bibliotecas deben estar disponibles en PyPI o conda-forge.
-:::
-
-::::
-
-### Estándares de Calidad
-
-| Criterio | Descripción |
-|---|---|
-| **Narrativa científica** | El cuaderno debe combinarse texto explicativo y código, siguiendo el estilo *literate programming* |
-| **Reproducibilidad** | Debe poder ejecutarse en Google Colab, Binder u otro entorno en la nube sin configuración adicional |
-| **Visualización** | Incluir al menos una visualización geoespacial (mapa) o interactiva (gráfico dinámico) |
-| **Contexto territorial** | El análisis debe estar referenciado a Colombia o a una región específica del país |
-| **Licencia** | El código debe publicarse bajo licencia abierta (MIT, Apache 2.0 o Creative Commons para contenido) |
-| **Idioma** | Preferiblemente en español. Se aceptan cuadernos en inglés con resumen en español |
-| **Extensión** | Entre 500 y 3,000 líneas de código efectivo. Cuadernos más extensos deben dividirse en módulos |
-
-### Bibliotecas y Herramientas Recomendadas
-
-::::{tab-set}
-
-:::{tab-item} Análisis de Datos
-```
-pandas          # manipulación y análisis de datos tabulares
-numpy           # cálculo numérico y álgebra lineal
-scipy           # estadística, interpolación, señales
-xarray          # datos multidimensionales (NetCDF, rasters)
-statsmodels     # series de tiempo, regresión, pruebas estadísticas
-```
-:::
-
-:::{tab-item} Geoespacial
-```
-geopandas       # datos vectoriales (shapefiles, GeoJSON)
-rasterio        # datos raster (GeoTIFF, DEM)
-folium          # mapas interactivos Leaflet
-leafmap         # herramientas avanzadas para mapas
-earthengine-api # Google Earth Engine
-pyproj          # proyecciones y transformaciones
-```
-:::
-
-:::{tab-item} Visualización
-```
-matplotlib      # gráficos estáticos
-seaborn         # gráficos estadísticos
-plotly          # gráficos interactivos
-bokeh           # visualización web interactiva
-cartopy         # mapas con proyecciones cartográficas
-```
-:::
-
-:::{tab-item} Inteligencia Artificial
-```
-scikit-learn    # machine learning clásico
-tensorflow      # redes neuronales
-pytorch         # redes neuronales
-huggingface     # modelos de lenguaje y visión
-openai          # modelos de lenguaje (vía API)
-```
-:::
-
-::::
-
-### Fuentes de Datos Recomendadas
-
-| Fuente | Tipo de dato | Acceso |
-|---|---|---|
-| **USGS Earthquake Catalog** | Sismicidad global | API REST gratuita |
-| **IDEAM (Datos Abiertos)** | Hidrometeorológico, clima | Portal datos.gov.co |
-| **SGC** | Geología, sismología, vulcanología | Descarga directa |
-| **NASA FIRMS** | Incendios activos (VIIRS, MODIS) | API gratuita |
-| **Copernicus / ERA5** | Reanálisis climático global | API gratuita |
-| **CHIRPS** | Precipitación de alta resolución | Descarga directa |
-| **IGAC** | Cartografía base Colombia | Portal abierto |
-| **DANE** | Censos, demografía, CNPV 2018 | Portal datos abiertos |
-| **Google Earth Engine** | Imágenes satelitales, rasters | API gratuita con cuenta Google |
-| **OpenStreetMap** | Infraestructura, red vial | osmnx, descarga libre |
-
----
-
-## Proceso de Postulación
-
-### Paso 1 — Preparación del cuaderno
-
-Prepara tu cuaderno siguiendo los requisitos técnicos descritos. Asegúrate de que se ejecute de forma completa sin errores en un entorno limpio.
-
-### Paso 2 — Crear tu repositorio desde la plantilla
-
-Cada cuaderno vive en su propio repositorio público de GitHub. Para crearlo, abre la [plantilla de cuadernos reproducibles](https://github.com/scr-ungrd/cuadernos-reproducibles-crc000), pulsa **Use this template → Create a new repository** y asigna un nombre a tu repositorio. Luego clónalo en tu equipo:
-
-```bash
-git clone https://github.com/<tu-usuario>/<tu-repositorio>.git
-cd <tu-repositorio>
+## Por qué la convocatoria
+
+Colombia está expuesta a amenazas de origen natural por su actividad tectónica, su variabilidad climática y su relieve. Entender ese riesgo requiere métodos y datos que otras personas puedan verificar y reutilizar. Hoy buena parte de ese conocimiento está en artículos o informes sin datos ni código, y es difícil de reproducir, sobre todo para los actores locales.
+
+Queremos reunir una biblioteca de cuadernos reproducibles que documenten metodologías para el análisis de amenazas, vulnerabilidad, exposición y riesgo. Con ella buscamos:
+
+- vincular a la comunidad técnica y científica con la plataforma de la UNGRD;
+- documentar métodos reproducibles con datos y herramientas abiertas, según los principios FAIR;
+- aportar a la Prioridad 1 del Marco de Sendai 2015–2030, comprender el riesgo de desastres.
+
+El modelo se inspira en el [Manual de Evaluación del Riesgo Climático de CLIMAAX](https://handbook.climaax.eu/intro.html) y en las herramientas abiertas del GFDRR.
+
+## Quién puede postular
+
+Puede postular cualquier persona u organización, de Colombia o del exterior:
+
+- grupos de investigación y universidades;
+- entidades técnicas del SNGRD (SGC, IDEAM, DIMAR, IGAC, INVÍAS y otras);
+- organizaciones no gubernamentales con trabajo técnico en gestión del riesgo;
+- consultoras, profesionales independientes y equipos de gobierno;
+- estudiantes de posgrado con aval de una persona directora o investigadora.
+
+Los cuadernos pueden tener varias personas autoras y no hay límite de postulaciones. Valoramos las metodologías internacionales que se adapten al contexto colombiano.
+
+## Qué cuadernos aceptamos
+
+Aceptamos cuadernos de cuatro tipos: evaluación de amenazas, análisis de riesgo, indicadores de vulnerabilidad y exposición, y metodologías transversales (véase la [guía](01-cuadernos-de-conocimiento.md)). Los temas incluyen, sin limitarse a ellos:
+
+- amenazas geológicas: sismicidad, volcanes, movimientos en masa, tsunamis;
+- amenazas hidrometeorológicas y climáticas: inundaciones, avenidas torrenciales, sequías, incendios, olas de calor, cambio climático, El Niño;
+- vulnerabilidad y exposición de la población y la infraestructura;
+- aprendizaje automático y teledetección aplicados a la gestión del riesgo;
+- datos y monitoreo: sensores remotos, series hidrometeorológicas y redes de observación.
+
+### Requisitos técnicos
+
+Cada cuaderno cumple lo siguiente:
+
+- **Formato.** Jupyter (`.ipynb`) o MyST Markdown con código. Se ejecuta de principio a fin sin intervención manual.
+- **Lenguaje.** Python 3.10 o superior. Aceptamos R con `renv`. No aceptamos cuadernos que requieran software de pago.
+- **Datos.** Públicos, gratuitos y redistribuibles, y conformes al [estándar de datos](03-estandar-de-datos.md). No aceptamos datos confidenciales ni con restricciones de redistribución.
+- **Dependencias.** Un archivo `environment.yml` o `requirements.txt` con versiones fijadas. Los paquetes están en PyPI o conda-forge.
+- **Reproducibilidad.** Se ejecuta en Binder o Google Colab sin configuración adicional.
+- **Visualización.** Al menos un mapa o un gráfico interactivo.
+- **Territorio.** El análisis se refiere a Colombia o a una región del país.
+- **Licencia.** Abierta: MIT o Apache-2.0 para el código, y CC BY 4.0 para los datos y el texto.
+- **Idioma.** Preferimos el español. Aceptamos el inglés con un resumen en español.
+- **Extensión.** Entre 500 y 3000 líneas de código. Si es más largo, divídalo en módulos.
+- **Uso de IA.** Declárelo según el [instructivo de uso de IA](05-uso-de-ia.md).
+
+Si el cuaderno incluye un tablero o una aplicación, cumpla además el [estándar de tableros](06-estandar-tableros.md) o el [estándar de aplicaciones](07-estandar-aplicaciones.md).
+
+### Fuentes de datos recomendadas
+
+```{list-table}
+:header-rows: 1
+
+* - Fuente
+  - Datos
+  - Acceso
+* - USGS Earthquake Catalog
+  - Sismicidad global
+  - API gratuita
+* - IDEAM (datos.gov.co)
+  - Hidrometeorología y clima
+  - Portal de datos abiertos
+* - SGC
+  - Geología, sismología y vulcanología
+  - Descarga directa
+* - NASA FIRMS
+  - Incendios activos
+  - API gratuita
+* - Copernicus y ERA5
+  - Reanálisis climático
+  - API gratuita
+* - CHIRPS
+  - Precipitación
+  - Descarga directa
+* - IGAC
+  - Cartografía base
+  - Portal abierto
+* - DANE
+  - Censos y demografía
+  - Portal de datos abiertos
+* - Google Earth Engine
+  - Imágenes satelitales
+  - Gratuito con cuenta de Google
+* - OpenStreetMap
+  - Infraestructura y red vial
+  - Descarga libre
 ```
 
-### Paso 3 — Ubicar el cuaderno
+Las bibliotecas más usadas son `pandas`, `numpy`, `scipy`, `xarray` y `statsmodels` para los datos; `geopandas`, `rasterio`, `folium`, `leafmap` y `cartopy` para lo geoespacial; `matplotlib`, `seaborn` y `plotly` para la visualización, y `scikit-learn` para el aprendizaje automático.
 
-Coloca tu cuaderno en la carpeta `notebooks/` de tu repositorio y, si aplica, los datos de prueba en `data/` o mediante descarga automática desde fuentes abiertas al interior del cuaderno. Actualiza `myst.yml` con los autores, afiliaciones y palabras clave, y `environment.yml` con las dependencias.
+## Cómo postular
 
-### Paso 4 — Postular el cuaderno
+La postulación tiene cuatro pasos.
 
-Cuando tu repositorio esté público y el cuaderno se ejecute completo, abre un **issue** en el [repositorio de la plataforma](https://github.com/scr-ungrd/cuadernos-reproducibles/issues) con el enlace a tu repositorio y la siguiente información:
+1. **Cree el repositorio.** Cada cuaderno vive en su propio repositorio público. Abra la [plantilla](https://github.com/scr-ungrd/cuadernos-reproducibles-crc000), pulse **Use this template → Create a new repository** y clónelo.
+2. **Ubique el cuaderno.** Copie el cuaderno en `notebooks/` y los datos de prueba en `data/`. Actualice `myst.yml` (autores, afiliaciones, palabras clave) y `environment.yml` (dependencias).
+3. **Verifique.** Ejecute el cuaderno desde cero en un entorno limpio y compruebe que `myst build --html` funciona.
+4. **Postule.** Abra un *issue* en el [repositorio de la plataforma](https://github.com/scr-ungrd/cuadernos-reproducibles/issues) con el enlace al repositorio y estos datos: nombre del cuaderno y autoría, institución, amenaza o fenómeno, región, fuentes de datos y una descripción del método de máximo 200 palabras.
 
-- Nombre del cuaderno y autores
-- Institución o afiliación
-- Amenaza o fenómeno analizado
-- Región geográfica del análisis
-- Fuentes de datos utilizadas
-- Breve descripción metodológica (máximo 200 palabras)
+La SCR revisa la postulación y puede pedir ajustes antes de publicar. Si no tiene cuenta de GitHub, escriba al equipo de la SCR y lo acompañamos en el proceso.
 
-El equipo de la Subdirección para el Conocimiento del Riesgo revisará la postulación y podrá solicitar ajustes antes de publicar.
+### Postular con un asistente de IA
 
-### Paso 5 — Hacer el proceso con ayuda de una IA
-
-Si usas un asistente de IA con acceso a tu equipo y a GitHub (por ejemplo, Claude Code, Codex o Copilot en modo agente), puedes delegarle los pasos 2 a 4. Copia el siguiente prompt, reemplaza los valores entre `<` y `>` y pégalo en tu asistente:
+Un asistente con acceso a su equipo y a GitHub (por ejemplo, Claude Code, Codex o Copilot en modo agente) puede hacer los pasos 1 a 4. Copie este prompt y reemplace los valores entre `<>`. Revise siempre lo que genere: la responsabilidad por el contenido, los datos y las licencias es de la autoría.
 
 ````text
-Quiero postular un cuaderno reproducible a la convocatoria de Cuadernos Reproducibles de Conocimiento del Riesgo de la UNGRD. Ayúdame a hacerlo paso a paso.
+Quiero postular un cuaderno reproducible a la convocatoria de Cuadernos Reproducibles de Conocimiento del Riesgo de la UNGRD. Ayúdame paso a paso.
 
 Datos del cuaderno:
 - Nombre del cuaderno: <nombre>
@@ -313,147 +143,56 @@ Datos del cuaderno:
 - Mi usuario de GitHub: <usuario>
 
 Tareas:
-1. Crea un repositorio público en mi cuenta de GitHub a partir de la plantilla https://github.com/scr-ungrd/cuadernos-reproducibles-crc000 (nombre sugerido: cuadernos-reproducibles-<codigo-o-tema>) y clónalo en mi equipo.
-2. Copia mi cuaderno a la carpeta notebooks/ y los datos de prueba a data/. Si el cuaderno descarga datos de fuentes abiertas, deja la descarga automática y documenta el acceso.
-3. Actualiza myst.yml (título, autores, afiliaciones, palabras clave, licencia), environment.yml (dependencias con versiones fijas) y README.md (título, descripción, instrucciones de instalación, datos de entrada y ejemplo de ejecución). Conserva una licencia abierta.
-4. Verifica que el cuaderno se ejecute completo y sin errores en un entorno limpio creado desde environment.yml, y que `myst build --html` funcione. Si algo falla, corrígelo o dime qué necesitas de mí.
+1. Crea un repositorio público en mi cuenta de GitHub a partir de la plantilla https://github.com/scr-ungrd/cuadernos-reproducibles-crc000 (nombre sugerido: cuadernos-reproducibles-<codigo-o-tema>) y clónalo.
+2. Copia mi cuaderno a notebooks/ y los datos de prueba a data/. Si el cuaderno descarga datos abiertos, deja la descarga automática y documenta el acceso.
+3. Actualiza myst.yml (título, autores, afiliaciones, palabras clave, licencia), environment.yml (versiones fijas) y README.md (título, descripción, instalación, datos de entrada y ejemplo de ejecución). Conserva una licencia abierta.
+4. Verifica que el cuaderno se ejecute completo en un entorno limpio creado desde environment.yml y que `myst build --html` funcione. Si falla, corrígelo o dime qué necesitas.
 5. Muéstrame un resumen de los cambios y espera mi confirmación antes de hacer commit y push.
-6. Después de mi confirmación, haz commit y push, y abre un issue en https://github.com/scr-ungrd/cuadernos-reproducibles/issues con el enlace a mi repositorio y estos datos: nombre y autores, institución, amenaza o fenómeno, región, fuentes de datos y una descripción metodológica de máximo 200 palabras.
+6. Con mi confirmación, haz commit y push, y abre un issue en https://github.com/scr-ungrd/cuadernos-reproducibles/issues con el enlace a mi repositorio y los datos de la postulación (nombre y autores, institución, amenaza, región, fuentes y una descripción del método de máximo 200 palabras).
 
 Reglas:
-- No inventes datos, resultados ni referencias; si falta información, pregúntamela.
+- No inventes datos, resultados ni referencias; si falta información, pregúntame.
 - No publiques nada (push, repositorio público o issue) sin mi confirmación.
 - No incluyas credenciales, tokens ni datos personales en el repositorio.
 ````
 
-:::{warning}
-Revisa siempre lo que genere la IA antes de confirmar la publicación. La responsabilidad sobre el contenido del cuaderno, los datos y las licencias es de los autores.
-:::
+## Cómo evaluamos
 
-:::{admonition} ¿No tienes cuenta de GitHub?
-:class: note
-Si no estás familiarizado con GitHub, puedes enviar tu cuaderno a través de un formulario de contacto disponible en el repositorio o por correo electrónico al equipo de la SCR-UNGRD. Nuestro equipo técnico te acompañará en el proceso de publicación.
-:::
+El equipo técnico de la SCR y un comité de pares externo evalúan cada cuaderno con estos criterios. Una persona del comité ejecuta el cuaderno de forma independiente en un entorno limpio.
 
----
+```{list-table}
+:header-rows: 1
 
-## Criterios de Selección
+* - Criterio
+  - Peso
+* - Relevancia para la gestión del riesgo en Colombia
+  - 25 %
+* - Calidad técnica y reproducibilidad
+  - 25 %
+* - Claridad de la narrativa y de la documentación
+  - 20 %
+* - Innovación metodológica
+  - 15 %
+* - Uso de datos y herramientas abiertas
+  - 15 %
+```
 
-Los cuadernos postulados serán evaluados por el equipo técnico de la SCR-UNGRD y un comité de pares externo según los siguientes criterios:
+## Qué ofrecemos
 
-| Criterio | Peso |
-|---|---|
-| **Relevancia para la GRD en Colombia** | 25% |
-| **Calidad técnica y reproducibilidad** | 25% |
-| **Claridad de la narrativa y documentación** | 20% |
-| **Innovación metodológica** | 15% |
-| **Uso de datos y herramientas abiertas** | 15% |
+- **Publicación** en la plataforma oficial de la UNGRD, con un DOI y el reconocimiento de la autoría.
+- **Difusión** de los mejores cuadernos en eventos técnicos, publicaciones y espacios de formación.
+- **Colaboración**: las personas autoras pueden ser convocadas a proyectos de investigación aplicada con la UNGRD y el SNGRD, y su método puede incorporarse a los procesos de la entidad.
 
----
+Puede actualizar su cuaderno después de publicado: actualice el repositorio y avise en el *issue* de la postulación. El historial queda en git.
 
-## Beneficios para los Participantes
+## Marco de política
 
-::::{grid} 1 2 2 3
+La convocatoria se inscribe en la Ley 1523 de 2012 (política nacional de gestión del riesgo y SNGRD), el Marco de Sendai 2015–2030, los ODS 11 y 13 de la Agenda 2030 y la política nacional de ciencia, tecnología e innovación, que promueve la ciencia abierta.
 
-:::{card}
-📢 **Visibilidad**
-^^^
-Tu cuaderno será publicado en la plataforma oficial de la UNGRD, visible para tomadores de decisiones, academia y comunidad internacional.
-:::
+## Cuaderno de ejemplo
 
-:::{card}
-🌐 **Red de conocimiento**
-^^^
-Formarás parte de una comunidad activa de investigadores, técnicos y gestores de riesgo de Colombia y la región.
-:::
-
-:::{card}
-📜 **Reconocimiento**
-^^^
-Los autores serán citados en la plataforma y en las comunicaciones institucionales de la UNGRD. El cuaderno llevará tu autoría con identificador DOI.
-:::
-
-:::{card}
-🔗 **Integración institucional**
-^^^
-Posibilidad de que tu metodología sea adoptada e integrada en los procesos de análisis y toma de decisiones del SNGRD.
-:::
-
-:::{card}
-🎓 **Divulgación científica**
-^^^
-Los mejores cuadernos serán promovidos en eventos técnicos nacionales e internacionales, publicaciones y espacios de formación.
-:::
-
-:::{card}
-🤝 **Colaboración**
-^^^
-Los participantes pueden ser convocados a proyectos de investigación aplicada en colaboración con la UNGRD y el SNGRD.
-:::
-
-::::
-
----
-
-## Marco Normativo y de Política Pública
-
-Esta convocatoria se inscribe en los siguientes instrumentos:
-
-- **Ley 1523 de 2012** — Política Nacional de Gestión del Riesgo de Desastres y conformación del SNGRD
-- **Marco de Sendai para la Reducción del Riesgo de Desastres 2015–2030** — En particular la Prioridad 1: comprender el riesgo de desastres
-- **Agenda 2030 para el Desarrollo Sostenible** — ODS 11 (ciudades resilientes) y ODS 13 (acción por el clima)
-- **Política Nacional de Ciencia, Tecnología e Innovación** — Principios de ciencia abierta y acceso libre al conocimiento
-
----
-
-## Preguntas Frecuentes
-
-:::{admonition} ¿Puede participar más de una persona por cuaderno?
-:class: note
-Sí. Los cuadernos pueden tener múltiples autores. Todos serán reconocidos en la plataforma.
-:::
-
-:::{admonition} ¿Se puede postular más de un cuaderno?
-:class: note
-Sí. No hay límite en el número de postulaciones por persona u organización.
-:::
-
-:::{admonition} ¿Qué pasa si mi cuaderno requiere datos que no se pueden descargar automáticamente?
-:class: note
-Si los datos son públicos pero requieren registro previo (como GEE o ERA5), debes documentar claramente el proceso de acceso. Se deben incluir datos de prueba de tamaño reducido en el repositorio para verificar la ejecución.
-:::
-
-:::{admonition} ¿Puedo modificar o actualizar mi cuaderno después de publicado?
-:class: note
-Sí. Actualiza tu repositorio y avisa al equipo en el issue de tu postulación. La plataforma lleva historial de versiones mediante git.
-:::
-
----
-
-## Cuaderno de Ejemplo
-
-Para ilustrar las capacidades técnicas de la plataforma y el estilo esperado, se ha desarrollado un cuaderno de ejemplo que analiza la sismicidad de Colombia usando el catálogo público del USGS:
-
-:::{card}
-:link: ../notebooks/sismicidad-colombia
-🏔️ **Ejemplo: Análisis de Sismicidad de Colombia (USGS)**
-^^^
-Descarga y análisis del catálogo sísmico público del USGS para Colombia (2000–2024). Incluye distribución temporal, relación magnitud-frecuencia (Gutenberg-Richter), análisis de profundidad y mapa interactivo de epicentros.
-
-`Python` · `USGS API` · `Folium` · `Pandas` · `Matplotlib`
-:::
-
-[→ Ver todos los cuadernos de la plataforma](../notebooks/cuadernos-de-conocimiento.md)
-
----
+El cuaderno [Análisis de sismicidad de Colombia](https://scr-ungrd.github.io/cuadernos-reproducibles-crc003) (CRC-003) muestra el estilo esperado: usa el catálogo público del USGS 2000–2026, estima la magnitud de completitud y la relación de Gutenberg-Richter, y presenta mapas interactivos de epicentros.
 
 ## Contacto
 
-Para consultas sobre la convocatoria, criterios técnicos o proceso de postulación, comunícate con la **Subdirección para el Conocimiento del Riesgo de la UNGRD**:
-
-- **GitHub**: Abre un issue en el repositorio [`scr-ungrd/cuadernos-reproducibles`](https://github.com/scr-ungrd/cuadernos-reproducibles/issues)
-- **Plataforma**: Usa el formulario de contacto disponible en el repositorio
-
-:::{note}
-Esta convocatoria es un proceso permanente y abierto. Los cuadernos pueden postularse en cualquier momento del año. El equipo de la SCR-UNGRD realiza revisiones de forma periódica.
-:::
+Para consultas sobre la convocatoria, escriba a la SCR abriendo un *issue* en [`scr-ungrd/cuadernos-reproducibles`](https://github.com/scr-ungrd/cuadernos-reproducibles/issues).

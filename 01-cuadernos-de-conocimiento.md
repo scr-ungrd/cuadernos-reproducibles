@@ -1,117 +1,122 @@
 ---
-title: Cuadernos Reproducibles de Conocimiento del Riesgo
-date: 2026-06-27
+title: Guía para publicar un cuaderno
+subtitle: Cómo preparar y enviar un cuaderno reproducible de conocimiento del riesgo
+date: 2026-11-16
 license: CC-BY-4.0
 keywords:
-  - Notebooks
+  - cuadernos reproducibles
   - Python
-  - Métodos
-  - Amenazas
-  - Vulnerablidad
-  - Exposición
-  - Riesgo
-  - Riesgo de desastres
-  - Daños y pérdidas
+  - amenaza
+  - vulnerabilidad
+  - exposición
+  - riesgo de desastres
+  - FAIR
 abbreviations:
-  IGN: Instituto Geográfico Nacional
-  UTC: Coordinated Universal Time
-  USGS: United States Geological Survey
+  UNGRD: Unidad Nacional para la Gestión del Riesgo de Desastres
+  SCR: Subdirección para el Conocimiento del Riesgo
+  FAIR: Findable, Accessible, Interoperable, Reusable
+  RDLS: Risk Data Library Standard
+  DOI: Digital Object Identifier
 ---
 
 +++ {"part": "abstract"}
 
-Los Cuadernos Reproducibles de Conocimiento del Riesgo de la UNGRD son documento ejecutables que combina tres elementos en un solo archivo o repositorio: Narrativa científica, código ejecutable, y resultados reproducibles. Los cuadernos abordan la evaluación de amenazas, análisis de riesgo, indicadores de vulnerabilidad y exposición, o metodologías transversales de análisis de riesgos. Deben desarrollarse con Python, Jupyter y MyST Markdown, publicarse en GitHub con licencia abierta, y cumplir los principios FAIR. Los cuadernos reproducibles son la convergencia de un artículo científico, un script reproducible y un sitio web interactivo en un solo flujo de trabajo.
+Un cuaderno reproducible reúne en un solo repositorio la narrativa, el código y los resultados de un análisis de riesgo, de modo que otra persona pueda ejecutarlo y obtener los mismos resultados. Esta guía explica cómo preparar y enviar uno a la colección de la Subdirección para el Conocimiento del Riesgo (SCR) de la UNGRD. Cubre el tipo de cuaderno, el repositorio, la estructura del texto y el control de calidad previo al envío.
 
 +++
 
-## Introducción
+## Pasos clave
 
-La producción de conocimiento técnico y científico en gestión del riesgo de desastres ha crecido de manera sostenida en Colombia durante la última década. Sin embargo, persistente la brecha que separa la generación de ese conocimiento de su reutilización efectiva: los métodos quedan atrapados en artículos científicos, capítulos de libros o informes técnicos e institucionales, los datos de entrada no se publican junto con los resultados, o los análisis rara vez pueden ser verificados, extendidos o adaptados por terceros. Esta convocatoria nace como respuesta a esa brecha.
+1. **Elija el tipo de cuaderno** (Sección 1).
+2. **Prepare el repositorio** en GitHub (Sección 2).
+3. **Prepare los datos** según el [estándar de datos](03-estandar-de-datos.md).
+4. **Escriba el cuaderno** con la estructura de la Sección 3.
+5. **Declare el uso de IA** según el [instructivo de uso de IA](05-uso-de-ia.md).
+6. **Verifique el cuaderno** en un entorno limpio (Sección 4).
+7. **Envíe el repositorio** según la [convocatoria](02-convocatoria-cuadernos.md).
 
-La Subdirección para el Conocimiento del Riesgo de la Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD) y la Comisión Nacional Asesora para el Fomento de la Ciencia, Tecnología e Innovación  convoca a investigadores, analistas y profesionales en general del Sistema Nacional para la Gestión del Riesgo de Desastres (SNGRD) a presentar cuadernos computacionales reproducibles que documenten metodologías, análisis y flujos de trabajo aplicados al proceso de conocimiento del riesgo, con potenciales alicaciones a los procesos de reducción del riesgo y manejo de desastres.
+Si el cuaderno incluye un tablero o una aplicación, cumpla además el [estándar de tableros](06-estandar-tableros.md) o el [estándar de aplicaciones](07-estandar-aplicaciones.md).
 
-Los Cuadernos Reproducibles de Conocimiento del Riesgo tienen el objetivo de compartir datos, herramientas y flujos de trabajo para fomentar la ciencia y tecnologías reproducibles y reutilizables en gestión del riesgo de desastres.
+## 1. Elija el tipo de cuaderno
 
-Un cuaderno computacional reproducible no es simplemente un script con comentarios: es un documento ejecutable que combina narrativa explicativa, código verificable, datos de entrada accesibles y resultados para interprerse y aplicarse en la toma de decisiones. Esta concepción está en el corazón del movimiento internacional de ciencia abierta soportado que los principios FAIR —Findable, Accessible, Interoperable, Reusable— que son la base de toda publicación científica moderna orientada a la transparencia y la reproducibilidad, especialmente en estudios con alta densidad de datos y computación intensiva. Los cuadernos computacionales son hoy el vehículo más directo para operacionalizar esos principios.
+Un cuaderno reproducible no es un script con comentarios. Es un documento ejecutable que combina texto, código verificable, datos accesibles y resultados interpretables. Cada cuaderno corresponde a una de cuatro líneas, que siguen el Marco de Sendai 2015–2030 y la Ley 1523 de 2012.
 
-Existen iniciativas internacionales de referencia han consolidado ecosistemas de cuadernos abiertos que articulan datos, métodos y narrativa dentro de repositorios públicos en GitHub. Algunos ejemplos son:
+```{list-table}
+:header-rows: 1
 
--   Manual de Evaluación del Riesgo Climático de CLIMAAX (https://handbook.climaax.eu/intro.html)
--   Risk Data Library del Global Facility for Disaster Reduction and Recovery (https://gfdrr.github.io/CCDR-tools/home.html)
--   Design Safe (https://www.designsafe-ci.org/)
--   European Centre for Medium-Range Weather Forecasts, Probability of Fire Jupyter Book (https://ecmwf.github.io/AI-Probability-of-Fire)
--   Proyecto Pythia (https://projectpythia.org/)
--   EM-DAT (https://github.com/em-dat/)
+* - Tipo
+  - Qué documenta
+  - Qué esperamos
+* - **Evaluación de amenazas**
+  - Caracterización, modelación o cartografía de amenazas naturales, socionaturales o antrópicas en Colombia
+  - Series históricas de fuentes institucionales (UNGRD, IDEAM, SGC, IGAC). Valoramos los enfoques probabilísticos y los escenarios de cambio climático.
+* - **Análisis de riesgo**
+  - Combinación de amenaza, exposición y vulnerabilidad para estimar el riesgo municipal, departamental o de cuenca
+  - Cuadernos encadenados que separan la evaluación de la amenaza del análisis del riesgo.
+* - **Indicadores de vulnerabilidad y exposición**
+  - Construcción, validación o comparación de indicadores de vulnerabilidad social, física o funcional y de exposición
+  - Datos abiertos (DANE, Registro Único de Damnificados, catastro multipropósito) y criterios documentados de selección, normalización y ponderación.
+* - **Metodologías transversales**
+  - Herramientas, flujos de procesamiento o marcos aplicables a más de una amenaza o escala
+  - Un valor que resida en la generalidad del método y no en el caso de aplicación.
+```
 
-Estas iniciativas emplean arquitecturas que implementan cuadernos Jupyter enriquecidos con MyST Markdown y publicados bajo licencia abierta, que en conjunto constituyen el modelo de referencia que esta convocatoria adopta y adapta al contexto colombiano con dos objetivos: construir un corpus verificable de metodologías computacionales para el análisis del riesgo en Colombia, y establecer una comunidad de práctica que eleve los estándares de reproducibilidad y apertura en el campo de la gestión del riesgo a nivel institucional y académico.
+**Tecnología.** Todos los cuadernos usan la misma base:
 
-## Enfoque de los cuadernos
+- **MyST Markdown** para el texto, las referencias cruzadas y los metadatos.
+- **Python 3.10 o superior** para todo el código. Recomendamos `xarray`, `geopandas`, `rasterio`, `pandas`, `matplotlib`, `cartopy` y `numpy`; puede usar otras si las justifica.
+- **Jupyter** para la ejecución. El cuaderno debe correr de principio a fin sin intervención manual, salvo la descarga de datos externos cuando sea inevitable.
+- **GitHub** para el control de versiones. No evaluamos cuadernos sin un repositorio público.
 
-Esta convocatoria define los cuadernos aceptables a partir de cuatro líneas temáticas, que corresponden al análisis del riesgo conforme al Marco de Sendai para la Reducción del Riesgo de Desastres 2015–2030 y a la Ley 1523 de 2012:
+Si el cuaderno usa o produce datos de riesgo, descríbalos con el Risk Data Library Standard (RDLS) del GFDRR. Así se pueden combinar con otras colecciones abiertas.
 
-**Evaluación de amenazas**. Cuadernos que documenten metodologías para la caracterización, modelación o cartografía de amenazas naturales,  socio naturales o antrópicas relevantes para el territorio colombiano. Se valoran especialmente los enfoques probabilísticos, el uso de series históricas con fuentes institucionales (e.g. desde UNGRD, IDEAM, SGC, IGAC), así como la integración de escenarios de cambio climático.
+## 2. Prepare el repositorio
 
-**Análisis de riesgo**. Cuadernos que articulen datos de amenaza con información de exposición y vulnerabilidad para estimar el riesgo relativo o absoluto a nivel municipal, departamental o de cuenca. Este tipo de contribución sigue la arquitectura metodológica consolidada por plataformas como CLIMAAX, donde los flujos de trabajo separan explícitamente la evaluación de la amenaza del análisis del riesgo en cuadernos encadenados dentro de un mismo repositorio.
+El repositorio contiene como mínimo:
 
-**Indicadores de vulnerabilidad y exposición**. Cuadernos enfocados en la construcción, validación o comparación de indicadores de vulnerabilidad social, física o funcional, y de exposición de población, infraestructura o activos. Se invita a utilizar fuentes de datos abiertas como el Censo Nacional de Población (DANE), el Registro Único de Damnificados, y los datos de catastro multipropósito, documentando los criterios de selección, normalización y ponderación de variables.
+- `README.md` con el título, una descripción breve, las instrucciones de instalación, los datos de entrada y un ejemplo de ejecución.
+- `environment.yml` o `requirements.txt` con todas las dependencias y sus versiones fijadas.
+- `notebooks/` con los cuadernos `.ipynb` numerados en orden de ejecución.
+- `data/` con los datos de ejemplo para una versión mínima, o instrucciones para descargarlos.
+- `LICENSE` con una licencia abierta. Recomendamos Apache-2.0 o MIT para el código y CC BY 4.0 para los datos y el texto.
+- `CITATION.cff` con el ORCID de cada persona autora.
 
-**Metodologías transversales**. Cuadernos que presenten herramientas, pipelines de procesamiento o marcos analíticos aplicables a más de una amenaza o escala territorial. Este tipo de contribución es análoga a la categoría Workflows reconocida por diversas revistas científicas, que describe ensamblajes novedosos de herramientas de software o procedimientos empíricos organizados en pipelines útiles para el análisis de datos complejos de importancia demostrable. En el contexto de esta convocatoria, se entiende por metodología transversal cualquier contribución cuyo valor resida en la generalidad y transferibilidad del método, más que en los resultados aplicados a un caso específico.
+Añada un botón de Binder al `README` para que cualquier persona ejecute el cuaderno en la nube sin instalar nada.
 
-**Stack tecnológico**. Todos los cuadernos deben desarrollarse con el siguiente stack tecnológico:
+**Principios FAIR.** El repositorio cumple los cuatro principios así:
 
--   **MyST Markdown** como lenguaje de marcado para la narrativa científica, las referencias cruzadas, las notas metodológicas y los metadatos estructurados del cuaderno. MyST permite enriquecer la presentación con directivas semánticas (`{note}`, `{warning}`, `{figure}`, `{bibliography}`) y es el formato base del proyecto Riesgos de UNGRD en GitHub, así como del Manual de CLIMAAX.
--   **Python 3.10 o superior** como lenguaje de programación para todos los componentes computacionales. Las bibliotecas recomendadas incluyen `xarray`, `geopandas`, `rasterio`, `pandas`, `matplotlib`, `cartopy` y `numpy`, sin perjuicio de otras que el autor justifique.
--   **Jupyter Notebook o JupyterLab** como entorno de ejecución interactiva. Los cuadernos deben poder ejecutarse de inicio a fin sin intervención manual, salvo la descarga explícita de datos externos cuando esta sea inevitable.
--   **GitHub** como plataforma de control de versiones y publicación pública del repositorio. No se aceptarán contribuciones que no cuenten con un repositorio público en GitHub al momento de la evaluación.
+- **Encontrable.** Registre el repositorio en Zenodo para obtener un DOI antes de la evaluación final. El `README` incluye título, autores, institución, palabras clave (amenaza, departamento, escala) y el DOI.
+- **Accesible.** El repositorio es público. Los datos de entrada están en formatos abiertos (GeoTIFF, GeoJSON, CSV, NetCDF) y sin restricciones que impidan reutilizarlos. Si provienen de una fuente restringida, explique cómo solicitarlos e incluya una muestra o datos sintéticos que permitan ejecutar todo el flujo.
+- **Interoperable.** Los formatos funcionan con las bibliotecas estándar de Python científico. Declare en el código las unidades, el sistema de coordenadas y los nombres de las variables.
+- **Reutilizable.** El código está en funciones con *docstrings*. El texto explica por qué se tomó cada decisión (parámetros, umbrales, fuentes). Una persona técnica debe poder adaptar el cuaderno a otro municipio o amenaza sin contactar a quien lo escribió.
 
-**Alineación con estándares de datos de riesgo**. Los cuadernos que utilicen o produzcan datos de riesgo deben alinearse, en la medida de lo posible, con el Risk Data Library Standard (RDLS) desarrollado por GFDRR, un estándar abierto que provee un lenguaje común para describir datos de amenaza, exposición, vulnerabilidad y pérdidas en evaluaciones de riesgo climático y de desastres. La adopción del RDLS facilita la interoperabilidad con colecciones de datos del Banco Mundial y con otras iniciativas de datos abiertos para la resiliencia, en línea con el principio de interoperabilidad de los datos FAIR.
+## 3. Escriba el cuaderno
 
-## Requisitos de un cuaderno reproducible
+El cuaderno tiene seis secciones, en este orden, escritas en celdas de texto MyST entre el código.
 
-La reproducibilidad no es una propiedad binaria: es un espectro que va desde la disponibilidad del código hasta la ejecución automática y verificable en cualquier entorno. Esta convocatoria adopta un estándar de reproducibilidad funcional y documentada, definido por los siguientes requisitos obligatorios y recomendados.
+**Contexto y objetivo.** Describa el problema, la escala territorial y por qué eligió el método. No incluya resultados.
 
-### Estructura del repositorio GitHub
+**Datos de entrada.** Indique la fuente, el formato, la resolución espaciotemporal y las limitaciones de cada dato. Enlace al archivo o registro exacto, no a la página de inicio de la fuente. Si el dato se actualiza de forma continua, registre la versión o los parámetros de la consulta.
 
-El repositorio debe contener como mínimo:
+**Metodología.** Explique cada bloque de código paso a paso y comente las operaciones no triviales. No incluya resultados ni descripciones generales de la herramienta.
 
--   `README.md` con título, descripción breve, instrucciones de instalación, descripción de los datos de entrada y un ejemplo de ejecución.
--   `environment.yml` (conda) o `requirements.txt` (pip) con todas las dependencias y sus versiones fijadas.
--   Carpeta `notebooks/` con los cuadernos `.ipynb` numerados en orden de ejecución.
--   Carpeta `data/` con los datos de ejemplo necesarios para ejecutar el cuaderno en su versión mínima, o instrucciones claras para su descarga automatizada.
--   Archivo `LICENSE` con una licencia abierta. Se recomienda Apache 2.0 para el código y CC BY 4.0 para los datos y la documentación narrativa, siguiendo el modelo de CLIMAAX.
+**Resultados e interpretación.** Presente visualizaciones comentadas e interprételas en términos de gestión del riesgo. Genere cada figura con código, a partir de los datos.
 
-Se recomienda adicionalmente incluir un archivo `CITATION.cff` para facilitar la citación formal del repositorio, y configurar la integración con Binder (mybinder.org) mediante un botón de lanzamiento en el README, de modo que cualquier lector pueda ejecutar el cuaderno en la nube sin instalación local.
+**Limitaciones y recomendaciones.** Declare los supuestos, las incertidumbres no cuantificadas y cómo ampliar el análisis. Sea específico: una limitación genérica no ayuda a quien reutiliza el cuaderno.
 
-### Principios FAIR aplicados al cuaderno
+**Referencias.** Use la directiva `{bibliography}` de MyST con un archivo `.bib` en el repositorio.
 
-Cada cuaderno debe operacionalizar los cuatro principios FAIR de la siguiente manera:
+## 4. Verifique el cuaderno
 
-**Findable (Encontrable)**. El repositorio debe registrarse en Zenodo para obtener un DOI permanente antes de la evaluación final. El `README.md` debe incluir metadatos mínimos: título, autores, institución, palabras clave temáticas (amenaza, departamento, escala espacial) y referencia al DOI.
+Antes del envío, compruebe que:
 
-**Accessible (Accesible)**. El repositorio debe ser público en GitHub. Los datos de entrada utilizados en el cuaderno deben estar disponibles en formatos abiertos (GeoTIFF, GeoJSON, CSV, NetCDF) sin restricciones de licencia que impidan su descarga y reutilización. Si los datos provienen de fuentes institucionales con restricciones, el cuaderno debe incluir instrucciones precisas para su solicitud y un conjunto de datos sintéticos o de muestra que permita verificar la ejecución completa del flujo de trabajo.
+- el cuaderno se ejecuta de principio a fin en un entorno limpio creado desde `environment.yml` o `requirements.txt`;
+- ninguna celda depende de variables definidas fuera de orden;
+- las rutas son relativas al repositorio;
+- el repositorio tiene al menos un *release* en GitHub y la versión correspondiente en Zenodo tiene un DOI activo.
 
-**Interoperable (Interoperable)**. Los formatos de datos deben ser compatibles con las bibliotecas estándar del ecosistema Python científico. Los cuadernos que produzcan datos de riesgo deben documentar sus esquemas de salida con referencia al RDLS cuando aplique. Las unidades, sistemas de referencia de coordenadas (CRS) y convenciones de nomenclatura deben declararse explícitamente en el código.
+Una persona del comité evaluador ejecuta el cuaderno de forma independiente en un entorno limpio. Pedimos esta comprobación porque la reproducibilidad solo se puede certificar cuando alguien distinto de quien escribió el cuaderno lo ejecuta sin ayuda.
 
-**Reusable (Reutilizable)**. La licencia abierta es condición necesaria pero no suficiente. El código debe estar modularizado en funciones documentadas con docstrings. La narrativa en MyST debe explicar no solo el qué sino el por qué de cada decisión metodológica: selección de parámetros, umbrales de clasificación, fuentes de datos preferidas. Un cuaderno reutilizable es aquel que un técnico con conocimientos equivalentes puede adaptar a un municipio o amenaza diferente sin necesidad de contactar al autor.
+## Ejemplos de referencia
 
-### Estructura narrativa del cuaderno
-
-Los cuadernos deben seguir la siguiente estructura narrativa mínima, implementada en celdas de texto MyST intercaladas con el código:
-
--   **Contexto y objetivo** — descripción del problema, escala territorial y justificación de la metodología seleccionada.
--   **Datos de entrada** — descripción de fuentes, formatos, resolución espaciotemporal y limitaciones conocidas.
--   **Metodología** — desarrollo paso a paso con explicación narrativa de cada bloque de código. Las celdas de código deben incluir comentarios en línea para las operaciones no triviales.
--   **Resultados e interpretación** — visualizaciones comentadas con análisis del significado de los resultados en términos de gestión del riesgo.
--   **Limitaciones y recomendaciones** — discusión honesta de los supuestos del modelo, las incertidumbres no cuantificadas y los pasos sugeridos para extender el análisis.
--   **Referencias** — gestionadas mediante la directiva `{bibliography}` de MyST, con archivo `.bib` incluido en el repositorio.
-
-### Control de calidad antes de la entrega
-
-Antes de la presentación formal, el autor debe verificar que:
-
--   El cuaderno se ejecuta completamente desde cero en un entorno limpio creado a partir del `environment.yml` o `requirements.txt` del repositorio.
--   Ninguna celda depende de variables definidas en celdas ejecutadas fuera de orden.
--   Las rutas de archivos son relativas al repositorio, no absolutas al sistema local del autor.
--   El repositorio ha sido etiquetado con al menos un release en GitHub y la versión correspondiente en Zenodo tiene DOI activo.
-
-El cumplimiento de estos requisitos será verificado por el comité evaluador mediante ejecución independiente del cuaderno en un entorno limpio, siguiendo el principio de que la reproducibilidad de un análisis sólo puede certificarse cuando alguien diferente al autor lo ejecuta sin asistencia.
+Esta guía adapta el modelo de colecciones abiertas como el [Manual de Evaluación del Riesgo Climático de CLIMAAX](https://handbook.climaax.eu/intro.html), la [Risk Data Library del GFDRR](https://gfdrr.github.io/CCDR-tools/home.html), [DesignSafe](https://www.designsafe-ci.org/), [Probability of Fire del ECMWF](https://ecmwf.github.io/AI-Probability-of-Fire), el [Proyecto Pythia](https://projectpythia.org/) y [EM-DAT](https://github.com/em-dat/).

@@ -34,6 +34,14 @@ project:
       file: 01-cuadernos-de-conocimiento.md
     - title: Convocatoria
       file: 02-convocatoria-cuadernos.md
+    - title: Estándar de datos
+      file: 03-estandar-de-datos.md
+    - title: Uso de IA
+      file: 05-uso-de-ia.md
+    - title: Estándar de tableros
+      file: 06-estandar-tableros.md
+    - title: Estándar de aplicaciones
+      file: 07-estandar-aplicaciones.md
 
 site:
   template: book-theme
@@ -56,6 +64,14 @@ site:
       url: /cuadernos-de-conocimiento
     - title: Convocatoria
       url: /convocatoria-cuadernos
+    - title: Estándar de datos
+      url: /estandar-de-datos
+    - title: Uso de IA
+      url: /uso-de-ia
+    - title: Tableros
+      url: /estandar-tableros
+    - title: Aplicaciones
+      url: /estandar-aplicaciones
     - title: HUB SCR — portal de proyectos
       url: https://scr-ungrd.github.io/hub/
     - title: Repositorio en GitHub
