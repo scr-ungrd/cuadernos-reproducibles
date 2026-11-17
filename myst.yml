@@ -30,20 +30,21 @@ project:
 
   toc:
     - file: index.md
-    - title: Guía
-      file: 01-cuadernos-de-conocimiento.md
     - title: Convocatoria
       file: 02-convocatoria-cuadernos.md
-    - title: Estándar de datos
-      file: 03-estandar-de-datos.md
-    - title: Uso de IA
-      file: 05-uso-de-ia.md
-    - title: Estándar de tableros
-      file: 06-estandar-tableros.md
-    - title: Estándar de aplicaciones
-      file: 07-estandar-aplicaciones.md
-    - title: Estándar de modelos
-      file: 08-estandar-modelos.md
+    - title: Guía para publicar
+      file: 01-cuadernos-de-conocimiento.md
+      children:
+        - title: Estándar de datos
+          file: 03-estandar-de-datos.md
+        - title: Uso de IA
+          file: 05-uso-de-ia.md
+        - title: Estándar de tableros
+          file: 06-estandar-tableros.md
+        - title: Estándar de aplicaciones
+          file: 07-estandar-aplicaciones.md
+        - title: Estándar de modelos
+          file: 08-estandar-modelos.md
 
 site:
   template: book-theme
@@ -62,20 +63,23 @@ site:
     extra_head: |
       <script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.sd-card-link').forEach(function(a){a.target='_blank';});});</script>
   nav:
-    - title: Guía
-      url: /cuadernos-de-conocimiento
     - title: Convocatoria
       url: /convocatoria-cuadernos
-    - title: Estándar de datos
-      url: /estandar-de-datos
-    - title: Uso de IA
-      url: /uso-de-ia
-    - title: Tableros
-      url: /estandar-tableros
-    - title: Aplicaciones
-      url: /estandar-aplicaciones
-    - title: Modelos
-      url: /estandar-modelos
+    - title: Guía para publicar
+      url: /cuadernos-de-conocimiento
+      children:
+        - title: Guía para publicar
+          url: /cuadernos-de-conocimiento
+        - title: Estándar de datos
+          url: /estandar-de-datos
+        - title: Uso de IA
+          url: /uso-de-ia
+        - title: Estándar de tableros
+          url: /estandar-tableros
+        - title: Estándar de aplicaciones
+          url: /estandar-aplicaciones
+        - title: Estándar de modelos
+          url: /estandar-modelos
     - title: HUB SCR — portal de proyectos
       url: https://scr-ungrd.github.io/hub/
     - title: Repositorio en GitHub
