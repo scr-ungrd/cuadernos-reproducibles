@@ -109,18 +109,16 @@ Ningún requisito de este documento exige comprar suscripciones, licencias ni se
 
 ### 2.1 Propósito, alcance y no hacer daño
 
-Una aplicación hace más que mostrar resultados: recibe entradas, calcula y devuelve un resultado que alguien puede usar para decidir. Eso la distingue de un cuaderno (que documenta un análisis), de un tablero (que muestra resultados ya calculados) y de un servicio (que expone una API). Si la aplicación solo muestra resultados precalculados, aplique el [estándar de tableros](06-estandar-tableros.md); si además tiene una API o permite subir archivos, este estándar y su sección de seguridad se aplican con todo su rigor.
+Una aplicación recibe entradas, calcula y devuelve un resultado que alguien puede usar para decidir. Un cuaderno documenta un análisis; un tablero muestra resultados ya calculados y se rige por el [estándar de tableros](06-estandar-tableros.md). Si una aplicación expone una API o permite subir archivos, la sección de seguridad se aplica con todo rigor.
 
-El Digital Public Goods Standard, la referencia internacional para el software abierto de interés público, incluye un indicador de **no hacer daño por diseño**: el proyecto debe mostrar que anticipó y previno los daños posibles, en especial los de privacidad y seguridad de los datos (Digital Public Goods Alliance, s. f., indicador 9). En gestión del riesgo, el daño más probable es un uso indebido del resultado: una calculadora de amenaza usada como si fuera un estudio de microzonificación, o un estimador de pérdidas tomado como una cifra oficial. El análisis de ALC-02 debe nombrar esos usos y decir qué hace la aplicación para impedirlos o advertirlos.
-
-Plantilla del análisis de no hacer daño (`DO_NO_HARM.md`):
+El Digital Public Goods Standard exige **no hacer daño por diseño**: el proyecto debe mostrar que anticipó y previno los daños posibles (Digital Public Goods Alliance, s. f., indicador 9). En gestión del riesgo, el daño más probable es el uso indebido del resultado, como tomar una calculadora de amenaza por un estudio de microzonificación. El análisis de ALC-02 nombra esos usos y dice qué hace la aplicación para impedirlos o advertirlos.
 
 ```markdown
-# Análisis de no hacer daño
+# Análisis de no hacer daño (`DO_NO_HARM.md`)
 
 | Uso indebido o daño posible | Quién lo sufriría | Medida adoptada | Responsable |
 |---|---|---|---|
-| <por ejemplo, usar el resultado como estudio de riesgo oficial> | <comunidades, autoridades> | <aviso visible, límites de validez, rango de uso> | <persona> |
+| <por ejemplo, usar el resultado como estudio de riesgo oficial> | <comunidades, autoridades> | <aviso visible, límites de validez> | <persona> |
 | <por ejemplo, subir datos personales> | <personas del territorio> | <no se almacenan; aviso de privacidad> | <persona> |
 ```
 
@@ -128,23 +126,21 @@ Plantilla del análisis de no hacer daño (`DO_NO_HARM.md`):
 
 ### 2.2 Código abierto, licencias y titularidad
 
-El software abierto exige más que publicar el código. El Digital Public Goods Standard pide una licencia aprobada por la OSI para el software, la titularidad documentada de los derechos y la independencia de dependencias cerradas, o la identificación de alternativas abiertas que funcionen sin cambios mayores (Digital Public Goods Alliance, s. f., indicadores 2 a 4). Aquí se concreta con la política de costo cero del [estándar de datos](03-estandar-de-datos.md): nadie debe pagar para usar o ejecutar la aplicación (COD-05).
+Publicar el código no basta. El DPG Standard pide una licencia aprobada por la OSI, la titularidad de los derechos documentada y independencia de dependencias cerradas, o una alternativa abierta identificada (Digital Public Goods Alliance, s. f., indicadores 2 a 4). La política de costo cero del [estándar de datos](03-estandar-de-datos.md) añade que nadie paga para usar o ejecutar la aplicación (COD-05).
 
-Los principios FAIR para software de investigación (FAIR4RS) piden, entre otras cosas, que el software tenga un identificador persistente, metadatos ricos, una licencia clara y referencias a otros objetos de los que depende (Chue Hong et al., 2022). Las secciones siguientes los convierten en requisitos verificables: DOI por versión (REP-07), metadatos del software (REP-08) y licencia (COD-01).
+Los principios FAIR4RS piden que el software tenga un identificador persistente, metadatos ricos, una licencia clara y referencias a lo que usa (Chue Hong et al., 2022). Aquí son requisitos verificables: DOI por versión (REP-07), metadatos (REP-08) y licencia (COD-01).
 
-El versionado semántico (MAJOR.MINOR.PATCH) permite que quien cita una versión sepa si un cambio puede alterar los resultados (Preston-Werner, s. f.). En una aplicación que calcula, un cambio de método debe subir la versión mayor o menor, nunca solo el parche.
+Use versionado semántico: quien cita una versión sabe si un cambio puede alterar los resultados (Preston-Werner, s. f.). Un cambio de método sube la versión mayor o menor, nunca solo el parche.
 
 *Requisitos de este grupo: COD-01, COD-02, COD-03, COD-04, COD-05, COD-06, COD-07, COD-08. Su enunciado completo está en la lista de verificación de la Sección 3.*
 
 ### 2.3 Reproducibilidad y despliegue
 
-Reproducir una aplicación significa que otra persona pueda ponerla en marcha igual que usted y obtener los mismos resultados con las mismas entradas. Se apoya en tres prácticas.
+Una aplicación es reproducible si otra persona la pone en marcha y obtiene los mismos resultados con las mismas entradas.
 
-**Entorno declarado y fijado.** Binder reconstruye la imagen cuando cambia el repositorio y recomienda fijar versiones exactas con `pip freeze` o `conda env export` (Binder Project, s. f.). La metodología de los doce factores añade que las dependencias se declaran de forma explícita y aislada del sistema (factor II), que la configuración vive en el entorno y no en el código (factor III) y que las fases de construcción, publicación y ejecución están separadas (factor V) (Wiggins, 2017).
-
-**Pruebas con casos de referencia.** Una aplicación científica no se prueba solo con «no falla»: se prueba con entradas fijas cuyos resultados se conocen del cuaderno. Esas pruebas se ejecutan en cada cambio y son la prueba de que una actualización de una dependencia no alteró los resultados (REP-05).
-
-**Ejecución sin el servidor del autor.** La instancia alojada puede desaparecer. Por eso la aplicación debe poder ejecutarse en local (REP-06) y, cuando es posible, en el propio navegador. Quarto documenta una opción sin servidor en la que Python corre en el navegador con Pyodide (Quarto, s. f.).
+- **Entorno declarado y fijado.** Binder recomienda fijar versiones exactas (Binder Project, s. f.). Los doce factores añaden que las dependencias se declaran y se aíslan del sistema (factor II), la configuración vive en el entorno y no en el código (factor III) y la construcción, la publicación y la ejecución están separadas (factor V) (Wiggins, 2017).
+- **Pruebas con casos de referencia.** Con entradas fijas, la aplicación reproduce los valores del cuaderno. Esas pruebas se ejecutan en cada cambio y muestran si una actualización alteró los resultados (REP-05).
+- **Ejecución sin el servidor de quien la escribió.** La instancia alojada puede desaparecer. La aplicación se ejecuta en local (REP-06) y, cuando es posible, en el navegador; Quarto documenta una opción con Pyodide (Quarto, s. f.).
 
 Estructura mínima del repositorio:
 
@@ -172,9 +168,7 @@ app-<tema>/
 
 ### 2.4 Entradas, salidas y datos
 
-Los datos de una aplicación tienen dos lados: lo que entra y lo que sale. Lo que entra sigue el estándar de datos, igual que en un cuaderno. Lo que sale es la parte nueva: un resultado solo se puede verificar, citar y reutilizar si se exporta en un formato abierto y con un registro de cómo se produjo. El Digital Public Goods Standard exige que los datos y contenidos no personales puedan extraerse en un formato no propietario (Digital Public Goods Alliance, s. f., indicador 6).
-
-Los metadatos de cada resultado deben bastar para repetirlo (DAT-03 y DAT-04). Ejemplo de archivo `resultado.meta.json`:
+Las entradas siguen el estándar de datos. Los resultados se exportan en un formato no propietario y con un registro de cómo se produjeron (Digital Public Goods Alliance, s. f., indicador 6). Los metadatos bastan para repetir el resultado (DAT-03 y DAT-04):
 
 ```json
 {
@@ -191,49 +185,47 @@ Los metadatos de cada resultado deben bastar para repetirlo (DAT-03 y DAT-04). E
 }
 ```
 
-La validación de entradas es a la vez un requisito de usabilidad (mensajes de error claros) y de seguridad: la lista OWASP Top 10:2025 incluye la inyección y los fallos de integridad de software y de datos (OWASP Foundation, 2025, A05 y A08).
+Valide las entradas: es un requisito de usabilidad (mensajes claros) y de seguridad, porque OWASP Top 10:2025 incluye la inyección y los fallos de integridad de software y de datos (OWASP Foundation, 2025, A05 y A08).
 
 *Requisitos de este grupo: DAT-01, DAT-02, DAT-03, DAT-04, DAT-05, DAT-06, DAT-07, DAT-08. Su enunciado completo está en la lista de verificación de la Sección 3.*
 
 ### 2.5 Seguridad y privacidad
 
-La lista OWASP Top 10:2025 es la referencia más usada para los riesgos de las aplicaciones web. Sus diez categorías son: A01 control de acceso roto, A02 configuración de seguridad incorrecta, A03 fallos en la cadena de suministro de software, A04 fallos criptográficos, A05 inyección, A06 diseño inseguro, A07 fallos de autenticación, A08 fallos de integridad de software o de datos, A09 fallos de registro y alertas de seguridad y A10 mal manejo de condiciones excepcionales (OWASP Foundation, 2025). No es una norma de cumplimiento, sino un punto de partida para decidir qué revisar.
+OWASP Top 10:2025 es el punto de partida para decidir qué revisar; no es una norma de cumplimiento. Sus categorías son A01 control de acceso roto, A02 configuración incorrecta, A03 fallos en la cadena de suministro, A04 fallos criptográficos, A05 inyección, A06 diseño inseguro, A07 fallos de autenticación, A08 fallos de integridad de software o de datos, A09 fallos de registro y alertas y A10 mal manejo de condiciones excepcionales (OWASP Foundation, 2025).
 
-Una aplicación científica pequeña se expone sobre todo por cinco puntos: secretos en el repositorio (A02), dependencias vulnerables (A03), archivos o parámetros de la persona usuaria que se evalúan o se deserializan (A05, A08), mensajes de error que revelan rutas o datos (A02, A10) y datos personales en los registros (A09). Los requisitos de esta sección se dirigen a ellos.
-
-Plantilla de revisión (`SECURITY_REVIEW.md`), una fila por categoría:
+Una aplicación científica pequeña se expone sobre todo por cinco puntos: secretos en el repositorio (A02), dependencias vulnerables (A03), entradas que se evalúan o se deserializan (A05, A08), errores que revelan rutas o datos (A02, A10) y datos personales en los registros (A09). Los requisitos de esta sección los cubren. Documente la revisión así (`SECURITY_REVIEW.md`):
 
 ```markdown
 | Categoría OWASP 2025 | ¿Aplica? | Qué se revisó | Medida o razón de no aplicar |
 |---|---|---|---|
 | A01 Control de acceso roto | <sí/no> | <rutas, archivos accesibles> | <medida> |
-| A03 Fallos en la cadena de suministro | sí | <dependencias fijadas, alertas> | <Dependabot, bloqueo de versiones> |
+| A03 Fallos en la cadena de suministro | sí | <dependencias fijadas, alertas> | <Dependabot, versiones fijas> |
 | A05 Inyección | <sí/no> | <entradas, archivos subidos> | <validación, sin `eval`> |
 ```
 
-**Datos personales.** La Ley 1581 de 2012 establece el régimen general de protección de datos personales en Colombia (Congreso de la República, 2012). La regla de esta guía es mínima: si es posible, la aplicación no recoge datos personales y lo declara; si los recoge, se aplican la finalidad, la autorización y el aviso de privacidad, y la decisión es de una persona con competencia jurídica, no de este documento.
+**Datos personales.** La Ley 1581 de 2012 establece el régimen general de protección de datos personales (Congreso de la República, 2012). Si es posible, la aplicación no los recoge y lo declara. Si los recoge, aplican la finalidad, la autorización y el aviso de privacidad, y decide una persona con competencia jurídica.
 
-**Entidades públicas.** La Resolución 1519 de 2020 exige a las entidades públicas condiciones mínimas de seguridad digital en sus sedes electrónicas (MinTIC, 2020, art. 6); una aplicación alojada en la sede electrónica de una entidad debe cumplirlas.
+**Entidades públicas.** La Resolución 1519 de 2020 exige condiciones mínimas de seguridad digital en las sedes electrónicas (MinTIC, 2020, art. 6). Una aplicación alojada en una sede electrónica las cumple.
 
 *Requisitos de este grupo: SEG-01, SEG-02, SEG-03, SEG-04, SEG-05, SEG-06, SEG-07, SEG-08, SEG-09, SEG-10, SEG-11, SEG-12. Su enunciado completo está en la lista de verificación de la Sección 3.*
 
 ### 2.6 Accesibilidad y usabilidad
 
-La accesibilidad de una aplicación es más exigente que la de un tablero porque hay formularios, pasos y entradas. WCAG 2.2 agrega criterios que importan aquí: tamaño mínimo del objetivo (2.5.8), no repetir información ya dada (3.3.7) y autenticación accesible (3.3.8) (W3C, 2024). Los formularios deben etiquetar sus campos, identificar los errores y sugerir cómo corregirlos (criterios 3.3.1 a 3.3.3), y los controles deben exponer su nombre, su función y su valor (criterio 4.1.2) (W3C, 2024).
+Una aplicación tiene formularios y pasos, así que exige más que un tablero. WCAG 2.2 añade el tamaño mínimo del objetivo (2.5.8), no repetir información (3.3.7) y la autenticación accesible (3.3.8). Los formularios etiquetan sus campos, identifican los errores y sugieren cómo corregirlos (3.3.1 a 3.3.3), y los controles exponen nombre, función y valor (4.1.2) (W3C, 2024).
 
-En Colombia, la Resolución 1519 de 2020 obliga a las entidades públicas a cumplir WCAG 2.1 nivel AA (MinTIC, 2020, art. 3 y anexo 1); WCAG 2.2 incluye esos criterios. La guía de pruebas del *Government Analysis Function* para tableros sirve también para aplicaciones: pruebas automáticas, teclado, zoom, lector de pantalla y personas usuarias (Analysis Function, 2026). Las pruebas automáticas no bastan: detectan solo una parte de los problemas.
+La Resolución 1519 de 2020 exige WCAG 2.1 AA a las entidades públicas (MinTIC, 2020, art. 3 y anexo 1); WCAG 2.2 lo incluye. La guía de pruebas del *Analysis Function* también sirve aquí: pruebas automáticas, teclado, zoom, lector de pantalla y personas usuarias (Analysis Function, 2026). Las pruebas automáticas no bastan.
 
-**Costo cero.** Use un lector de pantalla gratuito (NVDA, VoiceOver u Orca).
+**Costo cero.** Use un lector de pantalla gratuito: NVDA, VoiceOver u Orca.
 
 *Requisitos de este grupo: ACC-01, ACC-02, ACC-03, ACC-04, ACC-05, ACC-06, ACC-07, ACC-08, ACC-09. Su enunciado completo está en la lista de verificación de la Sección 3.*
 
 ### 2.7 Documentación, mantenimiento y uso de IA
 
-El Digital Public Goods Standard pide documentación que permita a una persona técnica que no conoce el proyecto ejecutarlo o entenderlo (Digital Public Goods Alliance, s. f., indicador 5). Es el criterio del `README` (DOC-01). Además, esta guía exige documentar el método y las limitaciones, porque una aplicación que calcula riesgo sin explicar cómo no puede evaluarse ni reutilizarse.
+El `README` permite a una persona técnica que no conoce el proyecto ejecutarlo o entenderlo (Digital Public Goods Alliance, s. f., indicador 5). La documentación también explica el método y las limitaciones: una aplicación que calcula riesgo sin explicar cómo no puede evaluarse ni reutilizarse.
 
-**Mantenimiento.** Una aplicación abandonada es un riesgo: dependencias vulnerables y resultados desactualizados. La política de mantenimiento (DOC-05) dice quién responde, qué versiones tienen soporte y cuándo se retira. Al retirarla, se archiva el código y se conservan los datos y los metadatos, como recomienda el *Analysis Function* para los tableros (Analysis Function, 2026).
+**Mantenimiento.** Una aplicación abandonada acumula dependencias vulnerables y resultados desactualizados. La política de mantenimiento (DOC-05) dice quién responde, qué versiones tienen soporte y cuándo se retira. Al retirarla, se archivan el código, los datos y los metadatos (Analysis Function, 2026).
 
-**Uso de IA.** Declare el uso de IA según el [instructivo de uso de IA](05-uso-de-ia.md). Si la aplicación llama a un modelo de IA al ejecutarse, aplican además los criterios de ese instructivo sobre datos derivados de modelos de lenguaje: fijar el modelo y la versión, guardar las salidas y no enviar datos personales a una IA pública (Uso de IA, U11, U12 y U20). La aplicación debe seguir funcionando, o fallar con claridad, si el modelo deja de estar disponible (DOC-09).
+**Uso de IA.** Declárelo según el [instructivo de uso de IA](05-uso-de-ia.md). Si la aplicación llama a un modelo al ejecutarse, fije el modelo y la versión, guarde las salidas y no envíe datos personales a una IA pública (Uso de IA, U11, U12 y U20). Si el modelo deja de estar disponible, la aplicación sigue funcionando o falla con claridad (DOC-09).
 
 *Requisitos de este grupo: DOC-01, DOC-02, DOC-03, DOC-04, DOC-05, DOC-06, DOC-07, DOC-08, DOC-09. Su enunciado completo está en la lista de verificación de la Sección 3.*
 

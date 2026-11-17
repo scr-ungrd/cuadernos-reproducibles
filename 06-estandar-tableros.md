@@ -108,15 +108,15 @@ Ningún requisito de este documento exige comprar suscripciones, licencias ni se
 
 ### 2.1 Propósito, alcance y responsabilidad
 
-Un tablero responde a una pregunta de un público concreto. Sin esa definición, se acumulan indicadores que nadie usa. El término cubre usos muy distintos (Sarikaya et al., 2019), por eso la primera decisión es el propósito, y la segunda, si hace falta un tablero. La guía del *Government Analysis Function* del Reino Unido pide justificarlo antes de construirlo: solo si hay una necesidad identificada, los datos se actualizan con frecuencia y existe capacidad para mantenerlo; si no, basta un informe, una tabla o un cuaderno (Analysis Function, 2026a).
+Esta sección define para quién es el tablero y qué decisión apoya. El término «tablero» cubre usos muy distintos (Sarikaya et al., 2019), por eso el propósito se declara antes de diseñar. Un tablero solo se justifica si hay una necesidad identificada, los datos se actualizan con frecuencia y hay capacidad para mantenerlo; de lo contrario, basta un informe, una tabla o un cuaderno (Analysis Function, 2026a).
 
-En esta colección el **cuaderno es la fuente del método y el tablero es una vista del resultado**. El tablero no debe contener análisis que no esté en el cuaderno (REP-06).
+En la colección, el cuaderno contiene el método y el tablero es una vista del resultado. El tablero no debe incluir análisis que no esté en el cuaderno (REP-06).
 
 :::{important} PRO-03: un tablero no es una alerta
-Un tablero con mapas de amenaza, exposición o riesgo puede leerse como un producto oficial. Si la entidad competente no lo autorizó, el aviso debe decir qué es, qué no es y a quién acudir para información oficial. Es un criterio propio de la SCR.
+Un mapa de amenaza o de riesgo puede leerse como un producto oficial. Si la entidad competente no lo autorizó, el aviso dice qué es el tablero, qué no es y dónde consultar la información oficial.
 :::
 
-Ficha mínima del tablero (`DASHBOARD.md`), de la que salen el aviso, la sección «Acerca de» y el `README`:
+Use esta ficha (`DASHBOARD.md`) como base del aviso, de la sección «Acerca de» y del `README`:
 
 ```markdown
 # Ficha del tablero
@@ -125,7 +125,7 @@ Ficha mínima del tablero (`DASHBOARD.md`), de la que salen el aviso, la secció
 - **Propósito:** <la pregunta que responde>
 - **Público y decisiones que apoya:** <quién lo usa y para qué>
 - **Qué no es:** <por ejemplo, no es una alerta temprana ni un producto oficial del SNGRD>
-- **Cuaderno que contiene el método:** <CRC-00X y enlace>
+- **Cuaderno con el método:** <CRC-00X y enlace>
 - **Datos:** <DOI del conjunto archivado, versión y fecha de corte>
 - **Periodo y frecuencia de actualización:** <AAAA-MM-DD a AAAA-MM-DD; mensual, anual o versión final>
 - **Responsable y contacto:** <persona o dependencia, correo>
@@ -136,23 +136,23 @@ Ficha mínima del tablero (`DASHBOARD.md`), de la que salen el aviso, la secció
 
 ### 2.2 Datos del tablero
 
-Los datos de un tablero siguen el [estándar de datos](03-estandar-de-datos.md) de la colección: lo que se muestra es un subconjunto de datos que ya están descritos, licenciados y depositados. El tablero agrega tres obligaciones propias de una visualización pública.
+Los datos del tablero cumplen el [estándar de datos](03-estandar-de-datos.md). Esta sección agrega tres reglas propias de una visualización pública.
 
-La primera es que **el tablero no puede ser la única forma de llegar a los datos**. El estándar de datos ya exige entregarlos completos y en bloque (EST-03), y la guía del *Analysis Function* pide ofrecer un archivo plano descargable de los datos de cada gráfico y no publicar un tablero sin los datos en otra forma (Analysis Function, 2026a, 2026b). La segunda es **mostrar de qué datos se trata**: versión, DOI, periodo y fecha de actualización, para que una cifra pueda citarse y verificarse. La tercera es **proteger a las personas en la agregación**: un mapa por manzana o una tabla con pocos casos puede identificar a un hogar, aunque los datos de origen estén anonimizados.
+1. **El tablero no es la única vía a los datos.** Cada gráfico ofrece un archivo plano descargable, y no se publica un tablero sin los datos en otra forma (Analysis Function, 2026a, 2026b).
+2. **El tablero dice de qué datos se trata.** Muestra la versión, el DOI, el periodo y la fecha de actualización, para que una cifra pueda citarse y verificarse.
+3. **La agregación protege a las personas.** Un mapa por manzana o una tabla con pocos casos puede identificar un hogar, aunque los datos de origen estén anonimizados.
 
-Si el tablero consulta una API en vivo, la reproducibilidad exige una copia con fecha. El tablero debe mostrar cuándo fue la última consulta exitosa y no ocultar una falla mostrando cifras antiguas como si fueran de hoy (DAT-08).
+Si el tablero consulta una API en vivo, conserve una copia con fecha y muestre cuándo fue la última consulta exitosa. No presente cifras antiguas como vigentes (DAT-08).
 
 *Requisitos de este grupo: DAT-01, DAT-02, DAT-03, DAT-04, DAT-05, DAT-06, DAT-07, DAT-08, DAT-09. Su enunciado completo está en la lista de verificación de la Sección 3.*
 
 ### 2.3 Código, entorno y reproducibilidad
 
-Un tablero es reproducible si otra persona puede reconstruirlo desde cero y obtener las mismas cifras. Tres decisiones lo hacen posible.
+Un tablero es reproducible si otra persona puede reconstruirlo desde cero y obtener las mismas cifras.
 
-**Preferir la salida estática.** Los tableros estáticos, como los de Quarto, solo necesitan un servidor web y pueden publicarse en GitHub Pages; los que requieren un servidor de aplicaciones (por ejemplo, Shiny) no se pueden alojar en un sitio web genérico (Quarto, s. f.). Un sitio estático es más barato de mantener, tiene menos superficie de ataque que uno con servidor y se archiva con más facilidad. Con Observable Framework, la lógica es equivalente: los cargadores de datos se ejecutan al construir el sitio y generan archivos estáticos (Observable, s. f.). Si el tablero necesita un servidor, deje de aplicar este estándar de forma exclusiva y aplique también el [estándar de aplicaciones](07-estandar-aplicaciones.md).
-
-**Fijar el entorno.** Binder reconstruye la imagen cuando cambia el repositorio y recomienda fijar las versiones exactas de los paquetes, por ejemplo con `pip freeze` o `conda env export` (Binder Project, s. f.). Apuntar el enlace a un *commit* en lugar de una rama evita reconstrucciones inesperadas.
-
-**Hacer una sola cadena de producción.** Los datos se generan desde `data/raw` con un script, el cuaderno consume esos datos y el tablero consume los resultados del cuaderno. Así las cifras del tablero y las del cuaderno no pueden divergir.
+- **Prefiera la salida estática.** Un tablero estático solo necesita un servidor web y se publica en GitHub Pages; uno con servidor, como Shiny, no se puede alojar en un sitio genérico (Quarto, s. f.). Con Observable Framework, los cargadores de datos corren al construir el sitio y generan archivos estáticos (Observable, s. f.). Si necesita un servidor, aplique también el [estándar de aplicaciones](07-estandar-aplicaciones.md).
+- **Fije el entorno.** Binder recomienda fijar versiones exactas con `pip freeze` o `conda env export`, y enlazar a un *commit* y no a una rama (Binder Project, s. f.).
+- **Use una sola cadena de producción.** Los datos salen de `data/raw` con un script, el cuaderno los consume y el tablero consume los resultados del cuaderno. Así las cifras no pueden diverger.
 
 Estructura mínima del repositorio:
 
@@ -176,25 +176,22 @@ tablero-<tema>/
 
 ### 2.4 Diseño visual y honestidad gráfica
 
-La honestidad gráfica evita que la forma de mostrar un dato cambie lo que dice. En un tablero de riesgo, un mapa mal clasificado o una escala truncada puede cambiar una prioridad de gestión.
+Esta sección evita que la forma de mostrar un dato cambie lo que dice. En un tablero de riesgo, un mapa mal clasificado o una escala truncada puede cambiar una prioridad.
 
-Para el color, Crameri et al. (2020) muestran que los mapas de color no uniformes distorsionan los datos y que los de arcoíris y rojo-verde dificultan la lectura a personas con daltonismo; recomiendan paletas científicas perceptualmente uniformes. WCAG añade que el color no puede ser la única señal (W3C, 2024, criterio 1.4.1).
-
-Para los mapas coropléticos, compare tasas y no conteos, declare cómo se clasificaron los valores y distinga lo observado de lo proyectado. Estos tres puntos (VIS-05 a VIS-07) son criterios propios de la SCR.
+- **Color.** Los mapas de color no uniformes distorsionan los datos, y el arcoíris y el rojo-verde dificultan la lectura con daltonismo. Use paletas perceptualmente uniformes (Crameri et al., 2020). El color nunca es la única señal (W3C, 2024, criterio 1.4.1).
+- **Mapas.** Compare tasas y no conteos, declare cómo clasificó los valores y distinga lo observado de lo proyectado (VIS-05 a VIS-07; criterios propios de la SCR).
 
 *Requisitos de este grupo: VIS-01, VIS-02, VIS-03, VIS-04, VIS-05, VIS-06, VIS-07, VIS-08, VIS-09, VIS-10. Su enunciado completo está en la lista de verificación de la Sección 3.*
 
 ### 2.5 Accesibilidad
 
-La accesibilidad es una condición de uso público, no un añadido final. El *Analysis Function* exige que sus tableros cumplan WCAG 2.2 A y AA, y reconoce que los tableros rara vez cumplen todos los requisitos, por lo que pide planificar la accesibilidad desde el inicio, ofrecer los datos en otra forma y publicar una declaración con lo que no se cumple (Analysis Function, 2026a, 2026b).
+Todo tablero público cumple WCAG 2.2 niveles A y AA. Ese nivel incluye WCAG 2.1 AA, que la Resolución 1519 de 2020 exige a las entidades públicas en sus portales y sedes electrónicas (MinTIC, 2020, art. 3 y anexo 1; W3C, 2024). El *Analysis Function* reconoce que los tableros rara vez cumplen todo; por eso pide ofrecer los datos en otra forma y publicar una declaración con lo que no se cumple (Analysis Function, 2026a, 2026b).
 
-En Colombia, la Resolución 1519 de 2020 del MinTIC obliga a las entidades públicas a cumplir WCAG 2.1 nivel AA en sus portales y sedes electrónicas (MinTIC, 2020, art. 3 y anexo 1). Como WCAG 2.2 incluye los criterios de la 2.1 (W3C, 2024), cumplir la 2.2 AA cubre ambas exigencias. Un tablero de la UNGRD o de una entidad territorial puede ser parte de esa sede electrónica.
+**Cómo probar.** Las pruebas automáticas (Lighthouse, WAVE) detectan cerca del 30 % de los problemas y no cubren lo interactivo; combínelas con una revisión manual de teclado, zoom y lector de pantalla (Analysis Function, 2026b). La Resolución 1519 trata los validadores automáticos como una verificación final (MinTIC, 2020, anexo 1).
 
-**Qué probar.** Las pruebas automáticas (Lighthouse, WAVE) detectan solo una parte de los problemas, alrededor del 30 % según el *Analysis Function*, y no cubren los elementos interactivos; por eso se combinan con una revisión manual de teclado, zoom, lector de pantalla y, cuando es posible, personas usuarias (Analysis Function, 2026b). La Resolución 1519 también considera los validadores automáticos solo como una verificación final y no como el método principal de revisión (MinTIC, 2020, anexo 1).
+**Costo cero.** Use un lector de pantalla gratuito: NVDA, VoiceOver u Orca. No exigimos JAWS.
 
-**Costo cero.** El *Analysis Function* menciona JAWS, que es de pago. Este estándar exige un lector de pantalla gratuito (NVDA en Windows, VoiceOver en macOS y iOS u Orca en Linux).
-
-Plantilla de declaración de accesibilidad (`ACCESSIBILITY.md`):
+Declaración de accesibilidad (`ACCESSIBILITY.md`):
 
 ```markdown
 # Declaración de accesibilidad
@@ -203,7 +200,7 @@ Plantilla de declaración de accesibilidad (`ACCESSIBILITY.md`):
 - **Fecha de la última evaluación:** <AAAA-MM-DD>
 - **Cómo se evaluó:** <Lighthouse, WAVE, teclado, zoom al 200 %, NVDA o VoiceOver, personas usuarias>
 - **Partes que no cumplen:** <por ejemplo, el mapa interactivo no se opera con teclado>
-- **Alternativa:** <tabla de datos en `/datos` y archivo CSV descargable>
+- **Alternativa:** <tabla de datos y archivo CSV descargable>
 - **Cuándo se corregirá:** <fecha o versión>
 - **Cómo reportar un problema:** <correo o enlace a *issues*>
 ```
@@ -212,21 +209,19 @@ Plantilla de declaración de accesibilidad (`ACCESSIBILITY.md`):
 
 ### 2.6 Privacidad, seguridad y terceros
 
-Un tablero público es una superficie de exposición. Tres riesgos son frecuentes: publicar sin querer datos que identifican personas (SEG-01), cargar recursos de terceros que cambian o exigen claves (SEG-03) y dejar dependencias desactualizadas (SEG-05).
+Un tablero público es una superficie de exposición. Los riesgos más frecuentes son publicar datos que identifican personas (SEG-01), cargar recursos de terceros que cambian o exigen claves (SEG-03) y dejar dependencias desactualizadas (SEG-05).
 
-La Ley 1581 de 2012 establece el régimen general de protección de datos personales en Colombia (Congreso de la República, 2012). Un tablero que no recoge datos personales reduce de forma importante sus obligaciones; por eso la regla por defecto es no recogerlos, ni siquiera mediante analítica. El estándar de datos ya prohíbe publicar datos personales o de comunidades sin constancia de autorización (PER-02).
-
-Para los riesgos técnicos, la lista OWASP Top 10:2025 ubica los fallos de la cadena de suministro de software en el tercer lugar (A03) y la mala configuración en el segundo (A02) (OWASP Foundation, 2025). En un sitio estático, el control más eficaz es mantener pocas dependencias, fijarlas y monitorearlas.
+La Ley 1581 de 2012 establece el régimen general de protección de datos personales (Congreso de la República, 2012). La regla por defecto es no recoger datos personales, ni siquiera con analítica. Para los riesgos técnicos, OWASP Top 10:2025 ubica los fallos de la cadena de suministro en el tercer lugar (A03) y la mala configuración en el segundo (A02) (OWASP Foundation, 2025). En un sitio estático, el control más eficaz es tener pocas dependencias, fijarlas y monitorearlas.
 
 *Requisitos de este grupo: SEG-01, SEG-02, SEG-03, SEG-04, SEG-05, SEG-06. Su enunciado completo está en la lista de verificación de la Sección 3.*
 
 ### 2.7 Documentación, citación y ciclo de vida
 
-La documentación de un tablero responde cinco preguntas: qué es, de dónde salen los datos, cómo se reconstruye, qué cambió y cómo se cita. El *Analysis Function* pide una nota de cambio cada vez que se actualizan los datos, con lo que cambió y cuándo, y tratar el tablero como un servicio digital que se mantiene durante toda su vida (Analysis Function, 2026a).
+El tablero se documenta para responder cinco preguntas: qué es, de dónde salen los datos, cómo se reconstruye, qué cambió y cómo se cita.
 
-**Ciclo de vida.** Un tablero sin mantenimiento es un riesgo: muestra cifras desactualizadas con aspecto de vigentes. La misma guía propone criterios de retiro (ya no se mantiene, ya no es útil o relevante), un aviso con antelación, la conservación de los datos y los metadatos con una nota de que no se actualizan, y el archivo del código en un repositorio público marcado como archivado (Analysis Function, 2026a). Aquí se agrega el depósito de la versión final en Zenodo con DOI, como ya exige el estándar de datos (PRE-01).
-
-**Citación.** Cada versión del tablero tiene su DOI y un `CITATION.cff`, que GitHub muestra en la página del repositorio y Zenodo aprovecha al crear el registro (Citation File Format, s. f.).
+- **Cambios.** Cada actualización de datos lleva una nota con lo que cambió y cuándo (Analysis Function, 2026a).
+- **Retiro.** Un tablero sin mantenimiento muestra cifras desactualizadas con aspecto de vigentes. Defina criterios de retiro, avise con antelación, conserve los datos y metadatos y archive el código (Analysis Function, 2026a). Deposite la versión final en Zenodo con DOI (PRE-01 del estándar de datos).
+- **Citación.** Cada versión tiene un DOI y un `CITATION.cff`, que GitHub muestra en el repositorio y Zenodo usa para crear el registro (Citation File Format, s. f.).
 
 *Requisitos de este grupo: DOC-01, DOC-02, DOC-03, DOC-04, DOC-05, DOC-06, DOC-07, DOC-08. Su enunciado completo está en la lista de verificación de la Sección 3.*
 
