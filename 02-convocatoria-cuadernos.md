@@ -70,7 +70,7 @@ Cada cuaderno cumple lo siguiente:
 - **Extensión.** Entre 500 y 3000 líneas de código. Si es más largo, divídalo en módulos.
 - **Uso de IA.** Declárelo según el [instructivo de uso de IA](05-uso-de-ia.md).
 
-Si el cuaderno incluye un tablero o una aplicación, cumpla además el [estándar de tableros](06-estandar-tableros.md) o el [estándar de aplicaciones](07-estandar-aplicaciones.md).
+Si el cuaderno incluye un modelo, un tablero o una aplicación, cumpla además el [estándar de modelos](08-estandar-modelos.md), el [estándar de tableros](06-estandar-tableros.md) o el [estándar de aplicaciones](07-estandar-aplicaciones.md).
 
 ### Fuentes de datos recomendadas
 
@@ -158,7 +158,7 @@ Reglas:
 
 ## Cómo evaluamos
 
-El equipo técnico de la SCR y un comité de pares externo evalúan cada cuaderno con estos criterios. Una persona del comité ejecuta el cuaderno de forma independiente en un entorno limpio.
+El equipo técnico de la SCR y un comité de pares externo evalúan cada cuaderno con estos criterios. Antes, una persona del comité verifica la reproducibilidad: ejecuta el cuaderno en un entorno limpio y publica un informe de verificación junto al cuaderno (véase la [guía](01-cuadernos-de-conocimiento.md)).
 
 ```{list-table}
 :header-rows: 1

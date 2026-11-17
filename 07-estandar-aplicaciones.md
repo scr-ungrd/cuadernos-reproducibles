@@ -46,7 +46,7 @@ Se distinguen tres objetos relacionados:
 
 - **Cuaderno**: documenta un análisis y es la fuente del método. Se rige por la [guía](01-cuadernos-de-conocimiento.md).
 - **Tablero**: muestra resultados ya calculados, sin entradas ni cálculos propios. Se rige por el [estándar de tableros](06-estandar-tableros.md).
-- **Aplicación**: calcula a partir de entradas de la persona usuaria. Se rige por este documento.
+- **Aplicación**: calcula a partir de entradas de la persona usuaria. Se rige por este documento. El modelo que ejecuta cumple además el [estándar de modelos](08-estandar-modelos.md).
 
 Complementan la guía, el [estándar de datos](03-estandar-de-datos.md) y el [instructivo de uso de IA](05-uso-de-ia.md): los datos de la aplicación cumplen el primero y el uso de IA, tanto en su preparación como en su ejecución, se declara según el segundo.
 
@@ -325,7 +325,7 @@ Este prompt convierte la lista de verificación en una auditoría repetible. Lee
 **Procedimiento de uso**
 
 1. Copie el prompt completo y reemplace los valores entre `<>` de la sección ENTRADAS.
-2. Ejecútelo desde un entorno con acceso a los archivos del repositorio. Para comprobar DOI, paquetes y la URL publicada, use el modo `con_red`.
+2. Ejecútelo desde un entorno con acceso a los archivos del repositorio. Para comprobar DOI, paquetes, la URL publicada o la ejecución, use el modo ampliado que indica la sección ENTRADAS.
 3. Revise el reporte con una persona. Un asistente de IA puede equivocarse al leer un archivo o interpretar un criterio. El resultado es un apoyo a la revisión y no una certificación, y todo lo marcado «Requiere revisión humana» lo decide una persona.
 4. Guarde el reporte en el repositorio y repita la auditoría antes de cada *release*.
 

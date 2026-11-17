@@ -88,5 +88,5 @@ Subdirección para el Conocimiento del Riesgo · 16 nov 2026
 :::{div}
 :class: see-all
 
-[Guía para publicar un cuaderno](01-cuadernos-de-conocimiento.md) · [Convocatoria](02-convocatoria-cuadernos.md) · [Estándar de datos](03-estandar-de-datos.md) · [Uso de IA](05-uso-de-ia.md) · [Estándar de tableros](06-estandar-tableros.md) · [Estándar de aplicaciones](07-estandar-aplicaciones.md)
+[Guía para publicar un cuaderno](01-cuadernos-de-conocimiento.md) · [Convocatoria](02-convocatoria-cuadernos.md) · [Estándar de datos](03-estandar-de-datos.md) · [Uso de IA](05-uso-de-ia.md) · [Estándar de tableros](06-estandar-tableros.md) · [Estándar de aplicaciones](07-estandar-aplicaciones.md) · [Estándar de modelos](08-estandar-modelos.md)
 :::

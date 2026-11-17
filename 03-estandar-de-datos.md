@@ -27,7 +27,7 @@ abbreviations:
 
 +++ {"part": "abstract"}
 
-Este documento establece los requisitos que deben cumplir los datos y los metadatos de un cuaderno para publicarse en la colección. Define 90 requisitos (79 obligatorios y 11 recomendados), cada uno con un identificador, un nivel y una fuente citada. Se derivan del Risk Data Library Standard (RDLS), los principios FAIR y CARE, el compromiso COPDESS, la guía *Open Data for Resilience*, las políticas de *Scientific Data*, la Ley 1712 de 2014, el Portal Nacional de Datos Abiertos y la documentación de EM-DAT. Ningún requisito exige pagos. Incluye una lista de verificación y un prompt de auditoría.
+Este documento establece los requisitos que deben cumplir los datos y los metadatos de un cuaderno para publicarse en la colección. Define 92 requisitos (80 obligatorios y 12 recomendados), cada uno con un identificador, un nivel y una fuente citada. Se derivan del Risk Data Library Standard (RDLS), los principios FAIR y CARE, el compromiso COPDESS, la guía *Open Data for Resilience*, las políticas de *Scientific Data*, la Ley 1712 de 2014, el Portal Nacional de Datos Abiertos y la documentación de EM-DAT. Ningún requisito exige pagos. Incluye una lista de verificación y un prompt de auditoría.
 
 +++
 
@@ -124,6 +124,9 @@ Ningún requisito de este documento exige comprar suscripciones, licencias ni se
 * - Socrata (s. f.-a, s. f.-b). Documentación de la API
   - Uso de tokens y límite de filas por solicitud
   - GOV-06
+* - UNDRR e ISC (2025). Hazard Information Profiles, versión 2025; Naciones Unidas (2015). Marco de Sendai
+  - Taxonomía de amenazas con códigos comunes e indicadores de daños y pérdidas
+  - EST-11, EST-12
 * - Departamento Administrativo Nacional de Estadística [DANE] (2025); Unidad Nacional para la Gestión del Riesgo de Desastres [UNGRD] (2026). Conjuntos del portal
   - Códigos DIVIPOLA y reportes anuales de emergencias
   - EST-09
@@ -265,7 +268,17 @@ Todo insumo se registra antes de usarse. El registro permite a otra persona obte
   - Obligatorio
   - Los valores numéricos usan el punto como separador decimal y no incluyen separador de miles ni texto.
   - Requisito de esta guía; MinTIC (2026a), ERR019
+* - **EST-11**
+  - Obligatorio
+  - Si el conjunto clasifica amenazas o eventos, usa los códigos de los Hazard Information Profiles (HIPs) 2025 de UNDRR y el ISC, y `sources.csv` o el diccionario registra la equivalencia con la clasificación de la fuente (por ejemplo, EM-DAT, DesInventar o UNGRD). Aplica solo si el conjunto clasifica amenazas.
+  - UNDRR e ISC (2025)
+* - **EST-12**
+  - Recomendado
+  - Los indicadores de daños y pérdidas se definen y se nombran según los indicadores del Marco de Sendai cuando existe uno equivalente, y el diccionario de variables indica cuál.
+  - Naciones Unidas (2015)
 ```
+
+**Vocabularios controlados.** Un código común permite comparar el conjunto con las bases internacionales. La actualización de 2025 de los HIPs agrupa 281 amenazas en 8 tipos y 39 clústeres (UNDRR e ISC, 2025). Cuando una fuente usa su propia clasificación, no la reemplace: conserve la clase original y agregue una columna con el código HIPs.
 
 Estructura de carpetas del repositorio:
 
@@ -1373,7 +1386,7 @@ La documentación de EM-DAT enlaza conjuntos aumentados que usan modelos de leng
 
 ## 3. Lista de verificación
 
-La lista tiene 90 requisitos: 79 obligatorios y 11 recomendados. Los 11 requisitos **críticos** (INV-04, INV-05, INV-06, MET-03, PER-02, LIC-01, LIC-02, DEP-01, DEP-03, EMD-01, EMD-03) bloquean la publicación si no se cumplen.
+La lista tiene 92 requisitos: 80 obligatorios y 12 recomendados. Los 11 requisitos **críticos** (INV-04, INV-05, INV-06, MET-03, PER-02, LIC-01, LIC-02, DEP-01, DEP-03, EMD-01, EMD-03) bloquean la publicación si no se cumplen.
 
 **Criterio de aceptación.** Un cuaderno cumple el estándar de datos si (1) ningún requisito crítico está en incumplimiento y (2) el puntaje de requisitos obligatorios es de 90 o más, calculado como se indica en el prompt de la Sección 4.
 
@@ -1400,6 +1413,8 @@ La lista tiene 90 requisitos: 79 obligatorios y 11 recomendados. Los 11 requisit
 - [ ] **EST-08.** *(Recomendado)* Los nombres de archivo no tienen espacios ni tildes.
 - [ ] **EST-09.** Los departamentos y municipios se identifican con el código DIVIPOLA del DANE, almacenado como texto con ceros a la izquierda: dos caracteres para departamentos (por ejemplo, `05`) y cinco para municipios (por ejemplo, `05001`).
 - [ ] **EST-10.** Los valores numéricos usan el punto como separador decimal y no incluyen separador de miles ni texto.
+- [ ] **EST-11.** Si el conjunto clasifica amenazas o eventos, usa los códigos HIPs 2025 y registra la equivalencia con la clasificación de la fuente (aplica solo si el conjunto clasifica amenazas).
+- [ ] **EST-12.** *(Recomendado)* Los indicadores de daños y pérdidas se definen según los indicadores del Marco de Sendai cuando existe uno equivalente.
 
 **2.3. Metadatos con el Risk Data Library Standard**
 
@@ -1554,7 +1569,7 @@ Lista los archivos de `data/`, `metadata/`, `scripts/` y la raíz. Identifica `s
 14. EM-DAT (solo si el cuaderno lo usa): confirma que `data/` no contiene archivos de EM-DAT, que `sources.csv` registra versión y fecha de acceso, y que no hay análisis de tendencia con registros anteriores a 2000.
 
 ### Paso C. Evaluación de requisitos
-Evalúa los 90 requisitos de abajo (79 obligatorios y 11 recomendados). A cada uno asígnale exactamente un estado: Cumple, Parcial, No cumple, No aplica o No verificable. Los marcados (CRÍTICO) son compuertas bloqueantes.
+Evalúa los 92 requisitos de abajo (80 obligatorios y 12 recomendados). A cada uno asígnale exactamente un estado: Cumple, Parcial, No cumple, No aplica o No verificable. Los marcados (CRÍTICO) son compuertas bloqueantes.
 
 ### 2.1. Inventario y selección de insumos
 INV-01. Cada insumo (dato de entrada) figura en metadata/sources.csv con las columnas de la Tabla 3.
@@ -1577,6 +1592,8 @@ EST-07. metadata/data_catalog.csv lista cada archivo publicado con su descripci�
 EST-08 (RECOMENDADO). Los nombres de archivo no tienen espacios ni tildes.
 EST-09. Los departamentos y municipios se identifican con el código DIVIPOLA del DANE, almacenado como texto con ceros a la izquierda: dos caracteres para departamentos (por ejemplo, 05) y cinco para municipios (por ejemplo, 05001).
 EST-10. Los valores numéricos usan el punto como separador decimal y no incluyen separador de miles ni texto.
+EST-11. Si el conjunto clasifica amenazas o eventos, usa los códigos HIPs 2025 y registra la equivalencia con la clasificación de la fuente (aplica solo si el conjunto clasifica amenazas).
+EST-12 (RECOMENDADO). Los indicadores de daños y pérdidas se definen según los indicadores del Marco de Sendai cuando existe uno equivalente.
 
 ### 2.3. Metadatos con el Risk Data Library Standard
 MET-01. Existe un archivo metadata/rdls/<nombre>.json por cada conjunto de datos publicado.
@@ -1736,6 +1753,8 @@ Ministerio de Tecnologías de la Información y las Comunicaciones. (2026b). *Po
 
 Ministerio de Tecnologías de la Información y las Comunicaciones. (2026c). *¿Tú primera vez con Datos Abiertos? Aquí te contamos por dónde empezar - 2026* [Historia]. Portal Nacional de Datos Abiertos. https://www.datos.gov.co/stories/s/nc93-tzp2
 
+Naciones Unidas. (2015). *Marco de Sendai para la Reducción del Riesgo de Desastres 2015-2030*. Oficina de las Naciones Unidas para la Reducción del Riesgo de Desastres. https://www.undrr.org/publication/sendai-framework-disaster-risk-reduction-2015-2030
+
 Rosen, S. (2026). *check-jsonschema* (Versión 0.39.0) [Software]. Python Package Index. https://pypi.org/project/check-jsonschema/
 
 Scientific Data. (s. f.-a). *Data policies*. Springer Nature. Recuperado el 16 de noviembre de 2026, de https://www.nature.com/sdata/policies/data-policies
@@ -1755,6 +1774,8 @@ Unidad Nacional para la Gestión del Riesgo de Desastres. (2026). *Emergencias U
 Université catholique de Louvain. (2025). *EM-DAT attribution and citation policy*. https://doc.emdat.be/docs/legal/citation-policy/
 
 Université catholique de Louvain. (2026). *EM-DAT database license agreement* (Versión del 16 de noviembre de 2026). https://doc.emdat.be/docs/legal/database-license-agreement/
+
+United Nations Office for Disaster Risk Reduction y International Science Council. (2025). *Hazard Information Profiles (HIPs): 2025 version*. https://www.undrr.org/publication/documents-and-publications/hazard-information-profiles-hips-2025-version
 
 Wilkinson, M. D., Dumontier, M., Aalbersberg, I. J., Appleton, G., Axton, M., Baak, A., Blomberg, N., Boiten, J.-W., da Silva Santos, L. B., Bourne, P. E., Bouwman, J., Brookes, A. J., Clark, T., Crosas, M., Dillo, I., Dumon, O., Edmunds, S., Evelo, C. T., Finkers, R., . . . Mons, B. (2016). The FAIR Guiding Principles for scientific data management and stewardship. *Scientific Data, 3*, Artículo 160018. https://doi.org/10.1038/sdata.2016.18
 

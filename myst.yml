@@ -42,6 +42,8 @@ project:
       file: 06-estandar-tableros.md
     - title: Estándar de aplicaciones
       file: 07-estandar-aplicaciones.md
+    - title: Estándar de modelos
+      file: 08-estandar-modelos.md
 
 site:
   template: book-theme
@@ -72,6 +74,8 @@ site:
       url: /estandar-tableros
     - title: Aplicaciones
       url: /estandar-aplicaciones
+    - title: Modelos
+      url: /estandar-modelos
     - title: HUB SCR — portal de proyectos
       url: https://scr-ungrd.github.io/hub/
     - title: Repositorio en GitHub

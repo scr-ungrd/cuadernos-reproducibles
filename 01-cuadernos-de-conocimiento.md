@@ -35,7 +35,7 @@ Un cuaderno reproducible reúne en un solo repositorio la narrativa, el código 
 6. **Verifique el cuaderno** en un entorno limpio (Sección 4).
 7. **Envíe el repositorio** según la [convocatoria](02-convocatoria-cuadernos.md).
 
-Si el cuaderno incluye un tablero o una aplicación, cumpla además el [estándar de tableros](06-estandar-tableros.md) o el [estándar de aplicaciones](07-estandar-aplicaciones.md).
+Si el cuaderno incluye un modelo, un tablero o una aplicación, cumpla además el [estándar de modelos](08-estandar-modelos.md), el [estándar de tableros](06-estandar-tableros.md) o el [estándar de aplicaciones](07-estandar-aplicaciones.md).
 
 ## 1. Elija el tipo de cuaderno
 
@@ -80,6 +80,7 @@ El repositorio contiene como mínimo:
 - `data/` con los datos de ejemplo para una versión mínima, o instrucciones para descargarlos.
 - `LICENSE` con una licencia abierta. Recomendamos Apache-2.0 o MIT para el código y CC BY 4.0 para los datos y el texto.
 - `CITATION.cff` con el ORCID de cada persona autora.
+- `AUTHORS.md` (opcional) con el rol de cada persona según la taxonomía CRediT (por ejemplo, conceptualización, curaduría de datos, software, validación) y la institución con su identificador ROR.
 
 Añada un botón de Binder al `README` para que cualquier persona ejecute el cuaderno en la nube sin instalar nada.
 
@@ -115,8 +116,16 @@ Antes del envío, compruebe que:
 - las rutas son relativas al repositorio;
 - el repositorio tiene al menos un *release* en GitHub y la versión correspondiente en Zenodo tiene un DOI activo.
 
-Una persona del comité evaluador ejecuta el cuaderno de forma independiente en un entorno limpio. Pedimos esta comprobación porque la reproducibilidad solo se puede certificar cuando alguien distinto de quien escribió el cuaderno lo ejecuta sin ayuda.
+**Verificación independiente.** Una persona del comité evaluador ejecuta el cuaderno en un entorno limpio y comprueba que reproduce las figuras y las tablas, siguiendo el proceso de CODECHECK (Nüst y Eglen, 2021). Pedimos esta comprobación porque la reproducibilidad solo se puede certificar cuando alguien distinto de quien escribió el cuaderno lo ejecuta sin ayuda. El informe de verificación (fecha, entorno, resultado y diferencias) se publica junto al cuaderno. Verificar no es replicar: el informe confirma que el código y los datos regeneran los resultados, no que estos sean correctos.
+
+**Transparencia.** La colección sigue las directrices TOP 2025 (*Transparency and Openness Promotion*), que piden declarar, compartir y citar los datos, el código y los materiales de un estudio (Center for Open Science, 2025). Los estándares de esta guía las concretan: datos, código, modelos y uso de IA.
 
 ## Ejemplos de referencia
 
 Esta guía adapta el modelo de colecciones abiertas como el [Manual de Evaluación del Riesgo Climático de CLIMAAX](https://handbook.climaax.eu/intro.html), la [Risk Data Library del GFDRR](https://gfdrr.github.io/CCDR-tools/home.html), [DesignSafe](https://www.designsafe-ci.org/), [Probability of Fire del ECMWF](https://ecmwf.github.io/AI-Probability-of-Fire), el [Proyecto Pythia](https://projectpythia.org/) y [EM-DAT](https://github.com/em-dat/).
+
+## Referencias
+
+Center for Open Science. (2025). *TOP 2025: An update to the Transparency and Openness Promotion guidelines*. https://doi.org/10.31222/osf.io/nmfs6
+
+Nüst, D., y Eglen, S. J. (2021). CODECHECK: An open science initiative for the independent execution of computations underlying research articles during peer review to improve reproducibility. *F1000Research, 10*, Artículo 253. https://doi.org/10.12688/f1000research.51738.2

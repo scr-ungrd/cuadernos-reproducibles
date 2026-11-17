@@ -37,6 +37,7 @@ https://mybinder.org/v2/gh/scr-ungrd/cuadernos-reproducibles-crc00X/HEAD
 | `05-uso-de-ia.md` | Recomendaciones de uso ético y responsable de IA, checklist y prompt de auditoría |
 | `06-estandar-tableros.md` | Estándar de tableros (dashboards) abiertos y reproducibles: accesibilidad WCAG 2.2, datos, diseño, checklist y prompt de auditoría |
 | `07-estandar-aplicaciones.md` | Estándar de aplicaciones abiertas y reproducibles: DPG Standard, FAIR4RS, OWASP Top 10:2025, checklist y prompt de auditoría |
+| `08-estandar-modelos.md` | Estándar de modelos (aprendizaje automático, estadísticos y de simulación): ficha del modelo, validación, incertidumbre, reproducibilidad, checklist y prompt de auditoría |
 | `footer.md` | Pie de página con logos y aviso de la Subdirección |
 | `css/footer.css` | Estilos de la portada (modo día/noche, tarjetas, pie) |
 | `images/` | Imágenes de la portada, logos y favicon |
