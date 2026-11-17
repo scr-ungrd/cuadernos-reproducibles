@@ -53,11 +53,11 @@ Cubre **cambio climático**, **olas de calor**, **sismos**, **tsunamis**, **inun
 
 ![Mapa de riesgo por olas de calor urbano en Montería](./images/olas-calor-monteria.png)
 
-**Riesgo por olas de calor urbano en Montería, Córdoba, bajo escenarios de cambio climático**
+**CRC-001 · Riesgo por olas de calor urbano en Montería, Córdoba, bajo escenarios de cambio climático**
 
-Cuaderno de la serie CRC-001. Proyección del cambio climático, olas de calor y riesgo por calor urbano en Montería, con datos de IDEAM, NEX-GDDP, Landsat y WorldPop en seis fases, según el marco del IPCC AR6.
+Proyección del cambio climático, olas de calor y riesgo relativo por calor urbano en Montería, en seis fases y con tres escenarios del CMIP6, según el marco del IPCC AR6. Usa datos abiertos de IDEAM, ERA5-Land, NEX-GDDP-CMIP6, Landsat, ESA WorldCover, WorldPop y OpenStreetMap. Incluye declaración de datos, uso de IA documentado y DOI en Zenodo.
 
-Subdirección para el Conocimiento del Riesgo · 15 nov 2026
+Subdirección para el Conocimiento del Riesgo · v2.0.0 · 16 nov 2026
 ::::
 
 ::::{card}
@@ -65,11 +65,11 @@ Subdirección para el Conocimiento del Riesgo · 15 nov 2026
 
 ![Fotografía del tsunami de Tumaco de 1979](./images/tsunami-1.avif)
 
-**Simulación del tsunami de Tumaco de 1979 (versión 2)**
+**CRC-002 · Simulación del Tsunami de Tumaco de 1979 con Google Colab**
 
-Cuaderno de la serie CRC-002. Propagación del tsunami del 12 de diciembre de 1979 (Mw 8,3) en el Pacífico colombiano con una fuente de Okada y aguas someras lineales, ejecutable en Google Colab.
+Propagación del tsunami del 12 de diciembre de 1979 (Mw 8,3) en el Pacífico colombiano, con una fuente de Okada y aguas someras lineales, en tres cuadernos que corren en CPU. Contrasta la simulación con las observaciones de Herd et al. (1981) y de NOAA/NGDC, que no coinciden entre sí, e incluye ficha del modelo y límites explícitos. Ejercicio sin validar.
 
-Subdirección para el Conocimiento del Riesgo · 2 nov 2026
+Subdirección para el Conocimiento del Riesgo · v2.2.0 · 17 nov 2026
 ::::
 
 ::::{card}
@@ -77,11 +77,11 @@ Subdirección para el Conocimiento del Riesgo · 2 nov 2026
 
 ![Mapa de sismicidad de Colombia](./images/crc003-sismicidad.png)
 
-**Análisis de sismicidad de Colombia**
+**CRC-003 · Análisis de sismicidad de Colombia**
 
-Cuaderno de la serie CRC-003. Sismicidad de Colombia con el catálogo del USGS 2000–2026: magnitud de completitud, relación de Gutenberg-Richter por máxima verosimilitud, profundidad focal y mapas interactivos de epicentros.
+Sismicidad de Colombia con el catálogo del USGS (2000–2026): magnitud de completitud, relación de Gutenberg-Richter por máxima verosimilitud (b = 1,07), profundidad focal, cortes transversales, mapas interactivos y una ficha piloto de Córdoba. Describe amenaza, no riesgo. Incluye ficha del modelo. Ejercicio sin validar.
 
-Subdirección para el Conocimiento del Riesgo · 16 nov 2026
+Subdirección para el Conocimiento del Riesgo · v0.1.0 · 16 nov 2026
 ::::
 
 
