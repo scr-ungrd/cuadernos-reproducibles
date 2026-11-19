@@ -35,16 +35,20 @@ project:
     - title: Guía para publicar
       file: 01-cuadernos-de-conocimiento.md
       children:
-        - title: Estándar de datos
+        - title: Requisitos de datos
           file: 03-estandar-de-datos.md
-        - title: Uso de IA
+        - title: Requisitos de uso de IA
           file: 05-uso-de-ia.md
-        - title: Estándar de tableros
+        - title: Requisitos de tableros
           file: 06-estandar-tableros.md
-        - title: Estándar de aplicaciones
+        - title: Requisitos de aplicaciones
           file: 07-estandar-aplicaciones.md
-        - title: Estándar de modelos
+        - title: Requisitos de modelos
           file: 08-estandar-modelos.md
+        - title: Requisitos de uso de LLMs
+          file: 09-uso-de-llms.md
+        - title: Requisitos de seguridad
+          file: 10-requisitos-seguridad.md
 
 site:
   template: book-theme
@@ -70,16 +74,20 @@ site:
       children:
         - title: Guía para publicar
           url: /cuadernos-de-conocimiento
-        - title: Estándar de datos
+        - title: Requisitos de datos
           url: /estandar-de-datos
-        - title: Uso de IA
+        - title: Requisitos de uso de IA
           url: /uso-de-ia
-        - title: Estándar de tableros
+        - title: Requisitos de tableros
           url: /estandar-tableros
-        - title: Estándar de aplicaciones
+        - title: Requisitos de aplicaciones
           url: /estandar-aplicaciones
-        - title: Estándar de modelos
+        - title: Requisitos de modelos
           url: /estandar-modelos
+        - title: Requisitos de uso de LLMs
+          url: /uso-de-llms
+        - title: Requisitos de seguridad
+          url: /requisitos-seguridad
     - title: HUB SCR — portal de proyectos
       url: https://scr-ungrd.github.io/hub/
     - title: Repositorio en GitHub

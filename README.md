@@ -33,11 +33,13 @@ https://mybinder.org/v2/gh/scr-ungrd/cuadernos-reproducibles-crc00X/HEAD
 | `index.md` | Portada: hero con imagen satelital y lista de cuadernos |
 | `01-cuadernos-de-conocimiento.md` | Guía para publicar un cuaderno |
 | `02-convocatoria-cuadernos.md` | Convocatoria abierta de cuadernos |
-| `03-estandar-de-datos.md` | Instructivo de estándar de datos (RDLS, FAIR, CARE, COPDESS, Banco Mundial, *Scientific Data*, EM-DAT) |
-| `05-uso-de-ia.md` | Recomendaciones de uso ético y responsable de IA, checklist y prompt de auditoría |
-| `06-estandar-tableros.md` | Estándar de tableros (dashboards) abiertos y reproducibles: accesibilidad WCAG 2.2, datos, diseño, checklist y prompt de auditoría |
-| `07-estandar-aplicaciones.md` | Estándar de aplicaciones abiertas y reproducibles: DPG Standard, FAIR4RS, OWASP Top 10:2025, checklist y prompt de auditoría |
-| `08-estandar-modelos.md` | Estándar de modelos (aprendizaje automático, estadísticos y de simulación): ficha del modelo, validación, incertidumbre, reproducibilidad, checklist y prompt de auditoría |
+| `03-estandar-de-datos.md` | Requisitos de datos (RDLS, FAIR, CARE, COPDESS, Banco Mundial, *Scientific Data*, EM-DAT) |
+| `05-uso-de-ia.md` | Requisitos de uso de IA: recomendaciones de uso ético y responsable, checklist y prompt de auditoría |
+| `06-estandar-tableros.md` | Requisitos de tableros (dashboards) abiertos y reproducibles: accesibilidad WCAG 2.2, datos, diseño, checklist y prompt de auditoría |
+| `07-estandar-aplicaciones.md` | Requisitos de aplicaciones abiertas y reproducibles: DPG Standard, FAIR4RS, OWASP Top 10:2025, checklist y prompt de auditoría |
+| `08-estandar-modelos.md` | Requisitos de modelos (aprendizaje automático, estadísticos y de simulación): ficha del modelo, validación, incertidumbre, reproducibilidad, checklist y prompt de auditoría |
+| `09-uso-de-llms.md` | Requisitos de uso de LLMs y otros modelos preentrenados de terceros (Hugging Face, APIs): revisión fijada, licencia, seguridad, reproducibilidad, evaluación, privacidad, checklist y prompt de auditoría |
+| `10-requisitos-seguridad.md` | Requisitos de seguridad del repositorio: secretos, datos personales y rutas locales, código no confiable, dependencias, GitHub Actions, releases, checklist y prompt de auditoría |
 | `footer.md` | Pie de página con logos y aviso de la Subdirección |
 | `css/footer.css` | Estilos de la portada (modo día/noche, tarjetas, pie) |
 | `images/` | Imágenes de la portada, logos y favicon |

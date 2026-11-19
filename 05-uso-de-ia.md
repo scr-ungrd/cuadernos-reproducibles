@@ -1,6 +1,6 @@
 ---
-title: Uso de IA
-subtitle: Recomendaciones para usar inteligencia artificial de forma ética y responsable en un cuaderno reproducible
+title: Requisitos de uso de IA
+subtitle: Requisitos y recomendaciones para usar inteligencia artificial de forma ética y responsable en un cuaderno reproducible
 date: 2026-11-16
 authors:
   - name: Subdirección para el Conocimiento del Riesgo
@@ -25,17 +25,17 @@ abbreviations:
 
 +++ {"part": "abstract"}
 
-Este instructivo reúne recomendaciones para usar inteligencia artificial (IA) de forma ética y responsable al producir un cuaderno reproducible de conocimiento del riesgo. Se apoya en las políticas de IA de editoriales y revistas científicas de referencia en desastres y cambio climático. Sintetiza lo que coinciden en exigir y en qué difieren, propone una clasificación del uso por nivel de riesgo, ofrece una plantilla de declaración y una lista de verificación de 23 puntos, y entrega un prompt para auditar el cumplimiento y generar un reporte.
+Este documento reúne recomendaciones para usar inteligencia artificial (IA) de forma ética y responsable al producir un cuaderno reproducible de conocimiento del riesgo. Se apoya en las políticas de IA de editoriales y revistas científicas de referencia en desastres y cambio climático. Sintetiza lo que coinciden en exigir y en qué difieren, propone una clasificación del uso por nivel de riesgo, ofrece una plantilla de declaración y una lista de verificación de 26 puntos, y entrega un prompt para auditar el cumplimiento y generar un reporte.
 
 +++
 
-## Para qué sirve este instructivo
+## Para qué sirven estos requisitos
 
-Los asistentes de IA escriben código, resumen literatura, traducen y dibujan figuras. En un cuaderno reproducible, la pregunta central es **quién responde por lo que se ejecuta y por lo que se concluye**. Este instructivo da reglas prácticas para cuatro momentos: la escritura del texto, el código y el análisis, la construcción de datos y figuras, y la evaluación de cuadernos ajenos.
+Los asistentes de IA escriben código, resumen literatura, traducen y dibujan figuras. En un cuaderno reproducible, la pregunta central es **quién responde por lo que se ejecuta y por lo que se concluye**. Estos requisitos dan reglas prácticas para cuatro momentos: la escritura del texto, el código y el análisis, la construcción de datos y figuras, y la evaluación de cuadernos ajenos. Cubre también a los asistentes en modo agente que usan conectores o servidores del Model Context Protocol (MCP).
 
 
-:::{important} Alcance y límites de este instructivo
-Las políticas de las revistas cambian con frecuencia y cada revista puede tener reglas propias que prevalecen sobre las de su editorial. Este instructivo resume las políticas consultadas el **16 de noviembre de 2026** y no reemplaza la política de la revista donde se vaya a enviar el trabajo. No es asesoría jurídica. Las recomendaciones que no citan ninguna fuente son criterios propios de la Subdirección para el Conocimiento del Riesgo (SCR).
+:::{important} Alcance y límites de estos requisitos
+Las políticas de las revistas cambian con frecuencia y cada revista puede tener reglas propias que prevalecen sobre las de su editorial. Este documento resume las políticas consultadas el **16 de noviembre de 2026** y no reemplaza la política de la revista donde se vaya a enviar el trabajo. No es asesoría jurídica. Las recomendaciones que no citan ninguna fuente son criterios propios de la Subdirección para el Conocimiento del Riesgo (SCR).
 :::
 
 ## Fuentes y síntesis de las políticas
@@ -64,7 +64,7 @@ Un marco de la editorial Springer Nature evalúa el uso de IA por su **nivel de 
   - Permitido. La SCR exige declarar todo uso salvo la corrección ortográfica y gramatical.
 * - **Ámbar**: con cautela
   - La IA aporta razonamiento o contenido nuevo que puede influir en la interpretación, aunque la persona siga al mando.
-  - Escribir scripts, flujos de procesamiento o modelos. Traducir. Reorganizar argumentos. Resumir o buscar literatura. Extraer datos con un modelo de lenguaje. Identificar patrones exploratorios. Explicar resultados estadísticos. Hacer diagramas conceptuales.
+  - Escribir scripts, flujos de procesamiento o modelos. Traducir. Reorganizar argumentos. Resumir o buscar literatura. Extraer datos con un modelo de lenguaje. Identificar patrones exploratorios. Explicar resultados estadísticos. Hacer diagramas conceptuales. Dar a un agente acceso a su equipo, a su repositorio o a conectores y servidores MCP.
   - Permitido con verificación humana demostrable y **declaración obligatoria**.
 * - **Rojo**: no permitido
   - La IA sustituye la responsabilidad humana, el uso es opaco o genera resultados que no se pueden verificar.
@@ -101,7 +101,7 @@ Cada recomendación cita las fuentes en que se apoya. Las que no citan ninguna s
 (uso-de-ia-datos)=
 ### Datos extraídos o generados con modelos de lenguaje
 
-La documentación de EM-DAT enlaza conjuntos que usan modelos de lenguaje para extraer información de noticias o de Wikipedia, como *Disaster Storylines* y *Wikimpacts* (Centre for Research on the Epidemiology of Disasters [CRED], 2026, sección 6.2). Estos conjuntos muestran por qué los datos construidos con modelos de lenguaje necesitan reglas propias.
+La documentación de EM-DAT enlaza conjuntos que usan modelos de lenguaje para extraer información de noticias o de Wikipedia, como *Disaster Storylines* y *Wikimpacts* (Centre for Research on the Epidemiology of Disasters [CRED], 2026, sección 6.2). Estos conjuntos muestran por qué los datos construidos con modelos de lenguaje necesitan reglas propias. Si el cuaderno llama a un modelo preentrenado de terceros (por ejemplo, de Hugging Face) como parte del análisis, cumpla además los [requisitos de uso de LLMs](09-uso-de-llms.md), que audita la identificación, la licencia, la seguridad y la reproducibilidad del modelo.
 
 14. **Trátelos como datos derivados con riesgo de error**, no como una fuente primaria. Documente el modelo, la versión, el prompt, los parámetros y la fecha (Wiley, s. f.).
 15. **Mida el error.** Revise a mano una muestra y publique la tasa de error y los casos que fallaron. Wiley (s. f.) pide describir cómo se revisó y validó lo generado.
@@ -122,13 +122,21 @@ La documentación de EM-DAT enlaza conjuntos que usan modelos de lenguaje para e
 
 ### Confidencialidad, derechos y equidad
 
-24. **No envíe a una IA pública** datos personales, datos de comunidades, información no publicada o con restricciones de licencia. Las editoriales exigen proteger la confidencialidad (Springer Nature, s. f.; Wiley, s. f.), y esto se suma a los principios CARE (Carroll et al., 2020) del instructivo de estándar de datos. Revise también si los términos de la fuente permiten enviarla a un tercero.
+24. **No envíe a una IA pública** datos personales, datos de comunidades, información no publicada o con restricciones de licencia. Las editoriales exigen proteger la confidencialidad (Springer Nature, s. f.; Wiley, s. f.), y esto se suma a los principios CARE (Carroll et al., 2020) de los requisitos de datos. Revise también si los términos de la fuente permiten enviarla a un tercero.
 25. **Lea los términos de la herramienta.** El proveedor no debe adquirir derechos sobre su contenido ni poder entrenar su modelo con él (Wiley, s. f.).
 26. **Use la IA para ampliar el acceso, no para ampliar brechas.** Una traducción asistida o un resumen en lenguaje sencillo pueden ayudar a las comunidades que usan los datos; revíselos con personas del territorio.
 
 ### Evaluación de cuadernos
 
 27. **Quien evalúa cuadernos no los sube a una IA pública**, y el informe de evaluación lo redacta una persona (Elsevier, s. f.; NHESS, s. f.; Springer Nature, s. f.; Wiley, s. f.).
+
+### Agentes, conectores y servidores MCP
+
+Un asistente en modo agente (Claude Code, Codex o Copilot en modo agente, por ejemplo) lee archivos, ejecuta comandos y, mediante conectores o servidores del Model Context Protocol, consulta servicios externos como el correo, el almacenamiento en la nube, un gestor de referencias o una base bibliográfica. Las editoriales no regulan todavía este uso; las tres recomendaciones siguientes son criterios propios de la SCR, con apoyo en la especificación del Model Context Protocol [MCP] (MCP, s. f.-a, s. f.-b) y en la lista OWASP Top 10 para aplicaciones con LLM (OWASP Foundation, 2025), consultadas el 19 de noviembre de 2026.
+
+28. **Declare el arnés, los conectores y los permisos.** Liste el asistente y el entorno desde el que lo usó (por ejemplo, una CLI, una extensión de VS Code o una aplicación de escritorio), con su versión, y los conectores y los servidores MCP habilitados (nombre, origen y versión) y qué podían hacer: leer, escribir o ejecutar. Las herramientas de MCP representan ejecución arbitraria de código y el cliente debe obtener el consentimiento de la persona antes de invocarlas (MCP, s. f.-b).
+29. **Dé el menor acceso necesario y trate los servidores como código de terceros.** Instale solo servidores de origen verificable y con versión fijada, y lea el comando que los inicia: un servidor local corre con los mismos privilegios que el cliente (MCP, s. f.-a). Conceda primero permisos de lectura, y no conecte carpetas, cuentas ni bases con datos personales, de comunidades o con restricciones de licencia. Las descripciones de las herramientas deben considerarse no confiables si el servidor no lo es (MCP, s. f.-b), y el texto que devuelve un conector (un correo, un documento, una página web) puede traer instrucciones ocultas que desvíen al agente (OWASP Foundation, 2025, LLM01).
+30. **No deje que un conector sea la fuente de un dato.** Lo que el agente trae por un conector es una consulta, no una fuente citable. Reconstruya la descarga con un script del cuaderno desde la fuente original, o guarde en bruto la consulta, la fecha y la salida, como pide la recomendación 16.
 
 ## Cómo declarar el uso de IA
 
@@ -141,6 +149,7 @@ Una declaración completa combina lo que piden Wiley (s. f.) y Springer Nature (
 - **Para qué** se usó y **en qué partes** del cuaderno.
 - **Qué hizo la persona**: cómo dirigió, revisó y verificó el resultado.
 - **Qué datos se enviaron a la herramienta** y cómo se protegió la privacidad.
+- **Qué conectores o servidores MCP** tuvo habilitados el asistente y con qué permisos, si lo usó en modo agente.
 - **Dónde están los prompts** y los parámetros.
 
 ### Plantilla de declaración
@@ -151,11 +160,13 @@ Pegue esta plantilla en el cuaderno y en el repositorio. Si no usó IA, reemplá
 ## Declaración de uso de inteligencia artificial
 
 - **Herramienta y versión:** <nombre y modelo>
+- **Entorno o cliente:** <CLI, extensión del editor o aplicación, con su versión; solo si usó un asistente en modo agente>
 - **Fecha de uso:** <AAAA-MM>
 - **Para qué se usó:** <por ejemplo, escribir un primer borrador del script de descarga; traducir el resumen al inglés>
 - **Dónde se usó:** <secciones, notebooks o archivos>
 - **Revisión humana:** <qué se leyó, qué pruebas se ejecutaron, cómo se verificaron las citas>
 - **Datos enviados a la herramienta:** <ninguno | solo texto público | ...>
+- **Conectores, servidores MCP y permisos:** <ninguno | nombre, origen, versión y permisos (lectura, escritura, ejecución)>
 - **Prompts y salidas:** <ruta en el repositorio, por ejemplo `AI_USE.md`>
 
 Las personas autoras revisaron todo el contenido generado con IA y asumen la responsabilidad total por su exactitud e integridad.
@@ -218,6 +229,12 @@ Marque cada punto antes de entregar el cuaderno. Los criterios críticos son com
 - [ ] **U22.** Se evaluaron los sesgos de las salidas, sobre todo los geográficos y de fuentes (CRED, 2026; Wiley, s. f.).
 - [ ] **U23.** Quien evalúa cuadernos no sube los materiales en evaluación a una IA pública (Elsevier, s. f.; NHESS, s. f.; Springer Nature, s. f.; Wiley, s. f.).
 
+**Agentes, conectores y MCP**
+
+- [ ] **U24.** Si se usó un asistente en modo agente, la declaración indica el entorno desde el que se usó y lista los conectores y los servidores MCP habilitados (nombre, origen verificable y versión) y los permisos que tuvieron (MCP, s. f.-b; criterio propio de la SCR).
+- [ ] **U25.** Los conectores y los servidores MCP no dieron acceso a información personal, de comunidades, no publicada o con restricciones de licencia, y los permisos se limitaron a lo necesario (MCP, s. f.-a, s. f.-b).
+- [ ] **U26.** Los datos y las referencias que llegaron por un conector se descargaron de nuevo desde su fuente con un script del cuaderno, o se guardaron en bruto con la consulta y la fecha; el cuaderno no depende del conector para reproducirse.
+
 ## Prompt para el checklist de uso de IA
 
 Este prompt convierte la lista de verificación en una auditoría repetible: revisa el repositorio y el texto de un cuaderno, busca indicios de uso de IA, contrasta lo declarado con lo detectado y genera un **reporte de cumplimiento** en Markdown y JSON. Funciona con un asistente que pueda leer archivos y ejecutar comandos.
@@ -235,13 +252,14 @@ Si el auditor es un servicio externo, aplíquele las mismas reglas que a cualqui
 :::
 
 ````text
-Actúa como auditor de integridad y ética del uso de inteligencia artificial (IA) en la Subdirección para el Conocimiento del Riesgo (UNGRD). Tu tarea es VERIFICAR si un cuaderno reproducible y su repositorio cumplen la lista de verificación de «Uso de IA» y producir un REPORTE DE CUMPLIMIENTO. Eres un revisor: NO modifiques ningún archivo.
+Actúa como auditor de integridad y ética del uso de inteligencia artificial (IA) en la Subdirección para el Conocimiento del Riesgo (UNGRD). Tu tarea es VERIFICAR si un cuaderno reproducible y su repositorio cumplen la lista de verificación de los «Requisitos de uso de IA» y producir un REPORTE DE CUMPLIMIENTO. Eres un revisor: NO modifiques ningún archivo.
 
 ## ENTRADAS
 - RUTA_REPO: <ruta local del repositorio del cuaderno>
 - TEXTO (opcional): <ruta del manuscrito, del cuaderno .md/.ipynb o del PDF>
 - DESTINO (opcional): <revista o repositorio de destino y enlace a su política de IA>
 - MODO: "estatico" (solo leer archivos e historial local) o "con_red" (además puedes comprobar DOI y paquetes). Si no lo indico, usa "estatico".
+- CONECTORES (opcional): <lista de conectores y servidores MCP que reporta el propio cliente del asistente, o «ninguno»>. La configuración de usuario no está en el repositorio, así que sin este dato U25 queda «No verificable».
 - SALIDA: carpeta donde escribir `reporte_uso_ia.md` y `reporte_uso_ia.json`; si no la indico, imprime el reporte.
 
 ## REGLAS DE CONDUCTA (obligatorias)
@@ -254,11 +272,11 @@ Actúa como auditor de integridad y ética del uso de inteligencia artificial (I
 
 ## PROCEDIMIENTO
 ### Paso A. Declaraciones
-Busca la declaración de uso de IA en `AI_USE.md`, `README.md`, `DATA_STATEMENT.md`, el cuaderno o el manuscrito (secciones Métodos, Agradecimientos, pies de figura). Para cada declaración extrae: herramienta, versión, fecha, propósito, secciones afectadas, revisión humana, datos enviados a la herramienta y ubicación de los prompts. Anota qué falta.
+Busca la declaración de uso de IA en `AI_USE.md`, `README.md`, `DATA_STATEMENT.md`, el cuaderno o el manuscrito (secciones Métodos, Agradecimientos, pies de figura). Para cada declaración extrae: herramienta, versión, fecha, propósito, secciones afectadas, revisión humana, datos enviados a la herramienta, conectores o servidores MCP con sus permisos y ubicación de los prompts. Anota qué falta.
 
 ### Paso B. Señales de uso de IA (indicios)
-1. Historial de git: busca firmas o menciones de asistentes en mensajes y en las líneas `Co-Authored-By` (`git log --format='%H %an %s%n%b'`).
-2. Archivos de configuración de asistentes: `CLAUDE.md`, `AGENTS.md`, `.cursorrules`, `.github/copilot-instructions.md`, carpetas `.claude/` o similares.
+1. Historial de git: busca firmas o menciones de asistentes en mensajes y en las líneas `Co-Authored-By` (`git log --format='%H %an %s%n%b'`). Cuenta los commits con rastro y el total, y compara con lo declarado. Revisa también `git status`: los cambios sin commit no dejan rastro en el historial y se reportan como «No verificable».
+2. Archivos de configuración de asistentes: `CLAUDE.md`, `AGENTS.md`, `.cursorrules`, `.github/copilot-instructions.md`, carpetas `.claude/` o similares. Configuración de conectores y de servidores MCP: `.mcp.json`, `.cursor/mcp.json`, `.vscode/mcp.json` o cualquier archivo con una clave `mcpServers`. Reporta el nombre de cada servidor, su origen, su versión y sus permisos, sin copiar claves ni tokens.
 3. Código que llama a modelos: importaciones o claves de OpenAI, Anthropic, Google, Hugging Face, `transformers`, `langchain` y similares. Para cada llamada: modelo, versión, parámetros (temperatura, semilla) y si las salidas se guardan en bruto.
 4. Datos derivados de modelos de lenguaje: scripts o columnas que indiquen extracción, clasificación o resumen con LLM. ¿Hay prompt, muestra de validación y tasa de error?
 5. Referencias: comprueba que cada una existe. En modo "con_red", resuelve el DOI y compara título, año y autores con el registro; señala DOI inexistentes, o referencias cuyos datos no coinciden.
@@ -270,12 +288,12 @@ Busca la declaración de uso de IA en `AI_USE.md`, `README.md`, `DATA_STATEMENT.
 ### Paso C. Clasificación de cada uso por riesgo
 Clasifica cada uso de IA que encuentres (declarado o detectado):
 - VERDE (permitido): pulir el idioma, sugerir estructura, depurar errores, formatear código, documentar, limpiar o deduplicar datos, comparar opciones metodológicas.
-- ÁMBAR (permitido con verificación y declaración): escribir scripts o pipelines de análisis, traducir, reorganizar argumentos, resumir o buscar literatura, extraer datos con un modelo de lenguaje, identificar patrones exploratorios, explicar resultados estadísticos, ilustraciones conceptuales.
+- ÁMBAR (permitido con verificación y declaración): escribir scripts o pipelines de análisis, traducir, reorganizar argumentos, resumir o buscar literatura, extraer datos con un modelo de lenguaje, identificar patrones exploratorios, explicar resultados estadísticos, ilustraciones conceptuales, dar a un agente acceso a su equipo, a su repositorio o a conectores y servidores MCP.
 - ROJO (no permitido): fabricar datos, citas o resultados; presentar como propias hipótesis o conclusiones generadas por IA; generar o alterar imágenes de datos observados o resultados; atribuir autoría a una IA; subir información confidencial a una IA pública; delegar la evaluación por pares en una IA.
 Para cada uso reporta: categoría, ¿está declarado?, ¿tiene revisión humana demostrable?
 
 ### Paso D. Evaluación de criterios
-Evalúa los 23 criterios. Para cada uno asigna exactamente un estado: Cumple, Parcial, No cumple, No aplica o No verificable. Los marcados (CRÍTICO) son compuertas bloqueantes.
+Evalúa los 26 criterios. Para cada uno asigna exactamente un estado: Cumple, Parcial, No cumple, No aplica o No verificable. Los marcados (CRÍTICO) son compuertas bloqueantes.
 
 ### Responsabilidad y autoría
 U01 (CRÍTICO). Ninguna herramienta de IA figura como autora ni coautora (Elsevier, s. f.; ICMJE, s. f.; Nature Climate Change, s. f.; Springer Nature, s. f.).
@@ -312,10 +330,16 @@ U21. Se revisaron los términos de la herramienta: no adquiere derechos sobre el
 U22. Se evaluaron los sesgos de las salidas, sobre todo los geográficos y de fuentes (CRED, 2026; Wiley, s. f.).
 U23. Quien evalúa cuadernos no sube los materiales en evaluación a una IA pública (Elsevier, s. f.; NHESS, s. f.; Springer Nature, s. f.; Wiley, s. f.).
 
+### Agentes, conectores y MCP
+U24. Si se usó un asistente en modo agente, la declaración indica el entorno desde el que se usó y lista los conectores y los servidores MCP habilitados (nombre, origen verificable y versión) y los permisos que tuvieron (MCP, s. f.-b; criterio propio de la SCR).
+U25. Los conectores y los servidores MCP no dieron acceso a información personal, de comunidades, no publicada o con restricciones de licencia, y los permisos se limitaron a lo necesario (MCP, s. f.-a, s. f.-b).
+U26. Los datos y las referencias que llegaron por un conector se descargaron de nuevo desde su fuente con un script del cuaderno, o se guardaron en bruto con la consulta y la fecha; el cuaderno no depende del conector para reproducirse.
+
 ### Paso E. Puntuación
 - Cumple = 1, Parcial = 0,5, No cumple = 0. «No aplica» y «No verificable» no entran en el denominador, pero repórtalos con su conteo.
 - Puntaje por grupo y total = suma de puntos ÷ criterios evaluables × 100, con un decimal.
 - Nivel: 90 o más, «Alto»; de 75 a 89,9, «Aceptable»; de 50 a 74,9, «Mejorable»; menos de 50, «Insuficiente».
+- Si la declaración dice que no se usaron conectores ni servidores MCP, U24, U25 y U26 son «No aplica».
 - Compuertas: si algún criterio CRÍTICO está en «No cumple» o hay un uso ROJO, el resultado global es «NO APTO». Si alguno está en «No verificable», es «PENDIENTE DE VERIFICACIÓN».
 
 ### Paso F. Redacta el reporte con esta estructura exacta
@@ -349,9 +373,15 @@ Elsevier. (s. f.). *Generative AI policies for journals*. Recuperado el 16 de no
 
 International Committee of Medical Journal Editors. (s. f.). *Preparing a manuscript for submission to a medical journal: A. Use of AI by authors* [Recomendaciones del ICMJE, sección V.A]. Recuperado el 16 de noviembre de 2026, de https://www.icmje.org/recommendations/browse/artificial-intelligence/ai-use-by-authors.html
 
+Model Context Protocol. (s. f.-a). *Security best practices* [Especificación del protocolo, versión 2026-07-28]. Recuperado el 19 de noviembre de 2026, de https://modelcontextprotocol.io/specification/latest/basic/security_best_practices
+
+Model Context Protocol. (s. f.-b). *Specification* [Especificación del protocolo, versión 2026-07-28]. Recuperado el 19 de noviembre de 2026, de https://modelcontextprotocol.io/specification/latest
+
 Natural Hazards and Earth System Sciences. (s. f.). *AI policy*. Copernicus Publications y European Geosciences Union. Recuperado el 16 de noviembre de 2026, de https://www.natural-hazards-and-earth-system-sciences.net/policies/ai_policy.html
 
 Nature Climate Change. (s. f.). *Artificial intelligence (AI)*. Springer Nature. Recuperado el 16 de noviembre de 2026, de https://www.nature.com/nclimate/editorial-policies/ai
+
+OWASP Foundation. (2025). *OWASP Top 10 for LLM applications 2025*. Recuperado el 19 de noviembre de 2026, de https://genai.owasp.org/llm-top-10/
 
 Springer Nature. (s. f.). *AI guidance for researchers, editors and reviewers*. Recuperado el 16 de noviembre de 2026, de https://group.springernature.com/gp/group/ai/ai-guidance-for-our-researchers-and-communities
 

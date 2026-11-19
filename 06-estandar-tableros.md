@@ -1,5 +1,5 @@
 ---
-title: Estándar de tableros
+title: Requisitos de tableros
 subtitle: Requisitos para publicar tableros (dashboards) abiertos, accesibles y reproducibles
 date: 2026-11-16
 authors:
@@ -45,9 +45,9 @@ Se distinguen tres objetos relacionados:
 
 - **Cuaderno**: documenta un análisis, con su texto, su código y sus datos. Es la fuente del método.
 - **Tablero**: muestra resultados ya calculados. Es una vista del cuaderno. Se rige por este documento.
-- **Aplicación**: recibe entradas de la persona usuaria, ejecuta cálculos o expone una API. Se rige por el [estándar de aplicaciones](07-estandar-aplicaciones.md). Un tablero que acepta datos de la persona usuaria o ejecuta cálculos propios debe cumplir también ese estándar. Si el tablero muestra resultados de un modelo, el modelo cumple el [estándar de modelos](08-estandar-modelos.md).
+- **Aplicación**: recibe entradas de la persona usuaria, ejecuta cálculos o expone una API. Se rige por los [requisitos de aplicaciones](07-estandar-aplicaciones.md). Un tablero que acepta datos de la persona usuaria o ejecuta cálculos propios debe cumplir también esos requisitos. Si el tablero muestra resultados de un modelo, el modelo cumple los [requisitos de modelos](08-estandar-modelos.md).
 
-Complementan la [guía para publicar un cuaderno](01-cuadernos-de-conocimiento.md), el [estándar de datos](03-estandar-de-datos.md) y el [instructivo de uso de IA](05-uso-de-ia.md): los datos del tablero cumplen el primero y el uso de IA se declara según el segundo.
+Complementan la [guía para publicar un cuaderno](01-cuadernos-de-conocimiento.md), los [requisitos de datos](03-estandar-de-datos.md) y los [requisitos de uso de IA](05-uso-de-ia.md): los datos del tablero cumplen los requisitos de datos y el uso de IA se declara según los de uso de IA. La seguridad común a todo repositorio (secretos, datos personales y rutas locales, código no confiable, dependencias y *releases*) la cubren los [requisitos de seguridad](10-requisitos-seguridad.md); los requisitos de seguridad de este documento se aplican además.
 
 ### 1.2 Convenciones
 
@@ -99,7 +99,7 @@ Ningún requisito de este documento exige comprar suscripciones, licencias ni se
 * - Congreso de la República (2012). Ley 1581 de 2012
   - Régimen general de protección de datos personales
   - SEG-01, SEG-02
-* - [Estándar de datos](03-estandar-de-datos.md) y [Uso de IA](05-uso-de-ia.md) de esta colección
+* - [Requisitos de datos](03-estandar-de-datos.md) y [requisitos de uso de IA](05-uso-de-ia.md) de esta colección
   - Requisitos de datos, metadatos, licencias y declaración de IA que el tablero hereda
   - DAT, DOC-04, DOC-08
 ```
@@ -136,7 +136,7 @@ Use esta ficha (`DASHBOARD.md`) como base del aviso, de la sección «Acerca de�
 
 ### 2.2 Datos del tablero
 
-Los datos del tablero cumplen el [estándar de datos](03-estandar-de-datos.md). Esta sección agrega tres reglas propias de una visualización pública.
+Los datos del tablero cumplen los [requisitos de datos](03-estandar-de-datos.md). Esta sección agrega tres reglas propias de una visualización pública.
 
 1. **El tablero no es la única vía a los datos.** Cada gráfico ofrece un archivo plano descargable, y no se publica un tablero sin los datos en otra forma (Analysis Function, 2026a, 2026b).
 2. **El tablero dice de qué datos se trata.** Muestra la versión, el DOI, el periodo y la fecha de actualización, para que una cifra pueda citarse y verificarse.
@@ -150,7 +150,7 @@ Si el tablero consulta una API en vivo, conserve una copia con fecha y muestre c
 
 Un tablero es reproducible si otra persona puede reconstruirlo desde cero y obtener las mismas cifras.
 
-- **Prefiera la salida estática.** Un tablero estático solo necesita un servidor web y se publica en GitHub Pages; uno con servidor, como Shiny, no se puede alojar en un sitio genérico (Quarto, s. f.). Con Observable Framework, los cargadores de datos corren al construir el sitio y generan archivos estáticos (Observable, s. f.). Si necesita un servidor, aplique también el [estándar de aplicaciones](07-estandar-aplicaciones.md).
+- **Prefiera la salida estática.** Un tablero estático solo necesita un servidor web y se publica en GitHub Pages; uno con servidor, como Shiny, no se puede alojar en un sitio genérico (Quarto, s. f.). Con Observable Framework, los cargadores de datos corren al construir el sitio y generan archivos estáticos (Observable, s. f.). Si necesita un servidor, aplique también los [requisitos de aplicaciones](07-estandar-aplicaciones.md).
 - **Fije el entorno.** Binder recomienda fijar versiones exactas con `pip freeze` o `conda env export`, y enlazar a un *commit* y no a una rama (Binder Project, s. f.).
 - **Use una sola cadena de producción.** Los datos salen de `data/raw` con un script, el cuaderno los consume y el tablero consume los resultados del cuaderno. Así las cifras no pueden diverger.
 
@@ -220,7 +220,7 @@ La Ley 1581 de 2012 establece el régimen general de protección de datos person
 El tablero se documenta para responder cinco preguntas: qué es, de dónde salen los datos, cómo se reconstruye, qué cambió y cómo se cita.
 
 - **Cambios.** Cada actualización de datos lleva una nota con lo que cambió y cuándo (Analysis Function, 2026a).
-- **Retiro.** Un tablero sin mantenimiento muestra cifras desactualizadas con aspecto de vigentes. Defina criterios de retiro, avise con antelación, conserve los datos y metadatos y archive el código (Analysis Function, 2026a). Deposite la versión final en Zenodo con DOI (PRE-01 del estándar de datos).
+- **Retiro.** Un tablero sin mantenimiento muestra cifras desactualizadas con aspecto de vigentes. Defina criterios de retiro, avise con antelación, conserve los datos y metadatos y archive el código (Analysis Function, 2026a). Deposite la versión final en Zenodo con DOI (PRE-01 de los requisitos de datos).
 - **Citación.** Cada versión tiene un DOI y un `CITATION.cff`, que GitHub muestra en el repositorio y Zenodo usa para crear el registro (Citation File Format, s. f.).
 
 *Requisitos de este grupo: DOC-01, DOC-02, DOC-03, DOC-04, DOC-05, DOC-06, DOC-07, DOC-08. Su enunciado completo está en la lista de verificación de la Sección 3.*
@@ -229,7 +229,7 @@ El tablero se documenta para responder cinco preguntas: qué es, de dónde salen
 
 La lista tiene 58 requisitos: 52 obligatorios y 6 recomendados. Los 7 requisitos **críticos** (PRO-03, DAT-01, DAT-02, REP-01, REP-02, ACC-02 y SEG-01) bloquean la publicación si no se cumplen.
 
-**Criterio de aceptación.** Un objeto cumple el estándar si (1) ningún requisito crítico está en incumplimiento y (2) el puntaje de requisitos obligatorios es de 90 o más, calculado como se indica en el prompt de la Sección 4.
+**Criterio de aceptación.** Un objeto cumple los requisitos si (1) ningún requisito crítico está en incumplimiento y (2) el puntaje de requisitos obligatorios es de 90 o más, calculado como se indica en el prompt de la Sección 4.
 
 **2.1. Propósito, alcance y responsabilidad**
 
@@ -241,25 +241,25 @@ La lista tiene 58 requisitos: 52 obligatorios y 6 recomendados. Los 7 requisitos
 
 **2.2. Datos del tablero**
 
-- [ ] **DAT-01.** **Crítico.** Todo conjunto de datos que alimenta el tablero cumple el [estándar de datos](03-estandar-de-datos.md): licencia, metadatos y ausencia de datos personales. (Estándar de datos, INV, LIC y PER)
-- [ ] **DAT-02.** **Crítico.** Los datos de cada gráfico y de cada mapa se descargan en un archivo plano legible por máquina (CSV o GeoJSON); el tablero no es la única vía de acceso a los datos. (Analysis Function, 2026a; Analysis Function, 2026b; Estándar de datos, EST-03)
-- [ ] **DAT-03.** Un script o flujo versionado regenera los datos del tablero desde `data/raw`, sin ediciones manuales intermedias. (Estándar de datos, EST-01)
-- [ ] **DAT-04.** Cada indicador tiene definición, fórmula, unidad, fuente, periodo y nivel espacial en un glosario accesible desde el tablero. (Estándar de datos, EST-04 y CAL-11)
-- [ ] **DAT-05.** El tablero muestra la versión de los datos y el DOI del conjunto archivado del que se alimenta. (Estándar de datos, DEP-03 y DEP-04)
-- [ ] **DAT-06.** Los valores faltantes se muestran como faltantes, no como cero. (Estándar de datos, CAL-03)
-- [ ] **DAT-07.** Las cifras se agregan o se suprimen cuando un valor permitiría identificar a una persona o una vivienda. (Estándar de datos, PER-04 y PER-07)
+- [ ] **DAT-01.** **Crítico.** Todo conjunto de datos que alimenta el tablero cumple los [requisitos de datos](03-estandar-de-datos.md): licencia, metadatos y ausencia de datos personales. (Requisitos de datos, INV, LIC y PER)
+- [ ] **DAT-02.** **Crítico.** Los datos de cada gráfico y de cada mapa se descargan en un archivo plano legible por máquina (CSV o GeoJSON); el tablero no es la única vía de acceso a los datos. (Analysis Function, 2026a; Analysis Function, 2026b; Requisitos de datos, EST-03)
+- [ ] **DAT-03.** Un script o flujo versionado regenera los datos del tablero desde `data/raw`, sin ediciones manuales intermedias. (Requisitos de datos, EST-01)
+- [ ] **DAT-04.** Cada indicador tiene definición, fórmula, unidad, fuente, periodo y nivel espacial en un glosario accesible desde el tablero. (Requisitos de datos, EST-04 y CAL-11)
+- [ ] **DAT-05.** El tablero muestra la versión de los datos y el DOI del conjunto archivado del que se alimenta. (Requisitos de datos, DEP-03 y DEP-04)
+- [ ] **DAT-06.** Los valores faltantes se muestran como faltantes, no como cero. (Requisitos de datos, CAL-03)
+- [ ] **DAT-07.** Las cifras se agregan o se suprimen cuando un valor permitiría identificar a una persona o una vivienda. (Requisitos de datos, PER-04 y PER-07)
 - [ ] **DAT-08.** Si el tablero consulta una API en vivo, conserva una copia con fecha, muestra la fecha de la última consulta exitosa y no presenta datos antiguos como vigentes cuando la consulta falla. (Requisito de esta guía)
-- [ ] **DAT-09.** Las limitaciones y los sesgos conocidos de los datos (cobertura, subregistro, resolución) se muestran junto a los resultados que afectan. (Estándar de datos, VAL-02 y VAL-04)
+- [ ] **DAT-09.** Las limitaciones y los sesgos conocidos de los datos (cobertura, subregistro, resolución) se muestran junto a los resultados que afectan. (Requisitos de datos, VAL-02 y VAL-04)
 
 **2.3. Código, entorno y reproducibilidad**
 
-- [ ] **REP-01.** **Crítico.** El código fuente completo está en un repositorio público con una licencia aprobada por la OSI (MIT o Apache-2.0) y un archivo `LICENSE`; el contenido (texto y figuras) declara CC BY 4.0. (Estándar de datos, LIC-04; Chue Hong et al., 2022)
+- [ ] **REP-01.** **Crítico.** El código fuente completo está en un repositorio público con una licencia aprobada por la OSI (MIT o Apache-2.0) y un archivo `LICENSE`; el contenido (texto y figuras) declara CC BY 4.0. (Requisitos de datos, LIC-04; Chue Hong et al., 2022)
 - [ ] **REP-02.** **Crítico.** El tablero se reconstruye desde un clon limpio con una orden documentada (por ejemplo, `quarto render`) y produce las mismas cifras; la reconstrucción se prueba en integración continua o en Binder. (Binder Project, s. f.; Requisito de esta guía)
 - [ ] **REP-03.** Las dependencias están fijadas por versión en `environment.yml`, `requirements.txt` o un archivo de bloqueo. (Binder Project, s. f.; Wiggins, 2017, factor II)
 - [ ] **REP-04.** El tablero se publica como sitio estático; si exige un servidor, el repositorio justifica por qué y documenta cómo ejecutarlo en local. (Quarto, s. f.)
 - [ ] **REP-05.** Ninguna clave, token ni contraseña figura en el repositorio ni en su historial; la configuración sensible se lee de variables de entorno. (Wiggins, 2017, factor III; OWASP Foundation, 2025, A02)
 - [ ] **REP-06.** Cada cifra y cada figura del tablero sale del mismo código y de los mismos datos que el cuaderno vinculado, o se importa de él. (Requisito de esta guía)
-- [ ] **REP-07.** Cada versión publicada tiene un *release* en GitHub, un DOI de Zenodo y un `CITATION.cff` con el ORCID de cada persona autora. (Citation File Format, s. f.; Chue Hong et al., 2022; Estándar de datos, DEP-06 y DEP-11)
+- [ ] **REP-07.** Cada versión publicada tiene un *release* en GitHub, un DOI de Zenodo y un `CITATION.cff` con el ORCID de cada persona autora. (Citation File Format, s. f.; Chue Hong et al., 2022; Requisitos de datos, DEP-06 y DEP-11)
 - [ ] **REP-08.** *(Recomendado)* Una acción de integración continua reconstruye el tablero, valida los enlaces y ejecuta las pruebas de datos en cada cambio. (Requisito de esta guía)
 
 **2.4. Diseño visual y honestidad gráfica**
@@ -292,7 +292,7 @@ La lista tiene 58 requisitos: 52 obligatorios y 6 recomendados. Los 7 requisitos
 
 **2.6. Privacidad, seguridad y terceros**
 
-- [ ] **SEG-01.** **Crítico.** El tablero no publica datos personales, datos de comunidades ni información pública clasificada o reservada. (Congreso de la República, 2012; Estándar de datos, PER-02 y GOV-08)
+- [ ] **SEG-01.** **Crítico.** El tablero no publica datos personales, datos de comunidades ni información pública clasificada o reservada. (Congreso de la República, 2012; Requisitos de datos, PER-02 y GOV-08)
 - [ ] **SEG-02.** Si mide el uso (analítica), lo declara, no recoge datos personales y no usa cookies de terceros sin consentimiento. (Congreso de la República, 2012; Analysis Function, 2026a)
 - [ ] **SEG-03.** Las bibliotecas, fuentes, mapas base y APIs de terceros figuran con su licencia y sus términos; ninguno exige pago ni una clave privada en el navegador. (Requisito de esta guía)
 - [ ] **SEG-04.** El tablero se sirve solo por HTTPS y sin contenido mixto. (OWASP Foundation, 2025, A04)
@@ -304,13 +304,13 @@ La lista tiene 58 requisitos: 52 obligatorios y 6 recomendados. Los 7 requisitos
 - [ ] **DOC-01.** El `README` explica el propósito, cómo reconstruir el tablero, las fuentes de datos, cómo citarlo, la licencia y el contacto. (Digital Public Goods Alliance, s. f., indicador 5)
 - [ ] **DOC-02.** El tablero incluye una sección «Acerca de» con las fuentes, las definiciones, las limitaciones, la versión y los enlaces al cuaderno y al repositorio. (Analysis Function, 2026a)
 - [ ] **DOC-03.** Un `CHANGELOG.md` registra cada actualización de datos: qué cambió y cuándo. (Analysis Function, 2026a)
-- [ ] **DOC-04.** El tablero muestra una cita sugerida con el DOI. (Estándar de datos, DEP-07)
+- [ ] **DOC-04.** El tablero muestra una cita sugerida con el DOI. (Requisitos de datos, DEP-07)
 - [ ] **DOC-05.** Existe un plan de retiro: criterios, aviso visible con antelación (el *Analysis Function* sugiere al menos seis meses), conservación de datos y metadatos y archivo del código. (Analysis Function, 2026a)
 - [ ] **DOC-06.** Hay un canal para recibir comentarios (*issues* o correo) y un registro de cómo se atendieron. (Analysis Function, 2026a)
 - [ ] **DOC-07.** *(Recomendado)* El tablero se probó con personas usuarias representativas del público al que se dirige. (Analysis Function, 2026a; Analysis Function, 2026b)
-- [ ] **DOC-08.** El uso de IA en el código, los textos o las figuras se declara según el [instructivo de uso de IA](05-uso-de-ia.md). (Uso de IA, U04)
+- [ ] **DOC-08.** El uso de IA en el código, los textos o las figuras se declara según los [requisitos de uso de IA](05-uso-de-ia.md). (Requisitos de uso de IA, U04)
 
-## 4. Prompt para validar el estándar de tableros
+## 4. Prompt para validar los requisitos de tableros
 
 Este prompt convierte la lista de verificación en una auditoría repetible. Lee el repositorio de un tablero, ejecuta comprobaciones automáticas y genera un **reporte de cumplimiento** en Markdown y JSON. Funciona con cualquier asistente de IA que pueda leer archivos y ejecutar comandos.
 
@@ -324,11 +324,11 @@ Este prompt convierte la lista de verificación en una auditoría repetible. Lee
 :::{warning} Lo que este prompt no puede hacer
 No puede probar la accesibilidad real de un tablero: Lighthouse y WAVE detectan solo una parte de los problemas, y la revisión con teclado, zoom y lector de pantalla la hace una persona. Tampoco decide si un indicador es adecuado ni si el tablero puede presentarse como un producto oficial; esos puntos se marcan «Requiere revisión humana».
 
-Si el auditor es un servicio externo, aplíquele las mismas reglas que a cualquier IA: no le entregue datos personales, datos de comunidades ni material con restricciones de licencia (véase el [instructivo de uso de IA](05-uso-de-ia.md)). Si cambia la lista de verificación, actualice también los criterios del prompt.
+Si el auditor es un servicio externo, aplíquele las mismas reglas que a cualquier IA: no le entregue datos personales, datos de comunidades ni material con restricciones de licencia (véanse los [requisitos de uso de IA](05-uso-de-ia.md)). Si cambia la lista de verificación, actualice también los criterios del prompt.
 :::
 
 ````text
-Actúa como auditor de tableros (dashboards) abiertos y reproducibles en la Subdirección para el Conocimiento del Riesgo (UNGRD). Tu tarea es VERIFICAR si un tablero y su repositorio cumplen la lista de verificación del «Estándar de tableros» y producir un REPORTE DE CUMPLIMIENTO. Eres un revisor: NO modifiques ningún archivo.
+Actúa como auditor de tableros (dashboards) abiertos y reproducibles en la Subdirección para el Conocimiento del Riesgo (UNGRD). Tu tarea es VERIFICAR si un tablero y su repositorio cumplen la lista de verificación de los «Requisitos de tableros» y producir un REPORTE DE CUMPLIMIENTO. Eres un revisor: NO modifiques ningún archivo.
 
 ## ENTRADAS
 - RUTA_REPO: <ruta local del repositorio del tablero>
@@ -354,7 +354,7 @@ Describe el objeto (propósito, tecnología, forma de despliegue, versión y lic
 2. Reconstrucción: ejecuta en una copia limpia la orden documentada en el `README` (por ejemplo, `quarto render`) y reporta si termina sin errores. Si no se documenta una orden, el estado de REP-02 es «No cumple».
 3. Dependencias: comprueba que las versiones están fijadas; en modo "con_red", comprueba que cada paquete existe.
 4. Secretos: busca claves, tokens y contraseñas en los archivos y en el historial (`git log -p`); reporta solo archivo y línea, nunca el valor.
-5. Datos: comprueba que cada gráfico tiene datos descargables, que no hay columnas con nombres de personas, documentos o direcciones exactas, y que los faltantes no son ceros. Aplica el estándar de datos a los conjuntos usados.
+5. Datos: comprueba que cada gráfico tiene datos descargables, que no hay columnas con nombres de personas, documentos o direcciones exactas, y que los faltantes no son ceros. Aplica los requisitos de datos a los conjuntos usados.
 6. Recursos externos: lista las URL de bibliotecas, fuentes tipográficas, teselas y APIs (`https://` en el HTML generado) y revisa su licencia, su versión fijada y si exigen claves.
 7. Accesibilidad estática: en el HTML generado revisa `lang`, texto alternativo en imágenes y gráficos, jerarquía de encabezados, etiquetas de controles y contraste de la paleta. En modo "con_red" y con URL_TABLERO, ejecuta Lighthouse y WAVE y guarda los resultados. Los resultados automáticos no sustituyen la revisión con teclado ni con lector de pantalla: márcalos «Requiere prueba manual».
 
@@ -369,24 +369,24 @@ PRO-04. El tablero muestra el periodo que cubre, la fecha de la última actualiz
 PRO-05. Una persona o dependencia figura como responsable del mantenimiento, con un medio de contacto. (Analysis Function, 2026a)
 
 ### Datos del tablero
-DAT-01 (CRÍTICO). Todo conjunto de datos que alimenta el tablero cumple el [estándar de datos](03-estandar-de-datos.md): licencia, metadatos y ausencia de datos personales. (Estándar de datos, INV, LIC y PER)
-DAT-02 (CRÍTICO). Los datos de cada gráfico y de cada mapa se descargan en un archivo plano legible por máquina (CSV o GeoJSON); el tablero no es la única vía de acceso a los datos. (Analysis Function, 2026a; Analysis Function, 2026b; Estándar de datos, EST-03)
-DAT-03. Un script o flujo versionado regenera los datos del tablero desde `data/raw`, sin ediciones manuales intermedias. (Estándar de datos, EST-01)
-DAT-04. Cada indicador tiene definición, fórmula, unidad, fuente, periodo y nivel espacial en un glosario accesible desde el tablero. (Estándar de datos, EST-04 y CAL-11)
-DAT-05. El tablero muestra la versión de los datos y el DOI del conjunto archivado del que se alimenta. (Estándar de datos, DEP-03 y DEP-04)
-DAT-06. Los valores faltantes se muestran como faltantes, no como cero. (Estándar de datos, CAL-03)
-DAT-07. Las cifras se agregan o se suprimen cuando un valor permitiría identificar a una persona o una vivienda. (Estándar de datos, PER-04 y PER-07)
+DAT-01 (CRÍTICO). Todo conjunto de datos que alimenta el tablero cumple los [requisitos de datos](03-estandar-de-datos.md): licencia, metadatos y ausencia de datos personales. (Requisitos de datos, INV, LIC y PER)
+DAT-02 (CRÍTICO). Los datos de cada gráfico y de cada mapa se descargan en un archivo plano legible por máquina (CSV o GeoJSON); el tablero no es la única vía de acceso a los datos. (Analysis Function, 2026a; Analysis Function, 2026b; Requisitos de datos, EST-03)
+DAT-03. Un script o flujo versionado regenera los datos del tablero desde `data/raw`, sin ediciones manuales intermedias. (Requisitos de datos, EST-01)
+DAT-04. Cada indicador tiene definición, fórmula, unidad, fuente, periodo y nivel espacial en un glosario accesible desde el tablero. (Requisitos de datos, EST-04 y CAL-11)
+DAT-05. El tablero muestra la versión de los datos y el DOI del conjunto archivado del que se alimenta. (Requisitos de datos, DEP-03 y DEP-04)
+DAT-06. Los valores faltantes se muestran como faltantes, no como cero. (Requisitos de datos, CAL-03)
+DAT-07. Las cifras se agregan o se suprimen cuando un valor permitiría identificar a una persona o una vivienda. (Requisitos de datos, PER-04 y PER-07)
 DAT-08. Si el tablero consulta una API en vivo, conserva una copia con fecha, muestra la fecha de la última consulta exitosa y no presenta datos antiguos como vigentes cuando la consulta falla. (Requisito de esta guía)
-DAT-09. Las limitaciones y los sesgos conocidos de los datos (cobertura, subregistro, resolución) se muestran junto a los resultados que afectan. (Estándar de datos, VAL-02 y VAL-04)
+DAT-09. Las limitaciones y los sesgos conocidos de los datos (cobertura, subregistro, resolución) se muestran junto a los resultados que afectan. (Requisitos de datos, VAL-02 y VAL-04)
 
 ### Código, entorno y reproducibilidad
-REP-01 (CRÍTICO). El código fuente completo está en un repositorio público con una licencia aprobada por la OSI (MIT o Apache-2.0) y un archivo `LICENSE`; el contenido (texto y figuras) declara CC BY 4.0. (Estándar de datos, LIC-04; Chue Hong et al., 2022)
+REP-01 (CRÍTICO). El código fuente completo está en un repositorio público con una licencia aprobada por la OSI (MIT o Apache-2.0) y un archivo `LICENSE`; el contenido (texto y figuras) declara CC BY 4.0. (Requisitos de datos, LIC-04; Chue Hong et al., 2022)
 REP-02 (CRÍTICO). El tablero se reconstruye desde un clon limpio con una orden documentada (por ejemplo, `quarto render`) y produce las mismas cifras; la reconstrucción se prueba en integración continua o en Binder. (Binder Project, s. f.; Requisito de esta guía)
 REP-03. Las dependencias están fijadas por versión en `environment.yml`, `requirements.txt` o un archivo de bloqueo. (Binder Project, s. f.; Wiggins, 2017, factor II)
 REP-04. El tablero se publica como sitio estático; si exige un servidor, el repositorio justifica por qué y documenta cómo ejecutarlo en local. (Quarto, s. f.)
 REP-05. Ninguna clave, token ni contraseña figura en el repositorio ni en su historial; la configuración sensible se lee de variables de entorno. (Wiggins, 2017, factor III; OWASP Foundation, 2025, A02)
 REP-06. Cada cifra y cada figura del tablero sale del mismo código y de los mismos datos que el cuaderno vinculado, o se importa de él. (Requisito de esta guía)
-REP-07. Cada versión publicada tiene un *release* en GitHub, un DOI de Zenodo y un `CITATION.cff` con el ORCID de cada persona autora. (Citation File Format, s. f.; Chue Hong et al., 2022; Estándar de datos, DEP-06 y DEP-11)
+REP-07. Cada versión publicada tiene un *release* en GitHub, un DOI de Zenodo y un `CITATION.cff` con el ORCID de cada persona autora. (Citation File Format, s. f.; Chue Hong et al., 2022; Requisitos de datos, DEP-06 y DEP-11)
 REP-08 (RECOMENDADO). Una acción de integración continua reconstruye el tablero, valida los enlaces y ejecuta las pruebas de datos en cada cambio. (Requisito de esta guía)
 
 ### Diseño visual y honestidad gráfica
@@ -416,7 +416,7 @@ ACC-11. Existe una declaración de accesibilidad que lista los incumplimientos c
 ACC-12 (RECOMENDADO). Los elementos que se pulsan miden al menos 24 × 24 píxeles CSS. (W3C, 2024, criterio 2.5.8)
 
 ### Privacidad, seguridad y terceros
-SEG-01 (CRÍTICO). El tablero no publica datos personales, datos de comunidades ni información pública clasificada o reservada. (Congreso de la República, 2012; Estándar de datos, PER-02 y GOV-08)
+SEG-01 (CRÍTICO). El tablero no publica datos personales, datos de comunidades ni información pública clasificada o reservada. (Congreso de la República, 2012; Requisitos de datos, PER-02 y GOV-08)
 SEG-02. Si mide el uso (analítica), lo declara, no recoge datos personales y no usa cookies de terceros sin consentimiento. (Congreso de la República, 2012; Analysis Function, 2026a)
 SEG-03. Las bibliotecas, fuentes, mapas base y APIs de terceros figuran con su licencia y sus términos; ninguno exige pago ni una clave privada en el navegador. (Requisito de esta guía)
 SEG-04. El tablero se sirve solo por HTTPS y sin contenido mixto. (OWASP Foundation, 2025, A04)
@@ -427,11 +427,11 @@ SEG-06 (RECOMENDADO). Los *scripts* cargados desde redes de distribución extern
 DOC-01. El `README` explica el propósito, cómo reconstruir el tablero, las fuentes de datos, cómo citarlo, la licencia y el contacto. (Digital Public Goods Alliance, s. f., indicador 5)
 DOC-02. El tablero incluye una sección «Acerca de» con las fuentes, las definiciones, las limitaciones, la versión y los enlaces al cuaderno y al repositorio. (Analysis Function, 2026a)
 DOC-03. Un `CHANGELOG.md` registra cada actualización de datos: qué cambió y cuándo. (Analysis Function, 2026a)
-DOC-04. El tablero muestra una cita sugerida con el DOI. (Estándar de datos, DEP-07)
+DOC-04. El tablero muestra una cita sugerida con el DOI. (Requisitos de datos, DEP-07)
 DOC-05. Existe un plan de retiro: criterios, aviso visible con antelación (el *Analysis Function* sugiere al menos seis meses), conservación de datos y metadatos y archivo del código. (Analysis Function, 2026a)
 DOC-06. Hay un canal para recibir comentarios (*issues* o correo) y un registro de cómo se atendieron. (Analysis Function, 2026a)
 DOC-07 (RECOMENDADO). El tablero se probó con personas usuarias representativas del público al que se dirige. (Analysis Function, 2026a; Analysis Function, 2026b)
-DOC-08. El uso de IA en el código, los textos o las figuras se declara según el [instructivo de uso de IA](05-uso-de-ia.md). (Uso de IA, U04)
+DOC-08. El uso de IA en el código, los textos o las figuras se declara según los [requisitos de uso de IA](05-uso-de-ia.md). (Requisitos de uso de IA, U04)
 
 ### Paso D. Puntuación
 - Cumple = 1, Parcial = 0,5, No cumple = 0. «No aplica» y «No verificable» no entran en el denominador, pero repórtalos con su conteo.

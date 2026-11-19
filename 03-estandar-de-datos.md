@@ -1,5 +1,5 @@
 ---
-title: Estándar de datos
+title: Requisitos de datos
 subtitle: Instrucciones para autores de cuadernos reproducibles
 date: 2026-11-16
 authors:
@@ -8,7 +8,7 @@ authors:
     github: scr-ungrd
 license: CC-BY-4.0
 keywords:
-  - estándar de datos
+  - requisitos de datos
   - metadatos
   - FAIR
   - CARE
@@ -331,7 +331,7 @@ cuaderno/
   - Se aceptan como formato de un insumo; para los datos publicados se entrega además GeoPackage o GeoJSON
   - MinTIC (2024, sección 5.3.2)
 * - `.xlsx`
-  - El portal lo admite como formato abierto estructurado (MinTIC, 2026c, sección 6); este estándar exige además una copia en CSV
+  - El portal lo admite como formato abierto estructurado (MinTIC, 2026c, sección 6); estos requisitos exigen además una copia en CSV
   - Requisito de esta guía
 * - PDF, Word e imágenes
   - No se aceptan como formato de datos
@@ -393,7 +393,7 @@ El RDLS es un estándar abierto de metadatos para describir conjuntos de datos d
   - Observación
 * - `id`
   - Identificador único del conjunto
-  - Se recomienda un URI HTTP; en este estándar, el DOI como URL (MET-05)
+  - Se recomienda un URI HTTP; en estos requisitos, el DOI como URL (MET-05)
 * - `title`
   - Título
   - Incluye tema, lugar y año
@@ -961,14 +961,14 @@ Scientific Data (s. f.-a) describe solo conjuntos terminados y no admite actuali
 
 **Observación sobre la fuente.** La historia del portal (MinTIC, 2026c) ubica la definición de datos abiertos en el «Numeral 6, Artículo 6» de la Ley 1712. El texto de la ley, consultado en el sitio de la Secretaría del Senado, la ubica en el literal j) del artículo 6. Este documento cita el literal j).
 
-**Tabla 11.** Elementos de la historia «¿Tú primera vez con Datos Abiertos?» (MinTIC, 2026c) y su uso en este estándar.
+**Tabla 11.** Elementos de la historia «¿Tú primera vez con Datos Abiertos?» (MinTIC, 2026c) y su uso en estos requisitos.
 
 ```{list-table}
 :header-rows: 1
 
 * - Elemento (sección de la historia)
   - Contenido
-  - Uso en este estándar
+  - Uso en estos requisitos
   - Requisitos
 * - Definición de datos abiertos (2)
   - Reproduce la definición del artículo 6 de la Ley 1712 de 2014
@@ -1008,7 +1008,7 @@ Scientific Data (s. f.-a) describe solo conjuntos terminados y no admite actuali
   - GOV-10
 * - Gráficos e historias (11)
   - Herramientas del portal para visualizar datos
-  - No se emplea: está fuera del alcance de este estándar
+  - No se emplea: está fuera del alcance de estos requisitos
   - Ninguno
 * - Procedimientos de publicación de las entidades (5)
   - Registro como funcionario y solicitud de permisos de publicador
@@ -1388,7 +1388,7 @@ La documentación de EM-DAT enlaza conjuntos aumentados que usan modelos de leng
 
 La lista tiene 92 requisitos: 80 obligatorios y 12 recomendados. Los 11 requisitos **críticos** (INV-04, INV-05, INV-06, MET-03, PER-02, LIC-01, LIC-02, DEP-01, DEP-03, EMD-01, EMD-03) bloquean la publicación si no se cumplen.
 
-**Criterio de aceptación.** Un cuaderno cumple el estándar de datos si (1) ningún requisito crítico está en incumplimiento y (2) el puntaje de requisitos obligatorios es de 90 o más, calculado como se indica en el prompt de la Sección 4.
+**Criterio de aceptación.** Un cuaderno cumple los requisitos de datos si (1) ningún requisito crítico está en incumplimiento y (2) el puntaje de requisitos obligatorios es de 90 o más, calculado como se indica en el prompt de la Sección 4.
 
 **2.1. Inventario y selección de insumos**
 
@@ -1515,7 +1515,7 @@ La lista tiene 92 requisitos: 80 obligatorios y 12 recomendados. Los 11 requisit
 - [ ] **EMD-06.** Las celdas vacías de EM-DAT no se reemplazan por cero.
 - [ ] **EMD-07.** *(Recomendado)* Se usa el EM-DAT Archive en lugar de la base viva.
 
-## 4. Prompt para validar el estándar de datos
+## 4. Prompt para validar los requisitos de datos
 
 Este prompt convierte la lista de verificación en una auditoría repetible. Lee el repositorio de un cuaderno, ejecuta comprobaciones automáticas y genera un **reporte de cumplimiento y calidad** en Markdown y JSON. Funciona con cualquier asistente de IA que pueda leer archivos y ejecutar comandos.
 
@@ -1527,11 +1527,11 @@ Este prompt convierte la lista de verificación en una auditoría repetible. Lee
 4. Guarde el reporte en `metadata/` y repita la auditoría antes de cada *release*.
 
 :::{warning} Límites del prompt
-El prompt no sustituye la consulta con las comunidades (Sección 2.5), no certifica la corrección jurídica de una licencia y no evalúa el mérito científico del cuaderno. Si se usa un servicio de IA externo, no se le deben entregar datos personales, datos de comunidades ni datos con restricciones de licencia. Ver la sección Uso de IA.
+El prompt no sustituye la consulta con las comunidades (Sección 2.5), no certifica la corrección jurídica de una licencia y no evalúa el mérito científico del cuaderno. Si se usa un servicio de IA externo, no se le deben entregar datos personales, datos de comunidades ni datos con restricciones de licencia. Véanse los [requisitos de uso de IA](05-uso-de-ia.md).
 :::
 
 ````text
-Actúa como auditor de datos de la Subdirección para el Conocimiento del Riesgo (UNGRD). Tu tarea es VALIDAR si el repositorio de un cuaderno reproducible cumple el «Estándar de datos» y producir un REPORTE DE CUMPLIMIENTO Y CALIDAD. Eres un revisor, no un autor: NO modifiques ningún archivo del cuaderno.
+Actúa como auditor de datos de la Subdirección para el Conocimiento del Riesgo (UNGRD). Tu tarea es VALIDAR si el repositorio de un cuaderno reproducible cumple los «Requisitos de datos» y producir un REPORTE DE CUMPLIMIENTO Y CALIDAD. Eres un revisor, no un autor: NO modifiques ningún archivo del cuaderno.
 
 ## ENTRADAS
 - RUTA_REPO: <ruta local del repositorio del cuaderno>
@@ -1694,7 +1694,7 @@ EMD-07 (RECOMENDADO). Se usa el EM-DAT Archive en lugar de la base viva.
 
 ### Paso E. Redacta el reporte con esta estructura exacta
 1. **Resumen ejecutivo**: resultado global (compuertas), puntaje y nivel, y las tres prioridades más urgentes, en menos de 150 palabras.
-2. **Alcance y método**: ruta auditada, modo, fecha, versión del estándar y del esquema RDLS, y qué no se pudo revisar.
+2. **Alcance y método**: ruta auditada, modo, fecha, versión de los requisitos y del esquema RDLS, y qué no se pudo revisar.
 3. **Resultados por requisito**: tabla con ID, requisito, estado, evidencia, acción recomendada y prioridad (Alta, Media o Baja).
 4. **Puntaje por sección**: tabla con sección, requisitos evaluables, puntos y porcentaje.
 5. **Comprobaciones automáticas**: resultado de cada comprobación del Paso B, con la salida relevante resumida.

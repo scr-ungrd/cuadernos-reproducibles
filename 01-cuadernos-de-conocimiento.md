@@ -29,13 +29,18 @@ Un cuaderno reproducible reúne en un solo repositorio la narrativa, el código 
 
 1. **Elija el tipo de cuaderno** (Sección 1).
 2. **Prepare el repositorio** en GitHub (Sección 2).
-3. **Prepare los datos** según el [estándar de datos](03-estandar-de-datos.md).
+3. **Prepare los datos** según los [requisitos de datos](03-estandar-de-datos.md).
 4. **Escriba el cuaderno** con la estructura de la Sección 3.
-5. **Declare el uso de IA** según el [instructivo de uso de IA](05-uso-de-ia.md).
-6. **Verifique el cuaderno** en un entorno limpio (Sección 4).
-7. **Envíe el repositorio** según la [convocatoria](02-convocatoria-cuadernos.md).
+5. **Declare el uso de IA** según los [requisitos de uso de IA](05-uso-de-ia.md).
+6. **Revise la seguridad del repositorio** según los [requisitos de seguridad](10-requisitos-seguridad.md).
+7. **Verifique el cuaderno** en un entorno limpio (Sección 4).
+8. **Envíe el repositorio** según la [convocatoria](02-convocatoria-cuadernos.md).
 
-Si el cuaderno incluye un modelo, un tablero o una aplicación, cumpla además el [estándar de modelos](08-estandar-modelos.md), el [estándar de tableros](06-estandar-tableros.md) o el [estándar de aplicaciones](07-estandar-aplicaciones.md).
+Si el cuaderno incluye un modelo, un tablero o una aplicación, cumpla además los [requisitos de modelos](08-estandar-modelos.md), los [requisitos de tableros](06-estandar-tableros.md) o los [requisitos de aplicaciones](07-estandar-aplicaciones.md). Si usa un modelo de lenguaje u otro modelo preentrenado de terceros (por ejemplo, de Hugging Face) como componente del análisis, cumpla los [requisitos de uso de LLMs](09-uso-de-llms.md).
+
+:::{note} Qué son los requisitos de esta colección
+Los requisitos de esta guía y de sus documentos de apoyo son propios de la Subdirección para el Conocimiento del Riesgo. Cada uno tiene un identificador, un nivel (obligatorio, recomendado o crítico) y una base documental; los que dicen «Requisito de esta guía» son criterio de la SCR. No son normas técnicas emitidas por un organismo de normalización, como ICONTEC o ISO, ni una certificación: cumplirlos es una condición para publicar en la colección y no una acreditación externa.
+:::
 
 ## 1. Elija el tipo de cuaderno
 
@@ -118,7 +123,7 @@ Antes del envío, compruebe que:
 
 **Verificación independiente.** Una persona del comité evaluador ejecuta el cuaderno en un entorno limpio y comprueba que reproduce las figuras y las tablas, siguiendo el proceso de CODECHECK (Nüst y Eglen, 2021). Pedimos esta comprobación porque la reproducibilidad solo se puede certificar cuando alguien distinto de quien escribió el cuaderno lo ejecuta sin ayuda. El informe de verificación (fecha, entorno, resultado y diferencias) se publica junto al cuaderno. Verificar no es replicar: el informe confirma que el código y los datos regeneran los resultados, no que estos sean correctos.
 
-**Transparencia.** La colección sigue las directrices TOP 2025 (*Transparency and Openness Promotion*), que piden declarar, compartir y citar los datos, el código y los materiales de un estudio (Center for Open Science, 2025). Los estándares de esta guía las concretan: datos, código, modelos y uso de IA.
+**Transparencia.** La colección sigue las directrices TOP 2025 (*Transparency and Openness Promotion*), que piden declarar, compartir y citar los datos, el código y los materiales de un estudio (Center for Open Science, 2025). Los requisitos de esta guía las concretan: datos, código, modelos, uso de IA y seguridad.
 
 ## Ejemplos de referencia
 

@@ -60,7 +60,7 @@ Cada cuaderno cumple lo siguiente:
 
 - **Formato.** Jupyter (`.ipynb`) o MyST Markdown con código. Se ejecuta de principio a fin sin intervención manual.
 - **Lenguaje.** Python 3.10 o superior. Aceptamos R con `renv`. No aceptamos cuadernos que requieran software de pago.
-- **Datos.** Públicos, gratuitos y redistribuibles, y conformes al [estándar de datos](03-estandar-de-datos.md). No aceptamos datos confidenciales ni con restricciones de redistribución.
+- **Datos.** Públicos, gratuitos y redistribuibles, y conformes a los [requisitos de datos](03-estandar-de-datos.md). No aceptamos datos confidenciales ni con restricciones de redistribución.
 - **Dependencias.** Un archivo `environment.yml` o `requirements.txt` con versiones fijadas. Los paquetes están en PyPI o conda-forge.
 - **Reproducibilidad.** Se ejecuta en Binder o Google Colab sin configuración adicional.
 - **Visualización.** Al menos un mapa o un gráfico interactivo.
@@ -68,9 +68,10 @@ Cada cuaderno cumple lo siguiente:
 - **Licencia.** Abierta: MIT o Apache-2.0 para el código, y CC BY 4.0 para los datos y el texto.
 - **Idioma.** Preferimos el español. Aceptamos el inglés con un resumen en español.
 - **Extensión.** Entre 500 y 3000 líneas de código. Si es más largo, divídalo en módulos.
-- **Uso de IA.** Declárelo según el [instructivo de uso de IA](05-uso-de-ia.md).
+- **Uso de IA.** Declárelo según los [requisitos de uso de IA](05-uso-de-ia.md).
+- **Seguridad.** Cumpla los [requisitos de seguridad](10-requisitos-seguridad.md): sin credenciales, datos personales ni rutas locales en el repositorio, el historial ni las salidas.
 
-Si el cuaderno incluye un modelo, un tablero o una aplicación, cumpla además el [estándar de modelos](08-estandar-modelos.md), el [estándar de tableros](06-estandar-tableros.md) o el [estándar de aplicaciones](07-estandar-aplicaciones.md).
+Si el cuaderno incluye un modelo, un tablero o una aplicación, cumpla además los [requisitos de modelos](08-estandar-modelos.md), los [requisitos de tableros](06-estandar-tableros.md) o los [requisitos de aplicaciones](07-estandar-aplicaciones.md). Si usa un modelo de lenguaje u otro modelo preentrenado de terceros como componente del análisis, cumpla los [requisitos de uso de LLMs](09-uso-de-llms.md).
 
 ### Fuentes de datos recomendadas
 
