@@ -1,5 +1,5 @@
 ---
-title: Requisitos de uso de LLMs
+title: Requisitos para el uso de LLMs
 subtitle: Requisitos para usar modelos de lenguaje y otros modelos preentrenados de repositorios como Hugging Face dentro de un cuaderno reproducible
 date: 2026-11-19
 authors:
@@ -46,14 +46,14 @@ Estos requisitos existen porque un modelo preentrenado es un componente que quie
 Se distinguen cinco objetos relacionados:
 
 - **Cuaderno**: documenta un análisis y es la fuente del método. Se rige por la [guía](01-cuadernos-de-conocimiento.md).
-- **Asistente de IA**: herramienta que usa la persona autora para escribir, programar o traducir, incluidos los asistentes en modo agente con conectores o servidores MCP. Se rige por los [requisitos de uso de IA](05-uso-de-ia.md).
-- **Modelo propio**: el que la persona autora entrena, calibra o ejecuta para estimar amenaza, exposición, vulnerabilidad o riesgo. Se rige por los [requisitos de modelos](08-estandar-modelos.md).
+- **Asistente de IA**: herramienta que usa la persona autora para escribir, programar o traducir, incluidos los asistentes en modo agente con conectores o servidores MCP. Se rige por los [requisitos para el uso de IA](05-uso-de-ia.md).
+- **Modelo propio**: el que la persona autora entrena, calibra o ejecuta para estimar amenaza, exposición, vulnerabilidad o riesgo. Se rige por los [requisitos para modelos](08-estandar-modelos.md).
 - **Modelo de terceros usado como componente**: el que el cuaderno llama para procesar datos o texto. Se rige por este documento.
-- **Tablero y aplicación**: muestran o ejecutan resultados. Se rigen por los requisitos de [tableros](06-estandar-tableros.md) y de [aplicaciones](07-estandar-aplicaciones.md).
+- **Tablero y aplicación**: muestran o ejecutan resultados. Se rigen por los requisitos para [tableros](06-estandar-tableros.md) y para [aplicaciones](07-estandar-aplicaciones.md).
 
-La diferencia con los requisitos de uso de IA es el objeto auditado. Aquellos requisitos responden a quién responde por el trabajo cuando una persona se apoya en un asistente. Estos responden a si el modelo que forma parte de la cadena de cálculo es identificable, seguro, legal, reproducible y válido para la tarea. Un mismo cuaderno puede estar sujeto a ambos: por ejemplo, el que usa Claude para escribir el código (requisitos de uso de IA) y un modelo de Hugging Face para clasificar noticias (estos requisitos).
+La diferencia con los requisitos para el uso de IA es el objeto auditado. Aquellos requisitos responden a quién responde por el trabajo cuando una persona se apoya en un asistente. Estos responden a si el modelo que forma parte de la cadena de cálculo es identificable, seguro, legal, reproducible y válido para la tarea. Un mismo cuaderno puede estar sujeto a ambos: por ejemplo, el que usa Claude para escribir el código (requisitos para el uso de IA) y un modelo de Hugging Face para clasificar noticias (estos requisitos).
 
-La frontera para los agentes es dónde corren: si el agente ayuda a quien escribe el cuaderno, se declara según los requisitos de uso de IA; si el agente o el servidor MCP forma parte de la cadena de cálculo del cuaderno y se ejecuta cada vez que alguien lo reproduce, aplican estos requisitos. Si el cuaderno ajusta o entrena el modelo, aplica también los [requisitos de modelos](08-estandar-modelos.md). Un cuaderno que usa un modelo preentrenado solo para tareas de apoyo que no entran en los resultados (por ejemplo, formatear una tabla) no necesita aplicar estos requisitos y lo declara según los requisitos de uso de IA. La seguridad común a todo repositorio (secretos, datos personales y rutas locales, código no confiable, dependencias y *releases*) la cubren los [requisitos de seguridad](10-requisitos-seguridad.md); los requisitos de seguridad de este documento (SEG) tratan lo específico de los modelos de terceros.
+La frontera para los agentes es dónde corren: si el agente ayuda a quien escribe el cuaderno, se declara según los requisitos para el uso de IA; si el agente o el servidor MCP forma parte de la cadena de cálculo del cuaderno y se ejecuta cada vez que alguien lo reproduce, aplican estos requisitos. Si el cuaderno ajusta o entrena el modelo, aplica también los [requisitos para modelos](08-estandar-modelos.md). Un cuaderno que usa un modelo preentrenado solo para tareas de apoyo que no entran en los resultados (por ejemplo, formatear una tabla) no necesita aplicar estos requisitos y lo declara según los requisitos para el uso de IA. La seguridad común a todo repositorio (secretos, datos personales y rutas locales, código no confiable, dependencias y *releases*) la cubren los [requisitos de seguridad](10-requisitos-seguridad.md); los requisitos de seguridad de este documento (SEG) tratan lo específico de los modelos de terceros.
 
 ### 1.2 Convenciones
 
@@ -100,7 +100,7 @@ Ningún requisito de este documento exige comprar suscripciones, licencias, cré
 * - Pineau et al. (2021); Chue Hong et al. (2022); Digital Public Goods Alliance (s. f.); Carroll et al. (2020); CRED (2026)
   - Reproducibilidad, software de investigación, no hacer daño, gobernanza de datos de comunidades y sesgos de reporte
   - EJE-04, EJE-07, SES-01, PRI-01, SES-02
-* - [Requisitos de datos](03-estandar-de-datos.md), [requisitos de uso de IA](05-uso-de-ia.md) y [requisitos de modelos](08-estandar-modelos.md)
+* - [Requisitos para datos](03-estandar-de-datos.md), [requisitos para el uso de IA](05-uso-de-ia.md) y [requisitos para modelos](08-estandar-modelos.md)
   - Licencias, costo cero, datos derivados con modelos de lenguaje, declaración de IA y validación que estos requisitos heredan
   - IDE-05, TER-04, TER-05, EJE-01, EJE-03, EVA-01, PRI-04, DOC-03 a DOC-05
 ```
@@ -143,7 +143,7 @@ Si el cuaderno usa conectores o servidores del Model Context Protocol (MCP), hay
 
 ### 2.4 Ejecución y reproducibilidad
 
-Un modelo generativo no siempre devuelve lo mismo: la temperatura, la semilla, la cuantización, la GPU y la versión de la biblioteca cambian la salida. Por eso la reproducibilidad de un cuaderno con LLM no se apoya en volver a llamar al modelo sino en **guardar las salidas en bruto** con su entrada, parámetros, fecha y revisión (EJE-03), y en hacer que las tablas y figuras se calculen desde ellas. Es la misma regla de los requisitos de uso de IA para datos derivados con modelos de lenguaje. La repetición de la llamada es una verificación adicional, no la fuente de los resultados. Lo mismo vale para las herramientas y los servidores MCP: registre cada llamada con su resultado y reproduzca desde el registro (EJE-06).
+Un modelo generativo no siempre devuelve lo mismo: la temperatura, la semilla, la cuantización, la GPU y la versión de la biblioteca cambian la salida. Por eso la reproducibilidad de un cuaderno con LLM no se apoya en volver a llamar al modelo sino en **guardar las salidas en bruto** con su entrada, parámetros, fecha y revisión (EJE-03), y en hacer que las tablas y figuras se calculen desde ellas. Es la misma regla de los requisitos para el uso de IA para datos derivados con modelos de lenguaje. La repetición de la llamada es una verificación adicional, no la fuente de los resultados. Lo mismo vale para las herramientas y los servidores MCP: registre cada llamada con su resultado y reproduzca desde el registro (EJE-06).
 
 Si el cuaderno usa una API alojada, el proveedor puede cambiar el modelo o retirarlo. Guarde las salidas y la fecha de consulta para que el cuaderno siga siendo útil cuando el servicio cambie (EJE-05).
 
@@ -175,13 +175,13 @@ Hay dos formas de usar un modelo y tienen riesgos distintos. Con **pesos locales
 
 ### 2.8 Riesgos, sesgos y uso responsable
 
-Los modelos de lenguaje aprenden de textos en los que unas regiones, idiomas y tipos de fuente pesan más que otros, y heredan los sesgos de reporte que tienen los registros de desastres (CRED, 2026). Evalúe y declare cómo cambia el desempeño con el español de Colombia y con los territorios con menos cobertura de prensa (SES-02). El análisis de no hacer daño (SES-01) sigue el Digital Public Goods Standard y usa la plantilla `DO_NO_HARM.md` de los [requisitos de aplicaciones](07-estandar-aplicaciones.md).
+Los modelos de lenguaje aprenden de textos en los que unas regiones, idiomas y tipos de fuente pesan más que otros, y heredan los sesgos de reporte que tienen los registros de desastres (CRED, 2026). Evalúe y declare cómo cambia el desempeño con el español de Colombia y con los territorios con menos cobertura de prensa (SES-02). El análisis de no hacer daño (SES-01) sigue el Digital Public Goods Standard y usa la plantilla `DO_NO_HARM.md` de los [requisitos para aplicaciones](07-estandar-aplicaciones.md).
 
 *Requisitos de este grupo: SES-01, SES-02, SES-03, SES-04, SES-05. Su enunciado completo está en la lista de verificación de la Sección 3.*
 
 ### 2.9 Documentación y ciclo de vida
 
-La ficha de uso (`LLM_USE.md`) reúne en un solo archivo lo que otra persona necesita para saber qué modelos usa el cuaderno y bajo qué condiciones. Es el equivalente, para un modelo de terceros, de la ficha `MODEL_CARD.md` de los requisitos de modelos.
+La ficha de uso (`LLM_USE.md`) reúne en un solo archivo lo que otra persona necesita para saber qué modelos usa el cuaderno y bajo qué condiciones. Es el equivalente, para un modelo de terceros, de la ficha `MODEL_CARD.md` de los requisitos para modelos.
 
 Use esta plantilla (`LLM_USE.md`), con una entrada por modelo:
 
@@ -221,7 +221,7 @@ La lista tiene 53 requisitos: 47 obligatorios y 6 recomendados. Los 5 requisitos
 - [ ] **IDE-02.** **Crítico.** Cada modelo está fijado a una revisión inmutable (el *hash* de un *commit*), no a una rama como `main` ni a una etiqueta que pueda moverse; en una API alojada, a la versión del modelo con su fecha. (Hugging Face, s. f.-a; Requisito de esta guía)
 - [ ] **IDE-03.** La ficha del modelo (*model card*) del repositorio de origen se leyó y se archivó una copia fechada en el repositorio del cuaderno; resume el uso previsto, las limitaciones y los datos de entrenamiento que declara el modelo, o indica que no los declara. (Mitchell et al., 2019; Gebru et al., 2021; Hugging Face, s. f.-b)
 - [ ] **IDE-04.** Si el modelo es un derivado (ajuste fino, adaptador, cuantización o fusión), se identifican el modelo base y el tipo de relación. (Hugging Face, s. f.-b)
-- [ ] **IDE-05.** Cada modelo se cita en las referencias con autoría o entidad, año, versión, enlace y DOI cuando exista. (Requisitos de datos, INV-02)
+- [ ] **IDE-05.** Cada modelo se cita en las referencias con autoría o entidad, año, versión, enlace y DOI cuando exista. (Requisitos para datos, INV-02)
 - [ ] **IDE-06.** *(Recomendado)* Se indica el grado de apertura del modelo (solo pesos, o también código de entrenamiento y datos) con el Model Openness Framework. (White et al., 2024)
 
 **2.2. Licencia y términos**
@@ -229,8 +229,8 @@ La lista tiene 53 requisitos: 47 obligatorios y 6 recomendados. Los 5 requisitos
 - [ ] **TER-01.** **Crítico.** La licencia del modelo permite el uso previsto (investigación, uso institucional, publicación de resultados y de derivados) y está registrada con su identificador o su texto. (Hugging Face, s. f.-b; Requisito de esta guía)
 - [ ] **TER-02.** Si el modelo es de acceso restringido o exige aceptar condiciones, las aceptó una persona con autoridad para hacerlo, y el cuaderno explica cómo obtener el acceso sin publicar credenciales ni pesos que la licencia no permita redistribuir. (Requisito de esta guía)
 - [ ] **TER-03.** Las restricciones de uso de la licencia (usos prohibidos, uso no comercial, límites por tamaño de la organización) se revisaron frente al uso institucional y a la publicación abierta del cuaderno. (Requisito de esta guía)
-- [ ] **TER-04.** Las condiciones de los datos de entrenamiento que declara el modelo se revisaron; si no las declara, queda registrado como limitación. (Gebru et al., 2021; Requisitos de datos, INV-05)
-- [ ] **TER-05.** Las salidas del modelo se publican bajo una licencia compatible con los términos del modelo o del proveedor de la API. (Requisitos de uso de IA, U21)
+- [ ] **TER-04.** Las condiciones de los datos de entrenamiento que declara el modelo se revisaron; si no las declara, queda registrado como limitación. (Gebru et al., 2021; Requisitos para datos, INV-05)
+- [ ] **TER-05.** Las salidas del modelo se publican bajo una licencia compatible con los términos del modelo o del proveedor de la API. (Requisitos para el uso de IA, U21)
 
 **2.3. Seguridad de la cadena de suministro**
 
@@ -245,12 +245,12 @@ La lista tiene 53 requisitos: 47 obligatorios y 6 recomendados. Los 5 requisitos
 
 **2.4. Ejecución y reproducibilidad**
 
-- [ ] **EJE-01.** El cuaderno declara el hardware, la memoria y el tiempo que necesita, y se ejecuta con cómputo gratuito (Colab o Binder) o ofrece un modelo más pequeño o una versión reducida. (Requisitos de modelos, REP-03)
+- [ ] **EJE-01.** El cuaderno declara el hardware, la memoria y el tiempo que necesita, y se ejecuta con cómputo gratuito (Colab o Binder) o ofrece un modelo más pequeño o una versión reducida. (Requisitos para modelos, REP-03)
 - [ ] **EJE-02.** Los parámetros de generación (temperatura, `top_p`, máximo de tokens, semilla, cuantización y precisión numérica) están fijados y registrados; si la tarea lo permite, la decodificación es determinista. (Requisito de esta guía)
-- [ ] **EJE-03.** Las salidas en bruto que alimentan resultados se guardan junto con su entrada, los parámetros, la fecha y la revisión del modelo, y los resultados se reproducen desde esas salidas, sin una nueva llamada al modelo. (Requisitos de uso de IA, U12)
+- [ ] **EJE-03.** Las salidas en bruto que alimentan resultados se guardan junto con su entrada, los parámetros, la fecha y la revisión del modelo, y los resultados se reproducen desde esas salidas, sin una nueva llamada al modelo. (Requisitos para el uso de IA, U12)
 - [ ] **EJE-04.** El cuaderno declara las fuentes de no determinismo (GPU, versión de las bibliotecas, tamaño del lote) y reporta la variación de varias ejecuciones o demuestra que las salidas guardadas bastan para reproducir los resultados. (Pineau et al., 2021)
 - [ ] **EJE-05.** Si usa una API alojada, el cuaderno archiva las salidas y la fecha de consulta, y no queda inutilizable si el proveedor cambia o retira el modelo. (Requisito de esta guía)
-- [ ] **EJE-06.** Si el modelo usa herramientas o servidores MCP, cada llamada (herramienta, argumentos, resultado y fecha) se registra, y los resultados se reproducen desde ese registro y no desde una nueva llamada (aplica solo si hay herramientas o MCP). (Requisitos de uso de IA, U26; Requisito de esta guía)
+- [ ] **EJE-06.** Si el modelo usa herramientas o servidores MCP, cada llamada (herramienta, argumentos, resultado y fecha) se registra, y los resultados se reproducen desde ese registro y no desde una nueva llamada (aplica solo si hay herramientas o MCP). (Requisitos para el uso de IA, U26; Requisito de esta guía)
 - [ ] **EJE-07.** *(Recomendado)* El modelo y el tokenizador se archivan con DOI y suma de verificación cuando la licencia lo permite, o el cuaderno documenta cómo recuperar la revisión exacta. (Chue Hong et al., 2022)
 
 **2.5. Prompts y configuración**
@@ -258,31 +258,31 @@ La lista tiene 53 requisitos: 47 obligatorios y 6 recomendados. Los 5 requisitos
 - [ ] **PRO-01.** Los prompts (instrucciones del sistema, plantillas, ejemplos y esquemas de salida) están en archivos versionados del repositorio, no solo escritos en celdas sueltas. (Requisito de esta guía)
 - [ ] **PRO-02.** Cada prompt documenta su objetivo, sus variables de entrada y el formato de salida esperado, y sus cambios se registran en el `CHANGELOG.md`. (Requisito de esta guía)
 - [ ] **PRO-03.** La salida del modelo se restringe a un formato verificable (JSON con esquema u opciones cerradas), y el cuaderno valida cada salida y registra las que rechaza. (OWASP Foundation, 2025, LLM05)
-- [ ] **PRO-04.** Los prompts no contienen datos personales, credenciales ni datos con restricciones de licencia. (Requisitos de uso de IA, U20)
+- [ ] **PRO-04.** Los prompts no contienen datos personales, credenciales ni datos con restricciones de licencia. (Requisitos para el uso de IA, U20)
 - [ ] **PRO-05.** *(Recomendado)* El cuaderno prueba la sensibilidad de los resultados a variaciones del prompt (parafraseos, orden de los ejemplos) y reporta cuánto cambian. (Requisito de esta guía)
 
 **2.6. Evaluación**
 
-- [ ] **EVA-01.** **Crítico.** Una muestra de referencia etiquetada por personas expertas, separada de los ejemplos del prompt y de cualquier ajuste, valida la salida del modelo para la tarea concreta antes de usar los resultados. (Requisitos de uso de IA, U11; Requisitos de modelos, VAL-01)
-- [ ] **EVA-02.** Las métricas se justifican para la tarea y se reportan con su incertidumbre, junto con el tamaño de la muestra y el acuerdo entre las personas que la etiquetaron. (Requisitos de modelos, VAL-02)
-- [ ] **EVA-03.** El desempeño se compara con una línea base sin modelo de lenguaje (reglas, diccionarios, expresiones regulares o un clasificador sencillo), y se justifica por qué se necesita un LLM. (Requisitos de modelos, VAL-04)
+- [ ] **EVA-01.** **Crítico.** Una muestra de referencia etiquetada por personas expertas, separada de los ejemplos del prompt y de cualquier ajuste, valida la salida del modelo para la tarea concreta antes de usar los resultados. (Requisitos para el uso de IA, U11; Requisitos para modelos, VAL-01)
+- [ ] **EVA-02.** Las métricas se justifican para la tarea y se reportan con su incertidumbre, junto con el tamaño de la muestra y el acuerdo entre las personas que la etiquetaron. (Requisitos para modelos, VAL-02)
+- [ ] **EVA-03.** El desempeño se compara con una línea base sin modelo de lenguaje (reglas, diccionarios, expresiones regulares o un clasificador sencillo), y se justifica por qué se necesita un LLM. (Requisitos para modelos, VAL-04)
 - [ ] **EVA-04.** La evaluación usa textos del dominio y del idioma de uso (español de Colombia, topónimos locales, términos de gestión del riesgo), no solo las pruebas genéricas del repositorio de origen. (Requisito de esta guía)
 - [ ] **EVA-05.** Las cifras de desempeño que publica el modelo (pruebas comparativas y tablas de clasificación) se tratan como referencia y no como evidencia de su desempeño en esta tarea; se considera la posible contaminación de las pruebas con datos de entrenamiento. (Mitchell et al., 2019; Requisito de esta guía)
 - [ ] **EVA-06.** Se documentan los errores frecuentes, incluidas las confabulaciones (contenido plausible pero falso), con la tasa de error por categoría y ejemplos de los casos que fallaron. (NIST, 2024; OWASP Foundation, 2025, LLM09)
-- [ ] **EVA-07.** *(Recomendado)* Se mide la consistencia (la misma entrada en varias ejecuciones) y, si el modelo reporta confianza, su calibración. (Requisitos de modelos, INC-04)
+- [ ] **EVA-07.** *(Recomendado)* Se mide la consistencia (la misma entrada en varias ejecuciones) y, si el modelo reporta confianza, su calibración. (Requisitos para modelos, INC-04)
 
 **2.7. Privacidad y datos**
 
-- [ ] **PRI-01.** **Crítico.** No se envían datos personales, de comunidades, no publicados ni con restricciones de licencia a un servicio alojado de terceros (API, proveedores de inferencia o Spaces); esos datos solo se procesan con modelos que se ejecutan localmente. (Carroll et al., 2020; OWASP Foundation, 2025, LLM02; Requisitos de uso de IA, U20)
-- [ ] **PRI-02.** Para cada servicio alojado se documenta qué datos recibe, quién lo opera y en qué país, y se revisaron sus términos sobre retención de datos y entrenamiento. (Requisitos de uso de IA, U21)
+- [ ] **PRI-01.** **Crítico.** No se envían datos personales, de comunidades, no publicados ni con restricciones de licencia a un servicio alojado de terceros (API, proveedores de inferencia o Spaces); esos datos solo se procesan con modelos que se ejecutan localmente. (Carroll et al., 2020; OWASP Foundation, 2025, LLM02; Requisitos para el uso de IA, U20)
+- [ ] **PRI-02.** Para cada servicio alojado se documenta qué datos recibe, quién lo opera y en qué país, y se revisaron sus términos sobre retención de datos y entrenamiento. (Requisitos para el uso de IA, U21)
 - [ ] **PRI-03.** Las salidas se revisan antes de publicarlas para comprobar que no reproducen datos personales ni texto con derechos de terceros. (OWASP Foundation, 2025, LLM02)
-- [ ] **PRI-04.** Lo que el cuaderno publique en un repositorio de modelos o de datos (modelos ajustados, conjuntos derivados, Spaces) cumple los requisitos de datos y no incluye datos de comunidades sin autorización registrada. (Carroll et al., 2020; Requisitos de datos, PER-02)
+- [ ] **PRI-04.** Lo que el cuaderno publique en un repositorio de modelos o de datos (modelos ajustados, conjuntos derivados, Spaces) cumple los requisitos para datos y no incluye datos de comunidades sin autorización registrada. (Carroll et al., 2020; Requisitos para datos, PER-02)
 
 **2.8. Riesgos, sesgos y uso responsable**
 
 - [ ] **SES-01.** Existe un análisis de «no hacer daño» del uso del modelo de lenguaje: usos indebidos, errores con consecuencias y medidas adoptadas (`DO_NO_HARM.md`). (Digital Public Goods Alliance, s. f., indicador 9)
 - [ ] **SES-02.** Se evaluaron y se declaran los sesgos del modelo y de su fuente: geográficos (más texto de unas regiones que de otras), de idioma y de tipo de fuente. (CRED, 2026; Mitchell et al., 2019)
-- [ ] **SES-03.** Ninguna decisión de gestión del riesgo (alerta, priorización, mapa) depende solo de la salida del modelo; una persona experta la revisa. (Requisitos de uso de IA, recomendación 4)
+- [ ] **SES-03.** Ninguna decisión de gestión del riesgo (alerta, priorización, mapa) depende solo de la salida del modelo; una persona experta la revisa. (Requisitos para el uso de IA, recomendación 4)
 - [ ] **SES-04.** Los datos y los textos generados con un modelo se rotulan como tales, con el modelo y la fecha, en las tablas, las figuras y los conjuntos publicados. (Requisito de esta guía)
 - [ ] **SES-05.** *(Recomendado)* Se estima y se declara el consumo de energía o las emisiones de la ejecución del modelo. (Hugging Face, s. f.-b)
 
@@ -290,9 +290,9 @@ La lista tiene 53 requisitos: 47 obligatorios y 6 recomendados. Los 5 requisitos
 
 - [ ] **DOC-01.** Un archivo `LLM_USE.md` registra cada modelo usado, con su identificación, licencia, parámetros, prompts, evaluación y limitaciones. (Mitchell et al., 2019; Requisito de esta guía)
 - [ ] **DOC-02.** El `README` explica cómo obtener cada modelo y volver a ejecutar el cuaderno: revisión exacta, comando y, si el acceso es restringido, cómo solicitarlo. (Digital Public Goods Alliance, s. f., indicador 5)
-- [ ] **DOC-03.** Un cambio de modelo, de revisión, de prompt o de parámetros sube la versión del cuaderno, y el `CHANGELOG.md` registra su efecto en los resultados. (Requisitos de modelos, DOC-02)
-- [ ] **DOC-04.** El uso de modelos como componente del análisis se declara en `LLM_USE.md`, y el uso de asistentes para escribir o programar se declara según los [requisitos de uso de IA](05-uso-de-ia.md); ambas declaraciones son coherentes entre sí. (Requisitos de uso de IA, U04)
-- [ ] **DOC-05.** Si el cuaderno entrena o ajusta un modelo, cumple además los [requisitos de modelos](08-estandar-modelos.md) y publica su `MODEL_CARD.md` (aplica solo si hay ajuste o entrenamiento). (Requisitos de modelos, USO-01)
+- [ ] **DOC-03.** Un cambio de modelo, de revisión, de prompt o de parámetros sube la versión del cuaderno, y el `CHANGELOG.md` registra su efecto en los resultados. (Requisitos para modelos, DOC-02)
+- [ ] **DOC-04.** El uso de modelos como componente del análisis se declara en `LLM_USE.md`, y el uso de asistentes para escribir o programar se declara según los [requisitos para el uso de IA](05-uso-de-ia.md); ambas declaraciones son coherentes entre sí. (Requisitos para el uso de IA, U04)
+- [ ] **DOC-05.** Si el cuaderno entrena o ajusta un modelo, cumple además los [requisitos para modelos](08-estandar-modelos.md) y publica su `MODEL_CARD.md` (aplica solo si hay ajuste o entrenamiento). (Requisitos para modelos, USO-01)
 - [ ] **DOC-06.** *(Recomendado)* El modelo ajustado se publica en un repositorio de modelos de acceso libre, con su ficha. (Hugging Face, s. f.-b)
 
 ## 4. Prompt para validar el uso de LLMs
@@ -309,11 +309,11 @@ Este prompt convierte la lista de verificación en una auditoría repetible. Lee
 :::{warning} Lo que este prompt no puede hacer
 No valida el mérito científico del análisis ni sustituye la revisión de una persona experta del dominio. No puede probar que un modelo es seguro: reconoce señales (formatos de pesos, banderas de ejecución de código, revisiones sin fijar) pero no analiza el contenido de los pesos. Tampoco puede reproducir ejecuciones que exijan más recursos de los que tiene. Las decisiones sobre licencias, datos de comunidades y daños posibles se marcan «Requiere revisión humana».
 
-En modo `con_red` solo debe enviar a Internet identificadores de modelos, nunca datos del repositorio. Si el auditor es un servicio externo, aplíquele las mismas reglas que a cualquier IA: no le entregue datos personales, datos de comunidades ni material con restricciones de licencia (véanse los [requisitos de uso de IA](05-uso-de-ia.md)). Si cambia la lista de verificación, actualice también los criterios del prompt.
+En modo `con_red` solo debe enviar a Internet identificadores de modelos, nunca datos del repositorio. Si el auditor es un servicio externo, aplíquele las mismas reglas que a cualquier IA: no le entregue datos personales, datos de comunidades ni material con restricciones de licencia (véanse los [requisitos para el uso de IA](05-uso-de-ia.md)). Si cambia la lista de verificación, actualice también los criterios del prompt.
 :::
 
 ````text
-Actúa como auditor del uso de modelos preentrenados de terceros (modelos de lenguaje y otros, obtenidos de repositorios como Hugging Face o de APIs alojadas) en cuadernos reproducibles de la Subdirección para el Conocimiento del Riesgo (UNGRD). Tu tarea es VERIFICAR si un cuaderno y su repositorio cumplen la lista de verificación de los «Requisitos de uso de LLMs» y producir un REPORTE DE CUMPLIMIENTO. Eres un revisor: NO modifiques ningún archivo.
+Actúa como auditor del uso de modelos preentrenados de terceros (modelos de lenguaje y otros, obtenidos de repositorios como Hugging Face o de APIs alojadas) en cuadernos reproducibles de la Subdirección para el Conocimiento del Riesgo (UNGRD). Tu tarea es VERIFICAR si un cuaderno y su repositorio cumplen la lista de verificación de los «Requisitos para el uso de LLMs» y producir un REPORTE DE CUMPLIMIENTO. Eres un revisor: NO modifiques ningún archivo.
 
 ## ENTRADAS
 - RUTA_REPO: <ruta local del repositorio del cuaderno>
@@ -358,15 +358,15 @@ IDE-01. Cada modelo se identifica con su identificador completo en el repositori
 IDE-02 (CRÍTICO). Cada modelo está fijado a una revisión inmutable (el *hash* de un *commit*), no a una rama como `main` ni a una etiqueta que pueda moverse; en una API alojada, a la versión del modelo con su fecha. (Hugging Face, s. f.-a; Requisito de esta guía)
 IDE-03. La ficha del modelo (*model card*) del repositorio de origen se leyó y se archivó una copia fechada en el repositorio del cuaderno; resume el uso previsto, las limitaciones y los datos de entrenamiento que declara el modelo, o indica que no los declara. (Mitchell et al., 2019; Gebru et al., 2021; Hugging Face, s. f.-b)
 IDE-04. Si el modelo es un derivado (ajuste fino, adaptador, cuantización o fusión), se identifican el modelo base y el tipo de relación. (Hugging Face, s. f.-b)
-IDE-05. Cada modelo se cita en las referencias con autoría o entidad, año, versión, enlace y DOI cuando exista. (Requisitos de datos, INV-02)
+IDE-05. Cada modelo se cita en las referencias con autoría o entidad, año, versión, enlace y DOI cuando exista. (Requisitos para datos, INV-02)
 IDE-06 (RECOMENDADO). Se indica el grado de apertura del modelo (solo pesos, o también código de entrenamiento y datos) con el Model Openness Framework. (White et al., 2024)
 
 ### Licencia y términos
 TER-01 (CRÍTICO). La licencia del modelo permite el uso previsto (investigación, uso institucional, publicación de resultados y de derivados) y está registrada con su identificador o su texto. (Hugging Face, s. f.-b; Requisito de esta guía)
 TER-02. Si el modelo es de acceso restringido o exige aceptar condiciones, las aceptó una persona con autoridad para hacerlo, y el cuaderno explica cómo obtener el acceso sin publicar credenciales ni pesos que la licencia no permita redistribuir. (Requisito de esta guía)
 TER-03. Las restricciones de uso de la licencia (usos prohibidos, uso no comercial, límites por tamaño de la organización) se revisaron frente al uso institucional y a la publicación abierta del cuaderno. (Requisito de esta guía)
-TER-04. Las condiciones de los datos de entrenamiento que declara el modelo se revisaron; si no las declara, queda registrado como limitación. (Gebru et al., 2021; Requisitos de datos, INV-05)
-TER-05. Las salidas del modelo se publican bajo una licencia compatible con los términos del modelo o del proveedor de la API. (Requisitos de uso de IA, U21)
+TER-04. Las condiciones de los datos de entrenamiento que declara el modelo se revisaron; si no las declara, queda registrado como limitación. (Gebru et al., 2021; Requisitos para datos, INV-05)
+TER-05. Las salidas del modelo se publican bajo una licencia compatible con los términos del modelo o del proveedor de la API. (Requisitos para el uso de IA, U21)
 
 ### Seguridad de la cadena de suministro
 SEG-01 (CRÍTICO). El cuaderno no ejecuta código remoto del repositorio del modelo sin revisarlo: `trust_remote_code` es falso, o se activa solo después de leer ese código y de fijar la revisión. (Hugging Face, s. f.-a)
@@ -379,49 +379,49 @@ SEG-07. Si el modelo actúa como agente con herramientas (ejecuta código, consu
 SEG-08. Si el cuaderno usa conectores o servidores MCP, estos son de origen verificable, tienen la versión fijada y corren con los privilegios mínimos; el texto que devuelven y las descripciones de sus herramientas se tratan como no confiables (aplica solo si el cuaderno usa MCP). (MCP, s. f.-a, s. f.-b; OWASP Foundation, 2025, LLM01 y LLM03)
 
 ### Ejecución y reproducibilidad
-EJE-01. El cuaderno declara el hardware, la memoria y el tiempo que necesita, y se ejecuta con cómputo gratuito (Colab o Binder) o ofrece un modelo más pequeño o una versión reducida. (Requisitos de modelos, REP-03)
+EJE-01. El cuaderno declara el hardware, la memoria y el tiempo que necesita, y se ejecuta con cómputo gratuito (Colab o Binder) o ofrece un modelo más pequeño o una versión reducida. (Requisitos para modelos, REP-03)
 EJE-02. Los parámetros de generación (temperatura, `top_p`, máximo de tokens, semilla, cuantización y precisión numérica) están fijados y registrados; si la tarea lo permite, la decodificación es determinista. (Requisito de esta guía)
-EJE-03. Las salidas en bruto que alimentan resultados se guardan junto con su entrada, los parámetros, la fecha y la revisión del modelo, y los resultados se reproducen desde esas salidas, sin una nueva llamada al modelo. (Requisitos de uso de IA, U12)
+EJE-03. Las salidas en bruto que alimentan resultados se guardan junto con su entrada, los parámetros, la fecha y la revisión del modelo, y los resultados se reproducen desde esas salidas, sin una nueva llamada al modelo. (Requisitos para el uso de IA, U12)
 EJE-04. El cuaderno declara las fuentes de no determinismo (GPU, versión de las bibliotecas, tamaño del lote) y reporta la variación de varias ejecuciones o demuestra que las salidas guardadas bastan para reproducir los resultados. (Pineau et al., 2021)
 EJE-05. Si usa una API alojada, el cuaderno archiva las salidas y la fecha de consulta, y no queda inutilizable si el proveedor cambia o retira el modelo. (Requisito de esta guía)
-EJE-06. Si el modelo usa herramientas o servidores MCP, cada llamada (herramienta, argumentos, resultado y fecha) se registra, y los resultados se reproducen desde ese registro y no desde una nueva llamada (aplica solo si hay herramientas o MCP). (Requisitos de uso de IA, U26; Requisito de esta guía)
+EJE-06. Si el modelo usa herramientas o servidores MCP, cada llamada (herramienta, argumentos, resultado y fecha) se registra, y los resultados se reproducen desde ese registro y no desde una nueva llamada (aplica solo si hay herramientas o MCP). (Requisitos para el uso de IA, U26; Requisito de esta guía)
 EJE-07 (RECOMENDADO). El modelo y el tokenizador se archivan con DOI y suma de verificación cuando la licencia lo permite, o el cuaderno documenta cómo recuperar la revisión exacta. (Chue Hong et al., 2022)
 
 ### Prompts y configuración
 PRO-01. Los prompts (instrucciones del sistema, plantillas, ejemplos y esquemas de salida) están en archivos versionados del repositorio, no solo escritos en celdas sueltas. (Requisito de esta guía)
 PRO-02. Cada prompt documenta su objetivo, sus variables de entrada y el formato de salida esperado, y sus cambios se registran en el `CHANGELOG.md`. (Requisito de esta guía)
 PRO-03. La salida del modelo se restringe a un formato verificable (JSON con esquema u opciones cerradas), y el cuaderno valida cada salida y registra las que rechaza. (OWASP Foundation, 2025, LLM05)
-PRO-04. Los prompts no contienen datos personales, credenciales ni datos con restricciones de licencia. (Requisitos de uso de IA, U20)
+PRO-04. Los prompts no contienen datos personales, credenciales ni datos con restricciones de licencia. (Requisitos para el uso de IA, U20)
 PRO-05 (RECOMENDADO). El cuaderno prueba la sensibilidad de los resultados a variaciones del prompt (parafraseos, orden de los ejemplos) y reporta cuánto cambian. (Requisito de esta guía)
 
 ### Evaluación
-EVA-01 (CRÍTICO). Una muestra de referencia etiquetada por personas expertas, separada de los ejemplos del prompt y de cualquier ajuste, valida la salida del modelo para la tarea concreta antes de usar los resultados. (Requisitos de uso de IA, U11; Requisitos de modelos, VAL-01)
-EVA-02. Las métricas se justifican para la tarea y se reportan con su incertidumbre, junto con el tamaño de la muestra y el acuerdo entre las personas que la etiquetaron. (Requisitos de modelos, VAL-02)
-EVA-03. El desempeño se compara con una línea base sin modelo de lenguaje (reglas, diccionarios, expresiones regulares o un clasificador sencillo), y se justifica por qué se necesita un LLM. (Requisitos de modelos, VAL-04)
+EVA-01 (CRÍTICO). Una muestra de referencia etiquetada por personas expertas, separada de los ejemplos del prompt y de cualquier ajuste, valida la salida del modelo para la tarea concreta antes de usar los resultados. (Requisitos para el uso de IA, U11; Requisitos para modelos, VAL-01)
+EVA-02. Las métricas se justifican para la tarea y se reportan con su incertidumbre, junto con el tamaño de la muestra y el acuerdo entre las personas que la etiquetaron. (Requisitos para modelos, VAL-02)
+EVA-03. El desempeño se compara con una línea base sin modelo de lenguaje (reglas, diccionarios, expresiones regulares o un clasificador sencillo), y se justifica por qué se necesita un LLM. (Requisitos para modelos, VAL-04)
 EVA-04. La evaluación usa textos del dominio y del idioma de uso (español de Colombia, topónimos locales, términos de gestión del riesgo), no solo las pruebas genéricas del repositorio de origen. (Requisito de esta guía)
 EVA-05. Las cifras de desempeño que publica el modelo (pruebas comparativas y tablas de clasificación) se tratan como referencia y no como evidencia de su desempeño en esta tarea; se considera la posible contaminación de las pruebas con datos de entrenamiento. (Mitchell et al., 2019; Requisito de esta guía)
 EVA-06. Se documentan los errores frecuentes, incluidas las confabulaciones (contenido plausible pero falso), con la tasa de error por categoría y ejemplos de los casos que fallaron. (NIST, 2024; OWASP Foundation, 2025, LLM09)
-EVA-07 (RECOMENDADO). Se mide la consistencia (la misma entrada en varias ejecuciones) y, si el modelo reporta confianza, su calibración. (Requisitos de modelos, INC-04)
+EVA-07 (RECOMENDADO). Se mide la consistencia (la misma entrada en varias ejecuciones) y, si el modelo reporta confianza, su calibración. (Requisitos para modelos, INC-04)
 
 ### Privacidad y datos
-PRI-01 (CRÍTICO). No se envían datos personales, de comunidades, no publicados ni con restricciones de licencia a un servicio alojado de terceros (API, proveedores de inferencia o Spaces); esos datos solo se procesan con modelos que se ejecutan localmente. (Carroll et al., 2020; OWASP Foundation, 2025, LLM02; Requisitos de uso de IA, U20)
-PRI-02. Para cada servicio alojado se documenta qué datos recibe, quién lo opera y en qué país, y se revisaron sus términos sobre retención de datos y entrenamiento. (Requisitos de uso de IA, U21)
+PRI-01 (CRÍTICO). No se envían datos personales, de comunidades, no publicados ni con restricciones de licencia a un servicio alojado de terceros (API, proveedores de inferencia o Spaces); esos datos solo se procesan con modelos que se ejecutan localmente. (Carroll et al., 2020; OWASP Foundation, 2025, LLM02; Requisitos para el uso de IA, U20)
+PRI-02. Para cada servicio alojado se documenta qué datos recibe, quién lo opera y en qué país, y se revisaron sus términos sobre retención de datos y entrenamiento. (Requisitos para el uso de IA, U21)
 PRI-03. Las salidas se revisan antes de publicarlas para comprobar que no reproducen datos personales ni texto con derechos de terceros. (OWASP Foundation, 2025, LLM02)
-PRI-04. Lo que el cuaderno publique en un repositorio de modelos o de datos (modelos ajustados, conjuntos derivados, Spaces) cumple los requisitos de datos y no incluye datos de comunidades sin autorización registrada. (Carroll et al., 2020; Requisitos de datos, PER-02)
+PRI-04. Lo que el cuaderno publique en un repositorio de modelos o de datos (modelos ajustados, conjuntos derivados, Spaces) cumple los requisitos para datos y no incluye datos de comunidades sin autorización registrada. (Carroll et al., 2020; Requisitos para datos, PER-02)
 
 ### Riesgos, sesgos y uso responsable
 SES-01. Existe un análisis de «no hacer daño» del uso del modelo de lenguaje: usos indebidos, errores con consecuencias y medidas adoptadas (`DO_NO_HARM.md`). (Digital Public Goods Alliance, s. f., indicador 9)
 SES-02. Se evaluaron y se declaran los sesgos del modelo y de su fuente: geográficos (más texto de unas regiones que de otras), de idioma y de tipo de fuente. (CRED, 2026; Mitchell et al., 2019)
-SES-03. Ninguna decisión de gestión del riesgo (alerta, priorización, mapa) depende solo de la salida del modelo; una persona experta la revisa. (Requisitos de uso de IA, recomendación 4)
+SES-03. Ninguna decisión de gestión del riesgo (alerta, priorización, mapa) depende solo de la salida del modelo; una persona experta la revisa. (Requisitos para el uso de IA, recomendación 4)
 SES-04. Los datos y los textos generados con un modelo se rotulan como tales, con el modelo y la fecha, en las tablas, las figuras y los conjuntos publicados. (Requisito de esta guía)
 SES-05 (RECOMENDADO). Se estima y se declara el consumo de energía o las emisiones de la ejecución del modelo. (Hugging Face, s. f.-b)
 
 ### Documentación y ciclo de vida
 DOC-01. Un archivo `LLM_USE.md` registra cada modelo usado, con su identificación, licencia, parámetros, prompts, evaluación y limitaciones. (Mitchell et al., 2019; Requisito de esta guía)
 DOC-02. El `README` explica cómo obtener cada modelo y volver a ejecutar el cuaderno: revisión exacta, comando y, si el acceso es restringido, cómo solicitarlo. (Digital Public Goods Alliance, s. f., indicador 5)
-DOC-03. Un cambio de modelo, de revisión, de prompt o de parámetros sube la versión del cuaderno, y el `CHANGELOG.md` registra su efecto en los resultados. (Requisitos de modelos, DOC-02)
-DOC-04. El uso de modelos como componente del análisis se declara en `LLM_USE.md`, y el uso de asistentes para escribir o programar se declara según los [requisitos de uso de IA](05-uso-de-ia.md); ambas declaraciones son coherentes entre sí. (Requisitos de uso de IA, U04)
-DOC-05. Si el cuaderno entrena o ajusta un modelo, cumple además los [requisitos de modelos](08-estandar-modelos.md) y publica su `MODEL_CARD.md` (aplica solo si hay ajuste o entrenamiento). (Requisitos de modelos, USO-01)
+DOC-03. Un cambio de modelo, de revisión, de prompt o de parámetros sube la versión del cuaderno, y el `CHANGELOG.md` registra su efecto en los resultados. (Requisitos para modelos, DOC-02)
+DOC-04. El uso de modelos como componente del análisis se declara en `LLM_USE.md`, y el uso de asistentes para escribir o programar se declara según los [requisitos para el uso de IA](05-uso-de-ia.md); ambas declaraciones son coherentes entre sí. (Requisitos para el uso de IA, U04)
+DOC-05. Si el cuaderno entrena o ajusta un modelo, cumple además los [requisitos para modelos](08-estandar-modelos.md) y publica su `MODEL_CARD.md` (aplica solo si hay ajuste o entrenamiento). (Requisitos para modelos, USO-01)
 DOC-06 (RECOMENDADO). El modelo ajustado se publica en un repositorio de modelos de acceso libre, con su ficha. (Hugging Face, s. f.-b)
 
 ### Paso D. Puntuación

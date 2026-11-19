@@ -1,5 +1,5 @@
 ---
-title: Requisitos de aplicaciones
+title: Requisitos para aplicaciones
 subtitle: Requisitos para publicar aplicaciones abiertas, seguras y reproducibles
 date: 2026-11-16
 authors:
@@ -45,10 +45,10 @@ Estas instrucciones se aplican a toda **aplicación** que acompañe a un cuadern
 Se distinguen tres objetos relacionados:
 
 - **Cuaderno**: documenta un análisis y es la fuente del método. Se rige por la [guía](01-cuadernos-de-conocimiento.md).
-- **Tablero**: muestra resultados ya calculados, sin entradas ni cálculos propios. Se rige por los [requisitos de tableros](06-estandar-tableros.md).
-- **Aplicación**: calcula a partir de entradas de la persona usuaria. Se rige por este documento. El modelo que ejecuta cumple además los [requisitos de modelos](08-estandar-modelos.md).
+- **Tablero**: muestra resultados ya calculados, sin entradas ni cálculos propios. Se rige por los [requisitos para tableros](06-estandar-tableros.md).
+- **Aplicación**: calcula a partir de entradas de la persona usuaria. Se rige por este documento. El modelo que ejecuta cumple además los [requisitos para modelos](08-estandar-modelos.md).
 
-Complementan la guía, los [requisitos de datos](03-estandar-de-datos.md) y los [requisitos de uso de IA](05-uso-de-ia.md): los datos de la aplicación cumplen los requisitos de datos y el uso de IA, tanto en su preparación como en su ejecución, se declara según los de uso de IA. La seguridad común a todo repositorio (secretos, datos personales y rutas locales, código no confiable, dependencias y *releases*) la cubren los [requisitos de seguridad](10-requisitos-seguridad.md); los requisitos de seguridad de este documento se aplican además.
+Complementan la guía, los [requisitos para datos](03-estandar-de-datos.md) y los [requisitos para el uso de IA](05-uso-de-ia.md): los datos de la aplicación cumplen los requisitos para datos y el uso de IA, tanto en su preparación como en su ejecución, se declara según los requisitos para el uso de IA. La seguridad común a todo repositorio (secretos, datos personales y rutas locales, código no confiable, dependencias y *releases*) la cubren los [requisitos de seguridad](10-requisitos-seguridad.md); los requisitos de seguridad de este documento se aplican además.
 
 ### 1.2 Convenciones
 
@@ -100,8 +100,8 @@ Ningún requisito de este documento exige comprar suscripciones, licencias ni se
 * - Preston-Werner (s. f.); Citation File Format (s. f.); Software Heritage (s. f.)
   - Versionado semántico, citación del software y archivo del código fuente
   - COD-07, REP-07, REP-11, DOC-04
-* - [Requisitos de datos](03-estandar-de-datos.md) y [requisitos de uso de IA](05-uso-de-ia.md) de esta colección
-  - Requisitos de datos, licencias, costo cero y declaración de IA que la aplicación hereda
+* - [Requisitos para datos](03-estandar-de-datos.md) y [requisitos para el uso de IA](05-uso-de-ia.md) de esta colección
+  - Requisitos para datos, licencias, costo cero y declaración de IA que la aplicación hereda
   - COD-05, DAT-01, DOC-08, DOC-09
 ```
 
@@ -109,7 +109,7 @@ Ningún requisito de este documento exige comprar suscripciones, licencias ni se
 
 ### 2.1 Propósito, alcance y no hacer daño
 
-Una aplicación recibe entradas, calcula y devuelve un resultado que alguien puede usar para decidir. Un cuaderno documenta un análisis; un tablero muestra resultados ya calculados y se rige por los [requisitos de tableros](06-estandar-tableros.md). Si una aplicación expone una API o permite subir archivos, la sección de seguridad se aplica con todo rigor.
+Una aplicación recibe entradas, calcula y devuelve un resultado que alguien puede usar para decidir. Un cuaderno documenta un análisis; un tablero muestra resultados ya calculados y se rige por los [requisitos para tableros](06-estandar-tableros.md). Si una aplicación expone una API o permite subir archivos, la sección de seguridad se aplica con todo rigor.
 
 El Digital Public Goods Standard exige **no hacer daño por diseño**: el proyecto debe mostrar que anticipó y previno los daños posibles (Digital Public Goods Alliance, s. f., indicador 9). En gestión del riesgo, el daño más probable es el uso indebido del resultado, como tomar una calculadora de amenaza por un estudio de microzonificación. El análisis de ALC-02 nombra esos usos y dice qué hace la aplicación para impedirlos o advertirlos.
 
@@ -126,7 +126,7 @@ El Digital Public Goods Standard exige **no hacer daño por diseño**: el proyec
 
 ### 2.2 Código abierto, licencias y titularidad
 
-Publicar el código no basta. El DPG Standard pide una licencia aprobada por la OSI, la titularidad de los derechos documentada y independencia de dependencias cerradas, o una alternativa abierta identificada (Digital Public Goods Alliance, s. f., indicadores 2 a 4). La política de costo cero de los [requisitos de datos](03-estandar-de-datos.md) añade que nadie paga para usar o ejecutar la aplicación (COD-05).
+Publicar el código no basta. El DPG Standard pide una licencia aprobada por la OSI, la titularidad de los derechos documentada y independencia de dependencias cerradas, o una alternativa abierta identificada (Digital Public Goods Alliance, s. f., indicadores 2 a 4). La política de costo cero de los [requisitos para datos](03-estandar-de-datos.md) añade que nadie paga para usar o ejecutar la aplicación (COD-05).
 
 Los principios FAIR4RS piden que el software tenga un identificador persistente, metadatos ricos, una licencia clara y referencias a lo que usa (Chue Hong et al., 2022). Aquí son requisitos verificables: DOI por versión (REP-07), metadatos (REP-08) y licencia (COD-01).
 
@@ -168,7 +168,7 @@ app-<tema>/
 
 ### 2.4 Entradas, salidas y datos
 
-Las entradas siguen los requisitos de datos. Los resultados se exportan en un formato no propietario y con un registro de cómo se produjeron (Digital Public Goods Alliance, s. f., indicador 6). Los metadatos bastan para repetir el resultado (DAT-03 y DAT-04):
+Las entradas siguen los requisitos para datos. Los resultados se exportan en un formato no propietario y con un registro de cómo se produjeron (Digital Public Goods Alliance, s. f., indicador 6). Los metadatos bastan para repetir el resultado (DAT-03 y DAT-04):
 
 ```json
 {
@@ -225,7 +225,7 @@ El `README` permite a una persona técnica que no conoce el proyecto ejecutarlo 
 
 **Mantenimiento.** Una aplicación abandonada acumula dependencias vulnerables y resultados desactualizados. La política de mantenimiento (DOC-05) dice quién responde, qué versiones tienen soporte y cuándo se retira. Al retirarla, se archivan el código, los datos y los metadatos (Analysis Function, 2026).
 
-**Uso de IA.** Declárelo según los [requisitos de uso de IA](05-uso-de-ia.md). Si la aplicación llama a un modelo al ejecutarse, fije el modelo y la versión, guarde las salidas y no envíe datos personales a una IA pública (Requisitos de uso de IA, U11, U12 y U20). Si el modelo deja de estar disponible, la aplicación sigue funcionando o falla con claridad (DOC-09).
+**Uso de IA.** Declárelo según los [requisitos para el uso de IA](05-uso-de-ia.md). Si la aplicación llama a un modelo al ejecutarse, fije el modelo y la versión, guarde las salidas y no envíe datos personales a una IA pública (Requisitos para el uso de IA, U11, U12 y U20). Si el modelo deja de estar disponible, la aplicación sigue funcionando o falla con claridad (DOC-09).
 
 *Requisitos de este grupo: DOC-01, DOC-02, DOC-03, DOC-04, DOC-05, DOC-06, DOC-07, DOC-08, DOC-09. Su enunciado completo está en la lista de verificación de la Sección 3.*
 
@@ -245,12 +245,12 @@ La lista tiene 62 requisitos: 53 obligatorios y 9 recomendados. Los 11 requisito
 
 **2.2. Código abierto, licencias y titularidad**
 
-- [ ] **COD-01.** **Crítico.** El código fuente completo está en un repositorio público con una licencia aprobada por la OSI (MIT o Apache-2.0) y un archivo `LICENSE`. (Digital Public Goods Alliance, s. f., indicador 2; Requisitos de datos, LIC-04)
+- [ ] **COD-01.** **Crítico.** El código fuente completo está en un repositorio público con una licencia aprobada por la OSI (MIT o Apache-2.0) y un archivo `LICENSE`. (Digital Public Goods Alliance, s. f., indicador 2; Requisitos para datos, LIC-04)
 - [ ] **COD-02.** Están documentadas la titularidad de los derechos de autor y las contribuciones de terceros. (Digital Public Goods Alliance, s. f., indicador 3)
 - [ ] **COD-03.** Todas las dependencias tienen una licencia compatible con la del código y existe un inventario de licencias. (Digital Public Goods Alliance, s. f., indicador 4)
 - [ ] **COD-04.** La aplicación funciona sin servicios propietarios; si usa uno (por ejemplo, un servicio en la nube de pago), el repositorio documenta la alternativa abierta y lo que se pierde al usarla. (Digital Public Goods Alliance, s. f., indicador 4)
-- [ ] **COD-05.** **Crítico.** El uso de la aplicación y su ejecución local no exigen pagos, suscripciones ni licencias. (Requisitos de datos, 1.3)
-- [ ] **COD-06.** Los datos y los contenidos que acompañan al código declaran su licencia por separado (CC BY 4.0 o equivalente). (Digital Public Goods Alliance, s. f., indicador 2; Requisitos de datos, LIC-04)
+- [ ] **COD-05.** **Crítico.** El uso de la aplicación y su ejecución local no exigen pagos, suscripciones ni licencias. (Requisitos para datos, 1.3)
+- [ ] **COD-06.** Los datos y los contenidos que acompañan al código declaran su licencia por separado (CC BY 4.0 o equivalente). (Digital Public Goods Alliance, s. f., indicador 2; Requisitos para datos, LIC-04)
 - [ ] **COD-07.** Las versiones siguen el versionado semántico y cada versión publicada es un *release*. (Preston-Werner, s. f.; Chue Hong et al., 2022)
 - [ ] **COD-08.** *(Recomendado)* El repositorio incluye `CONTRIBUTING.md`, un código de conducta y plantillas de *issues*. (Digital Public Goods Alliance, s. f., indicador 9c)
 
@@ -262,7 +262,7 @@ La lista tiene 62 requisitos: 53 obligatorios y 9 recomendados. Los 11 requisito
 - [ ] **REP-04.** La configuración y los secretos se leen de variables de entorno; el repositorio incluye un `.env.example` sin valores reales. (Wiggins, 2017, factor III; OWASP Foundation, 2025, A02)
 - [ ] **REP-05.** Hay pruebas automáticas con casos de referencia: con entradas fijas, la aplicación reproduce los valores esperados del cuaderno. (Requisito de esta guía)
 - [ ] **REP-06.** La aplicación se puede ejecutar en local con herramientas abiertas; la instancia alojada no es la única forma de usarla. (Digital Public Goods Alliance, s. f., indicador 4)
-- [ ] **REP-07.** **Crítico.** Cada versión publicada tiene un DOI en Zenodo y un `CITATION.cff` con el ORCID de cada persona autora. (Citation File Format, s. f.; Chue Hong et al., 2022; Requisitos de datos, DEP-06)
+- [ ] **REP-07.** **Crítico.** Cada versión publicada tiene un DOI en Zenodo y un `CITATION.cff` con el ORCID de cada persona autora. (Citation File Format, s. f.; Chue Hong et al., 2022; Requisitos para datos, DEP-06)
 - [ ] **REP-08.** El repositorio tiene un archivo de metadatos del software (`CITATION.cff` o `codemeta.json`) con descripción, versión, licencia y dependencias. (Chue Hong et al., 2022)
 - [ ] **REP-09.** Los procesos de la aplicación no guardan estado propio en memoria o disco local; el estado que se conserva está en un servicio declarado. (Wiggins, 2017, factor VI)
 - [ ] **REP-10.** *(Recomendado)* Si es posible, la aplicación se compila para ejecutarse en el navegador (por ejemplo, con Pyodide o Shinylive) y así prescindir de un servidor. (Quarto, s. f.)
@@ -270,12 +270,12 @@ La lista tiene 62 requisitos: 53 obligatorios y 9 recomendados. Los 11 requisito
 
 **2.4. Entradas, salidas y datos**
 
-- [ ] **DAT-01.** **Crítico.** Los datos y modelos que la aplicación incluye o descarga cumplen los [requisitos de datos](03-estandar-de-datos.md): licencia, metadatos y ausencia de datos personales. (Requisitos de datos, INV, LIC y PER)
+- [ ] **DAT-01.** **Crítico.** Los datos y modelos que la aplicación incluye o descarga cumplen los [requisitos para datos](03-estandar-de-datos.md): licencia, metadatos y ausencia de datos personales. (Requisitos para datos, INV, LIC y PER)
 - [ ] **DAT-02.** Los resultados se exportan en un formato no propietario (CSV, GeoJSON, GeoTIFF) junto con un archivo de metadatos. (Digital Public Goods Alliance, s. f., indicador 6)
 - [ ] **DAT-03.** El archivo de metadatos de cada resultado registra la versión de la aplicación, los parámetros, un resumen de las entradas (suma de verificación) y la fecha. (Requisito de esta guía)
 - [ ] **DAT-04.** Un resultado puede repetirse: un archivo de parámetros o una URL contiene todas las entradas necesarias. (Requisito de esta guía)
 - [ ] **DAT-05.** La aplicación valida las entradas (tipo, rango, unidades, sistema de referencia, tamaño de archivo) y devuelve mensajes de error claros. (OWASP Foundation, 2025, A05; W3C, 2024, criterio 3.3.1)
-- [ ] **DAT-06.** Los datos de referencia y los modelos que usa están citados con su versión y su DOI. (Requisitos de datos, INV-01 y DEP-07)
+- [ ] **DAT-06.** Los datos de referencia y los modelos que usa están citados con su versión y su DOI. (Requisitos para datos, INV-01 y DEP-07)
 - [ ] **DAT-07.** Si consulta APIs externas, maneja las fallas, los límites de uso y el almacenamiento temporal, y no deja claves en el navegador. (OWASP Foundation, 2025, A02 y A10)
 - [ ] **DAT-08.** *(Recomendado)* La aplicación incluye un conjunto de ejemplo con entradas y resultados esperados. (Requisito de esta guía)
 
@@ -315,10 +315,10 @@ La lista tiene 62 requisitos: 53 obligatorios y 9 recomendados. Los 11 requisito
 - [ ] **DOC-05.** Existe una política de mantenimiento: responsable, versiones con soporte, tiempos de respuesta y criterio de retiro, con archivo del código y de los datos al retirarla. (Analysis Function, 2026)
 - [ ] **DOC-06.** Hay un canal para reportar errores y recibir contribuciones (*issues* o correo). (Requisito de esta guía)
 - [ ] **DOC-07.** Se declaran los estándares y las buenas prácticas que sigue (por ejemplo, formatos OGC, GeoJSON o una especificación OpenAPI si ofrece una API). (Digital Public Goods Alliance, s. f., indicador 8)
-- [ ] **DOC-08.** El uso de IA en la preparación del código, los textos o los datos se declara según los [requisitos de uso de IA](05-uso-de-ia.md). (Requisitos de uso de IA, U04)
-- [ ] **DOC-09.** Si la aplicación llama a un modelo de IA al ejecutarse, el modelo y la versión están fijados y documentados, la aplicación avisa a la persona usuaria, no le envía datos personales, ofrece un modo sin IA o una salida guardada y etiqueta las salidas generadas (aplica solo si la aplicación llama a un modelo de IA). (Requisitos de uso de IA, U11, U12 y U20)
+- [ ] **DOC-08.** El uso de IA en la preparación del código, los textos o los datos se declara según los [requisitos para el uso de IA](05-uso-de-ia.md). (Requisitos para el uso de IA, U04)
+- [ ] **DOC-09.** Si la aplicación llama a un modelo de IA al ejecutarse, el modelo y la versión están fijados y documentados, la aplicación avisa a la persona usuaria, no le envía datos personales, ofrece un modo sin IA o una salida guardada y etiqueta las salidas generadas (aplica solo si la aplicación llama a un modelo de IA). (Requisitos para el uso de IA, U11, U12 y U20)
 
-## 4. Prompt para validar los requisitos de aplicaciones
+## 4. Prompt para validar los requisitos para aplicaciones
 
 Este prompt convierte la lista de verificación en una auditoría repetible. Lee el repositorio de una aplicación, instala y prueba el código en una copia limpia, ejecuta comprobaciones automáticas y genera un **reporte de cumplimiento** en Markdown y JSON. Funciona con cualquier asistente de IA que pueda leer archivos y ejecutar comandos.
 
@@ -332,11 +332,11 @@ Este prompt convierte la lista de verificación en una auditoría repetible. Lee
 :::{warning} Lo que este prompt no puede hacer
 No es una auditoría de seguridad ni una prueba de penetración: busca patrones de riesgo y fallas de configuración, y no puede garantizar que la aplicación sea segura. Tampoco decide cuestiones de datos personales, de derechos de terceros ni de uso indebido de los resultados; esos puntos se marcan «Requiere revisión humana». Para ejecutar el código del repositorio, hágalo en un entorno aislado.
 
-Si el auditor es un servicio externo, aplíquele las mismas reglas que a cualquier IA: no le entregue datos personales, datos de comunidades ni material con restricciones de licencia (véanse los [requisitos de uso de IA](05-uso-de-ia.md)). Si cambia la lista de verificación, actualice también los criterios del prompt.
+Si el auditor es un servicio externo, aplíquele las mismas reglas que a cualquier IA: no le entregue datos personales, datos de comunidades ni material con restricciones de licencia (véanse los [requisitos para el uso de IA](05-uso-de-ia.md)). Si cambia la lista de verificación, actualice también los criterios del prompt.
 :::
 
 ````text
-Actúa como auditor de aplicaciones abiertas y reproducibles en la Subdirección para el Conocimiento del Riesgo (UNGRD). Tu tarea es VERIFICAR si una aplicación y su repositorio cumplen la lista de verificación de los «Requisitos de aplicaciones» y producir un REPORTE DE CUMPLIMIENTO. Eres un revisor: NO modifiques ningún archivo.
+Actúa como auditor de aplicaciones abiertas y reproducibles en la Subdirección para el Conocimiento del Riesgo (UNGRD). Tu tarea es VERIFICAR si una aplicación y su repositorio cumplen la lista de verificación de los «Requisitos para aplicaciones» y producir un REPORTE DE CUMPLIMIENTO. Eres un revisor: NO modifiques ningún archivo.
 
 ## ENTRADAS
 - RUTA_REPO: <ruta local del repositorio de la aplicación>
@@ -380,12 +380,12 @@ ALC-04. El método que implementa la aplicación está descrito y validado en un
 ALC-05 (RECOMENDADO). La documentación explica por qué se necesita una aplicación y no basta un cuaderno o un tablero. (Requisito de esta guía)
 
 ### Código abierto, licencias y titularidad
-COD-01 (CRÍTICO). El código fuente completo está en un repositorio público con una licencia aprobada por la OSI (MIT o Apache-2.0) y un archivo `LICENSE`. (Digital Public Goods Alliance, s. f., indicador 2; Requisitos de datos, LIC-04)
+COD-01 (CRÍTICO). El código fuente completo está en un repositorio público con una licencia aprobada por la OSI (MIT o Apache-2.0) y un archivo `LICENSE`. (Digital Public Goods Alliance, s. f., indicador 2; Requisitos para datos, LIC-04)
 COD-02. Están documentadas la titularidad de los derechos de autor y las contribuciones de terceros. (Digital Public Goods Alliance, s. f., indicador 3)
 COD-03. Todas las dependencias tienen una licencia compatible con la del código y existe un inventario de licencias. (Digital Public Goods Alliance, s. f., indicador 4)
 COD-04. La aplicación funciona sin servicios propietarios; si usa uno (por ejemplo, un servicio en la nube de pago), el repositorio documenta la alternativa abierta y lo que se pierde al usarla. (Digital Public Goods Alliance, s. f., indicador 4)
-COD-05 (CRÍTICO). El uso de la aplicación y su ejecución local no exigen pagos, suscripciones ni licencias. (Requisitos de datos, 1.3)
-COD-06. Los datos y los contenidos que acompañan al código declaran su licencia por separado (CC BY 4.0 o equivalente). (Digital Public Goods Alliance, s. f., indicador 2; Requisitos de datos, LIC-04)
+COD-05 (CRÍTICO). El uso de la aplicación y su ejecución local no exigen pagos, suscripciones ni licencias. (Requisitos para datos, 1.3)
+COD-06. Los datos y los contenidos que acompañan al código declaran su licencia por separado (CC BY 4.0 o equivalente). (Digital Public Goods Alliance, s. f., indicador 2; Requisitos para datos, LIC-04)
 COD-07. Las versiones siguen el versionado semántico y cada versión publicada es un *release*. (Preston-Werner, s. f.; Chue Hong et al., 2022)
 COD-08 (RECOMENDADO). El repositorio incluye `CONTRIBUTING.md`, un código de conducta y plantillas de *issues*. (Digital Public Goods Alliance, s. f., indicador 9c)
 
@@ -396,19 +396,19 @@ REP-03. El entorno se define como código (Dockerfile, `environment.yml` o equiv
 REP-04. La configuración y los secretos se leen de variables de entorno; el repositorio incluye un `.env.example` sin valores reales. (Wiggins, 2017, factor III; OWASP Foundation, 2025, A02)
 REP-05. Hay pruebas automáticas con casos de referencia: con entradas fijas, la aplicación reproduce los valores esperados del cuaderno. (Requisito de esta guía)
 REP-06. La aplicación se puede ejecutar en local con herramientas abiertas; la instancia alojada no es la única forma de usarla. (Digital Public Goods Alliance, s. f., indicador 4)
-REP-07 (CRÍTICO). Cada versión publicada tiene un DOI en Zenodo y un `CITATION.cff` con el ORCID de cada persona autora. (Citation File Format, s. f.; Chue Hong et al., 2022; Requisitos de datos, DEP-06)
+REP-07 (CRÍTICO). Cada versión publicada tiene un DOI en Zenodo y un `CITATION.cff` con el ORCID de cada persona autora. (Citation File Format, s. f.; Chue Hong et al., 2022; Requisitos para datos, DEP-06)
 REP-08. El repositorio tiene un archivo de metadatos del software (`CITATION.cff` o `codemeta.json`) con descripción, versión, licencia y dependencias. (Chue Hong et al., 2022)
 REP-09. Los procesos de la aplicación no guardan estado propio en memoria o disco local; el estado que se conserva está en un servicio declarado. (Wiggins, 2017, factor VI)
 REP-10 (RECOMENDADO). Si es posible, la aplicación se compila para ejecutarse en el navegador (por ejemplo, con Pyodide o Shinylive) y así prescindir de un servidor. (Quarto, s. f.)
 REP-11 (RECOMENDADO). El código se archiva también en Software Heritage. (Software Heritage, s. f.)
 
 ### Entradas, salidas y datos
-DAT-01 (CRÍTICO). Los datos y modelos que la aplicación incluye o descarga cumplen los [requisitos de datos](03-estandar-de-datos.md): licencia, metadatos y ausencia de datos personales. (Requisitos de datos, INV, LIC y PER)
+DAT-01 (CRÍTICO). Los datos y modelos que la aplicación incluye o descarga cumplen los [requisitos para datos](03-estandar-de-datos.md): licencia, metadatos y ausencia de datos personales. (Requisitos para datos, INV, LIC y PER)
 DAT-02. Los resultados se exportan en un formato no propietario (CSV, GeoJSON, GeoTIFF) junto con un archivo de metadatos. (Digital Public Goods Alliance, s. f., indicador 6)
 DAT-03. El archivo de metadatos de cada resultado registra la versión de la aplicación, los parámetros, un resumen de las entradas (suma de verificación) y la fecha. (Requisito de esta guía)
 DAT-04. Un resultado puede repetirse: un archivo de parámetros o una URL contiene todas las entradas necesarias. (Requisito de esta guía)
 DAT-05. La aplicación valida las entradas (tipo, rango, unidades, sistema de referencia, tamaño de archivo) y devuelve mensajes de error claros. (OWASP Foundation, 2025, A05; W3C, 2024, criterio 3.3.1)
-DAT-06. Los datos de referencia y los modelos que usa están citados con su versión y su DOI. (Requisitos de datos, INV-01 y DEP-07)
+DAT-06. Los datos de referencia y los modelos que usa están citados con su versión y su DOI. (Requisitos para datos, INV-01 y DEP-07)
 DAT-07. Si consulta APIs externas, maneja las fallas, los límites de uso y el almacenamiento temporal, y no deja claves en el navegador. (OWASP Foundation, 2025, A02 y A10)
 DAT-08 (RECOMENDADO). La aplicación incluye un conjunto de ejemplo con entradas y resultados esperados. (Requisito de esta guía)
 
@@ -445,8 +445,8 @@ DOC-04. Un `CHANGELOG.md` registra los cambios de cada versión. (Preston-Werner
 DOC-05. Existe una política de mantenimiento: responsable, versiones con soporte, tiempos de respuesta y criterio de retiro, con archivo del código y de los datos al retirarla. (Analysis Function, 2026)
 DOC-06. Hay un canal para reportar errores y recibir contribuciones (*issues* o correo). (Requisito de esta guía)
 DOC-07. Se declaran los estándares y las buenas prácticas que sigue (por ejemplo, formatos OGC, GeoJSON o una especificación OpenAPI si ofrece una API). (Digital Public Goods Alliance, s. f., indicador 8)
-DOC-08. El uso de IA en la preparación del código, los textos o los datos se declara según los [requisitos de uso de IA](05-uso-de-ia.md). (Requisitos de uso de IA, U04)
-DOC-09. Si la aplicación llama a un modelo de IA al ejecutarse, el modelo y la versión están fijados y documentados, la aplicación avisa a la persona usuaria, no le envía datos personales, ofrece un modo sin IA o una salida guardada y etiqueta las salidas generadas (aplica solo si la aplicación llama a un modelo de IA). (Requisitos de uso de IA, U11, U12 y U20)
+DOC-08. El uso de IA en la preparación del código, los textos o los datos se declara según los [requisitos para el uso de IA](05-uso-de-ia.md). (Requisitos para el uso de IA, U04)
+DOC-09. Si la aplicación llama a un modelo de IA al ejecutarse, el modelo y la versión están fijados y documentados, la aplicación avisa a la persona usuaria, no le envía datos personales, ofrece un modo sin IA o una salida guardada y etiqueta las salidas generadas (aplica solo si la aplicación llama a un modelo de IA). (Requisitos para el uso de IA, U11, U12 y U20)
 
 ### Paso D. Puntuación
 - Cumple = 1, Parcial = 0,5, No cumple = 0. «No aplica» y «No verificable» no entran en el denominador, pero repórtalos con su conteo.

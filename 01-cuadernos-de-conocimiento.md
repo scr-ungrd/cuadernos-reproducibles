@@ -29,14 +29,14 @@ Un cuaderno reproducible reúne en un solo repositorio la narrativa, el código 
 
 1. **Elija el tipo de cuaderno** (Sección 1).
 2. **Prepare el repositorio** en GitHub (Sección 2).
-3. **Prepare los datos** según los [requisitos de datos](03-estandar-de-datos.md).
+3. **Prepare los datos** según los [requisitos para datos](03-estandar-de-datos.md).
 4. **Escriba el cuaderno** con la estructura de la Sección 3.
-5. **Declare el uso de IA** según los [requisitos de uso de IA](05-uso-de-ia.md).
+5. **Declare el uso de IA** según los [requisitos para el uso de IA](05-uso-de-ia.md).
 6. **Revise la seguridad del repositorio** según los [requisitos de seguridad](10-requisitos-seguridad.md).
 7. **Verifique el cuaderno** en un entorno limpio (Sección 4).
 8. **Envíe el repositorio** según la [convocatoria](02-convocatoria-cuadernos.md).
 
-Si el cuaderno incluye un modelo, un tablero o una aplicación, cumpla además los [requisitos de modelos](08-estandar-modelos.md), los [requisitos de tableros](06-estandar-tableros.md) o los [requisitos de aplicaciones](07-estandar-aplicaciones.md). Si usa un modelo de lenguaje u otro modelo preentrenado de terceros (por ejemplo, de Hugging Face) como componente del análisis, cumpla los [requisitos de uso de LLMs](09-uso-de-llms.md).
+Si el cuaderno incluye un modelo, un tablero o una aplicación, cumpla además los [requisitos para modelos](08-estandar-modelos.md), los [requisitos para tableros](06-estandar-tableros.md) o los [requisitos para aplicaciones](07-estandar-aplicaciones.md). Si usa un modelo de lenguaje u otro modelo preentrenado de terceros (por ejemplo, de Hugging Face) como componente del análisis, cumpla los [requisitos para el uso de LLMs](09-uso-de-llms.md).
 
 :::{note} Qué son los requisitos de esta colección
 Los requisitos de esta guía y de sus documentos de apoyo son propios de la Subdirección para el Conocimiento del Riesgo. Cada uno tiene un identificador, un nivel (obligatorio, recomendado o crítico) y una base documental; los que dicen «Requisito de esta guía» son criterio de la SCR. No son normas técnicas emitidas por un organismo de normalización, como ICONTEC o ISO, ni una certificación: cumplirlos es una condición para publicar en la colección y no una acreditación externa.

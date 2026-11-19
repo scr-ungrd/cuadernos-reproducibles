@@ -1,5 +1,5 @@
 ---
-title: Requisitos de datos
+title: Requisitos para datos
 subtitle: Instrucciones para autores de cuadernos reproducibles
 date: 2026-11-16
 authors:
@@ -8,7 +8,7 @@ authors:
     github: scr-ungrd
 license: CC-BY-4.0
 keywords:
-  - requisitos de datos
+  - requisitos para datos
   - metadatos
   - FAIR
   - CARE
@@ -1388,7 +1388,7 @@ La documentación de EM-DAT enlaza conjuntos aumentados que usan modelos de leng
 
 La lista tiene 92 requisitos: 80 obligatorios y 12 recomendados. Los 11 requisitos **críticos** (INV-04, INV-05, INV-06, MET-03, PER-02, LIC-01, LIC-02, DEP-01, DEP-03, EMD-01, EMD-03) bloquean la publicación si no se cumplen.
 
-**Criterio de aceptación.** Un cuaderno cumple los requisitos de datos si (1) ningún requisito crítico está en incumplimiento y (2) el puntaje de requisitos obligatorios es de 90 o más, calculado como se indica en el prompt de la Sección 4.
+**Criterio de aceptación.** Un cuaderno cumple los requisitos para datos si (1) ningún requisito crítico está en incumplimiento y (2) el puntaje de requisitos obligatorios es de 90 o más, calculado como se indica en el prompt de la Sección 4.
 
 **2.1. Inventario y selección de insumos**
 
@@ -1515,7 +1515,7 @@ La lista tiene 92 requisitos: 80 obligatorios y 12 recomendados. Los 11 requisit
 - [ ] **EMD-06.** Las celdas vacías de EM-DAT no se reemplazan por cero.
 - [ ] **EMD-07.** *(Recomendado)* Se usa el EM-DAT Archive en lugar de la base viva.
 
-## 4. Prompt para validar los requisitos de datos
+## 4. Prompt para validar los requisitos para datos
 
 Este prompt convierte la lista de verificación en una auditoría repetible. Lee el repositorio de un cuaderno, ejecuta comprobaciones automáticas y genera un **reporte de cumplimiento y calidad** en Markdown y JSON. Funciona con cualquier asistente de IA que pueda leer archivos y ejecutar comandos.
 
@@ -1527,11 +1527,11 @@ Este prompt convierte la lista de verificación en una auditoría repetible. Lee
 4. Guarde el reporte en `metadata/` y repita la auditoría antes de cada *release*.
 
 :::{warning} Límites del prompt
-El prompt no sustituye la consulta con las comunidades (Sección 2.5), no certifica la corrección jurídica de una licencia y no evalúa el mérito científico del cuaderno. Si se usa un servicio de IA externo, no se le deben entregar datos personales, datos de comunidades ni datos con restricciones de licencia. Véanse los [requisitos de uso de IA](05-uso-de-ia.md).
+El prompt no sustituye la consulta con las comunidades (Sección 2.5), no certifica la corrección jurídica de una licencia y no evalúa el mérito científico del cuaderno. Si se usa un servicio de IA externo, no se le deben entregar datos personales, datos de comunidades ni datos con restricciones de licencia. Véanse los [requisitos para el uso de IA](05-uso-de-ia.md).
 :::
 
 ````text
-Actúa como auditor de datos de la Subdirección para el Conocimiento del Riesgo (UNGRD). Tu tarea es VALIDAR si el repositorio de un cuaderno reproducible cumple los «Requisitos de datos» y producir un REPORTE DE CUMPLIMIENTO Y CALIDAD. Eres un revisor, no un autor: NO modifiques ningún archivo del cuaderno.
+Actúa como auditor de datos de la Subdirección para el Conocimiento del Riesgo (UNGRD). Tu tarea es VALIDAR si el repositorio de un cuaderno reproducible cumple los «Requisitos para datos» y producir un REPORTE DE CUMPLIMIENTO Y CALIDAD. Eres un revisor, no un autor: NO modifiques ningún archivo del cuaderno.
 
 ## ENTRADAS
 - RUTA_REPO: <ruta local del repositorio del cuaderno>

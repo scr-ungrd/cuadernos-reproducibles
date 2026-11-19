@@ -35,17 +35,17 @@ project:
     - title: Guía para publicar
       file: 01-cuadernos-de-conocimiento.md
       children:
-        - title: Requisitos de datos
+        - title: Requisitos para datos
           file: 03-estandar-de-datos.md
-        - title: Requisitos de uso de IA
+        - title: Requisitos para el uso de IA
           file: 05-uso-de-ia.md
-        - title: Requisitos de tableros
+        - title: Requisitos para tableros
           file: 06-estandar-tableros.md
-        - title: Requisitos de aplicaciones
+        - title: Requisitos para aplicaciones
           file: 07-estandar-aplicaciones.md
-        - title: Requisitos de modelos
+        - title: Requisitos para modelos
           file: 08-estandar-modelos.md
-        - title: Requisitos de uso de LLMs
+        - title: Requisitos para el uso de LLMs
           file: 09-uso-de-llms.md
         - title: Requisitos de seguridad
           file: 10-requisitos-seguridad.md
@@ -74,17 +74,17 @@ site:
       children:
         - title: Guía para publicar
           url: /cuadernos-de-conocimiento
-        - title: Requisitos de datos
+        - title: Requisitos para datos
           url: /estandar-de-datos
-        - title: Requisitos de uso de IA
+        - title: Requisitos para el uso de IA
           url: /uso-de-ia
-        - title: Requisitos de tableros
+        - title: Requisitos para tableros
           url: /estandar-tableros
-        - title: Requisitos de aplicaciones
+        - title: Requisitos para aplicaciones
           url: /estandar-aplicaciones
-        - title: Requisitos de modelos
+        - title: Requisitos para modelos
           url: /estandar-modelos
-        - title: Requisitos de uso de LLMs
+        - title: Requisitos para el uso de LLMs
           url: /uso-de-llms
         - title: Requisitos de seguridad
           url: /requisitos-seguridad

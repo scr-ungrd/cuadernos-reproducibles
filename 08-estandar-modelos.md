@@ -1,5 +1,5 @@
 ---
-title: Requisitos de modelos
+title: Requisitos para modelos
 subtitle: Requisitos para publicar modelos de aprendizaje automático, estadísticos y de simulación abiertos y reproducibles
 date: 2026-11-16
 authors:
@@ -46,10 +46,10 @@ Se distinguen cuatro objetos relacionados:
 
 - **Cuaderno**: documenta un análisis y es la fuente del método. Se rige por la [guía](01-cuadernos-de-conocimiento.md).
 - **Modelo**: la representación que produce los resultados. Se rige por este documento.
-- **Tablero**: muestra resultados ya calculados. Se rige por los [requisitos de tableros](06-estandar-tableros.md).
-- **Aplicación**: ejecuta el modelo con entradas de la persona usuaria. Se rige por los [requisitos de aplicaciones](07-estandar-aplicaciones.md).
+- **Tablero**: muestra resultados ya calculados. Se rige por los [requisitos para tableros](06-estandar-tableros.md).
+- **Aplicación**: ejecuta el modelo con entradas de la persona usuaria. Se rige por los [requisitos para aplicaciones](07-estandar-aplicaciones.md).
 
-Complementan los [requisitos de datos](03-estandar-de-datos.md), que cubren las entradas del modelo, y los [requisitos de uso de IA](05-uso-de-ia.md), que cubren el uso de asistentes de IA en la preparación del trabajo. Un modelo preentrenado de terceros que el cuaderno solo llama como componente (por ejemplo, un modelo de lenguaje de Hugging Face) se rige por los [requisitos de uso de LLMs](09-uso-de-llms.md); si el cuaderno lo ajusta o lo entrena, aplican ambos. Un cuaderno de análisis estadístico sin un modelo predictivo o de simulación no necesita aplicar estos requisitos. La seguridad común a todo repositorio (secretos, datos personales y rutas locales, código no confiable, dependencias y *releases*) la cubren los [requisitos de seguridad](10-requisitos-seguridad.md); los requisitos de seguridad de este documento se aplican además.
+Complementan los [requisitos para datos](03-estandar-de-datos.md), que cubren las entradas del modelo, y los [requisitos para el uso de IA](05-uso-de-ia.md), que cubren el uso de asistentes de IA en la preparación del trabajo. Un modelo preentrenado de terceros que el cuaderno solo llama como componente (por ejemplo, un modelo de lenguaje de Hugging Face) se rige por los [requisitos para el uso de LLMs](09-uso-de-llms.md); si el cuaderno lo ajusta o lo entrena, aplican ambos. Un cuaderno de análisis estadístico sin un modelo predictivo o de simulación no necesita aplicar estos requisitos. La seguridad común a todo repositorio (secretos, datos personales y rutas locales, código no confiable, dependencias y *releases*) la cubren los [requisitos de seguridad](10-requisitos-seguridad.md); los requisitos de seguridad de este documento se aplican además.
 
 ### 1.2 Convenciones
 
@@ -89,7 +89,7 @@ Ningún requisito de este documento exige comprar suscripciones, licencias ni c�
 * - Digital Public Goods Alliance (s. f.); OWASP Foundation (2025); Carroll et al. (2020); CRED (2026)
   - No hacer daño, integridad de software, gobernanza de datos de comunidades y sesgos de reporte
   - ETI, MET-06, DOC-01
-* - [Requisitos de datos](03-estandar-de-datos.md), [requisitos de uso de IA](05-uso-de-ia.md) y [requisitos de aplicaciones](07-estandar-aplicaciones.md)
+* - [Requisitos para datos](03-estandar-de-datos.md), [requisitos para el uso de IA](05-uso-de-ia.md) y [requisitos para aplicaciones](07-estandar-aplicaciones.md)
   - Datos, licencias, costo cero, declaración de IA y análisis de no hacer daño que el modelo hereda
   - DAT-01, DAT-05, REP-03, ETI-01, DOC-05
 ```
@@ -125,7 +125,7 @@ Use esta plantilla (`MODEL_CARD.md`):
 
 ### 2.2 Datos del modelo
 
-Los datos del modelo cumplen los [requisitos de datos](03-estandar-de-datos.md). Esta sección agrega lo que un modelo necesita de ellos.
+Los datos del modelo cumplen los [requisitos para datos](03-estandar-de-datos.md). Esta sección agrega lo que un modelo necesita de ellos.
 
 - **Hoja de datos.** Documenta cómo y por qué se recolectaron los datos de entrenamiento, qué contienen y qué sesgos tienen (Gebru et al., 2021).
 - **Partición.** En datos con estructura espacial o temporal, una partición aleatoria deja registros vecinos en entrenamiento y en prueba, y el desempeño parece mejor de lo que es (DAT-03). Separe por bloques de territorio o por periodos.
@@ -169,7 +169,7 @@ La reproducibilidad de un modelo es más difícil que la de un análisis: el ent
 
 ### 2.7 Riesgos, sesgos y uso responsable
 
-Un modelo de riesgo tiene consecuencias. El análisis de no hacer daño (ETI-01) sigue el Digital Public Goods Standard (Digital Public Goods Alliance, s. f., indicador 9) y usa la plantilla `DO_NO_HARM.md` de los [requisitos de aplicaciones](07-estandar-aplicaciones.md).
+Un modelo de riesgo tiene consecuencias. El análisis de no hacer daño (ETI-01) sigue el Digital Public Goods Standard (Digital Public Goods Alliance, s. f., indicador 9) y usa la plantilla `DO_NO_HARM.md` de los [requisitos para aplicaciones](07-estandar-aplicaciones.md).
 
 Los registros de desastres y las estaciones de medición se concentran donde hay más población e instituciones, y los modelos que aprenden de ellos heredan ese sesgo (CRED, 2026). Evalúe y declare cómo cambia el desempeño en los territorios con menos datos (ETI-02). No entrene con datos personales ni de comunidades sin autorización (Carroll et al., 2020).
 
@@ -196,11 +196,11 @@ La lista tiene 46 requisitos: 41 obligatorios y 5 recomendados. Los 5 requisitos
 
 **2.2. Datos del modelo**
 
-- [ ] **DAT-01.** **Crítico.** Los datos de entrenamiento, calibración y forzamiento cumplen los [requisitos de datos](03-estandar-de-datos.md): licencia, metadatos y ausencia de datos personales. (Requisitos de datos, INV, LIC y PER)
+- [ ] **DAT-01.** **Crítico.** Los datos de entrenamiento, calibración y forzamiento cumplen los [requisitos para datos](03-estandar-de-datos.md): licencia, metadatos y ausencia de datos personales. (Requisitos para datos, INV, LIC y PER)
 - [ ] **DAT-02.** Los datos de entrenamiento tienen una hoja de datos (*datasheet*) con motivación, composición, recolección, sesgos conocidos y usos recomendados. (Gebru et al., 2021)
 - [ ] **DAT-03.** La partición en entrenamiento, validación y prueba está documentada y evita la fuga de información; con datos espaciales o temporales, la separación es por bloques de territorio o por periodos, no aleatoria. (Requisito de esta guía)
 - [ ] **DAT-04.** La fuente, la calidad y la incertidumbre de las etiquetas o de la verdad de terreno están documentadas. (Requisito de esta guía)
-- [ ] **DAT-05.** Si el modelo clasifica amenazas o eventos, usa los códigos HIPs 2025 y registra la equivalencia con las clases de la fuente. (Requisitos de datos, EST-11)
+- [ ] **DAT-05.** Si el modelo clasifica amenazas o eventos, usa los códigos HIPs 2025 y registra la equivalencia con las clases de la fuente. (Requisitos para datos, EST-11)
 - [ ] **DAT-06.** Los datos sintéticos o simulados se identifican como tales y no se mezclan con datos observados sin marcarlos. (Requisito de esta guía)
 - [ ] **DAT-07.** Si los eventos son raros (por ejemplo, extremos), el desbalance se documenta y se trata de forma explícita. (Requisito de esta guía)
 
@@ -210,7 +210,7 @@ La lista tiene 46 requisitos: 41 obligatorios y 5 recomendados. Los 5 requisitos
 - [ ] **MET-02.** Un modelo basado en agentes o de simulación social se describe con el protocolo ODD (aplica solo a modelos basados en agentes). (Grimm et al., 2020)
 - [ ] **MET-03.** Los hiperparámetros y su método de selección están documentados, y la selección no usa el conjunto de prueba. (Pineau et al., 2021)
 - [ ] **MET-04.** En un modelo físico o numérico se declaran la resolución, la discretización, las condiciones de frontera y las comprobaciones numéricas (convergencia, balance de masa) (aplica solo a modelos físicos). (Requisito de esta guía)
-- [ ] **MET-05.** Los modelos o pesos de terceros se citan con nombre, versión, licencia, DOI y procedencia de los datos de preentrenamiento, si se conoce. (Requisitos de datos, INV-02 y INV-06)
+- [ ] **MET-05.** Los modelos o pesos de terceros se citan con nombre, versión, licencia, DOI y procedencia de los datos de preentrenamiento, si se conoce. (Requisitos para datos, INV-02 y INV-06)
 - [ ] **MET-06.** Los pesos se guardan en un formato que no ejecuta código al cargarse (por ejemplo, ONNX, safetensors o NetCDF) y no en `pickle`. (OWASP Foundation, 2025, A08)
 
 **2.4. Validación y desempeño**
@@ -234,7 +234,7 @@ La lista tiene 46 requisitos: 41 obligatorios y 5 recomendados. Los 5 requisitos
 
 - [ ] **REP-01.** **Crítico.** Desde un entorno limpio, el cuaderno reproduce el entrenamiento o la ejecución con resultados dentro de una tolerancia declarada. (Pineau et al., 2021; Requisito de esta guía)
 - [ ] **REP-02.** Las semillas están fijadas, las fuentes de no determinismo (GPU, paralelismo) están declaradas y los resultados se reportan como media y dispersión de varias ejecuciones. (Pineau et al., 2021)
-- [ ] **REP-03.** El cuaderno declara el hardware, la memoria y el tiempo que necesita, y se ejecuta con cómputo gratuito (Colab o Binder) o ofrece una versión reducida o pesos preentrenados. (Requisitos de datos, 1.3)
+- [ ] **REP-03.** El cuaderno declara el hardware, la memoria y el tiempo que necesita, y se ejecuta con cómputo gratuito (Colab o Binder) o ofrece una versión reducida o pesos preentrenados. (Requisitos para datos, 1.3)
 - [ ] **REP-04.** Los pesos y los artefactos intermedios están archivados con DOI y suma de verificación. (Chue Hong et al., 2022)
 - [ ] **REP-05.** La lista de verificación de reproducibilidad de aprendizaje automático está completa y archivada en el repositorio. (Pineau et al., 2021)
 - [ ] **REP-06.** Un registro versionado guarda, por cada ejecución, los parámetros, las métricas y la versión del código y de los datos. (Pineau et al., 2021)
@@ -244,7 +244,7 @@ La lista tiene 46 requisitos: 41 obligatorios y 5 recomendados. Los 5 requisitos
 
 - [ ] **ETI-01.** **Crítico.** Existe un análisis de «no hacer daño» que identifica los usos indebidos y los daños posibles de los resultados del modelo y las medidas adoptadas. (Digital Public Goods Alliance, s. f., indicador 9)
 - [ ] **ETI-02.** Se evaluaron los sesgos de los datos y del modelo, en especial la cobertura desigual de estaciones y registros entre territorios. (CRED, 2026; Mitchell et al., 2019)
-- [ ] **ETI-03.** No se usan datos personales ni de comunidades para entrenar el modelo sin la autorización registrada que exigen los requisitos de datos. (Carroll et al., 2020; Requisitos de datos, PER-02)
+- [ ] **ETI-03.** No se usan datos personales ni de comunidades para entrenar el modelo sin la autorización registrada que exigen los requisitos para datos. (Carroll et al., 2020; Requisitos para datos, PER-02)
 - [ ] **ETI-04.** Si el modelo es una caja negra, sus resultados se acompañan de una explicación (importancia de variables o mapas de contribución) o de la declaración de que no es interpretable. (Requisito de esta guía)
 - [ ] **ETI-05.** *(Recomendado)* Un modelo cuyos resultados orienten decisiones de alto impacto tuvo una validación externa. (Requisito de esta guía)
 
@@ -253,11 +253,11 @@ La lista tiene 46 requisitos: 41 obligatorios y 5 recomendados. Los 5 requisitos
 - [ ] **DOC-01.** El `README` permite a una persona técnica entrenar, ejecutar y evaluar el modelo. (Digital Public Goods Alliance, s. f., indicador 5)
 - [ ] **DOC-02.** Las versiones siguen el versionado semántico: un cambio de datos, de arquitectura o de hiperparámetros sube la versión, y el `CHANGELOG.md` registra su efecto en el desempeño. (Requisito de esta guía)
 - [ ] **DOC-03.** Un criterio dice cuándo el modelo se considera obsoleto (por ejemplo, por cambio en los datos) y quién decide reentrenarlo o retirarlo. (Requisito de esta guía)
-- [ ] **DOC-04.** El código y los pesos tienen una licencia abierta compatible con las licencias de los datos de entrenamiento. (Requisitos de datos, INV-05 y LIC-04)
-- [ ] **DOC-05.** El uso de IA en la preparación del código, los textos o los datos se declara según los [requisitos de uso de IA](05-uso-de-ia.md). (Requisitos de uso de IA, U04)
+- [ ] **DOC-04.** El código y los pesos tienen una licencia abierta compatible con las licencias de los datos de entrenamiento. (Requisitos para datos, INV-05 y LIC-04)
+- [ ] **DOC-05.** El uso de IA en la preparación del código, los textos o los datos se declara según los [requisitos para el uso de IA](05-uso-de-ia.md). (Requisitos para el uso de IA, U04)
 - [ ] **DOC-06.** *(Recomendado)* Los pesos también se publican en un repositorio de modelos de acceso libre, con la ficha del modelo. (Requisito de esta guía)
 
-## 4. Prompt para validar los requisitos de modelos
+## 4. Prompt para validar los requisitos para modelos
 
 Este prompt convierte la lista de verificación en una auditoría repetible. Lee el repositorio de un modelo, revisa su código y su documentación, reproduce lo que sea posible y genera un **reporte de cumplimiento** en Markdown y JSON. Funciona con cualquier asistente de IA que pueda leer archivos y ejecutar comandos.
 
@@ -271,11 +271,11 @@ Este prompt convierte la lista de verificación en una auditoría repetible. Lee
 :::{warning} Lo que este prompt no puede hacer
 No valida el mérito científico del modelo ni reemplaza la revisión de una persona experta del dominio. Tampoco puede reproducir entrenamientos que exijan más recursos de los que tiene. Las decisiones sobre sesgos, daños posibles y datos de comunidades se marcan «Requiere revisión humana».
 
-Si el auditor es un servicio externo, aplíquele las mismas reglas que a cualquier IA: no le entregue datos personales, datos de comunidades ni material con restricciones de licencia (véanse los [requisitos de uso de IA](05-uso-de-ia.md)). Si cambia la lista de verificación, actualice también los criterios del prompt.
+Si el auditor es un servicio externo, aplíquele las mismas reglas que a cualquier IA: no le entregue datos personales, datos de comunidades ni material con restricciones de licencia (véanse los [requisitos para el uso de IA](05-uso-de-ia.md)). Si cambia la lista de verificación, actualice también los criterios del prompt.
 :::
 
 ````text
-Actúa como auditor de modelos (de aprendizaje automático, estadísticos y de simulación) abiertos y reproducibles en la Subdirección para el Conocimiento del Riesgo (UNGRD). Tu tarea es VERIFICAR si un modelo y su repositorio cumplen la lista de verificación de los «Requisitos de modelos» y producir un REPORTE DE CUMPLIMIENTO. Eres un revisor: NO modifiques ningún archivo.
+Actúa como auditor de modelos (de aprendizaje automático, estadísticos y de simulación) abiertos y reproducibles en la Subdirección para el Conocimiento del Riesgo (UNGRD). Tu tarea es VERIFICAR si un modelo y su repositorio cumplen la lista de verificación de los «Requisitos para modelos» y producir un REPORTE DE CUMPLIMIENTO. Eres un revisor: NO modifiques ningún archivo.
 
 ## ENTRADAS
 - RUTA_REPO: <ruta local del repositorio del modelo>
@@ -302,7 +302,7 @@ Describe el objeto (propósito, tecnología, forma de despliegue, versión y lic
 4. Semillas y no determinismo: busca semillas fijas y repeticiones de la ejecución.
 5. Formato de pesos: busca `pickle`, `torch.load` sin restricción de carga y formatos que ejecutan código.
 6. Validación: comprueba que existen métricas independientes, desglose por región o periodo, línea base e incertidumbre.
-7. Datos: aplica los requisitos de datos a los conjuntos de entrenamiento y comprueba que no hay columnas con datos personales.
+7. Datos: aplica los requisitos para datos a los conjuntos de entrenamiento y comprueba que no hay columnas con datos personales.
 8. Terceros: lista los modelos y pesos preentrenados y revisa su licencia y su procedencia.
 
 ### Paso C. Evaluación de criterios
@@ -315,11 +315,11 @@ USO-03. La ficha justifica por qué se necesita este tipo de modelo (aprendizaje
 USO-04. La ficha indica quién revisa el resultado antes de usarlo en una decisión de gestión del riesgo. (Requisito de esta guía)
 
 ### Datos del modelo
-DAT-01 (CRÍTICO). Los datos de entrenamiento, calibración y forzamiento cumplen los [requisitos de datos](03-estandar-de-datos.md): licencia, metadatos y ausencia de datos personales. (Requisitos de datos, INV, LIC y PER)
+DAT-01 (CRÍTICO). Los datos de entrenamiento, calibración y forzamiento cumplen los [requisitos para datos](03-estandar-de-datos.md): licencia, metadatos y ausencia de datos personales. (Requisitos para datos, INV, LIC y PER)
 DAT-02. Los datos de entrenamiento tienen una hoja de datos (*datasheet*) con motivación, composición, recolección, sesgos conocidos y usos recomendados. (Gebru et al., 2021)
 DAT-03. La partición en entrenamiento, validación y prueba está documentada y evita la fuga de información; con datos espaciales o temporales, la separación es por bloques de territorio o por periodos, no aleatoria. (Requisito de esta guía)
 DAT-04. La fuente, la calidad y la incertidumbre de las etiquetas o de la verdad de terreno están documentadas. (Requisito de esta guía)
-DAT-05. Si el modelo clasifica amenazas o eventos, usa los códigos HIPs 2025 y registra la equivalencia con las clases de la fuente. (Requisitos de datos, EST-11)
+DAT-05. Si el modelo clasifica amenazas o eventos, usa los códigos HIPs 2025 y registra la equivalencia con las clases de la fuente. (Requisitos para datos, EST-11)
 DAT-06. Los datos sintéticos o simulados se identifican como tales y no se mezclan con datos observados sin marcarlos. (Requisito de esta guía)
 DAT-07. Si los eventos son raros (por ejemplo, extremos), el desbalance se documenta y se trata de forma explícita. (Requisito de esta guía)
 
@@ -328,7 +328,7 @@ MET-01. El modelo se describe con sus ecuaciones o su arquitectura, sus supuesto
 MET-02. Un modelo basado en agentes o de simulación social se describe con el protocolo ODD (aplica solo a modelos basados en agentes). (Grimm et al., 2020)
 MET-03. Los hiperparámetros y su método de selección están documentados, y la selección no usa el conjunto de prueba. (Pineau et al., 2021)
 MET-04. En un modelo físico o numérico se declaran la resolución, la discretización, las condiciones de frontera y las comprobaciones numéricas (convergencia, balance de masa) (aplica solo a modelos físicos). (Requisito de esta guía)
-MET-05. Los modelos o pesos de terceros se citan con nombre, versión, licencia, DOI y procedencia de los datos de preentrenamiento, si se conoce. (Requisitos de datos, INV-02 y INV-06)
+MET-05. Los modelos o pesos de terceros se citan con nombre, versión, licencia, DOI y procedencia de los datos de preentrenamiento, si se conoce. (Requisitos para datos, INV-02 y INV-06)
 MET-06. Los pesos se guardan en un formato que no ejecuta código al cargarse (por ejemplo, ONNX, safetensors o NetCDF) y no en `pickle`. (OWASP Foundation, 2025, A08)
 
 ### Validación y desempeño
@@ -349,7 +349,7 @@ INC-04 (RECOMENDADO). Si el modelo entrega probabilidades, se comprueba su calib
 ### Reproducibilidad
 REP-01 (CRÍTICO). Desde un entorno limpio, el cuaderno reproduce el entrenamiento o la ejecución con resultados dentro de una tolerancia declarada. (Pineau et al., 2021; Requisito de esta guía)
 REP-02. Las semillas están fijadas, las fuentes de no determinismo (GPU, paralelismo) están declaradas y los resultados se reportan como media y dispersión de varias ejecuciones. (Pineau et al., 2021)
-REP-03. El cuaderno declara el hardware, la memoria y el tiempo que necesita, y se ejecuta con cómputo gratuito (Colab o Binder) o ofrece una versión reducida o pesos preentrenados. (Requisitos de datos, 1.3)
+REP-03. El cuaderno declara el hardware, la memoria y el tiempo que necesita, y se ejecuta con cómputo gratuito (Colab o Binder) o ofrece una versión reducida o pesos preentrenados. (Requisitos para datos, 1.3)
 REP-04. Los pesos y los artefactos intermedios están archivados con DOI y suma de verificación. (Chue Hong et al., 2022)
 REP-05. La lista de verificación de reproducibilidad de aprendizaje automático está completa y archivada en el repositorio. (Pineau et al., 2021)
 REP-06. Un registro versionado guarda, por cada ejecución, los parámetros, las métricas y la versión del código y de los datos. (Pineau et al., 2021)
@@ -358,7 +358,7 @@ REP-07 (RECOMENDADO). Pruebas automáticas con un caso de referencia detectan ca
 ### Riesgos, sesgos y uso responsable
 ETI-01 (CRÍTICO). Existe un análisis de «no hacer daño» que identifica los usos indebidos y los daños posibles de los resultados del modelo y las medidas adoptadas. (Digital Public Goods Alliance, s. f., indicador 9)
 ETI-02. Se evaluaron los sesgos de los datos y del modelo, en especial la cobertura desigual de estaciones y registros entre territorios. (CRED, 2026; Mitchell et al., 2019)
-ETI-03. No se usan datos personales ni de comunidades para entrenar el modelo sin la autorización registrada que exigen los requisitos de datos. (Carroll et al., 2020; Requisitos de datos, PER-02)
+ETI-03. No se usan datos personales ni de comunidades para entrenar el modelo sin la autorización registrada que exigen los requisitos para datos. (Carroll et al., 2020; Requisitos para datos, PER-02)
 ETI-04. Si el modelo es una caja negra, sus resultados se acompañan de una explicación (importancia de variables o mapas de contribución) o de la declaración de que no es interpretable. (Requisito de esta guía)
 ETI-05 (RECOMENDADO). Un modelo cuyos resultados orienten decisiones de alto impacto tuvo una validación externa. (Requisito de esta guía)
 
@@ -366,8 +366,8 @@ ETI-05 (RECOMENDADO). Un modelo cuyos resultados orienten decisiones de alto imp
 DOC-01. El `README` permite a una persona técnica entrenar, ejecutar y evaluar el modelo. (Digital Public Goods Alliance, s. f., indicador 5)
 DOC-02. Las versiones siguen el versionado semántico: un cambio de datos, de arquitectura o de hiperparámetros sube la versión, y el `CHANGELOG.md` registra su efecto en el desempeño. (Requisito de esta guía)
 DOC-03. Un criterio dice cuándo el modelo se considera obsoleto (por ejemplo, por cambio en los datos) y quién decide reentrenarlo o retirarlo. (Requisito de esta guía)
-DOC-04. El código y los pesos tienen una licencia abierta compatible con las licencias de los datos de entrenamiento. (Requisitos de datos, INV-05 y LIC-04)
-DOC-05. El uso de IA en la preparación del código, los textos o los datos se declara según los [requisitos de uso de IA](05-uso-de-ia.md). (Requisitos de uso de IA, U04)
+DOC-04. El código y los pesos tienen una licencia abierta compatible con las licencias de los datos de entrenamiento. (Requisitos para datos, INV-05 y LIC-04)
+DOC-05. El uso de IA en la preparación del código, los textos o los datos se declara según los [requisitos para el uso de IA](05-uso-de-ia.md). (Requisitos para el uso de IA, U04)
 DOC-06 (RECOMENDADO). Los pesos también se publican en un repositorio de modelos de acceso libre, con la ficha del modelo. (Requisito de esta guía)
 
 ### Paso D. Puntuación

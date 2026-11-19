@@ -1,5 +1,5 @@
 ---
-title: Requisitos de uso de IA
+title: Requisitos para el uso de IA
 subtitle: Requisitos y recomendaciones para usar inteligencia artificial de forma ética y responsable en un cuaderno reproducible
 date: 2026-11-16
 authors:
@@ -101,7 +101,7 @@ Cada recomendación cita las fuentes en que se apoya. Las que no citan ninguna s
 (uso-de-ia-datos)=
 ### Datos extraídos o generados con modelos de lenguaje
 
-La documentación de EM-DAT enlaza conjuntos que usan modelos de lenguaje para extraer información de noticias o de Wikipedia, como *Disaster Storylines* y *Wikimpacts* (Centre for Research on the Epidemiology of Disasters [CRED], 2026, sección 6.2). Estos conjuntos muestran por qué los datos construidos con modelos de lenguaje necesitan reglas propias. Si el cuaderno llama a un modelo preentrenado de terceros (por ejemplo, de Hugging Face) como parte del análisis, cumpla además los [requisitos de uso de LLMs](09-uso-de-llms.md), que audita la identificación, la licencia, la seguridad y la reproducibilidad del modelo.
+La documentación de EM-DAT enlaza conjuntos que usan modelos de lenguaje para extraer información de noticias o de Wikipedia, como *Disaster Storylines* y *Wikimpacts* (Centre for Research on the Epidemiology of Disasters [CRED], 2026, sección 6.2). Estos conjuntos muestran por qué los datos construidos con modelos de lenguaje necesitan reglas propias. Si el cuaderno llama a un modelo preentrenado de terceros (por ejemplo, de Hugging Face) como parte del análisis, cumpla además los [requisitos para el uso de LLMs](09-uso-de-llms.md), que audita la identificación, la licencia, la seguridad y la reproducibilidad del modelo.
 
 14. **Trátelos como datos derivados con riesgo de error**, no como una fuente primaria. Documente el modelo, la versión, el prompt, los parámetros y la fecha (Wiley, s. f.).
 15. **Mida el error.** Revise a mano una muestra y publique la tasa de error y los casos que fallaron. Wiley (s. f.) pide describir cómo se revisó y validó lo generado.
@@ -122,7 +122,7 @@ La documentación de EM-DAT enlaza conjuntos que usan modelos de lenguaje para e
 
 ### Confidencialidad, derechos y equidad
 
-24. **No envíe a una IA pública** datos personales, datos de comunidades, información no publicada o con restricciones de licencia. Las editoriales exigen proteger la confidencialidad (Springer Nature, s. f.; Wiley, s. f.), y esto se suma a los principios CARE (Carroll et al., 2020) de los requisitos de datos. Revise también si los términos de la fuente permiten enviarla a un tercero.
+24. **No envíe a una IA pública** datos personales, datos de comunidades, información no publicada o con restricciones de licencia. Las editoriales exigen proteger la confidencialidad (Springer Nature, s. f.; Wiley, s. f.), y esto se suma a los principios CARE (Carroll et al., 2020) de los requisitos para datos. Revise también si los términos de la fuente permiten enviarla a un tercero.
 25. **Lea los términos de la herramienta.** El proveedor no debe adquirir derechos sobre su contenido ni poder entrenar su modelo con él (Wiley, s. f.).
 26. **Use la IA para ampliar el acceso, no para ampliar brechas.** Una traducción asistida o un resumen en lenguaje sencillo pueden ayudar a las comunidades que usan los datos; revíselos con personas del territorio.
 
@@ -252,7 +252,7 @@ Si el auditor es un servicio externo, aplíquele las mismas reglas que a cualqui
 :::
 
 ````text
-Actúa como auditor de integridad y ética del uso de inteligencia artificial (IA) en la Subdirección para el Conocimiento del Riesgo (UNGRD). Tu tarea es VERIFICAR si un cuaderno reproducible y su repositorio cumplen la lista de verificación de los «Requisitos de uso de IA» y producir un REPORTE DE CUMPLIMIENTO. Eres un revisor: NO modifiques ningún archivo.
+Actúa como auditor de integridad y ética del uso de inteligencia artificial (IA) en la Subdirección para el Conocimiento del Riesgo (UNGRD). Tu tarea es VERIFICAR si un cuaderno reproducible y su repositorio cumplen la lista de verificación de los «Requisitos para el uso de IA» y producir un REPORTE DE CUMPLIMIENTO. Eres un revisor: NO modifiques ningún archivo.
 
 ## ENTRADAS
 - RUTA_REPO: <ruta local del repositorio del cuaderno>

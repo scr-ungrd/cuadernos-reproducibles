@@ -41,9 +41,9 @@ Estas instrucciones se aplican a **todo repositorio** que se envíe a la colecci
 Se distinguen los requisitos así:
 
 - **Seguridad del repositorio** (este documento): lo que es común a cualquier cuaderno.
-- **[Requisitos de datos](03-estandar-de-datos.md)**: licencias, metadatos y datos personales de los conjuntos de datos.
-- **[Requisitos de tableros](06-estandar-tableros.md)** y **[de aplicaciones](07-estandar-aplicaciones.md)**: lo específico de un sitio o de un servicio que se despliega. Los requisitos de secretos de una aplicación (`SEG-01` de aplicaciones) y de un modelo de lenguaje (`SEG-05` de uso de LLMs) son casos particulares de `CRE-01` a `CRE-03`.
-- **[Requisitos de uso de IA](05-uso-de-ia.md)** y **[de uso de LLMs](09-uso-de-llms.md)**: la responsabilidad por el uso de asistentes y la cadena de suministro de modelos preentrenados.
+- **[Requisitos para datos](03-estandar-de-datos.md)**: licencias, metadatos y datos personales de los conjuntos de datos.
+- **[Requisitos para tableros](06-estandar-tableros.md)** y **[para aplicaciones](07-estandar-aplicaciones.md)**: lo específico de un sitio o de un servicio que se despliega. Los requisitos de secretos de una aplicación (`SEG-01` de aplicaciones) y de un modelo de lenguaje (`SEG-05` de uso de LLMs) son casos particulares de `CRE-01` a `CRE-03`.
+- **[Requisitos para el uso de IA](05-uso-de-ia.md)** y **[para el uso de LLMs](09-uso-de-llms.md)**: la responsabilidad por el uso de asistentes y la cadena de suministro de modelos preentrenados.
 
 Estos requisitos no sustituyen una auditoría de seguridad profesional. Un cuaderno de análisis tiene una superficie de ataque pequeña, y los requisitos se limitan a lo que una persona científica puede cumplir y comprobar con herramientas gratuitas.
 
@@ -88,7 +88,7 @@ Ningún requisito de este documento exige comprar herramientas ni servicios. El 
 * - Zenodo (s. f.). Manage records
   - Un registro publicado se puede borrar en 30 días; después, solo con justificación, y queda una página de memoria con la cita
   - REL-01, REL-04
-* - [Requisitos de datos](03-estandar-de-datos.md), [de uso de IA](05-uso-de-ia.md), [de tableros](06-estandar-tableros.md) y [de aplicaciones](07-estandar-aplicaciones.md)
+* - [Requisitos para datos](03-estandar-de-datos.md), [para el uso de IA](05-uso-de-ia.md), [para tableros](06-estandar-tableros.md) y [para aplicaciones](07-estandar-aplicaciones.md)
   - Datos personales, dependencias sugeridas por IA, alertas de dependencias y secretos que estos requisitos generalizan
   - FUG-01, DEP-02, DEP-04, CRE-04
 ```
@@ -115,7 +115,7 @@ La información personal se filtra por rutas poco evidentes. Las más frecuentes
 - **El historial de git.** La dirección de correo de cada commit queda visible, y cambiarla no reescribe los commits anteriores (GitHub, s. f.-d). Configure una dirección institucional o la *noreply* de GitHub antes del primer commit (FUG-04).
 - **Los metadatos de los archivos.** Las fotografías pueden incluir coordenadas y los PDF, el nombre del autor y la ruta de origen (FUG-03).
 
-Los datos personales de los conjuntos de datos se rigen por los [requisitos de datos](03-estandar-de-datos.md); aquí se exige que tampoco aparezcan en las salidas, los metadatos ni el historial (FUG-01).
+Los datos personales de los conjuntos de datos se rigen por los [requisitos para datos](03-estandar-de-datos.md); aquí se exige que tampoco aparezcan en las salidas, los metadatos ni el historial (FUG-01).
 
 *Requisitos de este grupo: FUG-01, FUG-02, FUG-03, FUG-04, FUG-05, FUG-06. Su enunciado completo está en la lista de verificación de la Sección 3.*
 
@@ -181,14 +181,14 @@ La lista tiene 36 requisitos: 32 obligatorios y 4 recomendados. Los 5 requisitos
 - [ ] **CRE-01.** **Crítico.** Ningún secreto (clave de API, token, contraseña, clave privada o cadena de conexión) está en los archivos del repositorio. (OWASP Foundation, 2025, A02; Requisito de esta guía)
 - [ ] **CRE-02.** **Crítico.** Ningún secreto está en el historial de git, incluidas todas las ramas, las etiquetas y los archivos que se borraron después. (GitHub, s. f.-b; Requisito de esta guía)
 - [ ] **CRE-03.** Ningún secreto aparece en las salidas guardadas del cuaderno, en sus metadatos ni en los registros (encabezados HTTP, variables de entorno, trazas de error). (Requisito de esta guía)
-- [ ] **CRE-04.** Las credenciales se leen de variables de entorno o de un gestor de secretos; el repositorio incluye un `.env.example` sin valores reales y `.gitignore` excluye `.env` (aplica solo si el cuaderno usa credenciales). (OWASP Foundation, 2025, A02; Requisitos de aplicaciones, REP-04)
+- [ ] **CRE-04.** Las credenciales se leen de variables de entorno o de un gestor de secretos; el repositorio incluye un `.env.example` sin valores reales y `.gitignore` excluye `.env` (aplica solo si el cuaderno usa credenciales). (OWASP Foundation, 2025, A02; Requisitos para aplicaciones, REP-04)
 - [ ] **CRE-05.** Si un secreto se expuso alguna vez, se revocó o se rotó en el proveedor y el incidente se documentó; borrar el archivo o reescribir el historial no basta. (GitHub, s. f.-b)
 - [ ] **CRE-06.** Los tokens y las claves tienen los permisos mínimos que la tarea necesita (aplica solo si el cuaderno usa credenciales). (GitHub, s. f.-c)
 - [ ] **CRE-07.** *(Recomendado)* Un escaneo automático de secretos está activo en el repositorio (el de GitHub u otra herramienta, como gitleaks). (GitHub, s. f.-b; Gitleaks, s. f.)
 
 **2.2. Datos personales y rutas locales**
 
-- [ ] **FUG-01.** **Crítico.** Ningún archivo, salida ni metadato publicado contiene datos personales (nombres, cédulas, teléfonos, direcciones, correos privados o coordenadas de viviendas) ni datos de comunidades sin autorización registrada; se exceptúan los datos de autoría que la persona autora decidió hacer públicos. (Requisitos de datos, PER; Carroll et al., 2020)
+- [ ] **FUG-01.** **Crítico.** Ningún archivo, salida ni metadato publicado contiene datos personales (nombres, cédulas, teléfonos, direcciones, correos privados o coordenadas de viviendas) ni datos de comunidades sin autorización registrada; se exceptúan los datos de autoría que la persona autora decidió hacer públicos. (Requisitos para datos, PER; Carroll et al., 2020)
 - [ ] **FUG-02.** El código, las salidas guardadas y los documentos no contienen rutas absolutas del equipo de quien escribe (nombre de usuario, carpetas personales, nombre de la máquina); las rutas son relativas al repositorio. (Guía para publicar, Sección 4; Requisito de esta guía)
 - [ ] **FUG-03.** Los metadatos de las imágenes, los PDF y otros archivos publicados (GPS, autoría, equipo, ruta de origen) se revisaron y se eliminaron los que identifican a personas o lugares privados. (Requisito de esta guía)
 - [ ] **FUG-04.** Los correos de autoría del historial de git son institucionales, la dirección *noreply* de GitHub o los que la persona autora decidió publicar. (GitHub, s. f.-d)
@@ -209,9 +209,9 @@ La lista tiene 36 requisitos: 32 obligatorios y 4 recomendados. Los 5 requisitos
 **2.4. Dependencias**
 
 - [ ] **DEP-01.** Las dependencias están fijadas con versión exacta en `environment.yml` o `requirements.txt`. (OWASP Foundation, 2025, A03; Guía para publicar, Sección 2)
-- [ ] **DEP-02.** Todas las dependencias provienen de índices oficiales (PyPI o conda-forge) y se verificó que el nombre corresponde al paquete previsto; ninguna fue sugerida por una IA sin comprobar que existe. (OWASP Foundation, 2025, A03; Requisitos de uso de IA, U16)
+- [ ] **DEP-02.** Todas las dependencias provienen de índices oficiales (PyPI o conda-forge) y se verificó que el nombre corresponde al paquete previsto; ninguna fue sugerida por una IA sin comprobar que existe. (OWASP Foundation, 2025, A03; Requisitos para el uso de IA, U16)
 - [ ] **DEP-03.** Un auditor de vulnerabilidades (por ejemplo, `pip-audit`) se ejecutó sobre el entorno y las vulnerabilidades conocidas se corrigieron o se justifican por escrito. (Python Packaging Authority, s. f.; OWASP Foundation, 2025, A03)
-- [ ] **DEP-04.** *(Recomendado)* Las alertas automáticas de dependencias (Dependabot o equivalente) están activas. (Requisitos de tableros, SEG-05)
+- [ ] **DEP-04.** *(Recomendado)* Las alertas automáticas de dependencias (Dependabot o equivalente) están activas. (Requisitos para tableros, SEG-05)
 
 **2.5. Automatización: Actions, Binder y Colab**
 
@@ -290,13 +290,13 @@ Evalúa los 36 criterios. Para cada uno asigna exactamente un estado: Cumple, Pa
 CRE-01 (CRÍTICO). Ningún secreto (clave de API, token, contraseña, clave privada o cadena de conexión) está en los archivos del repositorio. (OWASP Foundation, 2025, A02; Requisito de esta guía)
 CRE-02 (CRÍTICO). Ningún secreto está en el historial de git, incluidas todas las ramas, las etiquetas y los archivos que se borraron después. (GitHub, s. f.-b; Requisito de esta guía)
 CRE-03. Ningún secreto aparece en las salidas guardadas del cuaderno, en sus metadatos ni en los registros (encabezados HTTP, variables de entorno, trazas de error). (Requisito de esta guía)
-CRE-04. Las credenciales se leen de variables de entorno o de un gestor de secretos; el repositorio incluye un `.env.example` sin valores reales y `.gitignore` excluye `.env` (aplica solo si el cuaderno usa credenciales). (OWASP Foundation, 2025, A02; Requisitos de aplicaciones, REP-04)
+CRE-04. Las credenciales se leen de variables de entorno o de un gestor de secretos; el repositorio incluye un `.env.example` sin valores reales y `.gitignore` excluye `.env` (aplica solo si el cuaderno usa credenciales). (OWASP Foundation, 2025, A02; Requisitos para aplicaciones, REP-04)
 CRE-05. Si un secreto se expuso alguna vez, se revocó o se rotó en el proveedor y el incidente se documentó; borrar el archivo o reescribir el historial no basta. (GitHub, s. f.-b)
 CRE-06. Los tokens y las claves tienen los permisos mínimos que la tarea necesita (aplica solo si el cuaderno usa credenciales). (GitHub, s. f.-c)
 CRE-07 (RECOMENDADO). Un escaneo automático de secretos está activo en el repositorio (el de GitHub u otra herramienta, como gitleaks). (GitHub, s. f.-b; Gitleaks, s. f.)
 
 ### Datos personales y rutas locales
-FUG-01 (CRÍTICO). Ningún archivo, salida ni metadato publicado contiene datos personales (nombres, cédulas, teléfonos, direcciones, correos privados o coordenadas de viviendas) ni datos de comunidades sin autorización registrada; se exceptúan los datos de autoría que la persona autora decidió hacer públicos. (Requisitos de datos, PER; Carroll et al., 2020)
+FUG-01 (CRÍTICO). Ningún archivo, salida ni metadato publicado contiene datos personales (nombres, cédulas, teléfonos, direcciones, correos privados o coordenadas de viviendas) ni datos de comunidades sin autorización registrada; se exceptúan los datos de autoría que la persona autora decidió hacer públicos. (Requisitos para datos, PER; Carroll et al., 2020)
 FUG-02. El código, las salidas guardadas y los documentos no contienen rutas absolutas del equipo de quien escribe (nombre de usuario, carpetas personales, nombre de la máquina); las rutas son relativas al repositorio. (Guía para publicar, Sección 4; Requisito de esta guía)
 FUG-03. Los metadatos de las imágenes, los PDF y otros archivos publicados (GPS, autoría, equipo, ruta de origen) se revisaron y se eliminaron los que identifican a personas o lugares privados. (Requisito de esta guía)
 FUG-04. Los correos de autoría del historial de git son institucionales, la dirección *noreply* de GitHub o los que la persona autora decidió publicar. (GitHub, s. f.-d)
@@ -315,9 +315,9 @@ EJC-08. Quien evalúa o verifica un cuaderno ajeno lo ejecuta en un entorno aisl
 
 ### Dependencias
 DEP-01. Las dependencias están fijadas con versión exacta en `environment.yml` o `requirements.txt`. (OWASP Foundation, 2025, A03; Guía para publicar, Sección 2)
-DEP-02. Todas las dependencias provienen de índices oficiales (PyPI o conda-forge) y se verificó que el nombre corresponde al paquete previsto; ninguna fue sugerida por una IA sin comprobar que existe. (OWASP Foundation, 2025, A03; Requisitos de uso de IA, U16)
+DEP-02. Todas las dependencias provienen de índices oficiales (PyPI o conda-forge) y se verificó que el nombre corresponde al paquete previsto; ninguna fue sugerida por una IA sin comprobar que existe. (OWASP Foundation, 2025, A03; Requisitos para el uso de IA, U16)
 DEP-03. Un auditor de vulnerabilidades (por ejemplo, `pip-audit`) se ejecutó sobre el entorno y las vulnerabilidades conocidas se corrigieron o se justifican por escrito. (Python Packaging Authority, s. f.; OWASP Foundation, 2025, A03)
-DEP-04 (RECOMENDADO). Las alertas automáticas de dependencias (Dependabot o equivalente) están activas. (Requisitos de tableros, SEG-05)
+DEP-04 (RECOMENDADO). Las alertas automáticas de dependencias (Dependabot o equivalente) están activas. (Requisitos para tableros, SEG-05)
 
 ### Automatización: Actions, Binder y Colab
 FLU-01. Los flujos de GitHub Actions fijan los permisos de `GITHUB_TOKEN` en solo lectura por defecto y elevan, trabajo por trabajo, solo los que necesitan. (GitHub, s. f.-c)
