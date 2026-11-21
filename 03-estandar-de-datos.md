@@ -27,7 +27,7 @@ abbreviations:
 
 +++ {"part": "abstract"}
 
-Este documento establece los requisitos que deben cumplir los datos y los metadatos de un cuaderno para publicarse en la colección. Define 92 requisitos (80 obligatorios y 12 recomendados), cada uno con un identificador, un nivel y una fuente citada. Se derivan del Risk Data Library Standard (RDLS), los principios FAIR y CARE, el compromiso COPDESS, la guía *Open Data for Resilience*, las políticas de *Scientific Data*, la Ley 1712 de 2014, el Portal Nacional de Datos Abiertos y la documentación de EM-DAT. Ningún requisito exige pagos. Incluye una lista de verificación y un prompt de auditoría.
+Este documento establece los requisitos que deben cumplir los datos y los metadatos de un cuaderno para publicarse en la colección. Define 92 requisitos (80 obligatorios y 12 recomendados), cada uno con un identificador, un nivel y una fuente citada. Se derivan principalmente del Risk Data Library Standard (RDLS) y los principios FAIR y CARE, entre otros. Ningún requisito exige suscripciónes o pagos de ningún tipo. Se incluye una lista de verificación y un prompt de auditoría que puede emplear en una herramienta de IA.
 
 +++
 
@@ -45,7 +45,7 @@ Complementan la [guía para publicar un cuaderno](01-cuadernos-de-conocimiento.m
 
 ### 1.2 Convenciones
 
-1. **Identificador.** Cada requisito tiene un código de tres letras y dos cifras (por ejemplo, MET-03). Los códigos se usan en la lista de verificación, en el prompt de validación y en los reportes.
+1. **Identificador.** Cada requisito tiene un código de tres letras y dos cifras (por ejemplo, MET-03 o metadatos). Los códigos se usan en la lista de verificación, en el prompt de validación y en los reportes.
 2. **Nivel.** *Obligatorio* significa que el cuaderno no se acepta si el requisito aplica y no se cumple. *Recomendado* significa que el cumplimiento mejora la calidad pero no condiciona la aceptación. *Crítico* es un requisito obligatorio cuyo incumplimiento bloquea la publicación, cualquiera sea la puntuación total.
 3. **Base.** La columna «Base» indica el documento, el año y, cuando corresponde, el apartado del que procede el requisito. Los requisitos cuya base es «Requisito de esta guía» los establece este documento y no provienen de una fuente externa.
 4. **Redacción.** Cada requisito se enuncia en el estado conforme: describe cómo es un cuaderno que lo cumple.

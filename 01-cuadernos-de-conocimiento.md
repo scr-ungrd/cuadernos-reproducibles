@@ -6,9 +6,9 @@ license: CC-BY-4.0
 keywords:
   - cuadernos reproducibles
   - Python
-  - amenaza
-  - vulnerabilidad
-  - exposición
+  - conocimiento del riesgo
+  - reducción del riesgo
+  - manejo de desastres
   - riesgo de desastres
   - FAIR
 abbreviations:
@@ -44,7 +44,7 @@ Los requisitos de esta guía y de sus documentos de apoyo son propios de la Subd
 
 ## 1. Elija el tipo de cuaderno
 
-Un cuaderno reproducible no es un script con comentarios. Es un documento ejecutable que combina texto, código verificable, datos accesibles y resultados interpretables. Cada cuaderno corresponde a una de cuatro líneas, que siguen el Marco de Sendai 2015–2030 y la Ley 1523 de 2012.
+Un cuaderno reproducible no es un script con comentarios. Es un documento ejecutable que combina texto con una narrativa, código verificable, datos accesibles y resultados interpretables. Cada cuaderno corresponde a una de cuatro líneas, que siguen el Marco de Sendai 2015–2030 y la Ley 1523 de 2012.
 
 ```{list-table}
 :header-rows: 1
@@ -56,13 +56,13 @@ Un cuaderno reproducible no es un script con comentarios. Es un documento ejecut
   - Caracterización, modelación o cartografía de amenazas naturales, socionaturales o antrópicas en Colombia
   - Series históricas de fuentes institucionales (UNGRD, IDEAM, SGC, IGAC). Valoramos los enfoques probabilísticos y los escenarios de cambio climático.
 * - **Análisis de riesgo**
-  - Combinación de amenaza, exposición y vulnerabilidad para estimar el riesgo municipal, departamental o de cuenca
+  - Combinación de amenaza, exposición y vulnerabilidad para estimar el riesgo municipal, departamental o de cuenca.
   - Cuadernos encadenados que separan la evaluación de la amenaza del análisis del riesgo.
 * - **Indicadores de vulnerabilidad y exposición**
-  - Construcción, validación o comparación de indicadores de vulnerabilidad social, física o funcional y de exposición
+  - Construcción, validación o comparación de indicadores de vulnerabilidad social, física o funcional y de exposición.
   - Datos abiertos (DANE, Registro Único de Damnificados, catastro multipropósito) y criterios documentados de selección, normalización y ponderación.
 * - **Metodologías transversales**
-  - Herramientas, flujos de procesamiento o marcos aplicables a más de una amenaza o escala
+  - Herramientas, flujos de procesamiento o marcos aplicables a más de una amenaza o escala.
   - Un valor que resida en la generalidad del método y no en el caso de aplicación.
 ```
 
@@ -73,7 +73,7 @@ Un cuaderno reproducible no es un script con comentarios. Es un documento ejecut
 - **Jupyter** para la ejecución. El cuaderno debe correr de principio a fin sin intervención manual, salvo la descarga de datos externos cuando sea inevitable.
 - **GitHub** para el control de versiones. No evaluamos cuadernos sin un repositorio público.
 
-Si el cuaderno usa o produce datos de riesgo, descríbalos con el Risk Data Library Standard (RDLS) del GFDRR. Así se pueden combinar con otras colecciones abiertas.
+Si el cuaderno usa o produce datos de riesgo de desastres, descríbalos con el Risk Data Library Standard (RDLS) del GFDRR. Así se pueden combinar con otras colecciones abiertas.
 
 ## 2. Prepare el repositorio
 
@@ -98,7 +98,7 @@ Añada un botón de Binder al `README` para que cualquier persona ejecute el cua
 
 ## 3. Escriba el cuaderno
 
-El cuaderno tiene seis secciones, en este orden, escritas en celdas de texto MyST entre el código.
+El cuaderno tiene seis secciones, en este orden, escritas en celdas de texto entre el código.
 
 **Contexto y objetivo.** Describa el problema, la escala territorial y por qué eligió el método. No incluya resultados.
 
@@ -119,17 +119,25 @@ Antes del envío, compruebe que:
 - el cuaderno se ejecuta de principio a fin en un entorno limpio creado desde `environment.yml` o `requirements.txt`;
 - ninguna celda depende de variables definidas fuera de orden;
 - las rutas son relativas al repositorio;
-- el repositorio tiene al menos un *release* en GitHub y la versión correspondiente en Zenodo tiene un DOI activo.
 
 **Verificación independiente.** Una persona del comité evaluador ejecuta el cuaderno en un entorno limpio y comprueba que reproduce las figuras y las tablas, siguiendo el proceso de CODECHECK (Nüst y Eglen, 2021). Pedimos esta comprobación porque la reproducibilidad solo se puede certificar cuando alguien distinto de quien escribió el cuaderno lo ejecuta sin ayuda. El informe de verificación (fecha, entorno, resultado y diferencias) se publica junto al cuaderno. Verificar no es replicar: el informe confirma que el código y los datos regeneran los resultados, no que estos sean correctos.
 
 **Transparencia.** La colección sigue las directrices TOP 2025 (*Transparency and Openness Promotion*), que piden declarar, compartir y citar los datos, el código y los materiales de un estudio (Center for Open Science, 2025). Los requisitos de esta guía las concretan: datos, código, modelos, uso de IA y seguridad.
 
-## Ejemplos de referencia
+## 5. Ejemplos de referencia
 
-Esta guía adapta el modelo de colecciones abiertas como el [Manual de Evaluación del Riesgo Climático de CLIMAAX](https://handbook.climaax.eu/intro.html), la [Risk Data Library del GFDRR](https://gfdrr.github.io/CCDR-tools/home.html), [DesignSafe](https://www.designsafe-ci.org/), [Probability of Fire del ECMWF](https://ecmwf.github.io/AI-Probability-of-Fire), el [Proyecto Pythia](https://projectpythia.org/) y [EM-DAT](https://github.com/em-dat/).
+Esta guía sigue principalmente el modelo de [*Notebooks Now!*](https://notebooks.agu.org/) de la AGU (Caprarelli et al., 2023), y adapta también el modelo de otras colecciones abiertas como:
+
+- el [Manual de Evaluación del Riesgo Climático de CLIMAAX](https://handbook.climaax.eu/intro.html);
+- la [Risk Data Library del GFDRR](https://gfdrr.github.io/CCDR-tools/home.html);
+- [DesignSafe](https://www.designsafe-ci.org/);
+- [Probability of Fire del ECMWF](https://ecmwf.github.io/AI-Probability-of-Fire);
+- el [Proyecto Pythia](https://projectpythia.org/);
+- y [EM-DAT](https://github.com/em-dat/).
 
 ## Referencias
+
+Caprarelli, G., Sedora, B., Ricci, M., Stall, S., y Giampoala, M. (2023). Notebooks Now! The future of reproducible research. *Earth and Space Science, 10*(12), Artículo e2023EA003458. https://doi.org/10.1029/2023EA003458
 
 Center for Open Science. (2025). *TOP 2025: An update to the Transparency and Openness Promotion guidelines*. https://doi.org/10.31222/osf.io/nmfs6
 

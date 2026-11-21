@@ -55,7 +55,7 @@ site:
   title: Cuadernos Reproducibles — UNGRD
   options:
     favicon: ./images/favicon.png
-    logo_text: "Cuadernos · UNGRD"
+    logo: ./images/logo-cuadernos-ungrd.png
     style: ./css/footer.css
     url: https://scr-ungrd.github.io/cuadernos-reproducibles
     primary_color: "#0154a5"
