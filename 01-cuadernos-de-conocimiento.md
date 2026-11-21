@@ -118,7 +118,7 @@ Antes del envío, compruebe que:
 
 - el cuaderno se ejecuta de principio a fin en un entorno limpio creado desde `environment.yml` o `requirements.txt`;
 - ninguna celda depende de variables definidas fuera de orden;
-- las rutas son relativas al repositorio;
+- las rutas son relativas al repositorio.
 
 **Verificación independiente.** Una persona del comité evaluador ejecuta el cuaderno en un entorno limpio y comprueba que reproduce las figuras y las tablas, siguiendo el proceso de CODECHECK (Nüst y Eglen, 2021). Pedimos esta comprobación porque la reproducibilidad solo se puede certificar cuando alguien distinto de quien escribió el cuaderno lo ejecuta sin ayuda. El informe de verificación (fecha, entorno, resultado y diferencias) se publica junto al cuaderno. Verificar no es replicar: el informe confirma que el código y los datos regeneran los resultados, no que estos sean correctos.
 
