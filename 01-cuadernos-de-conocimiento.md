@@ -2,6 +2,8 @@
 title: Guía para publicar un cuaderno
 subtitle: Cómo preparar y enviar un cuaderno reproducible de conocimiento del riesgo
 date: 2026-11-16
+site:
+  hide_authors: true
 license: CC-BY-4.0
 keywords:
   - cuadernos reproducibles
@@ -19,11 +21,6 @@ abbreviations:
   DOI: Digital Object Identifier
 ---
 
-+++ {"part": "abstract"}
-
-Un cuaderno reproducible reúne en un solo repositorio la narrativa, el código y los resultados de un análisis de riesgo, de modo que otra persona pueda ejecutarlo y obtener los mismos resultados. Esta guía explica cómo preparar y enviar uno a la colección de la Subdirección para el Conocimiento del Riesgo (SCR) de la UNGRD. Cubre el tipo de cuaderno, el repositorio, la estructura del texto y el control de calidad previo al envío.
-
-+++
 
 ## Pasos clave
 
