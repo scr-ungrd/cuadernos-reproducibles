@@ -6,6 +6,8 @@ authors:
   - name: Subdirección para el Conocimiento del Riesgo
     affiliation: Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)
     github: scr-ungrd
+site:
+  hide_authors: true
 license: CC-BY-4.0
 keywords:
   - inteligencia artificial
@@ -23,11 +25,6 @@ abbreviations:
   DOI: Digital Object Identifier
 ---
 
-+++ {"part": "abstract"}
-
-Este documento reúne recomendaciones para usar inteligencia artificial (IA) de forma ética y responsable al producir un cuaderno reproducible de conocimiento del riesgo. Se apoya en las políticas de IA de editoriales y revistas científicas de referencia en desastres y cambio climático. Sintetiza lo que coinciden en exigir y en qué difieren, propone una clasificación del uso por nivel de riesgo, ofrece una plantilla de declaración y una lista de verificación de 26 puntos, y entrega un prompt para auditar el cumplimiento y generar un reporte.
-
-+++
 
 ## Para qué sirven estos requisitos
 

@@ -6,6 +6,8 @@ authors:
   - name: Subdirección para el Conocimiento del Riesgo
     affiliation: Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)
     github: scr-ungrd
+site:
+  hide_authors: true
 license: CC-BY-4.0
 keywords:
   - tableros
@@ -29,11 +31,6 @@ abbreviations:
   DPG: Digital Public Goods
 ---
 
-+++ {"part": "abstract"}
-
-Este documento establece los requisitos que debe cumplir un tablero (*dashboard*) de conocimiento del riesgo para publicarse en la colección como un objeto abierto, accesible y reproducible. Define 58 requisitos (52 obligatorios, de ellos 7 críticos, y 6 recomendados), cada uno con un identificador y una base documental citada. Se derivan de la guía del *Government Analysis Function* del Reino Unido para tableros, WCAG 2.2, la Resolución 1519 de 2020 del MinTIC, la literatura sobre diseño de tableros y uso del color, los principios FAIR para software, la guía de despliegue de Quarto y la lista OWASP Top 10:2025. Ningún requisito exige pagos de suscripción ni de licencias. El documento incluye plantillas, una lista de verificación y un prompt que audita el cumplimiento y genera un reporte.
-
-+++
 
 ## 1. Alcance y convenciones
 

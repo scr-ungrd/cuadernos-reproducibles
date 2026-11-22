@@ -6,6 +6,8 @@ authors:
   - name: Subdirección para el Conocimiento del Riesgo
     affiliation: Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)
     github: scr-ungrd
+site:
+  hide_authors: true
 license: CC-BY-4.0
 keywords:
   - modelos
@@ -30,11 +32,6 @@ abbreviations:
   ODD: Overview, Design concepts, Details
 ---
 
-+++ {"part": "abstract"}
-
-Este documento establece los requisitos que debe cumplir un modelo (de aprendizaje automático, estadístico o de simulación física) de conocimiento del riesgo para publicarse en la colección como un objeto documentado, validado y reproducible. Define 46 requisitos (41 obligatorios, de ellos 5 críticos, y 5 recomendados), cada uno con un identificador y una base documental citada. Se derivan de las fichas de modelo (*model cards*) y las hojas de datos (*datasheets*), el programa de reproducibilidad de NeurIPS, el protocolo ODD, el Digital Public Goods Standard y la lista OWASP Top 10:2025. Ningún requisito exige pagos. El documento incluye plantillas, una lista de verificación y un prompt que audita el cumplimiento y genera un reporte.
-
-+++
 
 ## 1. Alcance y convenciones
 

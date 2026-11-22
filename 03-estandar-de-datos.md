@@ -6,6 +6,8 @@ authors:
   - name: Subdirección para el Conocimiento del Riesgo
     affiliation: Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)
     github: scr-ungrd
+site:
+  hide_authors: true
 license: CC-BY-4.0
 keywords:
   - requisitos para datos
@@ -25,11 +27,6 @@ abbreviations:
   CRED: Centre for Research on the Epidemiology of Disasters
 ---
 
-+++ {"part": "abstract"}
-
-Este documento establece los requisitos que deben cumplir los datos y los metadatos de un cuaderno para publicarse en la colección. Define 92 requisitos (80 obligatorios y 12 recomendados), cada uno con un identificador, un nivel y una fuente citada. Se derivan principalmente del Risk Data Library Standard (RDLS) y los principios FAIR y CARE, entre otros. Ningún requisito exige suscripciónes o pagos de ningún tipo. Se incluye una lista de verificación y un prompt de auditoría que puede emplear en una herramienta de IA.
-
-+++
 
 ## 1. Alcance y convenciones
 

@@ -6,6 +6,8 @@ authors:
   - name: Subdirección para el Conocimiento del Riesgo
     affiliation: Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)
     github: scr-ungrd
+site:
+  hide_authors: true
 license: CC-BY-4.0
 keywords:
   - modelos de lenguaje
@@ -29,11 +31,6 @@ abbreviations:
   MCP: Model Context Protocol
 ---
 
-+++ {"part": "abstract"}
-
-Este documento establece los requisitos que debe cumplir un cuaderno que usa un modelo de lenguaje, o cualquier otro modelo preentrenado obtenido de un repositorio como Hugging Face o de una API alojada, como componente de su análisis. Define 53 requisitos (47 obligatorios, de ellos 5 críticos, y 6 recomendados), cada uno con un identificador y una base documental citada. Cubren la identificación y la revisión exacta del modelo, la licencia, la seguridad de la cadena de suministro, la reproducibilidad de las salidas, los prompts, la evaluación en la tarea concreta, la privacidad y el uso responsable. Se derivan de las fichas de modelo, la documentación del Hub, la lista OWASP Top 10 para aplicaciones con LLM, el perfil de IA generativa del NIST, la especificación del Model Context Protocol y el Model Openness Framework. Ningún requisito exige pagos. El documento incluye una plantilla, una lista de verificación y un prompt que audita el cumplimiento y genera un reporte.
-
-+++
 
 ## 1. Alcance y convenciones
 

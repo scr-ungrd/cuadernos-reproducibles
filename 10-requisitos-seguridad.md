@@ -6,6 +6,8 @@ authors:
   - name: Subdirección para el Conocimiento del Riesgo
     affiliation: Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)
     github: scr-ungrd
+site:
+  hide_authors: true
 license: CC-BY-4.0
 keywords:
   - seguridad
@@ -26,11 +28,6 @@ abbreviations:
   OWASP: Open Worldwide Application Security Project
 ---
 
-+++ {"part": "abstract"}
-
-Este documento establece los requisitos de seguridad y privacidad que debe cumplir el repositorio de un cuaderno reproducible de la colección, sea o no un tablero, una aplicación o un modelo. Define 39 requisitos (34 obligatorios, de ellos 6 críticos, y 5 recomendados), cada uno con un identificador y una base documental citada. Cubren los secretos y las credenciales, los datos personales y las rutas locales, la ejecución de código no confiable, las dependencias, la automatización (GitHub Actions, Binder y Colab), el contenido oculto dirigido a asistentes de IA y la publicación de versiones en Zenodo. Se apoyan en la documentación de GitHub, en la lista OWASP Top 10:2025, en el OWASP Top 10 para aplicaciones de LLM y en la de Zenodo. Ningún requisito exige pagos. El documento incluye una lista de verificación y un prompt que audita el cumplimiento y genera un reporte.
-
-+++
 
 ## 1. Alcance y convenciones
 

@@ -6,6 +6,8 @@ authors:
   - name: Subdirección para el Conocimiento del Riesgo
     affiliation: Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD)
     github: scr-ungrd
+site:
+  hide_authors: true
 license: CC-BY-4.0
 keywords:
   - aplicaciones
@@ -30,11 +32,6 @@ abbreviations:
   FAIR4RS: FAIR Principles for Research Software
 ---
 
-+++ {"part": "abstract"}
-
-Este documento establece los requisitos que debe cumplir una aplicación de conocimiento del riesgo (calculadora, visor interactivo con lógica propia, API o herramienta web) para publicarse en la colección como software abierto, seguro y reproducible. Define 62 requisitos (53 obligatorios, de ellos 11 críticos, y 9 recomendados), cada uno con un identificador y una base documental citada. Se derivan del Digital Public Goods Standard, los principios FAIR para software de investigación (FAIR4RS), la metodología de los doce factores, la lista OWASP Top 10:2025, WCAG 2.2, la Resolución 1519 de 2020 del MinTIC y la Ley 1581 de 2012. Ningún requisito exige pagos de suscripción ni de licencias. El documento incluye plantillas, una lista de verificación y un prompt que audita el cumplimiento y genera un reporte.
-
-+++
 
 ## 1. Alcance y convenciones
 
