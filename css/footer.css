@@ -89,7 +89,7 @@ body:has(.hero), body:has(.hero) main { background: var(--lp-bg) !important; col
 .hero .hero-bg, .hero img.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; margin: 0; }
 .hero figure { position: absolute; inset: 0; margin: 0; }
 .hero::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(6,11,22,.88) 0%, rgba(6,11,22,.55) 55%, rgba(6,11,22,.25) 100%); }
-.hero-content { position: relative; z-index: 2; max-width: 52rem; padding: 2.6rem max(1.5rem, 6vw); color: #fff; }
+.hero-content { position: relative; z-index: 2; max-width: 58rem; padding: 2.45rem max(1.5rem, 6vw); color: #fff; }
 .hero-content > p:first-child { font-size: .85rem; letter-spacing: .04em; font-weight: 500; opacity: .9; margin: 0 0 .6rem; }
 .hero-content h1, .hero-content h2 { font-size: clamp(2.2rem, 4.8vw, 3.6rem); line-height: 1.05; font-weight: 700; color: #fff; margin: 0 0 1rem; }
 .hero-content p { font-size: 1.15rem; line-height: 1.6; color: #fff; }
@@ -121,9 +121,10 @@ body:has(.hero) .myst-card:hover strong { text-decoration: underline; }
   body:has(.hero) .myst-card .myst-card-body > :first-child { grid-row: auto; }
   body:has(.hero) .myst-card .myst-card-body > :not(:first-child) { grid-column: 1; }
   body:has(.hero) .myst-card img { width: 100%; height: 180px; }
-  .hero { min-height: 442px; }
-  .hero-content { padding-top: 2rem; padding-bottom: 2rem; }
-  .hero-content h1, .hero-content h2 { font-size: 2.2rem; }
+  .hero { min-height: 380px; }
+  .hero-content { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+  .hero-content h1, .hero-content h2 { font-size: 2rem; }
+  .hero-content p { font-size: 1rem; }
 }
 
 /* Íconos de la barra superior: Hub, GitHub y traducción (Bootstrap Icons, MIT) */
