@@ -49,13 +49,15 @@ project:
           file: 09-uso-de-llms.md
         - title: Requisitos de seguridad
           file: 10-requisitos-seguridad.md
+    - title: Acerca de
+      file: 11-acerca-de.md
 
 site:
   template: book-theme
   title: Cuadernos Reproducibles — UNGRD
   options:
     favicon: ./images/favicon.png
-    logo: ./images/logo-cuadernos-ungrd.png
+    logo: ./images/logo-cuadernos-ungrd-barra.svg
     style: ./css/footer.css
     url: https://scr-ungrd.github.io/cuadernos-reproducibles
     primary_color: "#0154a5"
@@ -88,6 +90,8 @@ site:
           url: /uso-de-llms
         - title: Requisitos de seguridad
           url: /requisitos-seguridad
+    - title: Acerca de
+      url: /acerca-de
     - title: HUB SCR — portal de proyectos
       url: https://scr-ungrd.github.io/hub/
     - title: Repositorio en GitHub
