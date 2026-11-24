@@ -23,7 +23,7 @@ SUBDIRECCIÓN PARA EL CONOCIMIENTO DEL RIESGO · UNGRD
 
 Publicamos cuadernos abiertos, ejecutables e interactivos que muestran cómo realizar análisis en los tres procesos de la gestión del riesgo de desastres en Colombia: conocimiento del riesgo, reducción del riesgo y manejo de desastres. Se promueve el uso de datos públicos, flujos de trabajo con código y resultados que cualquiera puede reproducir.
 
-{button}`Cuadernos disponibles <#cuadernos>`
+{button}`Cuadernos disponibles <cuadernos.md>`
 ::::
 
 ::::{div}
@@ -94,6 +94,8 @@ Subdirección para el Conocimiento del Riesgo · v0.1.0 (0.1.1 en desarrollo) ·
 
 :::{div}
 :class: see-all
+
+**[Ver todos los cuadernos →](cuadernos.md)**
 
 [Guía para publicar un cuaderno](01-cuadernos-de-conocimiento.md) · [Convocatoria](02-convocatoria-cuadernos.md) · [Requisitos para datos](03-estandar-de-datos.md) · [Requisitos para el uso de IA](05-uso-de-ia.md) · [Requisitos para tableros](06-estandar-tableros.md) · [Requisitos para aplicaciones](07-estandar-aplicaciones.md) · [Requisitos para modelos](08-estandar-modelos.md) · [Requisitos para el uso de LLMs](09-uso-de-llms.md) · [Requisitos de seguridad](10-requisitos-seguridad.md)
 :::

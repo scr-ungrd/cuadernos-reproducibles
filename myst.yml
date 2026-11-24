@@ -30,6 +30,8 @@ project:
 
   toc:
     - file: index.md
+    - title: Cuadernos disponibles
+      file: cuadernos.md
     - title: Convocatoria
       file: 02-convocatoria-cuadernos.md
     - title: Guía para publicar
@@ -69,6 +71,8 @@ site:
     extra_head: |
       <script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.sd-card-link').forEach(function(a){a.target='_blank';});});</script>
   nav:
+    - title: Cuadernos
+      url: /cuadernos
     - title: Convocatoria
       url: /convocatoria-cuadernos
     - title: Guía para publicar
