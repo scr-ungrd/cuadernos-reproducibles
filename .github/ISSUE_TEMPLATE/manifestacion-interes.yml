@@ -1,0 +1,41 @@
+name: Manifestación de interés (nivel C)
+description: Cuéntenos su idea de cuaderno y reciba orientación. No se evalúa.
+title: "[Interés] <tema del cuaderno>"
+labels: ["interés"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        La manifestación de interés no se evalúa. Sirve para recibir orientación y pasar luego al nivel A o al B de la [convocatoria](https://scr-ungrd.github.io/cuadernos-reproducibles/convocatoria-cuadernos/).
+
+        Un documento Word no se acepta como cuaderno, porque no se ejecuta.
+
+  - type: input
+    id: tema
+    attributes:
+      label: Tema del cuaderno
+    validations:
+      required: true
+
+  - type: input
+    id: contacto
+    attributes:
+      label: Nombre e institución
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: Idea, datos y método
+      description: Un resumen breve. Puede adjuntar un documento Word o PDF arrastrándolo a este campo.
+    validations:
+      required: true
+
+  - type: textarea
+    id: apoyo
+    attributes:
+      label: Qué orientación necesita
+      placeholder: Por ejemplo, cómo pasar mi análisis a Python, qué datos abiertos usar, cómo usar GitHub
+    validations:
+      required: false

@@ -12,12 +12,12 @@ license: CC-BY-4.0
 
 +++ {"part": "abstract"}
 
-La Subdirección para el Conocimiento del Riesgo (SCR) de la UNGRD recibe cuadernos reproducibles que documenten análisis de riesgo de desastres en Colombia. La convocatoria es abierta, gratuita y permanente, y está dirigida a la academia, las entidades del SNGRD, las organizaciones técnicas y las personas profesionales. Este documento explica qué cuadernos aceptamos, cómo postularlos y cómo los evaluamos.
+La Subdirección para el Conocimiento del Riesgo (SCR) de la UNGRD recibe cuadernos reproducibles que documenten análisis de riesgo de desastres en Colombia. La convocatoria será abierta, gratuita y permanente, y estará dirigida a la academia, las entidades del SNGRD, las organizaciones técnicas y las personas profesionales. Este documento explica qué cuadernos aceptamos, cómo postularlos y cómo los evaluamos.
 
 +++
 
 :::{warning} Fase piloto
-La convocatoria aún no está abierta. Prevemos abrirla en el segundo semestre de 2026. Mientras tanto, esta página describe el proceso que seguiremos.
+La convocatoria está en fase piloto y abrirá el 1 de marzo de 2027. Mientras tanto, esta página describe el proceso que seguiremos.
 :::
 
 ## Por qué la convocatoria
@@ -54,12 +54,13 @@ Aceptamos cuadernos de cuatro tipos: evaluación de amenazas, análisis de riesg
 - aprendizaje automático y teledetección aplicados a la gestión del riesgo;
 - datos y monitoreo: sensores remotos, series hidrometeorológicas y redes de observación.
 
+(requisitos-tecnicos)=
 ### Requisitos técnicos
 
 Cada cuaderno cumple lo siguiente:
 
-- **Formato.** Jupyter (`.ipynb`) o MyST Markdown con código. Se ejecuta de principio a fin sin intervención manual.
-- **Lenguaje.** Python 3.10 o superior. Aceptamos R con `renv`. No aceptamos cuadernos que requieran software de pago.
+- **Formato.** Jupyter (`.ipynb`) o MyST Markdown (`.md` con celdas `{code-cell}`). La plantilla convierte el `.md` a `.ipynb` con `jupytext`. Se ejecuta de principio a fin sin intervención manual.
+- **Lenguaje.** Python 3.10 o superior. En el nivel A también aceptamos R con `renv`. No aceptamos cuadernos que requieran software de pago.
 - **Datos.** Públicos, gratuitos y redistribuibles, y conformes a los [requisitos para datos](03-estandar-de-datos.md). No aceptamos datos confidenciales ni con restricciones de redistribución.
 - **Dependencias.** Un archivo `environment.yml` o `requirements.txt` con versiones fijadas. Los paquetes están en PyPI o conda-forge.
 - **Reproducibilidad.** Se ejecuta en Binder o Google Colab sin configuración adicional.
@@ -115,18 +116,46 @@ Si el cuaderno incluye un modelo, un tablero o una aplicación, cumpla además l
 
 Las bibliotecas más usadas son `pandas`, `numpy`, `scipy`, `xarray` y `statsmodels` para los datos; `geopandas`, `rasterio`, `folium`, `leafmap` y `cartopy` para lo geoespacial; `matplotlib`, `seaborn` y `plotly` para la visualización, y `scikit-learn` para el aprendizaje automático.
 
+(como-postular)=
 ## Cómo postular
 
-La postulación tiene cuatro pasos.
+Puede postular por tres niveles, según su experiencia con GitHub. Los tres llegan al mismo punto: todo cuaderno evaluado termina en un repositorio público que cumple los [requisitos técnicos](#requisitos-tecnicos).
+
+```{list-table}
+:header-rows: 1
+
+* - Nivel
+  - Qué envía
+  - Por dónde
+  - Quién crea el repositorio
+* - **A. Repositorio propio**
+  - El enlace a su repositorio, creado desde la plantilla y verificado
+  - [Formulario de postulación](https://github.com/scr-ungrd/cuadernos-reproducibles/issues/new?template=postulacion.yml)
+  - Usted
+* - **B. Cuaderno con acompañamiento**
+  - El cuaderno, las dependencias con versiones fijas y los datos de prueba
+  - [Formulario de postulación](https://github.com/scr-ungrd/cuadernos-reproducibles/issues/new?template=postulacion.yml) o correo a [conocimiento@gestiondelriesgo.gov.co](mailto:conocimiento@gestiondelriesgo.gov.co)
+  - La SCR, con usted
+* - **C. Manifestación de interés**
+  - Un resumen o un documento Word con la idea, los datos y el método
+  - [Formulario de manifestación de interés](https://github.com/scr-ungrd/cuadernos-reproducibles/issues/new?template=manifestacion-interes.yml) o correo a [conocimiento@gestiondelriesgo.gov.co](mailto:conocimiento@gestiondelriesgo.gov.co)
+  - Nadie: no se evalúa
+```
+
+La exigencia de reproducibilidad es la misma en los tres niveles. Solo evaluamos un cuaderno cuando su repositorio cumple todos los requisitos.
+
+### Nivel A. Repositorio propio
+
+Usted crea el repositorio, lo verifica y lo postula. Son cuatro pasos.
 
 1. **Cree el repositorio.** Cada cuaderno vive en su propio repositorio público. Abra la [plantilla](https://github.com/scr-ungrd/cuadernos-reproducibles-crc000), pulse **Use this template → Create a new repository** y clónelo.
 2. **Ubique el cuaderno.** Copie el cuaderno en `notebooks/` y los datos de prueba en `data/`. Actualice `myst.yml` (autores, afiliaciones, palabras clave) y `environment.yml` (dependencias).
 3. **Verifique.** Ejecute el cuaderno desde cero en un entorno limpio y compruebe que `myst build --html` funciona.
-4. **Postule.** Abra un *issue* en el [repositorio de la plataforma](https://github.com/scr-ungrd/cuadernos-reproducibles/issues) con el enlace al repositorio y estos datos: nombre del cuaderno y autoría, institución, amenaza o fenómeno, región, fuentes de datos y una descripción del método de máximo 200 palabras.
+4. **Postule.** Llene el [formulario de postulación](https://github.com/scr-ungrd/cuadernos-reproducibles/issues/new?template=postulacion.yml) con el nivel A y el enlace al repositorio. El formulario pide el nombre del cuaderno, la autoría con ORCID, la institución, el tipo de cuaderno, la amenaza o fenómeno, la región, las fuentes de datos, una descripción del método de máximo 200 palabras, la declaración de uso de IA y las licencias.
 
-La SCR revisa la postulación y puede pedir ajustes antes de publicar. Si no tiene cuenta de GitHub, escriba al equipo de la SCR y lo acompañamos en el proceso.
+La SCR revisa la postulación y puede pedir ajustes antes de publicar.
 
-### Postular con un asistente de IA
+#### Postular con un asistente de IA
 
 Un asistente con acceso a su equipo y a GitHub (por ejemplo, Claude Code, Codex o Copilot en modo agente) puede hacer los pasos 1 a 4. Copie este prompt y reemplace los valores entre `<>`. Revise siempre lo que genere: la responsabilidad por el contenido, los datos y las licencias es de la autoría.
 
@@ -135,7 +164,7 @@ Quiero postular un cuaderno reproducible a la convocatoria de Cuadernos Reproduc
 
 Datos del cuaderno:
 - Nombre del cuaderno: <nombre>
-- Autores: <nombres>
+- Autores: <nombres y ORCID>
 - Institución o afiliación: <institución>
 - Amenaza o fenómeno analizado: <amenaza>
 - Región geográfica: <región>
@@ -149,13 +178,31 @@ Tareas:
 3. Actualiza myst.yml (título, autores, afiliaciones, palabras clave, licencia), environment.yml (versiones fijas) y README.md (título, descripción, instalación, datos de entrada y ejemplo de ejecución). Conserva una licencia abierta.
 4. Verifica que el cuaderno se ejecute completo en un entorno limpio creado desde environment.yml y que `myst build --html` funcione. Si falla, corrígelo o dime qué necesitas.
 5. Muéstrame un resumen de los cambios y espera mi confirmación antes de hacer commit y push.
-6. Con mi confirmación, haz commit y push, y abre un issue en https://github.com/scr-ungrd/cuadernos-reproducibles/issues con el enlace a mi repositorio y los datos de la postulación (nombre y autores, institución, amenaza, región, fuentes y una descripción del método de máximo 200 palabras).
+6. Con mi confirmación, haz commit y push, y prepara el texto del formulario de postulación (https://github.com/scr-ungrd/cuadernos-reproducibles/issues/new?template=postulacion.yml) para el nivel A: enlace a mi repositorio, nombre del cuaderno, autoría con ORCID, institución, tipo de cuaderno, amenaza, región, fuentes de datos, descripción del método de máximo 200 palabras, declaración de uso de IA y licencias. Yo reviso y envío el formulario.
 
 Reglas:
 - No inventes datos, resultados ni referencias; si falta información, pregúntame.
 - No publiques nada (push, repositorio público o issue) sin mi confirmación.
 - No incluyas credenciales, tokens ni datos personales en el repositorio.
 ````
+
+### Nivel B. Cuaderno con acompañamiento
+
+Use este nivel si su cuaderno ya se ejecuta, pero no quiere o no puede armar el repositorio. Envíe:
+
+- el cuaderno, en `.ipynb` o en `.md` de MyST con celdas `{code-cell}`;
+- un `requirements.txt` o un `environment.yml` con las versiones fijas de todas las dependencias;
+- los datos de prueba, o los enlaces exactos para descargarlos.
+
+Envíelo por el [formulario de postulación](https://github.com/scr-ungrd/cuadernos-reproducibles/issues/new?template=postulacion.yml), con el nivel B y el enlace a los archivos, o por correo a [conocimiento@gestiondelriesgo.gov.co](mailto:conocimiento@gestiondelriesgo.gov.co). En este nivel el código debe estar en Python.
+
+La SCR crea el repositorio desde la plantilla con usted. Usted sigue siendo responsable del contenido, los datos y las licencias. La evaluación empieza solo cuando el repositorio cumple los mismos requisitos del nivel A: el cuaderno se ejecuta de principio a fin en un entorno limpio y `myst build --html` funciona.
+
+### Nivel C. Manifestación de interés
+
+Use este nivel si tiene una idea o un análisis en curso y quiere orientación antes de escribir el cuaderno. Envíe un resumen o un documento Word con la idea, los datos y el método, por el [formulario de manifestación de interés](https://github.com/scr-ungrd/cuadernos-reproducibles/issues/new?template=manifestacion-interes.yml) o por correo a [conocimiento@gestiondelriesgo.gov.co](mailto:conocimiento@gestiondelriesgo.gov.co).
+
+La manifestación de interés no se evalúa. Sirve para recibir orientación y pasar luego al nivel A o al B. Un documento Word no se acepta como cuaderno, porque no se ejecuta.
 
 ## Cómo evaluamos
 
@@ -196,4 +243,4 @@ El cuaderno [Análisis de sismicidad de Colombia](https://scr-ungrd.github.io/cu
 
 ## Contacto
 
-Para consultas sobre la convocatoria, escriba a la SCR abriendo un *issue* en [`scr-ungrd/cuadernos-reproducibles`](https://github.com/scr-ungrd/cuadernos-reproducibles/issues).
+Para consultas sobre la convocatoria, abra un *issue* en [`scr-ungrd/cuadernos-reproducibles`](https://github.com/scr-ungrd/cuadernos-reproducibles/issues) o escriba a [conocimiento@gestiondelriesgo.gov.co](mailto:conocimiento@gestiondelriesgo.gov.co).

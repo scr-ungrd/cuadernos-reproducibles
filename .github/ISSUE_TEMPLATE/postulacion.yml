@@ -1,0 +1,134 @@
+name: Postulación de un cuaderno (niveles A y B)
+description: Postule un cuaderno reproducible a la convocatoria. Nivel A, con su propio repositorio; nivel B, con acompañamiento de la SCR.
+title: "[Postulación] <nombre del cuaderno>"
+labels: ["postulación"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Antes de llenar el formulario, lea la [convocatoria](https://scr-ungrd.github.io/cuadernos-reproducibles/convocatoria-cuadernos/) y la [guía para publicar](https://scr-ungrd.github.io/cuadernos-reproducibles/cuadernos-de-conocimiento/).
+
+        - **Nivel A:** usted creó el repositorio desde la plantilla CRC000 y lo verificó.
+        - **Nivel B:** usted envía el cuaderno, las dependencias y los datos, y la SCR crea el repositorio con usted.
+
+        Si solo tiene una idea o un documento Word, use el formulario de manifestación de interés (nivel C).
+
+  - type: dropdown
+    id: nivel
+    attributes:
+      label: Nivel de postulación
+      options:
+        - "A. Repositorio propio"
+        - "B. Cuaderno con acompañamiento"
+    validations:
+      required: true
+
+  - type: input
+    id: nombre
+    attributes:
+      label: Nombre del cuaderno
+    validations:
+      required: true
+
+  - type: textarea
+    id: autoria
+    attributes:
+      label: Autoría
+      description: Una persona por línea, con su ORCID.
+      placeholder: |
+        Nombre Apellido — https://orcid.org/0000-0000-0000-0000
+    validations:
+      required: true
+
+  - type: input
+    id: institucion
+    attributes:
+      label: Institución
+      description: Nombre de la institución y su identificador ROR, si lo tiene (https://ror.org).
+      placeholder: Nombre de la institución — https://ror.org/xxxxxxxxx
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo de cuaderno
+      options:
+        - Evaluación de amenazas
+        - Análisis de riesgo
+        - Indicadores de vulnerabilidad y exposición
+        - Metodologías transversales
+    validations:
+      required: true
+
+  - type: input
+    id: amenaza
+    attributes:
+      label: Amenaza o fenómeno
+      placeholder: Por ejemplo, inundación, sismo, ola de calor
+    validations:
+      required: true
+
+  - type: input
+    id: region
+    attributes:
+      label: Región
+      placeholder: Por ejemplo, Montería (Córdoba), cuenca del río Magdalena, nacional
+    validations:
+      required: true
+
+  - type: textarea
+    id: fuentes
+    attributes:
+      label: Fuentes de datos
+      description: Una fuente por línea, con el enlace al archivo o registro exacto.
+    validations:
+      required: true
+
+  - type: textarea
+    id: metodo
+    attributes:
+      label: Descripción del método
+      description: Máximo 200 palabras.
+    validations:
+      required: true
+
+  - type: input
+    id: enlace
+    attributes:
+      label: Enlace al repositorio (nivel A) o a los archivos (nivel B)
+      description: En el nivel B, enlace a una carpeta compartida con el cuaderno, el archivo de dependencias y los datos de prueba.
+      placeholder: https://github.com/<usuario>/cuadernos-reproducibles-<tema>
+    validations:
+      required: true
+
+  - type: textarea
+    id: uso-ia
+    attributes:
+      label: Declaración de uso de IA
+      description: Según los [requisitos para el uso de IA](https://scr-ungrd.github.io/cuadernos-reproducibles/uso-de-ia/). Si no usó IA, escríbalo.
+    validations:
+      required: true
+
+  - type: input
+    id: licencias
+    attributes:
+      label: Licencias
+      description: Licencia del código y licencia de los datos y el texto.
+      placeholder: Código Apache-2.0; datos y texto CC BY 4.0
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmaciones
+    attributes:
+      label: Confirmaciones
+      options:
+        - label: El cuaderno se ejecuta de principio a fin en un entorno limpio.
+          required: true
+        - label: El cuaderno y el repositorio no tienen credenciales ni datos personales.
+          required: true
+        - label: Los datos son redistribuibles.
+          required: true
+        - label: La autoría acepta la evaluación de la SCR y del comité de pares.
+          required: true

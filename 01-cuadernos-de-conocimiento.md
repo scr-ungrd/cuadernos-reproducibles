@@ -31,7 +31,7 @@ abbreviations:
 5. **Declare el uso de IA** según los [requisitos para el uso de IA](05-uso-de-ia.md).
 6. **Revise la seguridad del repositorio** según los [requisitos de seguridad](10-requisitos-seguridad.md).
 7. **Verifique el cuaderno** en un entorno limpio (Sección 4).
-8. **Envíe el repositorio** según la [convocatoria](02-convocatoria-cuadernos.md).
+8. **Postule el cuaderno** por uno de los [tres niveles de la convocatoria](02-convocatoria-cuadernos.md#como-postular). Todo cuaderno evaluado termina en un repositorio público.
 
 Si el cuaderno incluye un modelo, un tablero o una aplicación, cumpla además los [requisitos para modelos](08-estandar-modelos.md), los [requisitos para tableros](06-estandar-tableros.md) o los [requisitos para aplicaciones](07-estandar-aplicaciones.md). Si usa un modelo de lenguaje u otro modelo preentrenado de terceros (por ejemplo, de Hugging Face) como componente del análisis, cumpla los [requisitos para el uso de LLMs](09-uso-de-llms.md).
 
@@ -66,9 +66,9 @@ Un cuaderno reproducible no es un script con comentarios. Es un documento ejecut
 **Tecnología.** Todos los cuadernos usan la misma base:
 
 - **MyST Markdown** para el texto, las referencias cruzadas y los metadatos.
-- **Python 3.10 o superior** para todo el código. Recomendamos `xarray`, `geopandas`, `rasterio`, `pandas`, `matplotlib`, `cartopy` y `numpy`; puede usar otras si las justifica.
+- **Python 3.10 o superior** para todo el código. Si crea su propio repositorio (nivel A de la convocatoria), también puede usar R con `renv`. Recomendamos `xarray`, `geopandas`, `rasterio`, `pandas`, `matplotlib`, `cartopy` y `numpy`; puede usar otras si las justifica.
 - **Jupyter** para la ejecución. El cuaderno debe correr de principio a fin sin intervención manual, salvo la descarga de datos externos cuando sea inevitable.
-- **GitHub** para el control de versiones. No evaluamos cuadernos sin un repositorio público.
+- **GitHub** para el control de versiones. Todo cuaderno evaluado termina en un repositorio público: lo crea usted o la SCR con usted, según el [nivel de postulación](02-convocatoria-cuadernos.md#como-postular).
 
 Si el cuaderno usa o produce datos de riesgo de desastres, descríbalos con el Risk Data Library Standard (RDLS) del GFDRR. Así se pueden combinar con otras colecciones abiertas.
 
@@ -78,7 +78,7 @@ El repositorio contiene como mínimo:
 
 - `README.md` con el título, una descripción breve, las instrucciones de instalación, los datos de entrada y un ejemplo de ejecución.
 - `environment.yml` o `requirements.txt` con todas las dependencias y sus versiones fijadas.
-- `notebooks/` con los cuadernos `.ipynb` numerados en orden de ejecución.
+- `notebooks/` con los cuadernos `.ipynb` numerados en orden de ejecución. También se acepta un `.md` de MyST con celdas `{code-cell}`: la plantilla lo convierte a `.ipynb` con `jupytext`.
 - `data/` con los datos de ejemplo para una versión mínima, o instrucciones para descargarlos.
 - `LICENSE` con una licencia abierta. Recomendamos Apache-2.0 o MIT para el código y CC BY 4.0 para los datos y el texto.
 - `CITATION.cff` con el ORCID de cada persona autora.
