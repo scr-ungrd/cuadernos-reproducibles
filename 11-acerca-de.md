@@ -19,7 +19,7 @@ La colección está a cargo de la **Subdirección para el Conocimiento del Riesg
 ## Estado del proyecto
 
 :::{warning} Fase piloto
-El proyecto está en fase piloto. La [convocatoria](02-convocatoria-cuadernos.md) aún no está abierta y los cuadernos publicados son ejercicios de demostración que no han validado personas expertas.
+El proyecto está en fase piloto. La [convocatoria](02-convocatoria-cuadernos.md) abrirá el 1 de marzo de 2027. Los cuadernos publicados son ejercicios de demostración que no han validado personas expertas.
 :::
 
 ## Principios

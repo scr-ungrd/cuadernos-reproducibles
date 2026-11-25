@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+contact_links:
+  # GitHub solo acepta enlaces http(s) aquí, no mailto:. El enlace lleva a la sección Contacto de la convocatoria.
+  - name: Postular o consultar por correo (sin cuenta de GitHub)
+    url: https://scr-ungrd.github.io/cuadernos-reproducibles/convocatoria-cuadernos/#contacto
+    about: "Escriba a conocimiento@gestiondelriesgo.gov.co para enviar su cuaderno (nivel B) o su manifestación de interés (nivel C)."

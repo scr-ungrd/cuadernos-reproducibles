@@ -32,7 +32,7 @@ https://mybinder.org/v2/gh/scr-ungrd/cuadernos-reproducibles-crc00X/HEAD
 |------|-----------|
 | `index.md` | Portada: hero con imagen satelital y lista de cuadernos |
 | `01-cuadernos-de-conocimiento.md` | Guía para publicar un cuaderno |
-| `02-convocatoria-cuadernos.md` | Convocatoria abierta de cuadernos |
+| `02-convocatoria-cuadernos.md` | Convocatoria de cuadernos (fase piloto) y niveles de postulación |
 | `03-estandar-de-datos.md` | Requisitos para datos (RDLS, FAIR, CARE, COPDESS, Banco Mundial, *Scientific Data*, EM-DAT) |
 | `05-uso-de-ia.md` | Requisitos para el uso de IA: recomendaciones de uso ético y responsable, checklist y prompt de auditoría |
 | `06-estandar-tableros.md` | Requisitos para tableros (dashboards) abiertos y reproducibles: accesibilidad WCAG 2.2, datos, diseño, checklist y prompt de auditoría |
@@ -45,6 +45,7 @@ https://mybinder.org/v2/gh/scr-ungrd/cuadernos-reproducibles-crc00X/HEAD
 | `images/` | Imágenes de la portada, logos y favicon |
 | `myst.yml` | Configuración del sitio MyST |
 | `binder/requirements.txt` | Dependencias de Python para Binder |
+| `.github/ISSUE_TEMPLATE/` | Formularios de postulación (niveles A y B) y de manifestación de interés (nivel C) |
 
 ## Agregar un cuaderno a la portada
 
