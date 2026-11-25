@@ -68,7 +68,7 @@ Un cuaderno reproducible no es un script con comentarios. Es un documento ejecut
 - **MyST Markdown** para el texto, las referencias cruzadas y los metadatos.
 - **Python 3.10 o superior** para todo el código. Si crea su propio repositorio (nivel A de la convocatoria), también puede usar R con `renv`. Recomendamos `xarray`, `geopandas`, `rasterio`, `pandas`, `matplotlib`, `cartopy` y `numpy`; puede usar otras si las justifica.
 - **Jupyter** para la ejecución. El cuaderno debe correr de principio a fin sin intervención manual, salvo la descarga de datos externos cuando sea inevitable.
-- **GitHub** para el control de versiones. Todo cuaderno evaluado termina en un repositorio público: lo crea usted o la SCR con usted, según el [nivel de postulación](02-convocatoria-cuadernos.md#como-postular).
+- **GitHub** para el control de versiones. Todo cuaderno evaluado termina en un repositorio público: lo crea usted o la UNGRD con usted, según el [nivel de postulación](02-convocatoria-cuadernos.md#como-postular).
 
 Si el cuaderno usa o produce datos de riesgo de desastres, descríbalos con el Risk Data Library Standard (RDLS) del GFDRR. Así se pueden combinar con otras colecciones abiertas.
 
