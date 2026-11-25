@@ -135,7 +135,7 @@ Puede postular por tres niveles, según su experiencia con GitHub. Los tres lleg
 * - **B. Cuaderno con acompañamiento**
   - El cuaderno, las dependencias con versiones fijas y los datos de prueba
   - [Formulario de postulación](https://github.com/scr-ungrd/cuadernos-reproducibles/issues/new?template=postulacion.yml) o correo a [conocimiento@gestiondelriesgo.gov.co](mailto:conocimiento@gestiondelriesgo.gov.co)
-  - La SCR, con usted
+  - La UNGRD, con usted
 * - **C. Manifestación de interés**
   - Un resumen o un documento Word con la idea, los datos y el método
   - [Formulario de manifestación de interés](https://github.com/scr-ungrd/cuadernos-reproducibles/issues/new?template=manifestacion-interes.yml) o correo a [conocimiento@gestiondelriesgo.gov.co](mailto:conocimiento@gestiondelriesgo.gov.co)
@@ -196,7 +196,7 @@ Use este nivel si su cuaderno ya se ejecuta, pero no quiere o no puede armar el 
 
 Envíelo por el [formulario de postulación](https://github.com/scr-ungrd/cuadernos-reproducibles/issues/new?template=postulacion.yml), con el nivel B y el enlace a los archivos, o por correo a [conocimiento@gestiondelriesgo.gov.co](mailto:conocimiento@gestiondelriesgo.gov.co). En este nivel el código debe estar en Python.
 
-La SCR crea el repositorio desde la plantilla con usted. Usted sigue siendo responsable del contenido, los datos y las licencias. La evaluación empieza solo cuando el repositorio cumple los mismos requisitos del nivel A: el cuaderno se ejecuta de principio a fin en un entorno limpio y `myst build --html` funciona.
+La UNGRD crea el repositorio desde la plantilla, en su organización de GitHub [`scr-ungrd`](https://github.com/scr-ungrd), con usted. Usted sigue siendo responsable del contenido, los datos y las licencias. La evaluación empieza solo cuando el repositorio cumple los mismos requisitos del nivel A: el cuaderno se ejecuta de principio a fin en un entorno limpio y `myst build --html` funciona.
 
 ### Nivel C. Manifestación de interés
 
@@ -243,4 +243,4 @@ El cuaderno [Análisis de sismicidad de Colombia](https://scr-ungrd.github.io/cu
 
 ## Contacto
 
-Para consultas sobre la convocatoria, abra un *issue* en [`scr-ungrd/cuadernos-reproducibles`](https://github.com/scr-ungrd/cuadernos-reproducibles/issues) o escriba a [conocimiento@gestiondelriesgo.gov.co](mailto:conocimiento@gestiondelriesgo.gov.co).
+Para consultas sobre la convocatoria, llene el [formulario de consulta](https://github.com/scr-ungrd/cuadernos-reproducibles/issues/new?template=consulta.yml) o escriba a [conocimiento@gestiondelriesgo.gov.co](mailto:conocimiento@gestiondelriesgo.gov.co).

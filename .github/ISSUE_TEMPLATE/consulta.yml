@@ -1,0 +1,32 @@
+name: Consulta general
+description: Haga una pregunta sobre la convocatoria, la guía o los requisitos.
+title: "[Consulta] <tema>"
+labels: ["consulta"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Antes de preguntar, revise la [convocatoria](https://scr-ungrd.github.io/cuadernos-reproducibles/convocatoria-cuadernos/) y la [guía para publicar](https://scr-ungrd.github.io/cuadernos-reproducibles/cuadernos-de-conocimiento/). Para postular un cuaderno, use el formulario de postulación o el de manifestación de interés.
+
+  - type: input
+    id: tema
+    attributes:
+      label: Tema
+      placeholder: Por ejemplo, datos, licencias, plantilla, evaluación
+    validations:
+      required: true
+
+  - type: textarea
+    id: consulta
+    attributes:
+      label: Consulta
+    validations:
+      required: true
+
+  - type: input
+    id: referencia
+    attributes:
+      label: Página o sección relacionada
+      description: Enlace a la página o nombre de la sección, si aplica.
+    validations:
+      required: false

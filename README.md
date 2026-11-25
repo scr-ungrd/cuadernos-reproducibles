@@ -45,7 +45,7 @@ https://mybinder.org/v2/gh/scr-ungrd/cuadernos-reproducibles-crc00X/HEAD
 | `images/` | Imágenes de la portada, logos y favicon |
 | `myst.yml` | Configuración del sitio MyST |
 | `binder/requirements.txt` | Dependencias de Python para Binder |
-| `.github/ISSUE_TEMPLATE/` | Formularios de postulación (niveles A y B) y de manifestación de interés (nivel C) |
+| `.github/ISSUE_TEMPLATE/` | Formularios de postulación (niveles A y B), de manifestación de interés (nivel C) y de consulta general |
 
 ## Agregar un cuaderno a la portada
 
